@@ -1,0 +1,23 @@
+/* styles.css */
+* {
+    font-size: 18px;
+}
+
+.bkgdRED {
+    background-color: rgb(255, 166, 167);
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+.bkgdGREEN.bold {
+    background-color: rgb(128, 255, 128);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.txtBLUE {
+    color: blue;
+}
+
+#n2font {
+    font-size: 36px;
+}
