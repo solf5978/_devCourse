@@ -11,8 +11,52 @@ html, body {
   padding: 0;
 }
 
-.wrapper {
-  min-height: 100%;
-  border: solid;
+.max-width-wrapper {
+    height: min-content;
+    max-width: 75%;
+    margin: auto;
+    /*min-height: 100%;*/
+}
 
+main {
+    background-color: hsla(45, 2%, 77%, 1);
+}
+
+.title {
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+
+strong {
+    color: hsla(122, 100%, 36%, 1);
+}
+.card {
+    display: inline-block;
+    background-color: hsla(360, 100%, 100%, 1);
+    margin-top: 48px;
+    margin-bottom: 48px;
+    max-width: fit-content;
+}
+
+.indented-heading {
+    display: inline-block;
+    background-color: hsla(45, 100%, 64%, 1);
+    margin-top: 16px;
+    margin-left: -24px;
+    outline: 4px outset hsla(45, 100%, 60%, 1);
+    padding: 1.2rem 1.5rem;
+
+    /*background-color: hsla(45, 100%, 64%, 1);
+    margin-top: 8px;
+    margin-left: -24px;
+    outline: 4px outset hsla(45, 100%, 60%, 1);
+    padding: 1.2rem 1.5rem;
+    width: max-content;
+    */
+}
+
+p {
+    padding: 8px 24px;
+    width: fit-content;
 }
