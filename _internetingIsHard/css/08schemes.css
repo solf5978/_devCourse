@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* For Debugging Purpose As To Clearly See The Outline */
+    border: solid;
+}
+
+body {
+    height: 1200px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.example {
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+    margin: 50px 0;
+    background-color: hsla(211, 95%, 91%, 1);
+}
+
+.item img {
+    display: block;
+}
+
