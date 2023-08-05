@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  /* Override Browser Default CSS */
+  margin: 0;
+  padding: 0;
+  /* Render Box Into Actual Box Size */
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  width: 600px;
+  margin: 0 auto;
+  border: solid;
+
+}
+
+.synopsis {
+    color: hsla(189, 7%, 48%, 1);
+    font-style: italic;
+}
+
+.synopsis em {
+    font-style: normal;
+}
+
+.button {
+    color: hsla(0, 0%, 100%, 1);
+    background-color: hsla(212, 63%, 60%, 1);
+    font-weight: 2rem;
+    padding: 1.25rem;
+    text-align: center;
+    border: 2px solid hsla(210, 3%, 37%, 1);
+    border-radius: 5px;
+
+    width: 200px;
+    margin: 20px auto;
+}
+
+.call-to-action {
+    font-style: italic;
+    background-color: hsla(37, 81%, 64%, 1);
+
+}
+
+/* Pseudo Classes */
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+}
+
+/* Chainning Pseudo Classes Behaviour */
+a:visited:hover {
+    color: orange;
+}
+
+a:visited:active {
+    color: red;
+}
+
+a.button:link,
+a.button:visited {
+    display: block;
+    text-decoration: none;
+
+    color: hsla(0, 0%, 100%, 1);
+    background-color: hsla(212, 63%, 60%, 1);
+    font-weight: 2rem;
+    padding: 1.25rem;
+    text-align: center;
+    border: 0.125rem solid hsla(210, 3%, 37%, 1);
+    border-radius: 0.3rem;
+
+    width: 200px;
+    margin: 20px auto;
+}
+
+a.button:hover,
+a.button:visited:hover {
+    color: hsla(0, 0%, 100%, 1);
+    background-color: hsla(211, 76%, 69%, 1);
+}
+
+a.button:active,
+a.button:visited:active {
+    color: hsla(0, 0%, 100%, 1);
+    background-color: hsla(212, 63%, 60%, 1);
+}
+
+a.call-to-action:link,
+a.call-to-action:visited {
+    font-style: italic;
+    background-color: hsla(37, 81%, 64%, 1);
+}
+
+a.call-to-action:hover,
+a.call-to-action:visited:hover {
+    background-color: hsla(37, 83%, 75%, 1);
+}
+
+a.call-to-action:active,
+a.call-to-action:visited:active {
+    background-color: hsla(37, 81%, 64%, 1);
+}
+
+p:first-of-type {
+    color: hsla(189, 7%, 48%, 1);
+    font-style: italic;
+}
+
+p:last-of-type {
+    margin-bottom: 50px;
+}
+
+#button-4 {
+    color: hsla(210, 3%, 37%, 1);
+}
