@@ -1,17 +1,20 @@
 *,
 *::before,
 *::after {
-  /* Override Browser Default CSS */
-  margin: 0;
-  padding: 0;
-  /* Render Box Into Actual Box Size */
-  box-sizing: border-box;
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+html,
+body {
+    height: 100%;
 }
+
 .wrapper {
-  min-height: 100%;
-  border: solid;
+    min-height: 100%;
+    /* For Debugging Purpose As To Clearly See The Outline */
+    border: solid;
 }
