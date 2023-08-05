@@ -36,7 +36,30 @@ body {
     background-color: hsla(211, 95%, 91%, 1);
 }
 
+.absolute {
+    position: relative;
+}
+
 .item img {
     display: block;
+    border: 4px dotted darkcyan;
+}
+
+.item-relative {
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+.item-absolute {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.item-fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
