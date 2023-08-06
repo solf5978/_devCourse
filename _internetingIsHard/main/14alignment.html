@@ -3,7 +3,43 @@
 <head>
   <meta charset='UTF-8'/>
   <title>Text Alignment</title>
-  <link rel='stylesheet' href='typo.css'/>
+  <link rel='stylesheet' href='../css/14typo.css'/>
+  <style>
+    .left {
+      text-align: left;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    figcaption {
+      display: none;
+    }
+
+    .justify {
+      text-align: justify;
+    }
+
+    @media only screen and (min-width: 900px) {
+      figure {
+        position: relative;
+      }
+
+      figcaption {
+        display: block;
+
+        font-style: italic;
+        text-align: right;
+        background-color: hsla(0, 0, 100%, 1);
+
+        position: absolute;
+        left: -220px;
+        width: 200px;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
@@ -52,7 +88,7 @@
     <figure>
       <figcaption>These letters are touching. This is called a
       ligature.</figcaption>
-      <img src='ligature.svg'/>
+      <img src='../images/ligature.svg'/>
     </figure>
 
     <p>Of course, if you’re publishing content in a language that’s read
