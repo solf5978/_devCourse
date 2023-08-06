@@ -10,10 +10,30 @@
       <div class="page">
         <div class="section menu"></div>
         <div class="section header">
-          <img src="../images/header.svg" alt="">
+          <div class="photo">
+            <picture>
+              <source media="(min-width: 401px)" 
+                              srcset="../images/photo-big.jpg" />
+              <source media="(min-width: 400px)" 
+                              srcset="../images/photo-tall.jpg">
+              <img src="../images/photo-small.jpg" alt="" />
+            </picture>
+            <!--
+            <img src="../images/photo-small.jpg" 
+                 srcset="../images/photo-big.jpg 2000w,
+                      ../images/photo-small.jpg 1000w"
+                 sizes="(min-width: 960px) 960px, 100vw"
+                 alt="" />
+            -->
+          </div>
         </div>
         <div class="section content">
-          <img src="../images/content.svg" alt="">
+          <img class="illustration" 
+          src="../images/illustration-small.png"
+          srcset="../images/illustration-small.png 1x,
+                  ../images/illustration-big.png 2x" 
+          style="max-width: 500px;"
+          alt="" />
         </div>
         <div class="section sign-up">
           <img src="../images/sign-up.svg" alt="">

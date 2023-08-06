@@ -39,11 +39,25 @@ body {
 
 .header {
     background-color: hsla(211, 100%, 84%, 1);
+    height: auto;
+    justify-content: inherit;
+    align-items: inherit;
+}
+
+.photo img {
+    width: 100%;
+    display: block;
 }
 
 .content {
     background-color: hsla(209, 16%, 92%, 1);
     height: 600px;
+}
+
+.illustration {
+    width: 100%;
+    display: block;
+    margin: auto;
 }
 
 .sign-up {
