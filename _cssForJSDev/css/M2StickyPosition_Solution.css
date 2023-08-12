@@ -20,13 +20,13 @@ body {
 }
 
 header {
-    height: 50px;
+    height: 66px;
     background-color: slateblue;
     color: white;
     opacity: 0.96;
     position: sticky;
     top: -16px;
-    padding: 8px;
+    padding: 16px;
 }
 
 body {
