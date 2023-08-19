@@ -4,10 +4,18 @@
 }
 
 .maxWidthWrapper {
+  /* Creating a Stack Contxt */
+  isolation: isolate;
+
+  /* Applying Position Relative Also Works*/
+  /*
+  position: relative;
+  */
 }
 
 .header {
   padding-bottom: 64px;
+  max-width: 65%;
 }
 
 .title {
@@ -24,7 +32,21 @@
 }
 
 .characterWrapper {
+  min-height: 500px;
+  position: fixed;
+  left: 55%;
+  top: 5%;
+  bottom: 5%;
 }
 
 .controlColumn {
+  width: 50%;
+}
+
+.grayOutBox {
+  position: fixed;
+  top: 60%;
+  background-color: hsl(195deg, 20%, 86%);
+  height: 40%;
+  width: 100%;
 }

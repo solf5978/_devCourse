@@ -1,2 +1,10 @@
 .buttonRow {
+    /* Makign the span(s) follow along with their corresponding partens" */
+    position: relative;
+    overflow: auto;
+    white-space: nowrap;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+    padding: 20px;
 }
