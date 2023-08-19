@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* For Debugging Purpose As To Clearly See The Outline */
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+body {
+    background-color: hsla(260, 50%, 20%, 1);
+    color: white;
+    padding: 0;
+*/
+
+body {
+    background-color: slateblue;
+}
+
+/*
+.marble {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: hsla(50, 100%, 55%, 1);
+*/
+
+.marble {
+    height: 100px;
+    width: 100px;
+    background-color: lightsalmon;
+    border: 2px solid lightsalmon;
+    border-radius: 50%;
+}

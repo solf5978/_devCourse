@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* For Debugging Purpose As To Clearly See The Outline */
+    border: solid;
+}
+
+
+body {
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: hsla(0, 0%, 0%, 1);
+}
