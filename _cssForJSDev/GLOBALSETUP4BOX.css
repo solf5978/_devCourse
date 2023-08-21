@@ -21,18 +21,3 @@ body {
     /* For Debugging Purpose As To Clearly See The Outline */
     border: solid;
 }
-
-
-body {
-    padding: 0px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    font-size: 2rem;
-    text-decoration: none;
-    color: hsla(0, 0%, 0%, 1);
-}
