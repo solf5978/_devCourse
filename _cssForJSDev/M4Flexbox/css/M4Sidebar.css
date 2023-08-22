@@ -14,19 +14,33 @@
 html,
 body {
     height: 100%;
+    line-height: 1.25rem;
 }
 
 .wrapper {
-    min-height: 100%;
-    /* For Debugging Purpose As To Clearly See The Outline */
+    display: flex;
+    /* min-height: 100%;
+    For Debugging Purpose As To Clearly See The Outline 
+    */
     border: solid;
 }
 
 nav {
     width: 220px;
+    flex-shrink: 99999;
   }
   
 nav, main {
     padding: 16px;
     border: 2px solid;
-  }
+}
+
+nav ul li {
+    margin-left: 32px;
+    padding-left: 8px;
+}
+
+main {
+    flex-grow: 3;
+}
+
