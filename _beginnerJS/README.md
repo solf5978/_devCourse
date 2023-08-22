@@ -1,11 +1,18 @@
-# Course Noting
+# Course Note
+
+## External Material
+- [ESLint For Linter](https://eslint.org/)
+- [Prettier For Beautify The Code](https://prettier.io/)
+
 ## Function Scoped
 `var first = "live as long as the called function";`
 
 ## Block Scoped
-`let second = 300;`
-`let third = true;`
-`const fourth = "another";`
+```
+let second = 300;
+let third = true;
+const fourth = "another";
+```
 
 ## CamelCase
 `const andYouHoldingMe = true;`
