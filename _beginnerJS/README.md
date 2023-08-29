@@ -14,7 +14,7 @@ let third = true;
 const fourth = "another";
 ```
 
-## Global Scoped
+## Global and Function Scoped 
 ```
 var globalvariable = `hi`;
 var globalSameAsWindow = `uptowindowscale`
