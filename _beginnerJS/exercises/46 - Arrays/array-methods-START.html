@@ -75,48 +75,136 @@
       const [deKey, deValue] = qty
     })
 
+    // More Concise Way
+    Object.entries(meats).forEach( ([key, value]) => 
+      console.log(key, value)
+    )
+
     /*
       Instance Methods
     */
 
     // Display all bun types with " or " - use join()
-
+    console.log(buns.join(' or '))
     // We have a string "hot dogs,hamburgers,sausages,corn" - use split() to turn it into a string
-
+    const foodString = "hot dogs, hamburgers, sausages, corn"
+    console.log(foodString.split(','))
     // take the last item off toppings with pop()
+    const lastItem = toppings.pop()
     // add it back with push()
+    toppings.push(lastItem)
+    console.log(toppings)
     // take the first item off toppings with shift()
+    const finalItem = toppings.shift()
     // add it back in with unshift()
+    toppings.unshift(finalItem)
     // Do the last four,but immutable (with spreads and new variables)
-
+    const newToppings = [...toppings, toppings.slice(toppings.length - 4)]
 
     // Make a copy of the toppings array with slice()
+    let toppingsCopy = toppings.slice(0)
     // Make a copy of the toppings array with a spread
+    toppingsCopy = [...toppings]
     // take out items 3 to 5 of your new toppings array with splice()
+    toppingsCopy.splice(3, 5)
     // find the index of Avocado with indexOf() / lastIndexOf()
+    toppingsCopy.findIndex('Avocado')
+
     // Check if hot sauce is in the toppings with includes()
+    if (!toppings.includes('hot sauce')) {
+      toppings.push('Hot Sauce')
+    }
+    
     // add it if it's not
     // flip those toppings around with reverse()
-
+    toppings.reverse()
+    const toppingsReversed = [...toppings].reverse()
     /*
       Callback Methods
     */
 
     // find the first rating that talks about a burger with find()
+    function findBurgRating(feedbacks) {
+      if (feedbacks.comment.includes('burg')) {
+        return true
+      } else {
+        return false
+      }
+    }
+
+    function findBurgRatingConcise(feedbacks) {
+      return feedbacks.comment.includes('burg')
+    }
+
+    function searchByWord(word) {return feedback.comment.includes(word)}
+    // Objectized
+    const util = {
+      findBurgRating: (oneFeedback) => oneFeedback.comment.includes('burg'),
+      findSmoothieRating: (oneFeedback) => oneFeedback.comment.includes('Smoothie'),
+      findSearchWord: (oneFeedback) => oneFeedback.find(searchByWord('${PassedValueFromFrontEnd}')),
+    }
+
+    const burgerRating = feedback.find( () => 
+      feedback.comment.includes('burg')
+    )
     // find all ratings that are above 2 with filter()
+    function filterByMinRating(minRating) {
+      return () => oneFeedback.rating > minRating
+    }
+    const star2Comment = feedback.filter(oneFeedback => (oneFeedback.rating >= 2))
+
     // find all ratings that talk about a burger with filter()
+    const burgRatings = feedback.filter(searchByWord('burg'))
+    console.table(burgRatings)
     // Remove the one star rating however you like!
+    const damnRemove = feedback.filter(oneStar => oneStar.rating !== 1)
 
     // check if there is at least 5 of one type of meat with some()
+    const isThereEnoughOfAtLeastOneMeat = Object.values(meats).some(
+      meatValue => meatValue >= 5
+    )
+    const isThereEnoughOfEveryMeat = Object.values(meats).every(
+      meatValue => meatValue >= 5
+    )
     // make sure we have at least 3 of every meat with every()
+    const numbers = [1, 2, 100, 3, 200, 400, 155];
+    const numbersSorted = numbers.sort((firstItem, secondItem) => firstItem - secondItem);
+    console.log(numbersSorted);
+    console.log(toppings.sort());
     // sort the toppings alphabetically with sort()
+    function numberSort(itemA, itemB) {return itemA - itemB}
     // sort the order totals from most expensive to least with .sort()
+    
     // Sort the prices with sort()
+    const productsSortedByPrice = Object.entries(prices)
+                                        .sort( function(itemA, itemB) {
+      const aPrice = itemA[1]
+      const bPrice = itemB[1]
+      return aPrice - bPrice
+      //debugger
+    })
+    console.table(productsSortedByPrice)
 
     /*
       Looping Methods (next)
     */
+   function logTopping(topping, index, array) {
+    console.log(topping, index, array)
+    // current one
+    console.log(topping)
+    // previous one
+    if (array[index - 1] !== undefined) {array[index + 1].value}
+    // next one
+    if (array[index + 1] !== undefined) {array[index + 1].value}
+    // goodbye with the last item 
+    
+    
+    index == array.length && console.log('goodbye')
+    // below is the same as above statement
+    // if (index == array.length - 1) { console.log('goodbye')}
+    
 
+   toppings.forEach(logTopping)
   </script>
 </body>
 
