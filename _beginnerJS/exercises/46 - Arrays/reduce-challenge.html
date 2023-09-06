@@ -555,7 +555,22 @@ Firefox
 TermsPrivacyCookies
 © 2005-2019 Mozilla and individual contributors.Content is available under these licenses.
     `
-  
+  const example = `
+  2005-2019 Mozilla and individual contributors.Content is available under these licenses.`
+  function isValidCase(str) { return str.match(/[a-z0-9]/) }
+  function instanceCount(counts, instance) {
+    counts[instance] = counts[instance] + 1 || 1
+    return counts
+  }
+  function parseText(pureText){
+    return pureText.toLowerCase()
+                   .split('')
+                   .filter(isValidCase)
+                   .reduce(instanceCount, {})
+  }
+
+  const sortedText = parseText(text)
+  console.table(sortedText)  
 
   </script>
 </body>
