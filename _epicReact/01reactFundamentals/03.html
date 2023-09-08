@@ -8,14 +8,13 @@
 
   <!-- 🐨 add Babel to the page.
        💰 Here is the script tag that'll do the job:
-  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
   -->
+  <script src="https://unpkg.com/@babel/standalone@7.12.4/babel.js"></script>
+  
 
-  <script type="module">
-    // 🐨 on the script tag above, change `type="module"`
-    // to `type="text/babel"` so babel will compile this code for the browser to run.
-
-    // 🐨 re-implement this using JSX!
+  <script type="babel">
+    
+    
     const element = React.createElement('div', {
       className: 'container',
       children: 'Hello World',
