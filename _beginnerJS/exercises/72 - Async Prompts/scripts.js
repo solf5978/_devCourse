@@ -32,7 +32,6 @@ function ask(options) {
       const skipButton = document.createElement('button');
       skipButton.type = 'button';
       skipButton.textContent = 'Cancel';
-      console.log(popup.firstChild);
       popup.firstElementChild.appendChild(skipButton);
       // TODO: listen for a click on that cancel button
       skipButton.addEventListener(
