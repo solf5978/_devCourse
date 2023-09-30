@@ -19,3 +19,7 @@ func test() {
 func (miles distance) toKm() distanceKm {
 	return distanceKm(1.6093 * miles)
 }
+
+func (km distanceKm) toMiles() distance {
+	return distance(km / 1.6093)
+}
