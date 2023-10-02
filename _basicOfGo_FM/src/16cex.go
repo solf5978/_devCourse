@@ -11,6 +11,9 @@ import (
 const apiUrl = "https://cex.io/api/ticker/%s/USD"
 
 func GetRate(currency string) (*Rate, error) {
+	if len(currency) != 3 {
+		return nil, fmt.Errorf("Currency Format Is Unmatched")
+	}
 	res, err := http.Get(fmt.Sprintf(apiUrl, strings.ToUpper(currency)))
 	if err != nil {
 		return nil, err
