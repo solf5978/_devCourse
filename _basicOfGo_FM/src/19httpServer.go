@@ -10,8 +10,12 @@ func handleHello(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc(
+	server := http.NewServeMux()
+	server.HandleFunc(
 		"/", handleHello)
+
+	fs := http.FileServer(http.Dir("./public"))
+	server.Handle("/", fs)
 	err := http.ListenAndServe(":3333", nil)
 	if err != nil {
 		return
