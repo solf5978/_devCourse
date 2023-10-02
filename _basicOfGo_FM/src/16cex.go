@@ -16,15 +16,14 @@ func GetRate(currency string) (*Rate, error) {
 		return nil, err
 	}
 
+	var response CEXResponse
 	if res.StatusCode == http.StatusOK {
 		bodyBytes, err2 := io.ReadAll(res.Body)
 		if err2 != nil {
 			return nil, err2
 		}
 
-		var cryptoRate Rate
-
-		err := json.Unmarshal(bodyBytes, &cryptoRate)
+		err := json.Unmarshal(bodyBytes, &response)
 		if err != nil {
 			return nil, err
 		}
@@ -34,7 +33,7 @@ func GetRate(currency string) (*Rate, error) {
 	}
 	rate := Rate{
 		Currency: currency,
-		Price:    20,
+		Price:    response.Bid,
 	}
 
 	return &rate, nil

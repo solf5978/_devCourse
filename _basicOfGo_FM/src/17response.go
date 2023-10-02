@@ -1,6 +1,6 @@
 package main
 
-type Response struct {
+type CEXResponse struct {
 	Timestamp             string  `json:"timestamp"`
 	Low                   string  `json:"low"`
 	High                  string  `json:"high"`
