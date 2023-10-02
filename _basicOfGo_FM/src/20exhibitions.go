@@ -1,14 +1,12 @@
 package main
 
-package data
-
 type Exhibition struct {
 	Title       string
 	Description string
 	Image       string
 }
 
-var list = []Exhibition{
+var List = []Exhibition{
 	{
 		Title:       "Life in Ancient Greek",
 		Description: "Uncover the world of ancient Greece through the sculptures, tools, and jewelry found in ruins from over 2000 years ago that have been unearthed through modern science and technology.",

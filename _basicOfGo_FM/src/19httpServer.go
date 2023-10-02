@@ -17,7 +17,7 @@ func handleTemplate(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusInternalServerError)
 		return
 	} else {
-		html.Execute(w, "Test")
+		html.Execute(w, List[0])
 	}
 }
 
