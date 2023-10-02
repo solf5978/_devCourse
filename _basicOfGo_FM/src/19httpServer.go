@@ -26,6 +26,8 @@ func main() {
 	server.HandleFunc(
 		"/", handleHello)
 	server.HandleFunc("/template", handleTemplate)
+	server.HandleFunc("/exhibitions", Get)
+	server.HandleFunc(("/exhibitions/new", Post))
 	fs := http.FileServer(http.Dir("./public"))
 	server.Handle("/", fs)
 	err := http.ListenAndServe(":3333", nil)
