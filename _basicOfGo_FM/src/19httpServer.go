@@ -5,13 +5,13 @@ import (
 	"net/http"
 )
 
+func handleHello(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Hello From A Go Program"))
+}
+
 func main() {
 	http.HandleFunc(
-		"/",
-		func (w http.ResponseWriter, r *http.Request) {
-			w.Write([]byte("Hello From A Go Program"))
-		}
-	)
+		"/", handleHello)
 	err := http.ListenAndServe(":3333", nil)
 	if err != nil {
 		return
