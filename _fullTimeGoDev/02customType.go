@@ -23,7 +23,10 @@ type Player struct {
 	attackPower float64
 }
 
-func getHealth(player Player) int {
+//	func getHealth(player Player) int {
+//		return player.health
+//	}
+func (player Player) getHealth() int {
 	return player.health
 }
 
@@ -35,5 +38,5 @@ func main() {
 	}
 
 	fmt.Printf("this is the player: %+v\n", player)
-	fmt.Printf("Remain Health: %d\n", getHealth(player))
+	fmt.Printf("Remain Health: %d\n", player.getHealth())
 }
