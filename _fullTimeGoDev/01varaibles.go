@@ -10,5 +10,8 @@ var (
 )
 
 func main() {
-	
+	version := 1
+	otherVersion := "Bar"
+	anotherVersion := "10.5"
+
 }
