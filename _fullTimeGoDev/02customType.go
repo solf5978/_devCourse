@@ -23,9 +23,12 @@ type Player struct {
 	attackPower float64
 }
 
+//  Normal Function
 //	func getHealth(player Player) int {
 //		return player.health
 //	}
+
+// Struct Method
 func (player Player) getHealth() int {
 	return player.health
 }
@@ -36,6 +39,18 @@ func main() {
 		health:      100,
 		attackPower: 45.1,
 	}
+
+	users := map[string]int{
+		// users = make(map[string]int)
+	}
+
+	users["foo"] = 1
+	users["bar"] = 2
+
+	//	Access Map
+
+	age := users["foo"]
+	fmt.Println(age)
 
 	fmt.Printf("this is the player: %+v\n", player)
 	fmt.Printf("Remain Health: %d\n", player.getHealth())
