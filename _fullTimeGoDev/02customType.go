@@ -5,7 +5,7 @@ import "fmt"
 var (
 	floatVar   float32 = 0.1
 	floatVar64 float64 = 0.1
-	name       string  = "Foo"
+	nameA      string  = "Foo"
 	intVar32   int32   = 1
 	intVar64   int64   = 32769
 	intVar     int     = 10
@@ -51,6 +51,15 @@ func main() {
 
 	age := users["foo"]
 	fmt.Println(age)
+
+	secAge, err := users["hello"]
+	if !err {
+		fmt.Printf("Age is %d\n", secAge)
+	} else {
+		fmt.Println("Value is not exist")
+	}
+
+	delete(users, "foo")
 
 	fmt.Printf("this is the player: %+v\n", player)
 	fmt.Printf("Remain Health: %d\n", player.getHealth())
