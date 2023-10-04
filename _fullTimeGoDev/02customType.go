@@ -33,6 +33,12 @@ func (player Player) getHealth() int {
 	return player.health
 }
 
+type Weapon string
+
+func getWeapon(w Weapon) string {
+	return string(w)
+}
+
 func main() {
 	player := Player{
 		name:        "Captain Jack",
