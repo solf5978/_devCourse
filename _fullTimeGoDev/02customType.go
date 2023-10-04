@@ -61,6 +61,14 @@ func main() {
 
 	delete(users, "foo")
 
+	for k, v := range users {
+		fmt.Printf("Key: %s, Value: %d\n", k, v)
+	}
+
+	//	Slice
+	numSlice := []int{1, 2, 3}
+	otherSlice := make([]int, 10)
+
 	fmt.Printf("this is the player: %+v\n", player)
 	fmt.Printf("Remain Health: %d\n", player.getHealth())
 }
