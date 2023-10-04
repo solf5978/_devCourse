@@ -65,7 +65,10 @@ func main() {
 		fmt.Printf("Key: %s, Value: %d\n", k, v)
 	}
 
-	//	Slice
+	// 	Array [FIXED LENGTH]
+	numArr := [2]int{1, 2}
+
+	//	Slice [DYNAMIC GROW]
 	numSlice := []int{1, 2, 3}
 	otherSlice := make([]int, 10)
 
