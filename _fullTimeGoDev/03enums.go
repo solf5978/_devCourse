@@ -4,15 +4,22 @@ import "fmt"
 
 type WeaponType int
 
-func getDamage(weaponType string) int {
+const (
+	Axe WeaponType = iota
+	Sword
+	WoodenStick
+	Knife
+)
+
+func getDamage(weaponType WeaponType) int {
 	switch weaponType {
-	case "axe":
+	case Axe:
 		return 100
-	case "sword":
+	case Sword:
 		return 90
-	case "woodenStick":
+	case WoodenStick:
 		return 1
-	case "knife":
+	case Knife:
 		return 40
 	default:
 		panic("Don't get it without a weapon")
@@ -20,5 +27,5 @@ func getDamage(weaponType string) int {
 }
 
 func main() {
-	fmt.Println("damage of weapon:", getDamage("woodenStick"))
+	fmt.Println("damage of weapon (%d) (%d):\n", Axe, getDamage(Axe))
 }
