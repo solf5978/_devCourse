@@ -1,5 +1,7 @@
 package _fullTimeGoDev
 
+import "fmt"
+
 type StoreOwner interface {
 	GetStoreName() ([]int, error)
 	SetStoreName()
@@ -22,4 +24,11 @@ func main() {
 	storeApi := ApiServer{
 		storeMGR: CandyStoreOwner{},
 	}
+
+	storeApi.storeMGR.SetStoreName()
+	storeName, err := storeApi.storeMGR.GetStoreName()
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(storeName)
 }
