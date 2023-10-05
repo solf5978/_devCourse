@@ -11,6 +11,6 @@ func main() {
 
 	for i := 0; i < len(number); i++ {
 		fmt.Println(i)
-		fmt.Println(number[i])
+		fmt.Println(number[i+1])
 	}
 }
