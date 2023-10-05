@@ -3,8 +3,6 @@ package _fullTimeGoDev
 type StoreOwner interface {
 	GetStoreName() ([]int, error)
 	SetStoreName()
-	DelStoreName()
-	UpdateStoreName(int) error
 }
 
 type CandyStoreOwner struct{}
@@ -17,6 +15,11 @@ func (candyO CandyStoreOwner) GetStoreName() ([]int, error) {
 	return []int{1, 2, 3}, nil
 }
 
+func (candyO CandyStoreOwner) SetStoreName() {
+	return
+}
 func main() {
-
+	storeApi := ApiServer{
+		storeMGR: CandyStoreOwner{},
+	}
 }
