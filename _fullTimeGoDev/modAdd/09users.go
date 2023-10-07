@@ -1,6 +1,6 @@
 package main
 
 type User struct {
-	username string
-	age      int
+	Username string
+	Age      int
 }

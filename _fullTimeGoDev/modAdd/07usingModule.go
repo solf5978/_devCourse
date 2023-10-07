@@ -10,8 +10,8 @@ func main() {
 	fmt.Println(randNum)
 
 	user := User{
-		username: "Jason",
-		age:      getRand(),
+		Username: "Jason",
+		Age:      getRand(),
 	}
 	fmt.Printf("USER: %s | Age: %d\n", user.username, user.age)
 }
