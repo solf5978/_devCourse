@@ -4,16 +4,15 @@ import (
 	"example/greetings"
 	"fmt"
 	"log"
-	"rsc.io/quote"
 )
 
 func main() {
 
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
-	fmt.Println("Hello, World!")
-	fmt.Println(quote.Go())
-	message, err := greetings.Hello("Gladys")
+
+	names := []string{"Gladys", "Sam", "Darwin"}
+	message, err := greetings.Hellos(names)
 	if err != nil {
 		log.Fatal(err)
 	}
