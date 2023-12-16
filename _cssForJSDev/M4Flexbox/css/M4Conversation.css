@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* For Debugging Purpose As To Clearly See The Outline */
+    border: solid;
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.message {
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 8px 8px;
+    margin-top: 8px;
+
+}
+
+.message.sent {
+    background-color: blue;
+    color: white;
+    align-self: flex-end;
+    margin-right: 8px;
+}
+
+.message.received {
+    background-color: gainsboro;
+    color: black;
+    align-self: flex-start;
+    margin-left: 8px;
+}

@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  /* Override Browser Default CSS */
+  margin: 0;
+  padding: 0;
+  /* Render Box Into Actual Box Size */
+  box-sizing: border-box;
+}
+
+
+h1, p {
+    background-color: hsla(210, 9%, 87%, 1);
+}
+
+em, strong {
+    background-color: hsla(211, 100%, 84%, 1);
+    display: inline;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    padding: 50px;
+    /* border: 1px solid hsla(210, 3%, 37%, 1); */
+    border-bottom: 1px solid hsla(210, 3%, 37%, 1);
+}
+
+div {
+    color: hsla(0, 0%, 100%, 1);
+    background-color: hsla(212, 63%, 60%, 1);
+    font-weight: 1.75rem;
+    padding: 1.25rem;
+    text-align: center;
+    border: 0.125rem solid hsla(210, 3%, 37%, 1);
+    border-radius: 0.3rem;
+    width: 200px;
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+
+p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* padding: 20px 10px Vertical Horizontal */
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+strong {
+    margin: 50px;
+}
+
+
+

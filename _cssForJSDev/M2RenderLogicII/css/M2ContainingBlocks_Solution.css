@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* For Debugging Purpose As To Clearly See The Outline */
+    border: solid;
+}
+
+.box {
+    height: 150px;
+    margin: 64px;
+    border: 4px solid palevioletred;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    border: inherit;
+    border-radius: 50%;
+    background-color: hsla(0, 0%, 100%, 1);
+}
+
+.big.circle {
+    width: 65px;
+    height: 65px;
+    top: -30px;
+    left: -20px;
+}
+
+.medium.circle {
+    width: 35px;
+    height: 35px;
+    top: 35px;
+    left: -20px;
+}
+
+.small.circle {
+    width: 25px;
+    height: 25px;
+    top: -14px;
+    left: 55px;
+}
+

@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 200%;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* For Debugging Purpose As To Clearly See The Outline */
+    border: solid;
+}
+
+header,
+main {
+    padding: 16px;
+}
+
+header {
+    height: 200px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: deeppink;
+    border-radius: 4px;
+}

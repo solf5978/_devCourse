@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: slateblue;
+    padding: 16px;
+}
+
+.wrapper {
+    /* For Debugging Purpose As To Clearly See The Outline */
+    border: solid;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 2px 20px hsla(0, 0%, 0%, 1);
+    overflow: hidden;
+}
+
+.body {
+    padding: 16px;
+}
+
+.wrapper footer {
+    background-color: hsla(0, 0%, 95%, 1);
+    padding: 16px;
+}
+
+h2 {
+    margin-top: -6px;
+    margin-bottom: 4px;
+}
+
+p {
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.btn {
+    padding: 8px 16px;
+    font-size: 1.5rem;
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn.primary {
+    background-color: hsla(0, 0%, 0%, 1);
+    color: hsla(100, 100%, 100%, 1);
+}
+
+.btn.secondary {
+    border: 1px solid gray;
+}
+
+
+
+

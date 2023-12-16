@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1.25rem;
+}
+
+.wrapper {
+    display: flex;
+    /* min-height: 100%;
+    For Debugging Purpose As To Clearly See The Outline 
+    */
+    border: solid;
+}
+
+nav {
+    width: 220px;
+    flex-shrink: 99999;
+  }
+  
+nav, main {
+    padding: 16px;
+    border: 2px solid;
+}
+
+nav ul li {
+    margin-left: 32px;
+    padding-left: 8px;
+}
+
+main {
+    flex-grow: 3;
+}
+

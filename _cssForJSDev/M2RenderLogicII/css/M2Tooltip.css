@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* For Debugging Purpose As To Clearly See The Outline */
+    border: solid;
+}
+
+p {
+    max-width: 300px;
+}
+
+.tooltip-trigger {
+    font-weight: bold;
+    color: seagreen;
+    text-decoration: none;;
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 2px 2px;
+    width: 150px;
+    top: 100%;
+    left: 5%;
+    font-style: normal;
+    background-color: hsla(0, 0%, 100%, 1);
+    color: inherit;
+}

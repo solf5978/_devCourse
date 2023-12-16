@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* For Debugging Purpose As To Clearly See The Outline */
+    border: solid;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    background-color: hsla(212, 63%, 60%, 1);
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    color: hsla(212, 63%, 60%, 1);
+    background-color: hsla(211, 95%, 91%, 1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    height: 300px;
+}
+
+.social,
+.subscribe {
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid darkcyan;
+    width: 900px;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login {
+    margin-left: 20px;
+}
+
+.signup {
+    margin-left: auto;
+}
+
+.photo-grid-container {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 900px;
+}
+
+.photo-grid-item {
+    border: 1px solid white;
+    width: 300px;
+    height: 300px;
+}
+
+.first-item {
+    order: 1;
+}
+
+.last-item {
+    order: -1;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item {
+    border: 1px solid white;
+    background-color: hsla(211, 95%, 91%, 1);
+    height: 200px;
+    flex: 1;
+}
+
+.footer-item.footer-one,
+.footer-item.footer-three {
+    background-color: hsla(212, 63%, 60%, 1);
+    flex: initial;
+    width: 300px;
+}
+
+.footer-item.footer-two {
+    flex: 2;
+}

@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* For Debugging Purpose As To Clearly See The Outline */
+    border: solid;
+}
+
+header {
+    height: 66px;
+    background-color: slateblue;
+    color: white;
+    opacity: 0.96;
+    position: sticky;
+    top: -16px;
+    padding: 16px;
+}
+
+body {
+    height: 150vh;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    padding: 0;
+    margin: 0 16px;
+    line-height: 50px;
+    font-size: 1.5rem;
+}
+
+main {
+    padding: 32px;
+}

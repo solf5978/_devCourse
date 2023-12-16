@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/M2Tooltip.css" />
+    <!--
+        Tooltip should:
+        • Be at least 150px wide
+        • Have a black text and border color
+        • Use 400 font weight
+        • Use 0.875rem font size
+    -->
+        
+    <style>
+        .tooltip {
+        /* Hide the tooltip by default */
+          display: none;
+          background: white;
+          border: 1px solid;
+        }
+          
+        /*
+        Show the tooltip when hovering
+        over the wrapper:
+        */
+        .tooltip-trigger:hover .tooltip {
+          display: block;
+        }
+    </style>
+  </head>
+  <body>
+    <p>
+      The traditional Japanese tea ceremony centers on the preparation, serving, and drinking of
+      <a href="/" class="tooltip-trigger">
+        matcha
+        <span class="tooltip">
+          A concentrated, powdered form of green tea
+        </span>
+      </a>
+      as hot tea.
+    </p>
+  </body>
+</html>

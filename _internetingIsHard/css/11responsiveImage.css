@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* For Debugging Purpose As To Clearly See The Outline */
+    border: solid;
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    display: flex;
+    justify-content: cneter;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+
+.menu {
+    background-color: hsla(212, 63%, 60%, 1);
+    height: 80px;
+}
+
+.header {
+    background-color: hsla(211, 100%, 84%, 1);
+    height: auto;
+    justify-content: inherit;
+    align-items: inherit;
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+}
+
+.content {
+    background-color: hsla(209, 16%, 92%, 1);
+    height: 600px;
+}
+
+.illustration {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.sign-up {
+    background-color: hsla(211, 95%, 91%, 1);
+}
+
+.feature-1 {
+    background-color: hsla(37, 83%, 75%, 1);
+}
+
+.feature-2 {
+    background-color: hsla(358, 74%, 77%, 1);
+}
+
+.feature-3 {
+    background-color: hsla(242, 83%, 87%, 1);
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: hsla(358, 74%, 77%, 1);
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+        background-color: hsla(37, 83%, 75%, 1);
+    }
+
+    .sign-up,
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 961px) {
+    body {
+        background-color: hsla(211, 100%, 84%, 1);
+    }
+
+    .page {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    .sign-up {
+        height: 200px;
+        order: 1;
+    }
+
+    .content {
+        order: 2;
+    }
+
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        width: 33.3%;
+    }
+
+    .header {
+        height: 400px;
+    }
+
+}
+
+

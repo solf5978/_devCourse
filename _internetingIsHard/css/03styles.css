@@ -1,0 +1,44 @@
+body {
+    /* color: hsla(0, 100%, 50%, 1); */
+    color: hsla(0, 0, 25%, 1); /* Dark Gray */
+    background-color: hsla(0, 0%, 93%, 1); /* Light Gray */
+    font-size: 1rem;
+}
+
+h1, h2, h3 {
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+h1 {
+    font-size: 2.25rem;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: lower-greek;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+}
+
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+strong {
+    font-weight: normal;
+    font-style: italic;
+}
