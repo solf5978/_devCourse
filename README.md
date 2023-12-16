@@ -7,7 +7,7 @@
 
 ### JavaScript
 ---
-- [_modernJSBootCamp] (https://www.udemy.com/course/javascript-beginners-complete-tutorial/) By Colt Steele & Stephen Grider
+- [_modernJSBootCamp](https://www.udemy.com/course/javascript-beginners-complete-tutorial/) By Colt Steele & Stephen Grider
 - 
 
 ### Python
