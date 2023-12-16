@@ -1,6 +1,5 @@
 // function getCard() {
 // 	const values = [
-// 		'1',
 // 		'2',
 // 		'3',
 // 		'4',
@@ -32,7 +31,6 @@ function pick(arr) {
 
 function getCard() {
 	const values = [
-		'1',
 		'2',
 		'3',
 		'4',
