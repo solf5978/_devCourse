@@ -2,8 +2,16 @@
 const shuffleArray = function(arr) {
   let newArray = [...arr];
 
+  let newPos;
+  for (let oldPos = 0; newArray.length; oldPos++) {
+    newPos = Math.floor(Math.random() * newArray.length);
+    [newArray[oldPos], newArray[newPos]] = [newArray[newPos], newArray[oldPos]];
+  }
+  console.log(newArray);
   return newArray;
 };
+
+
 
 
 
