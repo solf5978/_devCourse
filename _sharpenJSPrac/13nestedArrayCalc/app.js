@@ -1,7 +1,15 @@
 'use strict';
 
 const totalLength = function(array) {
-  
+    let tempLen = 0;
+    for (let elem of array) {
+        if (Array.isArray(elem)) {
+            tempLen = tempLen +totalLength(elem);
+        } else {
+            tempLen++;
+        }
+    }
+    return tempLen;
 };
 
 
