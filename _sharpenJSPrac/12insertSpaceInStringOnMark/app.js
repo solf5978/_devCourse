@@ -10,7 +10,7 @@
 
 const insertWhiteSpace = function(str) {
   //return str.replace(/([A-Z])/g," $1");
-  return str.replace(/(?<=[a-z])([A-Z])/g," $1");
+  return str.replace(/(?<=[a-z\?])([A-Z])/g," $1");
 };
 
 
