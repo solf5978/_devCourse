@@ -1,10 +1,13 @@
 
 const multiplying = function(num1) {
-  
+  return function(num2) {
+    return function(num3) {
+        return num3 * num2 * num1;
+    }
+  }
 };
 
 let result = multiplying(3)(5)(2);
-
 
 
 
