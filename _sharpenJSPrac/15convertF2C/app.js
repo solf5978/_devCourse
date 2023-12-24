@@ -4,7 +4,16 @@
 // celsius = (F - 32) * 5/9 fahrenheit = (C * 9/5) + 32
 
 const convertDegrees = function(str) {
-  
+    let regEx = /^-*\d{1,}°*([CFcf]|Celsius|Fahrenheit)$/;
+    let degreeUnit = /[Cc]/;
+
+    if (regEx.test(str)) {
+        if (degreeUnit.test(str)) {
+            return `${Math.round(parseInt(str) * (9 / 5)) + 32}°F`;
+        }
+        return `${Math.round((parseInt(str) - 32) * (5 / 9))}°C`;
+    }
+    return "Error: Invalid Input";
 };
 
 
