@@ -7,6 +7,7 @@
 
 ### HTML & CSS
 ---
+- [_compGuide2HTML](https://www.udemy.com/course/the-complete-guide-to-html/) By Colt Steele
 - [_htmlCSSBootCamp](https://www.udemy.com/course/html-and-css-bootcamp/) By Colt Steele
 
 ### JavaScript
