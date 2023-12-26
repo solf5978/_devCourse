@@ -1,0 +1,12 @@
+body {
+  background-color: yellow;
+}
+
+h2 {
+  background-color: rgba(212, 0, 255, 0.279);
+}
+
+h1 {
+  background-color: rgb(0, 255, 255);
+  opacity: 0.5;
+}
