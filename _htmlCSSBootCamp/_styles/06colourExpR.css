@@ -1,0 +1,18 @@
+p {
+  color: purple;
+}
+
+a {
+  color: cyan;
+  background-color: magenta;
+}
+
+h2 {
+  color: orangered;
+  background-color: olive;
+}
+
+h1 {
+  color: teal;
+  background-color: yellow;
+}
