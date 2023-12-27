@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Form</title>
+  </head>
+  <body>
+    <h1>Checkout</h1>
+
+    <form action="/checkout">
+      <label for="paymentMethod">Payment Method</label>
+      <select name="paymentMethod" id="paymentMethod">
+        <option value="4566">Visa Ending in 4566</option>
+        <option value="1099">American Express Ending in 1099</option>
+        <option value="2346">Discover Ending in 2346</option>
+      </select>
+      <fieldset>
+        <legend>Shipping Method</legend>
+        <div>
+          <input type="radio" id="d2Shipping" name="dayShipping" value="2" />
+          <label for="d2Shipping">FREE - Two Day Shipping </label>
+        </div>
+        <div>
+          <input type="radio" id="d4Shipping" name="dayShipping" value="4" />
+          <label for="d4Shipping"
+            >FREE - Standard Shipping (4-5 Business Days)
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="d5Shipping" name="dayShipping" value="5" />
+          <label for="">FREE - No Rush Shipping (5 Business Days) </label>
+        </div>
+      </fieldset>
+      <div>
+        <label for="giftPKG">This is a gift</label>
+        <input type="checkbox" name="gifted" />
+      </div>
+
+      <div>
+        <button>Place Your Order</button>
+      </div>
+    </form>
+  </body>
+</html>
