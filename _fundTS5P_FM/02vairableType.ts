@@ -41,3 +41,9 @@ humidity = 6; //  6 is of type 6
  *     endTime = new Date()
  * }, RANDOM_WAIT_TIME)
  */
+
+/**
+ * let frontEndMastersFounding = new Date("Jan 1, 2012")
+ * let date1 = frontEndMastersFounding
+ * let date2 = frontEndMastersFounding as any;
+ */
