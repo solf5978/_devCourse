@@ -47,3 +47,6 @@ humidity = 6; //  6 is of type 6
  * let date1 = frontEndMastersFounding
  * let date2 = frontEndMastersFounding as any;
  */
+
+const humid3 = 79 as number;
+let date3 = "ooops" as any as Date;

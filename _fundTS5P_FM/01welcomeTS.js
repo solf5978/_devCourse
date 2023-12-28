@@ -59,7 +59,7 @@ function addNumbers(a, b) {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, timeout(500)];
-                case 1:
+                case 1:         
                     _a.sent();
                     return [2 /*return*/, a + b];
             }
