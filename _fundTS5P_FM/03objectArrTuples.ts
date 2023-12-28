@@ -13,6 +13,14 @@ let vehicle: {
   year: number;
 } = myCar;
 
-function printCar(vehicle: { make: string; model: string; year: number }) {
-  console.log(`${vehicle.make} ${vehicle.model} ${vehicle.year}`);
+function printCar(vehicle: { 
+  make: string; 
+  model: string; 
+  year: number;
+  chargeVoltage?: number  // ? -> Optional Props
+}) {
+  let str = `${vehicle.make} ${vehicle.model} ${vehicle.year}`
+  str += `// $vehicle.chargeVoltage}`
+  console.log(str)
 }
+
