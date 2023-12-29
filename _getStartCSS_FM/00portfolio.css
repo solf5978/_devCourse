@@ -32,6 +32,16 @@ body {
     font-size: var(--font-size);
 }
 
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+a {
+    color: var(--magenta);
+}
+
 
 
 .wrapper {

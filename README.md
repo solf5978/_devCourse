@@ -12,6 +12,7 @@
 ---
 
 - [_compGuide2HTML](https://www.udemy.com/course/the-complete-guide-to-html/) By Colt Steele
+- [_getStartCSS](https://frontendmasters.com/teachers/jen-kramer/) By Jen Kramer
 - [_htmlCSSBootCamp](https://www.udemy.com/course/html-and-css-bootcamp/) By Colt Steele
 
 ### JavaScript
