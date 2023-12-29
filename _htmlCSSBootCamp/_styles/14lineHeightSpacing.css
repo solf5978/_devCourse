@@ -13,7 +13,7 @@ body {
 
 p {
   font-weight: bold;
-  line-height: 2;
+  line-height: 2; /* Multiplier works well */
   word-spacing: 20px;
 }
 
