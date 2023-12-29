@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap');
 
 :root {
     --black: #171321;
@@ -36,9 +36,6 @@ body {
 section {
     background-color: var(--white);
 }
-
-
-
 
 
 .wrapper {
