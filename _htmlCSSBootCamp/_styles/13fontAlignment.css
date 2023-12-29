@@ -1,0 +1,20 @@
+h1 {
+  font-family: "Segoe UI", Futura, sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+  text-align: center;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: justify;
+}
+
+p {
+  font-weight: bold;
+}
+
+a {
+  font-style: italic;
+}
