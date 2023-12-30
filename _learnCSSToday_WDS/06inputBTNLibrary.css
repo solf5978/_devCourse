@@ -10,3 +10,9 @@ input {
     padding: 0.5em;
     border-radius: .2em;
 }
+
+.input:focus {
+    border-color: #0af;
+    box-shadow: 0 0 5px 0 #0af;
+}
+
