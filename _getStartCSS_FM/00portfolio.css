@@ -90,6 +90,14 @@ a:hover {
 #contact p:last-child {
     margin-top: 3rem;
 }
+/**
+ * Navbar
+ */
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 1rem;
+}
 
 .wrapper {
     min-height: 100%;
