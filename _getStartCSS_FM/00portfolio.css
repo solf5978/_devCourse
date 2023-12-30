@@ -152,6 +152,18 @@ nav [class*="fa-"]:hover {
     background-color: var(--hotMag);
 }
 
+@media (min-width: 640px) {
+    nav {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
+
 .wrapper {
     min-height: 100%;
     /* For Debugging Purpose As To Clearly See The Outline */
