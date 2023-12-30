@@ -152,6 +152,24 @@ nav [class*="fa-"]:hover {
     background-color: var(--hotMag);
 }
 
+/*  Footer Section  */
+
+footer {
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+}
+
+
 @media (min-width: 640px) {
     nav {
         max-width: 1280px;
@@ -163,6 +181,9 @@ nav [class*="fa-"]:hover {
         margin-right: auto;
     }
 }
+
+
+
 
 .wrapper {
     min-height: 100%;
