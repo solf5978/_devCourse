@@ -1,0 +1,13 @@
+span:first-child,
+span:last-child,
+span:first-of-type,
+span:last-of-type,
+span:nth-child(3),
+span:nth-child(even),
+span:nth-child(2n),
+span:nth-child(odd),
+span:nth-child(2n + 1),
+span:nth-last-child(2),
+span:nth-of-type(2n + 1) {
+    color: white;
+}
