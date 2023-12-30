@@ -47,6 +47,10 @@ a:hover {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+}
+
 /*  Intro Section   */
 #intro {
     padding-bottom: 4rem 1rem 10rem 1rem;
@@ -231,7 +235,7 @@ footer ul {
 }
 
 #projects img {
-    width: 640px;
+
     margin: 2rem 4rem 0;
     border-left: 1px solid var(--aqua);
     border-top: 1px solid var(--aqua);
@@ -241,13 +245,28 @@ footer ul {
 
 figure {
     font-family: var(--mono);
-    font-size: smaller;
+    font-size: 3px;
     margin-top: -10px;
-    padding-left: 17.5rem;
+    padding-left: 10.5rem;
     padding-bottom: 1.5rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 550px) {
+    article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .text {
+        order: 2;
+        text-align: right;
+    }
+    #projects ul {
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 850px) {
     nav {
         max-width: 1200px;
         margin: 0 auto;
