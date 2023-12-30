@@ -1,0 +1,12 @@
+input {
+    margin: 0.25rem;
+
+}
+
+.input {
+    border: 1px solid #aaa;
+    outline: none;
+    font-size: inherit;
+    padding: 0.5em;
+    border-radius: .2em;
+}
