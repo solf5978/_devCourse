@@ -117,7 +117,17 @@ nav ul {
 nav li:first-child {
     flex-basis: 100%;
     text-align: center;
-    
+
+}
+
+nav [class^="fa-"] {
+    font-size: 150%;
+    color: var(--aqua);
+}
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
 }
 
 nav a {
@@ -126,8 +136,20 @@ nav a {
     display: block;
 }
 
-nav a:hover {
+nav a:hover,
+nav [class*="fa-"]:hover {
     color: var(--magenta);
+}
+
+.resumeBTN {
+    background-color: var(--magenta);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.resumeBTN:hover {
+    color: var(--white);
+    background-color: var(--hotMag);
 }
 
 .wrapper {
