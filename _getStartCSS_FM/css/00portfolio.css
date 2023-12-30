@@ -251,12 +251,17 @@ figure {
     padding-bottom: 1.5rem;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 800px) {
     article,
     .altReversed {
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         gap: 1rem;
+    }
+    
+    #projects {
+        min-width: 1200px;
+        margin: 0 auto;
     }
     #projects img {
         grid-column: 1/6;
@@ -290,7 +295,7 @@ figure {
     }
 }
 
-@media (min-width: 850px) {
+@media (min-width: 800px) {
     nav {
         max-width: 1200px;
         margin: 0 auto;
@@ -302,14 +307,11 @@ figure {
     }
 }
 
-
-
-
-.wrapper {
+/* .wrapper {
     min-height: 100%;
     /* For Debugging Purpose As To Clearly See The Outline */
     border: solid;
-}
+} */
 
 
   
