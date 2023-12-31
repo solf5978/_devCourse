@@ -16,3 +16,32 @@ input {
     box-shadow: 0 0 5px 0 #0af;
 }
 
+.input.input-success {
+    border-color: #27ae60;
+}
+
+.input.input-success:focus {
+    border-color: #0f0;
+    box-shadow: 0 0 5px 0 #0f0;
+}
+
+.input.input-error {
+    border-color: #eb5757;
+}
+
+.input.input-error:focus {
+    border-color: #f00;
+    box-shadow: 0 0 5px 0 #f00;
+}
+
+.input.input-large {
+    font-size: 1.25rem;
+}
+
+.input.input-small {
+    font-size: .75rem;
+}
+
+.input:disabled {
+    background-color: #eaeaea;
+}
