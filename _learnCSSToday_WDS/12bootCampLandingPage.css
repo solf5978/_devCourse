@@ -20,6 +20,8 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+
+    position: relative;
 }
 
 .nav {
@@ -85,3 +87,8 @@ body {
     background-color: hsl(200, 100%, 40%);
 }
 
+.scroll-down-icon {
+    position: absolute;
+    bottom: 1rem;
+    width: 30px;
+}
