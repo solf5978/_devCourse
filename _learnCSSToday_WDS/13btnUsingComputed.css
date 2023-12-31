@@ -37,6 +37,7 @@
         var(--bkgd-hue),
         var(--bkgd-saturation),
         var(--border-lightness), 1);
+}
 
 .btn.btn-primary {
     background-color: hsla(271, 70%, 50%, 1);
