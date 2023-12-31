@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bkgd-hue: 0%;
+    --bkgd-saturation: 0%;
+    --bkgd-lightness: 90%;
+    --border-lightness: calc(var(--bkgd-lightness) - 20%);
+}
+
 .btn {
     background: none;
     border: none;
@@ -9,8 +16,14 @@
 }
 
 .btn {
-    background-color: hsla(0, 0%, 90%, 1);
-    border: 1px solid hsla(0, 0%, 70%, 1);
+    background-color: hsla(
+        var(--bkgd-hue),
+        var(--bkgd-saturation),
+        var(--bkgd-lightness), 1);
+    border: 1px solid hsla(        
+        var(--bkgd-hue),
+        var(--bkgd-saturation),
+        var(--border-lightness), 1);
     outline: none;
     cursor: pointer;
     padding: .5em 1em;
@@ -20,8 +33,10 @@
 .btn:hover,
 .btn:focus {
     background-color: hsla(0, 0%, 80%, 1);
-    box-shadow: 0 0 5px 0 hsla(0, 0%, 70%, 1);
-}
+    box-shadow: 0 0 5px 0 hsla(
+        var(--bkgd-hue),
+        var(--bkgd-saturation),
+        var(--border-lightness), 1);
 
 .btn.btn-primary {
     background-color: hsla(271, 70%, 50%, 1);
