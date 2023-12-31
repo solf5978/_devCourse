@@ -92,3 +92,33 @@ body {
     bottom: 1rem;
     width: 30px;
 }
+
+.section {
+    padding: 2rem;
+}
+
+.section-title {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+}
+
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 450px));
+    justify-content: center;
+}
+
+.curriculum-grid-item {
+    display: flex;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 50px;
+}
+
+.curriculum-grid-item img {
+    width: 50px;
+    margin-right: 1rem;
+}
