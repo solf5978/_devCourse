@@ -10,8 +10,20 @@
     background-color: #333;
     align-items: stretch;
     grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    padding: 10px;
 }
 
 img {
     min-width: 100%;
+    border: 1px solid white;
+
+}
+
+.tall {
+    grid-row: span 2;
+}
+
+.wide {
+    grid-column: span 2;
 }
