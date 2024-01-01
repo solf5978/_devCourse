@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+div {
+  max-width: 400px;
+  border-bottom: 1px solid #999;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  padding: 1rem;
+}
+div:last-child {
+  border: none;
+}
+div > * {
+  padding: 1rem;
+}
+dt {
+  font-weight: bold;
+  grid-column-start: 1;
+  /* border: 1px dotted blue; */
+}
+dd {
+  /* TRouBLe */
+  margin: 0;
+  grid-column-start: 2;
+  /* border: 1px solid red; */
+}
+dd:first-of-type {
+  grid-row-start: 1;
+}
+div:nth-child(even) {
+  background-color: #eee;
+}
