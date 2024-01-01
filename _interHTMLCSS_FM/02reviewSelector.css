@@ -9,8 +9,8 @@ body {
   font-size: 1.2rem;
 }
 
-Elements, classes, IDs
-Groups of selectors
+/* Elements, classes, IDs */
+/* Groups of selectors */
 /* Descendent selectors */
 ul ul a {
     color: inherit;
@@ -21,8 +21,18 @@ ul.nested > li {
     color: inherit;
 }
 
-Adjacent/general sibling
-Attribute selectors
+/* Adjacent/general sibling */
+ul.nested li ~ li {
+    color: inherit;
+}
+/* Attribute selectors */
+[href] {
+    color: inherit;
+}
 
+/* Exact value of the attribute */
+a[href*="???"] {
+    color: inherit;
+}
 
 
