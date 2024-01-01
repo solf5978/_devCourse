@@ -35,4 +35,7 @@ a[href*="???"] {
     color: inherit;
 }
 
+a[href*=".pdf"]::after {
+    content: ' (PDF) ';
+}
 
