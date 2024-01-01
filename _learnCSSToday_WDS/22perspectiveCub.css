@@ -39,25 +39,15 @@ body {
                 translate(calc(var(--size)) / 2);
 }
 
-.front {
-    --rotate-y: 90deg;
-}
+.front {--rotate-y: 90deg;}
 
-.right {
-    --rotate-y: -90deg;
-}
+.right {--rotate-y: -90deg;}
 
-.top {
-    --rotate-x: 90deg;
-}
+.top {--rotate-x: 90deg;}
 
-.bottom {
-    --rotate-x: -90deg;
-}
+.bottom {--rotate-x: -90deg;}
 
-.back {
-    --rotate-y: 180deg;
-}
+.back {--rotate-y: 180deg;}
 
 @keyframes spin {
     0%{transform: rotateX(0) rotateY(0);}
