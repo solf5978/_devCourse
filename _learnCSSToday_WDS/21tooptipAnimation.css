@@ -16,13 +16,24 @@ body {
 [data-tooltip]::after {
     --tooltip-color: #333;
     --arrow-size: 0.5rem;
+    --scale: 0;
+
     position: absolute;
     left: 50%;
-    transform: translate(-50%, var(--translate-y));
+    transform: translate(-50%, var(--translate-y)) scale(var(--scale));
+
+    transition: transform 500ms;
+    transition-timing-function: linear;
+
 } 
 
+[data-tooltip]:hover::before,
+[data-tooltip]:hover::after {
+    --scale: 1;
+    transition-timing-function: cubic-bezier(0.25, 0.1m 0.45, 1.93);
+}
 
-[data-tooltip]:hover::before {
+[data-tooltip]::before {
     --translate-y: calc(-100% - var(--arrow-size));
     content: attr(data-tooltip);
     position: absolute;
@@ -35,6 +46,8 @@ body {
     width: max-content;
     max-width: 100%;
     text-align: center;
+
+    transform-origin: center;
 }
 
 [data-tooltip]::after {
@@ -53,4 +66,5 @@ body {
     border-top-color: var(--tooltip-color);
     transform: translate(-50%, 0.5rem);
     left: 50%;
+    transform-origin: top center;
 }
