@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    perspective: 400px;
+}
+
+.cube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side {
+    --size: 75px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--size);
+    height: var(--size);
+
+    position: absolute;
+    background-color: hsla(200, 100%, 50%, 0.5);
+    border: 1px solid hsla(200, 100%, 10%, 0.5);
+}
+
+.right {
+    transform: rotateY(90deg);
+}
