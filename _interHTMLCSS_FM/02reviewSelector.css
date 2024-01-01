@@ -11,12 +11,16 @@ body {
 
 Elements, classes, IDs
 Groups of selectors
-Descendent selectors
+/* Descendent selectors */
 ul ul a {
     color: inherit;
 }
 
-Parent-child
+/* Parent-child */
+ul.nested > li {
+    color: inherit;
+}
+
 Adjacent/general sibling
 Attribute selectors
 
