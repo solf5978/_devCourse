@@ -22,10 +22,6 @@ article ~h2 {
     border-bottom: 2px dotted var(--sideColor);
 }
 
-h2::after {
-    color: red;
-}
-
 .mainDesc {
     display: grid;
     grid-template-columns: 3fr 1fr;
