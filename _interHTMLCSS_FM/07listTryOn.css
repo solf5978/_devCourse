@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor: aquamarine;
+    --sideColor: cyan;
+}
+
+body {
+    margin: 0;
+    font-family: "Cherry Cream Soda", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+article h2, 
+article ~h2 {
+    color: var(--mainColor);
+    border-bottom: 2px dotted var(--sideColor);
+}
+
+h2::after {
+    color: red;
+}
+
+.mainDesc {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.mainDesc img {
+    border-radius: 7px;
+    min-width: 100%;
+}
+
+.mainDesc dt {
+    font-weight: bold;
+    color: var(--mainColor);
+}
+
+.mainDesc dd {
+    padding: 1.25em;
+}
+
+.sectionIngredients {
+    line-height: 1.25;
+    list-style-type: square;
+}
+
+.sectionFreezeInstruction {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    min-width: 640px;
+}
+
+footer {
+    background-color: var(--mainColor);
+    color: #033;
+    padding: 1.75rem;
+}
+
+
+
+
+
+
