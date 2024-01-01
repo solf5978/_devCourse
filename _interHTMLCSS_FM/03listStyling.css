@@ -1,0 +1,12 @@
+/* declare border box sizing so the borders placed on elements doesn't disrupt our layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* by placing a font family and size on the body element, all other elements inherit this style, leading to uniform page styling that's easily overridden as needed */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
