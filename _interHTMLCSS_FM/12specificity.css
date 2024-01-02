@@ -19,7 +19,7 @@ footer {
   p::first-line {
     color: blue;
   }
-/* 004 */
+/* 002 */
   h1::after, h1::before {
     content: ' ☕️ ';
   }
