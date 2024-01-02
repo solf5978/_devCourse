@@ -20,7 +20,7 @@ figcaption {
     padding: 0.5rem;
 }
 
-a {
+figure a:any-link {
     background-color: var(--dark-purple);
     color: white;
     display: block;
