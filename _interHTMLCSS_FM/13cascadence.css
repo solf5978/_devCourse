@@ -1,40 +1,81 @@
-@import "14atLayer.css" layer(newLayer);
+@layer standard, newLayer;
 
-:root {
-    --pink: #de0051;
-    --purple: mediumslateblue;
+@layer newLayer {
+    :root {
+        --grey: #999;
+        --radius: 10px;
+        --dark-purple: purple;
+        /* Custom Prop Conflict */
+    }
+    
+    figure {
+        margin: 0;
+        border: 1px solid var(--grey);
+        border-radius: var(--radius);
+    }
+    
+    img {
+        border-radius: var(--radius) var(--radius) 0 0;
+        max-width: 100%;
+    }
+    
+    figcaption {
+        padding: 0.5rem;
+    }
+    
+    figure a:any-link {
+        background-color: var(--dark-purple);
+        color: white;
+        display: block;
+        text-decoration: none;
+        padding: 0.5rem;
+        border-radius: var(--radius);
+        text-align: center;
+    }
+    
+    a:hover {
+        background-color: orchid;
+        color: black;
+    }
 }
 
-/* basic styling */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Trebuchet MS", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    line-height: 1.5;
-    font-size: 1.2rem;
-}
-
-a:any-link {
-    color: var(--pink);
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-footer {
-    font-size: 0.9rem;
-    font-style: italic;
-}
-
-strong {
-    color: var(--pink);
-}
-
-p:nth-of-type(3)>strong {
-    font-weight: normal !important;
+@layer standard {
+    :root {
+        --pink: #de0051;
+        --purple: mediumslateblue;
+    }
+    
+    /* basic styling */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: "Trebuchet MS", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        line-height: 1.5;
+        font-size: 1.2rem;
+    }
+    
+    a:any-link {
+        color: var(--pink);
+    }
+    
+    a:hover {
+        text-decoration: none;
+    }
+    
+    footer {
+        font-size: 0.9rem;
+        font-style: italic;
+    }
+    
+    strong {
+        color: var(--pink);
+    }
+    
+    p:nth-of-type(3)>strong {
+        font-weight: normal !important;
+    }
 }
