@@ -2,7 +2,8 @@
     --grey: #999;
     --radius: 10px;
     --font: Arial, Helvetica, sans-serif;
-    --purple: purple;
+    --dark-purple: purple;
+    /* Custom Prop Conflict */
 }
 
 figure {
@@ -22,7 +23,7 @@ figcaption {
 }
 
 a {
-    background-color: var(--purple);
+    background-color: var(--dark-purple);
     color: white;
     display: block;
     text-decoration: none;
