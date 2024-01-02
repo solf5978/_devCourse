@@ -13,10 +13,11 @@
 
 - [_compGuide2HTML](https://www.udemy.com/course/the-complete-guide-to-html/) By Colt Steele
 - [_cssDemystified](https://cssdemystified.com/) By Kevin Powell
-- [_getStartCSS_FM](https://frontendmasters.com/teachers/jen-kramer/) By Jen Kramer
+- [_getStartCSS_FM](https://gettingstartedwith.css.education/) By Jen Kramer
 - [_htmlCSSBootCamp](https://www.udemy.com/course/html-and-css-bootcamp/) By Colt Steele
-- [_interHTMLCSS_FM](https://frontendmasters.com/courses/intermediate-html-css/) By Jen Kramer
-- [_learnCSSToday_WDS](https://courses.webdevsimplified.com/learn-css-today) By Web Dev Simplified
+- [_interHTMLCSS_FM](https://semantics-selectors.css.education/index.html/) By Jen Kramer
+- [_learnCSSToday_WDS](https://courses.webdevsimplified.com/learn-css-today/) By Web Dev Simplified
+- [_pracCSSLayout_FM](https://practical.css.education/) By Jen Kramer
 
 ### JavaScript
 
