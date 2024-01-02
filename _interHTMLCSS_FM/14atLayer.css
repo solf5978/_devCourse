@@ -1,7 +1,6 @@
 :root {
     --grey: #999;
     --radius: 10px;
-    --font: Arial, Helvetica, sans-serif;
     --dark-purple: purple;
     /* Custom Prop Conflict */
 }
@@ -10,7 +9,6 @@ figure {
     margin: 0;
     border: 1px solid var(--grey);
     border-radius: var(--radius);
-    font-family: var(--font);
 }
 
 img {
