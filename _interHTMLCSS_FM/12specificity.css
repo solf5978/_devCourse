@@ -27,11 +27,12 @@ footer {
   sup::after {
     content: '😃';
   }
-  
+  /* 002 */
   p > sup {
     background-color: orange;
     font-weight: bold;
   }
+  /* 011 */
   p:last-child {
     color: green;
   }
