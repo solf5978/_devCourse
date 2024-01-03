@@ -1,0 +1,1204 @@
+/* ---------------------------------------------------
+ * 0 Document Base Styles
+ * ---------------------------------------------------*/
+ :root {
+    --link-color: rgba(10, 47, 158, 1);
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: Muli;
+    margin: 0;
+    color: #151025;
+  }
+  
+  section {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 6rem;
+    position: relative;
+    background: #efefef;
+  }
+  
+  .highlight {
+    position: relative;
+  }
+  
+  .highlight:hover:before,
+  .highlight:active:before,
+  .highlight:focus:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(15, 10, 25, 0.15);
+    border-radius: 15px;
+  }
+  
+  a {
+    color: rgba(10, 47, 158, 1);
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    color: rgba(53, 68, 255, 1);
+  }
+  
+  a:visited {
+    color: rgba(164, 88, 255, 1);
+  }
+  
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section-title {
+    color: white;
+    background: linear-gradient(
+      240deg,
+      rgba(164, 88, 255, 1) 0%,
+      rgba(53, 68, 255, 1) 40%,
+      rgba(10, 47, 158, 1) 80%
+    );
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+  
+    margin: -6rem -6rem 3rem;
+    padding: 6rem;
+  }
+  
+  .section-title span a {
+    color: white;
+    font-size: 2rem;
+    float: right;
+    line-height: 56px;
+  }
+  
+  /* ----- Table of Contents -----------------------------*/
+  .table-of-contents {
+    counter-reset: section 1;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .table-of-contents ol {
+    /*   counter-increment: section; */
+    counter-reset: sub-section 3;
+    list-style-type: none;
+  }
+  
+  .table-of-contents ol li {
+    counter-increment: sub-section;
+  }
+  
+  .table-of-contents ol li:before {
+    content: counter(section) "." counter(sub-section) ") ";
+    opacity: 0.8;
+    font-size: 80%;
+  }
+  
+  .table-of-contents ol ol {
+    counter-reset: sub-section;
+    counter-reset: subsub-section;
+    list-style-type: none;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .table-of-contents ol ol li {
+    counter-increment: subsub-section;
+  }
+  
+  .table-of-contents ol ol li:before {
+    content: counter(section) "." counter(sub-section) "." counter(subsub-section)
+      ") ";
+  }
+  
+  .table-of-contents .image-contents {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1rem;
+    margin: 0 auto 3rem;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .table-of-contents .image-contents li {
+    overflow: hidden;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  
+  .table-of-contents .image-contents li:hover {
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.9);
+  }
+  
+  .table-of-contents .image-contents img {
+    height: 180px;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+  
+  article {
+    min-height: calc(100vh - 6rem);
+    padding: 3rem 0;
+    position: relative;
+  }
+  
+  .section-nav-buttons {
+    font-size: 4.8rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10rem;
+  }
+  
+  .table-of-contents .section-nav-buttons {
+    bottom: 25%;
+    margin-top: 0;
+  }
+  
+  .section-nav-buttons a {
+    text-decoration: none;
+  }
+  
+  .next-section.end,
+  .top-section.end {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+  
+  .next-section.bottom {
+    transform: rotate(-90deg);
+    display: inline-block;
+  }
+  
+  .next-section.end span,
+  .top-section.end span,
+  .next-section.bottom span {
+    font-size: initial;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  
+  .next-section.bottom span {
+    font-size: initial;
+    position: absolute;
+    left: -3rem;
+    bottom: 50%;
+    transform: translateY(50%) rotate(90deg);
+  }
+  
+  h1 {
+    font-size: 5.2rem;
+  }
+  
+  h2 {
+    font-size: 4.4rem;
+    position: relative;
+  }
+  
+  h3 {
+    font-size: 3.6rem;
+  }
+  
+  h4 {
+    font-size: 3rem;
+    position: relative;
+  }
+  
+  h2 .fa-eye {
+    font-size: 40%;
+    position: absolute;
+    left: 1rem;
+    top: 45%;
+    -webkit-text-fill-color: gray;
+    cursor: pointer;
+  }
+  
+  h4 .fa-eye {
+    font-size: 50%;
+    position: absolute;
+    left: -4rem;
+    top: 1.5rem;
+    -webkit-text-fill-color: gray;
+    cursor: pointer;
+  }
+  
+  .title:before {
+    content: "#";
+    opacity: 0.3;
+    position: absolute;
+    left: 3.5rem;
+    text-align: right;
+  }
+  
+  .sub-section-title {
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  .sub-section-title:before {
+    left: -2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: initial;
+  }
+  
+  /* -----------------------------------
+   * Posters
+   * --------------------------------- */
+  .poster-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .poster {
+    box-sizing: border-box;
+    height: 440px;
+    width: 320px;
+    background: white;
+    box-shadow: 2px 2px 6px rgba(15, 10, 25, 0.5);
+    position: relative;
+  }
+  
+  .poster figcaption {
+    font-size: 1.6rem;
+    position: absolute;
+    bottom: -4rem;
+    left: 50%;
+    transform: translate(-50%);
+    text-transform: uppercase;
+  }
+  
+  .poster-img {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+  
+  /* ----- 1.4.1 Single Shadow -----------------------------*/
+  .poster-img.good-bad {
+    background: url("https://lh6.googleusercontent.com/proxy/k0MtsjciNVfTD2_cAlQd1wj-oHNXh5p4GiBhzEjiQdO495Vm4FGaLV93sOncPYv8JFdo_OLfudFPRigqYevbPpme1Cowz5Dl2jJv3C0tfBjkRyzEVTtFfEUgOQ");
+  }
+  
+  .good-bad {
+    font-size: 4.8rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    word-break: break-word;
+    padding: 0 6rem;
+    position: relative;
+    background: rgb(151, 151, 153);
+    background: linear-gradient(
+      230deg,
+      rgba(151, 151, 153, 1) 0%,
+      rgba(225, 225, 226, 1) 50%
+    );
+  }
+  
+  .bad-sans {
+    color: rgba(205, 0, 0, 0.8);
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 3px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .bad-sans span {
+    text-align: right;
+    display: block;
+  }
+  
+  .bad-sans span span {
+    text-align: center;
+  }
+  
+  .good-serif {
+    /*   background: rgb(151,151,153);
+  background: linear-gradient(230deg, rgba(151,151,153,1) 0%, rgba(225,225,226,1) 50%); */
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    color: rgba(225, 225, 226, 1);
+    position: absolute;
+    top: -5px;
+    line-height: 1;
+    left: 6rem;
+    width: 200px;
+  
+    text-shadow: 3px 1px 6px rgba(0, 0, 0, 0.5);
+  
+    z-index: 0;
+    font-size: 109%;
+  }
+  
+  /* ----- 1.4.2 Multiple Shadows -----------------------------*/
+  .poster-img.hell-yeah {
+    background: url("https://media1.popsugar-assets.com/files/thumbor/91jIc5mOjPL9VqdYiA01XmfOyrc/fit-in/1200x630/filters:format_auto-!!-:strip_icc-!!-:fill-!white!-/2019/07/09/466/n/45005349/4984a972e7ba418f_Screen_Shot_2019-07-09_at_6.11.34_AM/i/Hell-Yeah-002-x-Typography-Poster.png");
+  }
+  
+  .hell-yeah:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #51cada;
+    border: 20px solid #e5e6e3;
+  }
+  
+  .hell-yeah span {
+    font-size: 10rem;
+    display: block;
+    font-family: Pacifico;
+    line-height: 1;
+    transform: skewX(-6deg) rotate(-10deg) translate(5px, -10px);
+    margin: 0;
+    padding: 0;
+    text-shadow: -1px 1px 1px black, -2px 2px 1px black, -3px 3px 1px black,
+      -4px 4px 1px black, -5px 5px 1px black, -6px 6px 1px black,
+      -7px 7px 1px black, -8px 8px 1px black, -9px 9px 1px black,
+      -10px 10px 1px black, -11px 11px 1px black, -12px 12px 1px black,
+      -13px 13px 1px black, -14px 14px 1px black, -15px 15px 1px black,
+      -16px 16px 1px black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  .hell-yeah span:first-child {
+    position: relative;
+    left: 10px;
+    color: #fac61b;
+  }
+  
+  .hell-yeah span:last-child {
+    position: relative;
+    right: 10px;
+    color: #ff0a83;
+  }
+  
+  /* ----- 1.4.3 Layered Shadows -----------------------------*/
+  .poster-img.disco {
+    background: url("https://www.lovefrankie.com/wp-content/uploads/2019/11/DISCO.jpg");
+  }
+  
+  .disco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .poster-design.disco:before,
+  .poster-design.disco:after {
+    content: "";
+    position: absolute;
+    top: 8rem;
+    width: 100%;
+    height: 10px;
+    background: black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .poster-design.disco:after {
+    bottom: 8rem;
+    top: auto;
+  }
+  
+  .disco p {
+    font-family: "Bowlby One SC", sans-serif;
+    text-shadow: 0px 4px 0px #feed02, 0 8px 0 #f9bc2a, 0 12px 0 #f39103,
+      0 16px 0 #e84f1a, 0 20px 0 #e6332a, 0 24px 0 #e5007c, 0 28px 0 #d80a58,
+      0 32px 0 #951a80, 0 36px 0 #652382, 0 40px 0 #2a2e81, 0 44px 0 #1e67b1,
+      0 48px 0 #0c8dd3;
+    transform: translateY(-20px);
+    z-index: 1;
+  }
+  
+  .disco p:before {
+    content: "Disco.";
+    color: black;
+    position: absolute;
+    z-index: 3;
+    text-shadow: none;
+  }
+  
+  .disco p:after {
+    content: "";
+    background: white;
+    width: 100%;
+    position: absolute;
+    height: 34px;
+    left: 0;
+    top: 4rem;
+    z-index: 2;
+  }
+  
+  /* ----- 1.4.4 Complex Shadows -----------------------------*/
+  .poster-img.no-me {
+    background: url("https://ctl.s6img.com/society6/img/vJYNIeEkUwzJQlaLTRAkVoK_LDM/w_1500/prints/~artwork/s6-original-art-uploads/society6/uploads/misc/8b49a65467374c35ad015ac8402930c3/~~/its-a-no-from-me-2-typography-poster-design-prints.jpg");
+  }
+  
+  .no-me {
+    padding-top: 4.4rem;
+    text-align: center;
+    background: #ffca76;
+    position: relative;
+    border-top: 20px solid white;
+    border-bottom: 20px solid white;
+  }
+  
+  .no-me p {
+    font-family: "Oswald";
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+    color: #fbd3dc;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  
+    z-index: 20;
+    position: relative;
+  }
+  
+  .no-me p:before {
+    position: absolute;
+    z-index: -1;
+    text-shadow: -1px -1px 0 white, 3px 3px 0 #46b2af, 1px 1px 0 #f2682e,
+      2px 2px 0 #f2682e, 3px 3px 0 #f2682e, 4px 4px 0 #f2682e, 5px 5px 0 #f2682e,
+      6px 6px 0 #f2682e, 7px 7px 0 #f2682e, 8px 8px 0 #f2682e, 9px 9px 0 #f2682e,
+      10px 10px 0 #f2682e, 11px 11px 0 #f2682e, 12px 12px 0 #f2682e,
+      13px 13px 0 #f2682e, 14px 14px 0 #f2682e, 15px 15px 0 #f2682e;
+  }
+  
+  /* .no-me p:before {
+    text-shadow: 0 15px 0 #46B2AF;
+    transform: skewX(45deg) translateX(-44px);
+    position: absolute;
+    color: transparent;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: black;
+    z-index: -1;
+  } */
+  
+  .no-me p:after {
+    position: absolute;
+    transform: translate(-96px, 16px);
+    color: transparent;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: black;
+    z-index: -2;
+    text-shadow: -1px 1px 0 #f59838, -2px 2px 0 #f59838, -3px 3px 0 #f59838,
+      -4px 4px 0 #f59838, -5px 5px 0 #f59838, -6px 6px 0 #f59838,
+      -7px 7px 0 #f59838, -8px 8px 0 #f59838, -9px 9px 0 #f59838,
+      -10px 10px 0 #f59838, -11px 11px 0 #f59838, -12px 12px 0 #f59838,
+      -13px 13px 0 #f59838, -14px 14px 0 #f59838, -15px 15px 0 #f59838,
+      -16px 16px 0 #f59838, -17px 17px 0 #f59838, -18px 18px 0 #f59838,
+      -19px 19px 0 #f59838, -20px 20px 0 #f59838, -21px 21px 0 #f59838,
+      -22px 22px 0 #f59838, -23px 23px 0 #f59838, -24px 24px 0 #f59838,
+      -25px 25px 0 #f59838, -26px 26px 0 #f59838, -27px 27px 0 #f59838,
+      -28px 28px 0 #f59838, -29px 29px 0 #f59838, -30px 30px 0 #f59838;
+  }
+  
+  .no-me p:first-child:before,
+  .no-me p:first-child:after {
+    content: "It's a";
+  }
+  
+  .no-me p:nth-child(2):before,
+  .no-me p:nth-child(2):after {
+    content: "No";
+  }
+  
+  .no-me p:nth-child(3):before,
+  .no-me p:nth-child(3):after {
+    content: "from";
+  }
+  
+  .no-me p:nth-child(4):before,
+  .no-me p:nth-child(4):after {
+    content: "Me";
+  }
+  
+  .no-me p:nth-child(2) {
+    font-size: 11rem;
+    letter-spacing: -0.04em;
+    margin-bottom: 6px;
+  }
+  
+  .no-me p:nth-child(3) {
+    letter-spacing: -0.02em;
+  }
+  
+  .no-me p:nth-child(4) {
+    font-size: 10rem;
+  }
+  
+  /* ----- 1.4.5 Complex Lettering -----------------------------*/
+  .poster-img.competition {
+    background: url("http://bookcoverarchive.com/wp-content/uploads/amazon/competition.jpg");
+  }
+  
+  .poster-design.competition {
+    background: black;
+    text-align: center;
+  }
+  
+  .competition .cover {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18rem;
+    line-height: 0.7em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 4rem;
+    color: white;
+  }
+  
+  .cover span {
+    position: relative;
+  }
+  
+  .cover .char1 {
+    margin-left: -0.05em;
+    z-index: 4;
+    text-shadow: 0.05em 0.05em 0.2em rgba(10, 10, 10, 0.8);
+  }
+  
+  .cover .char2 {
+    margin-left: -0.09em;
+    top: 0.05em;
+    z-index: 3;
+    text-shadow: 0.05em 0.01em 0.3em rgba(10, 10, 10, 0.8);
+  }
+  
+  .cover .char3 {
+    margin-left: -0.05em;
+    z-index: 9;
+    text-shadow: -0.02em 0.02em 0.14em rgba(10, 10, 10, 0.8);
+  }
+  
+  .cover .char4 {
+    margin-left: -0.05em;
+    top: -0.01em;
+    z-index: 5;
+    text-shadow: 0.01em -0.01em 0.14em rgba(10, 10, 10, 0.8);
+  }
+  
+  .cover .char5 {
+    margin-left: -0.06em;
+    top: 0.02em;
+    z-index: 2;
+    text-shadow: -0.02em -0.02em 0.14em rgba(10, 10, 10, 0.8);
+  }
+  
+  .cover .char6 {
+    margin-left: -0.06em;
+    z-index: 11;
+    text-shadow: -0.02em -0.02em 0.14em rgba(10, 10, 10, 0.8);
+  }
+  
+  .cover .char7 {
+    margin-left: -0.05em;
+    z-index: 8;
+    text-shadow: -0.02em -0.02em 0.14em rgba(10, 10, 10, 0.8);
+  }
+  
+  .cover .char8 {
+    margin-left: -0.08em;
+    top: -0.02em;
+    z-index: 6;
+    text-shadow: -0.02em -0.02em 0.14em rgba(10, 10, 10, 0.8);
+  }
+  
+  .cover .char9 {
+    margin-left: -0.08em;
+    z-index: 7;
+    text-shadow: -0.02em -0.02em 0.14em rgba(10, 10, 10, 0.8);
+  }
+  
+  .cover .char10 {
+    margin-left: -0.03em;
+    top: -0.02em;
+    z-index: 1;
+    text-shadow: 0.05em 0.05em 0.14em rgba(10, 10, 10, 0.8);
+  }
+  
+  .cover .char11 {
+    margin-left: -0.08em;
+    top: -0.02em;
+    z-index: 0;
+    text-shadow: -0.02em -0.02em 0.14em rgba(10, 10, 10, 0.8);
+  }
+  
+  /* ----- 1.4.6 More Complex Lettering -------------------*/
+  .poster-img.make-me-happy {
+    background: url("https://cdn.supadupa.me/shop/2226/images/220466/il_fullxfull.279837562_massive.jpg");
+  }
+  
+  .poster-design .happy-cover {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 7.5rem;
+    text-transform: uppercase;
+    letter-spacing: -0.25em;
+    overflow-break: anywhere;
+    line-height: 0.75;
+    font-weight: 800;
+    margin: 0;
+    padding: 2rem 2.5rem;
+  }
+  
+  .happy-cover span {
+    position: relative;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+    filter: saturate(2);
+  }
+  
+  .happy-cover .char4,
+  .happy-cover .char9,
+  .happy-cover .char12,
+  .happy-cover .char18,
+  .happy-cover .char23,
+  .happy-cover .char29 {
+    padding-right: 6rem;
+  }
+  
+  .happy-cover .char33 {
+    margin-right: 2rem;
+  }
+  
+  .happy-cover .char21 {
+    padding-left: 0.5rem;
+  }
+  
+  .happy-cover .char27 {
+    padding-left: 1.5rem;
+  }
+  
+  .happy-cover .char1,
+  .happy-cover .char6,
+  .happy-cover .char11,
+  .happy-cover .char15,
+  .happy-cover .char20,
+  .happy-cover .char25,
+  .happy-cover .char32,
+  .happy-cover .char35 {
+    color: rgba(217, 24, 24, 0.6);
+    z-index: 2;
+  }
+  
+  .happy-cover .char2,
+  .happy-cover .char8,
+  .happy-cover .char10,
+  .happy-cover .char14,
+  .happy-cover .char16,
+  .happy-cover .char19,
+  .happy-cover .char22,
+  .happy-cover .char27,
+  .happy-cover .char31,
+  .happy-cover .char36 {
+    color: rgba(26, 170, 228, 0.6);
+    z-index: 1;
+  }
+  
+  .happy-cover .char3,
+  .happy-cover .char7,
+  .happy-cover .char13,
+  .happy-cover .char21,
+  .happy-cover .char26,
+  .happy-cover .char28,
+  .happy-cover .char30,
+  .happy-cover .char37 {
+    color: rgba(252, 233, 33, 0.6);
+  }
+  
+  .happy-cover .char5,
+  .happy-cover .char17,
+  .happy-cover .char24,
+  .happy-cover .char34 {
+    color: rgba(88, 183, 53, 0.6);
+  }
+  
+  /* ----- 1.5.1 Clipping Overflow -----------------------------*/
+  .poster-img.clipping {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTfWoepTGL69dt2uEyK6K33p0PSlf9Scj917i2jZzrhZ2wehjR3&usqp=CAU");
+  }
+  
+  .poster-design.clipping p {
+    height: 100%;
+    line-height: 100%;
+    margin: 0;
+    padding-top: 186px;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-size: 16.5rem;
+    letter-spacing: -6px;
+    position: relative;
+    background: #dcdcdc;
+    color: black;
+  }
+  
+  .clipping p:after {
+    content: "Water";
+    padding-top: 186px;
+    padding-left: 5px;
+    width: 160px;
+    height: 100%;
+    margin: 0;
+    color: #151025;
+    background: url("https://cdn.pixabay.com/photo/2015/03/22/23/07/bora-bora-685303_960_720.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    text-align: right;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-size: 16.5rem;
+    letter-spacing: -6px;
+    color: rgba(15, 10, 55, 0.8);
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5), 0 0 0 #000,
+      1px 1px 0 #151025, 2px 2px 0 #151025, 3px 3px 0 #151025, 4px 4px 0 #151025,
+      5px 5px 0 #151025, 6px 6px 0 #151025;
+  }
+  
+  .clipping p:before {
+    content: "";
+    position: absolute;
+    background: #efefef;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    z-index: 10;
+    left: 50%;
+    cursor: pointer;
+  }
+  
+  /* ----- 1.5.2 Text Clipping -----------------------------*/
+  .poster-img.cage-dive {
+    background: url("http://www.impawards.com/2017/posters/cage_dive.jpg");
+  }
+  
+  .poster-design.cage-dive {
+    background: black;
+  }
+  
+  .cage-dive p {
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    font-size: 22rem;
+    overflow-break: break-word;
+    margin: 0;
+    text-align: center;
+    line-height: 0.75;
+    letter-spacing: -0.06em;
+    padding-top: 4rem;
+    background: url("https://live.staticflickr.com/3136/2816657882_881dd961b5_b.jpg");
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    left: -5px;
+    top: 2rem;
+  }
+  
+  .cage-dive p span {
+    letter-spacing: 0;
+    display: inline-block;
+    padding-left: 10px;
+  }
+  
+  /* ----- 1.6.1 2D Rotation -----------------------------*/
+  .poster-img.dive {
+    background: url("https://ctl.s6img.com/society6/img/oYSugapFams1lyh3wdErsWr9QQ0/w_700/posters/18x24/front/~artwork,fw_2718,fh_3618,fx_-149,iw_3015,ih_3618/s6-original-art-uploads/society6/uploads/misc/c23f3fa86f32458584e7d5e43bc081ae/~~/dive-typography-underwater-scuba-diving-diver-posters.jpg");
+  }
+  
+  .poster-design.dive {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 20px solid #dcdcdc;
+    perspective: 500px;
+  }
+  
+  .dive p {
+    background: url("https://cdn.pixabay.com/photo/2015/05/04/17/23/diver-752667_960_720.jpg");
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: rotateX(-30deg) rotateZ(90deg);
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    text-align: center;
+    padding-top: 0;
+    top: 0;
+    left: 1rem;
+  }
+  
+  /* ----- 1.6.2 Complex 2D Rotation -----------------------------*/
+  .poster-img.mr-foster {
+    background: url("https://i.pinimg.com/originals/d6/f6/02/d6f602c14d2cef8450c569dbc7aa4819.jpg");
+  }
+  
+  .poster-design.mr-foster {
+    background: black;
+    font-family: "Passion One", Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .mr-foster figcaption {
+    font-family: Muli, sans-serif;
+    font-weight: initial;
+  }
+  
+  .movie-title {
+    position: relative;
+    top: 7rem;
+    left: 7rem;
+  }
+  
+  .movie-title .right {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 4rem;
+    line-height: 0.8;
+    transform: skew(30deg) rotate(30deg);
+    position: relative;
+  }
+  
+  .movie-title .right:before {
+    content: "";
+    height: 100%;
+    width: 55px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: black;
+  }
+  
+  .movie-title .left {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 4rem;
+    line-height: 0.8;
+    transform: skew(-30deg) rotate(-30deg);
+    position: absolute;
+    top: -38px;
+    left: -20px;
+    width: 55px;
+    overflow: hidden;
+    z-index: 3;
+  }
+  
+  .movie-directors {
+    color: rgba(255, 255, 255, 0.2);
+    font-family: "Passion One", sans-serif;
+    line-height: 0.8;
+    font-size: 2.4rem;
+    font-weight: bold;
+    position: relative;
+    transform: skew(-40deg);
+  }
+  
+  .movie-directors-box {
+    position: relative;
+    top: 3rem;
+    left: 5rem;
+    transform: rotate(25deg);
+  }
+  
+  /* ----- 1.6.3 3D Transformations ------------------------*/
+  .poster-img.evoma {
+    background: url("https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_900,h_900,r_0,c_crop,q_60,fl_progressive/w_400,f_auto,c_fit/evoma---business-hotel-k-r-puram-bangalore/evoma-transparent-pool_i6rtdx");
+    background-size: contain;
+  }
+  
+  .poster-design.evoma {
+    perspective: 100px;
+    text-align: center;
+    overflow: hidden;
+    background: url("https://images.wisegeek.com/blue-ocean-floor.jpg");
+    background-size: initial;
+  }
+  
+  .evoma p {
+    margin-top: 5rem;
+    font-family: "Muli";
+    font-size: 11rem;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+    transform: rotateX(15deg);
+    color: rgba(15, 10, 25, 0.2);
+    text-shadow: -2px 0 5px rgba(15, 10, 25, 0.8),
+      3px 0 10px rgba(15, 10, 25, 0.8);
+  }
+  
+  .evoma p span {
+    margin-left: -1rem;
+    margin-right: -3rem;
+    font-size: 120%;
+  }
+  
+  /* ----- 1.7.1 Simple Transition -----------------------------*/
+  .poster-img.focus {
+    background: url("https://chasness.files.wordpress.com/2015/08/focus-2015-movie-poster.jpg");
+  }
+  
+  .poster-design.focus {
+    background: url("https://www.highonfilms.com/wp-content/uploads/2019/11/focus-2015-featured-and-content.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px) grayscale(0.8);
+    transition: 0.5s all linear;
+  }
+  
+  .poster-design.focus:hover {
+    filter: blur(0);
+  }
+  
+  .focus p {
+    color: #f1f635;
+    text-transform: lowercase;
+    letter-spacing: 3rem;
+    font-size: 4rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    margin: 0.5rem 0 15rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-45%);
+    filter: blur(1px);
+  }
+  
+  .focus p:nth-child(2) {
+    letter-spacing: 5rem;
+  }
+  
+  .focus p:nth-child(3) {
+    margin-top: -5rem;
+    color: white;
+  }
+  
+  .focus p span {
+    filter: blur(3px);
+    transition: all 0.5s ease-out 0s;
+    cursor: pointer;
+  }
+  
+  .focus p span:hover {
+    filter: blur(0);
+  }
+  
+  /* ----- 1.7.2 Simple Keyframes -----------------------------*/
+  .poster-img.kill-bill {
+    background: url("https://img.buzzfeed.com/buzzfeed-static/static/2014-05/enhanced/webdr06/4/12/anigif_enhanced-32402-1399221283-1.gif?downsize=600:*&output-format=auto&output-quality=auto");
+  }
+  
+  .kill-bill .movie-still {
+    background: url("http://kissthemgoodbye.net/movie/albums/Kill%20Bill%201/KB1_1904.jpg");
+    height: 170px;
+    background-size: cover;
+    animation: move 3s linear alternate infinite;
+  }
+  
+  @keyframes move {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+  
+  .kill-bill {
+    background: black;
+    font-family: Impact, "Passion One", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .poster-design.kill-bill {
+    overflow: hidden;
+  }
+  
+  .kill-bill img {
+    width: 400px;
+    position: absolute;
+    top: 140px;
+    left: -3rem;
+  }
+  
+  .kill-bill figcaption {
+    font-family: "Muli";
+  }
+  
+  .kill-bill p {
+    color: red;
+    position: relative;
+    font-size: 9rem;
+    margin: 2rem 0 0;
+  }
+  
+  .kill-bill p span {
+    color: white;
+    position: absolute;
+    right: -0.8rem;
+    top: 3.5rem;
+    transform: rotate(90deg);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-family: "Bebas Neue";
+  }
+  
+  .kill-bill small {
+    color: yellow;
+    letter-spacing: 1px;
+    font-family: "Bebas Neue";
+    font-size: 1.6rem;
+  }
+  
+  /* ----- 1.7.3 Simple Animations -----------------------------*/
+  .kill-bill.complex .sword {
+    position: absolute;
+    border-bottom: 3px solid black;
+    top: 240px;
+    width: 100%;
+    transform: rotate(-5deg);
+    z-index: 1;
+    animation: sword 5s infinite;
+  }
+  
+  @keyframes sword {
+    0% {
+      width: 0%;
+      top: 255px;
+      opacity: 1;
+    }
+    20% {
+      width: 100%;
+      top: 240px;
+      opacity: 1;
+    }
+    100% {
+      width: 100%;
+      top: 240px;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes strike {
+    0% {
+      left: -40px;
+    }
+    20% {
+      left: 340px;
+    }
+    100% {
+      left: 340px;
+    }
+  }
+  
+  #pointer {
+    width: 30px;
+    height: 10px;
+    position: relative;
+    background: gray;
+    top: 5px;
+    left: -40px;
+    animation: strike 5s infinite;
+  }
+  
+  #pointer:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid black;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+  
+  #pointer:before {
+    content: "";
+    position: absolute;
+    right: -5px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 6px solid gray;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+  
+  /* Other Poster Options */
+  .poster-img.underwater {
+    background: url("https://unblast.com/wp-content/uploads/2020/02/Underwater-Text-Effect-1.jpg");
+  }
+  
+  .poster-img.crashing-underwater {
+    background: url("https://i.pinimg.com/originals/7b/74/20/7b7420c3c03dfb07b508bfddce33a3c6.jpg");
+  }
+  
+  .poster-img.iceberg {
+    background: url("https://lh5.googleusercontent.com/proxy/D9zzX6Zb-0eeKV83wujGguxH1R0IhM7Oa32fKch0t7wxgaggA2Fc5TDAUIy3iqm_DX0s65NWO4asW7ZhZ4F4u-XDhjbpZYwuUakkvND9_fpSMf5Z02FLLaRkOOla-YpGWXjKyMqrAGj-AbGmZZH4YCTD8VHLUAPjGXxnDIwOdCgVcUE");
+  }
+  
+  .poster-img.player-one {
+    background: url("https://ctl.s6img.com/society6/img/vpFGnWMbrIv0BfReLgmbE6VstKU/w_700/posters/18x24/front/~artwork,fw_2718,fh_3618,fx_-450,iw_3618,ih_3618/s6-original-art-uploads/society6/uploads/misc/39e99e56c7814249a33f98e6ae7e3df1/~~/ready-player-one1168841-posters.jpg?wait=0&attempt=0");
+  }
+  
+  .poster-img.the-deep {
+    background: url("https://creativedojo.net/wp-content/uploads/Underwater-Ocean-Scenes.jpg");
+  }
+  
+  .poster-img.stockholm {
+    background: url("https://res.cloudinary.com/teepublic/image/private/s--_utxrNDM--/c_crop,x_10,y_10/c_fit,h_1109/c_crop,g_north_west,h_1260,w_1008,x_-91,y_-76/co_rgb:ffffff,e_colorize,u_Misc:One%20Pixel%20Gray/c_scale,g_north_west,h_1260,w_1008/fl_layer_apply,g_north_west,x_-91,y_-76/bo_126px_solid_white/e_overlay,fl_layer_apply,h_1260,l_Misc:Art%20Print%20Bumpmap,w_1008/e_shadow,x_6,y_6/c_limit,h_1134,w_1134/c_lpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1513578151/production/designs/2191948_1.jpg");
+  }
+  
