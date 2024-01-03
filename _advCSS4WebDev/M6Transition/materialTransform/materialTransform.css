@@ -1,0 +1,497 @@
+/* ---------------------------------------------------
+ * 0 Document Base Styles
+ * ---------------------------------------------------*/
+ :root {
+    --link-color: rgba(10, 47, 158, 1);
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: Muli;
+    margin: 0;
+    color: #151025;
+  }
+  
+  section {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 6rem;
+    position: relative;
+    background: #efefef;
+  }
+  
+  a {
+    color: rgba(10, 47, 158, 1);
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    color: rgba(53, 68, 255, 1);
+  }
+  
+  a:visited {
+    color: rgba(164, 88, 255, 1);
+  }
+  
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul ul {
+    margin-left: 2rem;
+  }
+  
+  .section-title {
+    color: white;
+    background: linear-gradient(
+      240deg,
+      rgba(164, 88, 255, 1) 0%,
+      rgba(53, 68, 255, 1) 40%,
+      rgba(10, 47, 158, 1) 80%
+    );
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+  
+    margin: -6rem -6rem 3rem;
+    padding: 6rem;
+  }
+  
+  .section-title span {
+    font-size: 60%;
+    opacity: 0.6;
+  }
+  
+  article {
+    min-height: calc(100vh - 6rem);
+    padding: 3rem 0;
+    position: relative;
+  }
+  
+  .section-nav-buttons {
+    font-size: 4.8rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10rem;
+  }
+  
+  .section-nav-buttons a {
+    text-decoration: none;
+  }
+  
+  .next-section.end {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+  
+  .next-section.end span {
+    font-size: initial;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  
+  h2 {
+    font-size: 4.4rem;
+  }
+  
+  h3 {
+    font-size: 3.6rem;
+  }
+  
+  h4 {
+    font-size: 3rem;
+    position: relative;
+  }
+  
+  h5 {
+    padding-top: 0rem;
+    margin-top: 0;
+    font-size: 2.4rem;
+  }
+  
+  article article article {
+    padding: 0 10rem;
+  }
+  
+  .col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  
+  .title:before {
+    content: "#";
+    opacity: 0.3;
+    position: absolute;
+    left: 3.5rem;
+    text-align: right;
+  }
+  
+  .sub-section-title {
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  .sub-section-title:before {
+    left: -2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: initial;
+  }
+  
+  .sub-section-title span {
+    font-size: 50%;
+    -webkit-text-fill-color: gray;
+    opacity: 50%;
+  }
+  
+  .font-notes {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pre-columns pre {
+    background: #151025;
+    color: #efefef;
+    padding: 2rem 2rem 0;
+  }
+  
+  /* ---------------------------------------------------
+   * 5.2 Transforms
+   * ---------------------------------------------------*/
+  .field,
+  .field-2d,
+  .field-3d {
+    border: 2px solid hsl(240deg, 60%, 60%, 0.3);
+    background: gainsboro;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  #obj,
+  #obj-2d,
+  #obj-3d {
+    background: red;
+    height: 100px;
+    width: 100px;
+    display: block;
+    position: absolute;
+    top: 36%;
+    right: 40%;
+    /*   transform: translate(50%, -50%); */
+    transition: all 2s;
+  }
+  
+  /* ---------------------------------------------------
+   * 5.2.1 2D Transforms
+   * ---------------------------------------------------*/
+  #obj-2d {
+    transform-origin: top left;
+    /*   transform-origin: top; Show with rotation */
+  
+    /*     transform: translateX(-200px);
+      transform: translateY(100px);
+      transform: translate(-200px, 100px);
+  
+      transform: scaleX(2);
+      transform: scaleY(3);
+      transform: scale(2, 3);
+      transform: scale(0.5);
+  
+      transform: skewX(30deg);
+      transform: skewY(0.5rad);
+      transform: skew(-0.05turn);
+      transform: skew(35deg, 15deg); */
+  
+    transform: rotate(45deg);
+  
+    /* Order matters */
+    transform: skew(25deg) rotate(45deg) translateX(100px) scale(1.5);
+    /*     transform: scale(1.5) translateX(100px) rotate(45deg) skew(25deg); */
+  
+    /* Matrix */
+    /* matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() ) */
+    /*     transform: matrix(0.5, 1, -1, 0.5, 80, 80); */
+  }
+  
+  #transforms-2d,
+  #transforms-2d-title {
+    /*   display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 5.2.2 3D Transforms
+   * ---------------------------------------------------*/
+  .field-3d {
+    perspective: 500px;
+    /*   perspective-origin: 50% 50%; */
+    transform-style: preserve-3d;
+  }
+  
+  #obj-3d {
+    transform: translateX(200px);
+    transform: translateY(200px);
+    transform: translateZ(200px);
+  
+    transform: scaleX(2);
+    transform: scaleY(2);
+    transform: scaleZ(2);
+  
+    transform: rotateX(45deg);
+    transform: rotateY(45deg);
+    transform: rotateZ(45deg);
+  
+    /* Order matters */
+    transform: skew(25deg) rotateX(45deg) translateX(100px) scale(1.5);
+    transform: scale(1.5) translateX(100px) rotateX(45deg) skew(25deg);
+  
+    /* Matrix3d */
+    /* matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4) */
+    /*     transform: matrix3d(2, 0, 3, 0, 0, 1.5, 0, 0, 2, 0, 1, 0, -50, -100, 0, 1.1); */
+  }
+  
+  #transforms-3d,
+  #transforms-3d-title {
+    /*   display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 5.2.3 Transform Origin
+   * ---------------------------------------------------*/
+  .field-movies {
+    width: 616px;
+  }
+  
+  .movie-shelf {
+    transform: perspective(500px) rotateY(-30deg) translateX(-80px);
+    /*     perspectice-origin: center center; */
+    transform-style: preserve-3d;
+  }
+  
+  .movie-poster {
+    width: 150px;
+    height: 200px;
+    transform: rotateX(25deg) rotateY(-5deg);
+    transform-origin: top;
+    box-shadow: 4px 8px 16px;
+  }
+  
+  #transform-origin,
+  #transform-origin-title {
+    display: none;
+  }
+  
+  /* ---------------------------------------------------
+   * 5.2.4 Cards
+   * ---------------------------------------------------*/
+  .field-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-notes {
+    margin-bottom: 10rem;
+  }
+  
+  .card {
+    width: 200px;
+    height: 300px;
+    perspective: 600px;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  
+  .card-face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background: url(https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Falishagrauso%2Ffiles%2F2016%2F05%2Fcaptain-america-vs-iron-man-image-1600x1200-1200x900.jpg);
+    background-size: cover;
+  }
+  
+  .card-back {
+    background: blue;
+    transform: rotateY(180deg);
+    background: url(https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Falishagrauso%2Ffiles%2F2016%2F05%2Fcaptain-america-vs-iron-man-image-1600x1200-1200x900.jpg);
+    background-size: cover;
+    background-position: top left 599px;
+  }
+  
+  .card-inner:hover {
+    transform: rotateY(-180deg);
+  }
+  
+  #cards,
+  #cards-title {
+    /*   display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 5.2.5 Carousels
+   * ---------------------------------------------------*/
+  .carousel-notes {
+    margin-bottom: 14rem;
+  }
+  
+  .carousel-scene {
+    width: 210px;
+    height: 140px;
+    position: relative;
+    perspective: 1000px;
+    left: 200px;
+    top: 30px;
+  }
+  
+  .carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    /*   transform: translateZ(-288px); */
+    transition: transform 1s;
+  }
+  
+  .cell {
+    position: absolute;
+    width: 200px;
+    /*   transform-origin: 50% 50% 0px; */
+  }
+  
+  .cell img {
+    width: 100%;
+  }
+  
+  .cell:nth-child(1) {
+    transform: rotateY(0deg) translateZ(140px);
+  }
+  .cell:nth-child(2) {
+    transform: rotateY(72deg) translateZ(140px);
+  }
+  .cell:nth-child(3) {
+    transform: rotateY(144deg) translateZ(140px);
+  }
+  .cell:nth-child(4) {
+    transform: rotateY(216deg) translateZ(140px);
+  }
+  .cell:nth-child(5) {
+    transform: rotateY(288deg) translateZ(140px);
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  .carousel:hover {
+    animation: spin 6s infinite linear;
+  }
+  
+  #carousels,
+  #carousels-title {
+    /*     display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 5.2.6 Cubes & Boxes (https://3dtransforms.desandro.com/box)
+   * ---------------------------------------------------*/
+  .cube-notes {
+    margin-bottom: 14rem;
+  }
+  
+  .cube-scene {
+    width: 240px;
+    height: 240px;
+    perspective: 600px;
+    margin: 50px auto;
+  }
+  
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  
+  .cube-face {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+  }
+  
+  .cube-face img {
+    width: 100%;
+  }
+  
+  .cube-front {
+    transform: rotateY(0deg) translateZ(120px);
+  }
+  .cube-back {
+    transform: rotateY(180deg) translateZ(120px);
+  }
+  .cube-bottom {
+    transform: rotateX(-90deg) translateZ(120px);
+  }
+  .cube-left {
+    transform: rotateY(-90deg) translateZ(120px);
+  }
+  .cube-right {
+    transform: rotateY(90deg) translateZ(120px);
+  }
+  .cube-top {
+    transform: rotateX(90deg) translateZ(120px);
+  }
+  
+  .cube {
+    transform: rotateX(-25deg) rotateY(-25deg) rotateZ(10deg);
+    transition: transform 2s ease-in-out;
+  }
+  
+  .cube:hover {
+    transform: rotateX(40deg) rotateY(-215deg) rotateZ(-10deg);
+  }
+  
+  #cubes,
+  #cubes-title {
+      display: none;
+  }
+  
