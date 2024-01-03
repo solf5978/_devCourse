@@ -1,0 +1,297 @@
+/* ---------------------------------------------------
+ * 0 Document Base Styles
+ * ---------------------------------------------------*/
+ :root {
+    --link-color: rgba(10, 47, 158, 1);
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: Muli;
+    margin: 0;
+    color: #151025;
+  }
+  
+  section {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 6rem;
+    position: relative;
+    background: #efefef;
+  }
+  
+  a {
+    color: rgba(10, 47, 158, 1);
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    color: rgba(53, 68, 255, 1);
+  }
+  
+  a:visited {
+    color: rgba(164, 88, 255, 1);
+  }
+  
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section-title {
+    color: white;
+    background: linear-gradient(
+      240deg,
+      rgba(164, 88, 255, 1) 0%,
+      rgba(53, 68, 255, 1) 40%,
+      rgba(10, 47, 158, 1) 80%
+    );
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+  
+    margin: -6rem -6rem 3rem;
+    padding: 6rem;
+  }
+  
+  .section-title span {
+    font-size: 60%;
+    opacity: 0.6;
+  }
+  
+  article {
+    min-height: calc(100vh - 6rem);
+    padding: 3rem 0;
+    position: relative;
+  }
+  
+  .section-nav-buttons {
+    font-size: 4.8rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10rem;
+  }
+  
+  .section-nav-buttons a {
+    text-decoration: none;
+  }
+  
+  .next-section.end {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+  
+  .next-section.end span {
+    font-size: initial;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  
+  h2 {
+    font-size: 4.4rem;
+  }
+  
+  h3 {
+    font-size: 3.6rem;
+  }
+  
+  h4 {
+    font-size: 3rem;
+    position: relative;
+  }
+  
+  h5 {
+    padding-top: 0rem;
+    margin-top: 0;
+    font-size: 2.4rem;
+  }
+  
+  article article article {
+    padding: 0 10rem;
+  }
+  
+  .col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  
+  .title:before {
+    content: "#";
+    opacity: 0.3;
+    position: absolute;
+    left: 3.5rem;
+    text-align: right;
+  }
+  
+  .sub-section-title {
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  .sub-section-title:before {
+    left: -2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: initial;
+  }
+  
+  .sub-section-title span {
+    font-size: 50%;
+    -webkit-text-fill-color: gray;
+    opacity: 50%;
+  }
+  
+  .font-notes {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pre-columns pre {
+    background: #151025;
+    color: #efefef;
+    padding: 2rem 2rem 0;
+  }
+  
+  /* ---------------------------------------------------
+   * 3.3.1 Image Borders
+   * ---------------------------------------------------*/
+  .image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+  
+  .image-grid figure {
+    overflow: hidden;
+    height: 600px;
+    text-align: center;
+    display: block;
+  }
+  
+  .image-grid figure img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    text-align: center;
+  }
+  
+  .image-grid figure:not(.has-border) {
+    border: 15px solid transparent;
+  }
+  
+  .image-grid figure:first-of-type {
+    /*     border: 15px solid #f5b81b; */
+    /*     border-style: dashed; */
+    /*     border-style: dotted; */
+    /*     border-style: double; */
+    /*     border-style: groove; */
+    /*     border-style: ridge; */
+    /*     border-style: inset; */
+    /*     border-style: outset; */
+    /*     border-style: hidden; */
+    /*     border-style: none; */
+    /*     border-style: groove ridge ridge groove; */
+  
+    /*     border-color: red green blue orange; */
+    /*     border-color: red orange; */
+  
+    /*     border-radius: 50%; */
+    /*     border-radius: 800px; */
+    /*     border-radius: 30px 60px 90px 0px; */
+  
+    /* Elliptical radii */
+    /*     border-radius: 90px/30px; */
+    /*     border-radius: 30px/90px; */
+    /*     border-radius: 160px 60px 100px  / 60px 160px 100px; */
+  }
+  
+  .image-grid figure:last-of-type {
+    /*     border-image: url(https://www.clker.com/cliparts/x/q/O/y/F/m/another-border-hi.png); */
+    /*     border-image: url(https://www.clker.com/cliparts/x/q/O/y/F/m/another-border-hi.png) 38 round; */
+    /*     border-image: url(https://www.clker.com/cliparts/x/q/O/y/F/m/another-border-hi.png) 38 repeat stretch; */
+    /*     border-image: url(https://www.clker.com/cliparts/x/q/O/y/F/m/another-border-hi.png) 38 round; */
+    /*     border-image: linear-gradient(#f5b81b, rgb(53, 68, 255)) 30; */
+    /*     border-image: repeating-linear-gradient(30deg, rgb(255,0,0), rgb(255,255,0), rgb(0,0,255) 20px) 60 round; */
+  }
+  
+  #image-border {
+    /*   display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 3.3.2 Image Filters
+   * ---------------------------------------------------*/
+  figure.has-border {
+    border: 15px solid transparent;
+    border-image: url(https://www.clker.com/cliparts/x/q/O/y/F/m/another-border-hi.png)
+      38 round;
+  }
+  
+  figure.has-border img {
+    /* URL to SVG filter */
+    filter: url("filters.svg#filter-id");
+  
+    /* <filter-function> values */
+    filter: blur(1px);
+    filter: brightness(1.4);
+    filter: contrast(20%);
+    filter: drop-shadow(16px 16px 20px blue);
+    filter: grayscale(100%);
+    filter: hue-rotate(0deg);
+    filter: invert(60%);
+    filter: opacity(25%);
+    filter: saturate(2300%);
+    filter: sepia(100%);
+  
+    /* Multiple filters */
+    filter: contrast(200%) brightness(200%) blur(10px) grayscale(100%);
+  
+    /* Use no filter */
+    filter: none;
+  
+    /* Global values */
+    /*   filter: inherit; */
+    /*   filter: initial; */
+    /*   filter: unset; */
+  }
+  
+  #images {
+    /*   display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 3.4.1 Responsive Images
+   * ---------------------------------------------------*/
+  .image-grid.full {
+    grid-template-columns: 1fr;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .image-grid.full {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  

@@ -1,0 +1,123 @@
+<section id="graphic-images" class="section-graphics">
+    <h2 class="section-title title">3 Graphics <span>(Images)</span></h2>
+  
+    <!-- 3.1 Images -->
+    <article id="images">
+      <h3 class="sub-section-title title">3.3 Images</h3>
+  
+      <!-- 3.3.1 Image borders-->
+      <article id="image-border" style="">
+        <h5>3.3.1 Image Borders</h5>
+  
+        <div class="image-grid">
+          <figure>
+            <img src="https://vignette.wikia.nocookie.net/7e17433d-69be-440a-a972-f988d4436d5d/scale-to-width-down/800">
+            <figcaption></figcaption>
+          </figure>
+  
+          <figure>
+            <img src="https://gamingtrend.com/wp-content/uploads/2017/03/top-8.jpg">
+            <figcaption></figcaption>
+          </figure>
+  
+        </div>
+  
+        <div class="outcomeBox">
+          <pre><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image">https://developer.mozilla.org/en-US/docs/Web/CSS/border-image</a><br>border-image: url(url) slices /widths /outsets repeats;
+        </div>
+  
+              <div class="section-nav-buttons">
+          <a class="prev-section" href="#graphic-images">&uarr;</a>
+          <a class="next-section" href="#image-filter">&darr;</a>
+        </div>
+      </article>
+  
+      <!-- 3.3.2 Image filters-->
+      <article id="image-filter" style="">
+        <h5>3.3.2 Image Filters</h5>
+  
+        <div class="image-grid">
+          <figure class="has-border">
+            <img src="https://vignette.wikia.nocookie.net/7e17433d-69be-440a-a972-f988d4436d5d/scale-to-width-down/800">
+            <figcaption></figcaption>
+          </figure>
+          
+          <figure class="has-border">
+            <img src="https://vignette.wikia.nocookie.net/versus-compendium/images/0/00/Link_BotW.png">
+            <figcaption></figcaption>
+          </figure>
+          
+        </div>
+        
+        <div class="outcomeBox">
+          <pre><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter">https://developer.mozilla.org/en-US/docs/Web/CSS/filter</a><br>filter: &lt;filter-function&gt; [&lt;filter-function&gt;]* | none;
+        </div>
+  
+              <div class="section-nav-buttons">
+          <a class="prev-section" href="#image-border">&uarr;</a>
+          <a class="next-section" href="#srcset-sizes">&darr;</a>
+        </div>
+      </article>
+    </article>
+  
+    <!-- 3.4 Responsive Images -->
+    <article id="responsive-images">
+      <h4 class="sub-section-title title">3.4 Responsive Images</h4>
+  
+      <!-- 3.4.1 srcset and sizes -->
+      <article id="srcset-sizes" style="">
+        <h5>3.4.1 <code>srcset</code> and <code>sizes</code></h5>
+  
+        <div class="image-grid full">
+          <figure class="has-border">
+            <img srcset="                       https://pm1.narvii.com/6376/bc3e1f6a6716008bdbcca80f93c2d304160297cd_128.jpg 600w,
+   https://i.ya-webdesign.com/images/link-png-25.png 700w,
+   https://files.cults3d.com/uploaders/13844179/illustration-file/aa43167f-f3eb-4049-a0cc-bd69113fe809/Link-Top-10-best-video-game-characters_large.jpg 800w,
+   https://vignette.wikia.nocookie.net/p__/images/d/db/SSBULinkAlt.png/revision/latest?cb=20200127010534&path-prefix=protagonist 900w"
+                 
+                 src="https://vignette.wikia.nocookie.net/7e17433d-69be-440a-a972-f988d4436d5d/scale-to-width-down/800"
+                 alt="Link vs. Guardian"
+              >
+            <!-- sizes="(max-width: 600px) 128px,
+                        800px" -->
+            <figcaption></figcaption>
+          </figure>
+          
+        </div>
+        
+        <div class="outcomeBox">
+          <pre><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive Images (Mozilla)</a></pre>
+        </div>
+  
+        <div class="section-nav-buttons">
+          <a class="prev-section" href="#image-filter">&uarr;</a>
+          <a class="next-section" href="#picture-tag">&darr;</a>
+        </div>
+      </article>
+  
+      <!-- 3.4.2 <picture> tag -->
+      <article id="picture-tag" style="">
+        <h5>3.4.1 <code>srcset</code> and <code>sizes</code></h5>
+  
+        <div class="image-grid full">
+          <picture class="has-border">
+            <source media="(max-width: 500px)" srcset="https://pm1.narvii.com/6376/bc3e1f6a6716008bdbcca80f93c2d304160297cd_128.jpg">
+            <source media="(max-width: 750px)" srcset="https://i.ya-webdesign.com/images/link-png-25.png">
+            <source media="(max-width: 1000px)" srcset="https://files.cults3d.com/uploaders/13844179/illustration-file/aa43167f-f3eb-4049-a0cc-bd69113fe809/Link-Top-10-best-video-game-characters_large.jpg">
+            <img src="https://vignette.wikia.nocookie.net/7e17433d-69be-440a-a972-f988d4436d5d/scale-to-width-down/800" alt="Link vs. Guardian">
+          </picture>
+  
+        </div>
+  
+        <div class="outcomeBox">
+          <pre><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive Images (Mozilla)</a></pre>
+        </div>
+  
+        <div class="section-nav-buttons">
+          <a class="prev-section" href="#srcset-sizes">&uarr;</a>
+          <a class="next-section end" href="#graphic-images">&#8656;<span>Top</span></a>
+        </div>
+      </article>
+  
+    </article>
+  </section>
