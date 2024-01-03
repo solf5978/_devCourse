@@ -1,0 +1,442 @@
+/* ---------------------------------------------------
+ * 0 Document Base Styles
+ * ---------------------------------------------------*/
+ :root {
+    --link-color: rgba(10, 47, 158, 1);
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: Muli;
+    margin: 0;
+    color: #151025;
+  }
+  
+  section {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 6rem;
+    position: relative;
+    background: #efefef;
+  }
+  
+  a {
+    color: rgba(10, 47, 158, 1);
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    color: rgba(53, 68, 255, 1);
+  }
+  
+  a:visited {
+    color: rgba(164, 88, 255, 1);
+  }
+  
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul ul {
+    margin-left: 2rem;
+  }
+  
+  .section-title {
+    color: white;
+    background: linear-gradient(
+      240deg,
+      rgba(164, 88, 255, 1) 0%,
+      rgba(53, 68, 255, 1) 40%,
+      rgba(10, 47, 158, 1) 80%
+    );
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+  
+    margin: -6rem -6rem 3rem;
+    padding: 6rem;
+  }
+  
+  .section-title span {
+    font-size: 60%;
+    opacity: 0.6;
+  }
+  
+  article {
+    min-height: calc(100vh - 6rem);
+    padding: 3rem 0;
+    position: relative;
+  }
+  
+  .section-nav-buttons {
+    font-size: 4.8rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10rem;
+  }
+  
+  .section-nav-buttons a {
+    text-decoration: none;
+  }
+  
+  .next-section.end {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+  
+  .next-section.end span {
+    font-size: initial;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  
+  h2 {
+    font-size: 4.4rem;
+  }
+  
+  h3 {
+    font-size: 3.6rem;
+  }
+  
+  h4 {
+    font-size: 3rem;
+    position: relative;
+  }
+  
+  h5 {
+    padding-top: 0rem;
+    margin-top: 0;
+    font-size: 2.4rem;
+  }
+  
+  article article article {
+    padding: 0 10rem;
+  }
+  
+  .col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  
+  .title:before {
+    content: "#";
+    opacity: 0.3;
+    position: absolute;
+    left: 3.5rem;
+    text-align: right;
+  }
+  
+  .sub-section-title {
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  .sub-section-title:before {
+    left: -2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: initial;
+  }
+  
+  .sub-section-title span {
+    font-size: 50%;
+    -webkit-text-fill-color: gray;
+    opacity: 50%;
+  }
+  
+  .font-notes {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pre-columns pre {
+    background: #151025;
+    color: #efefef;
+    padding: 2rem 2rem 0;
+  }
+  
+  /* ---------------------------------------------------
+   * 5.3.1 Basic Animation (Carousel)
+   * ---------------------------------------------------*/
+  .field,
+  .field-2d,
+  .field-3d {
+    border: 2px solid hsl(240deg, 60%, 60%, 0.3);
+    background: gainsboro;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .carousel-notes {
+    margin-bottom: 14rem;
+  }
+  
+  .carousel-scene {
+    width: 210px;
+    height: 140px;
+    position: relative;
+    perspective: 1000px;
+    left: 200px;
+    top: 30px;
+  }
+  
+  .carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    /*   transform: translateZ(-288px); */
+    transition: transform 1s;
+  }
+  
+  .cell {
+    position: absolute;
+    width: 200px;
+    /*   transform-origin: 50% 50% 0px; */
+  }
+  
+  .cell img {
+    width: 100%;
+  }
+  
+  .cell:nth-child(1) {
+    transform: rotateY(0deg) translateZ(160px);
+  }
+  .cell:nth-child(2) {
+    transform: rotateY(72deg) translateZ(160px);
+  }
+  .cell:nth-child(3) {
+    transform: rotateY(144deg) translateZ(160px);
+  }
+  .cell:nth-child(4) {
+    transform: rotateY(216deg) translateZ(160px);
+  }
+  .cell:nth-child(5) {
+    transform: rotateY(288deg) translateZ(160px);
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+  
+  .carousel:hover {
+    animation: spin 2s infinite ease-in-out 2s;
+  }
+  
+  #carousels,
+  #carousels-title {
+    /*   display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 5.2 Transforms
+   * ---------------------------------------------------*/
+  hr.pacman {
+    border-style: dotted;
+    border-width: 3px 0 0 0;
+    border-color: gray;
+    margin: 2rem 0;
+  }
+  
+  hr.pacman::before {
+    content: "";
+    display: block;
+    height: 1.6rem;
+    position: absolute;
+    top: 34px;
+    left: 0;
+  
+    width: 0;
+    height: 0;
+    border-right: 18px solid transparent;
+    border-left: 18px solid #cf00ff;
+    border-bottom: 18px solid #cf00ff;
+    border-top: 18px solid #cf00ff;
+    border-radius: 18px;
+  
+    animation-name: eat, move;
+    animation-duration: 0.5s, 10s;
+    animation-timing-function: ease, linear;
+    animation-iteration-count: infinite, infinite;
+    animation-delay: 3s, 6s;
+    animation-fill-mode: backwards, both;
+    animation-direction: normal, normal;
+  }
+  
+  hr:hover::before {
+    animation-play-state: paused;
+  }
+  
+  @keyframes eat {
+    0% {
+      border-right: 18px solid transparent;
+    }
+    50% {
+      border-right: 18px solid #cf00ff;
+    }
+    100% {
+      border-right: 18px solid transparent;
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  #basic-animations,
+  #basic-animations-title {
+    /*     display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 5.3.2 Sprite Animations
+   * ---------------------------------------------------*/
+  .sprite {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/doodle-sprite.png);
+    overflow: hidden;
+    background-size: cover;
+    height: 510px;
+    width: 200px;
+    margin: 0 auto;
+    background-position: top left 0px;
+    transition: none;
+  }
+  
+  .sprite:hover {
+    animation: drink 1s;
+    animation-timing-function: steps(1);
+  }
+  
+  @keyframes drink {
+    0% {
+      background-position: top left 0px;
+    }
+    10% {
+      background-position: top left 200px;
+    }
+    20% {
+      background-position: top left 400px;
+    }
+    30% {
+      background-position: top left 600px;
+    }
+    40% {
+      background-position: top left 800px;
+    }
+    50% {
+      background-position: top left 1000px;
+    }
+    60% {
+      background-position: top left 1200px;
+    }
+    70% {
+      background-position: top left 1400px;
+    }
+    80% {
+      background-position: top left 1600px;
+    }
+    90% {
+      background-position: top left 1800px;
+    }
+    100% {
+      background-position: top left 2000px;
+    }
+  }
+  
+  /* ---------------------------------------------------
+   * 5.2.6 Cubes & Boxes (https://3dtransforms.desandro.com/box)
+   * ---------------------------------------------------*/
+  .cube-notes {
+    margin-bottom: 14rem;
+  }
+  
+  .cube-scene {
+    width: 240px;
+    height: 240px;
+    perspective: 600px;
+    margin: 50px auto;
+  }
+  
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  
+  .cube-face {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+  }
+  
+  .cube-face img {
+    width: 100%;
+  }
+  
+  .cube-front {
+    transform: rotateY(0deg) translateZ(120px);
+  }
+  .cube-back {
+    transform: rotateY(180deg) translateZ(120px);
+  }
+  .cube-bottom {
+    transform: rotateX(-90deg) translateZ(120px);
+  }
+  .cube-left {
+    transform: rotateY(-90deg) translateZ(120px);
+  }
+  .cube-right {
+    transform: rotateY(90deg) translateZ(120px);
+  }
+  .cube-top {
+    transform: rotateX(90deg) translateZ(120px);
+  }
+  
+  .cube {
+    transform: rotateX(-25deg) rotateY(-25deg) rotateZ(10deg);
+    transition: transform 2s ease-in-out;
+  }
+  
+  .cube:hover {
+    transform: rotateX(40deg) rotateY(-215deg) rotateZ(-10deg);
+  }
+  
+  #cubes,
+  #cubes-title {
+    display: none;
+  }
+  
