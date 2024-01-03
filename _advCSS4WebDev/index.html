@@ -1,96 +1,374 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced CSS Practice</title>
-
-    <link rel="stylesheet" href="rpg-awesome/css/rpg-awesome.min.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="css/baseHTML.css">
-    <link rel="stylesheet" href="css/navBar.css">
-    <link rel="stylesheet" href="css/headerSection.css">
-    <link rel="stylesheet" href="css/mainContent.css">
-    <link rel="stylesheet" href="css/footerSection.css">
+	<title>Advanced CSS</title>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&amp;display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+	<link href="rpg-awesome/css/rpg-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/baseHTML.css">
+	<link rel="stylesheet" href="css/navBar.css">
+	<link rel="stylesheet" href="css/headerSection.css">
+	<link rel="stylesheet" href="css/mainContent.css">
+	<link rel="stylesheet" href="css/footerSection.css">
+	<!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
+	<!-- Off-canvas navigation -->
+	<input type="checkbox" name="nav" class="nav-check" id="off-canvas">
+	<label rel="navigation" class="navicon" for="off-canvas"></label>
+	<nav class="site-navigation" role="navigation">
+		<h2 class="nav-title">Course Contents</h2>
+		<div class="tabs">
+			<div class="tab">
+				<input type="checkbox" id="chck0">
+				<label class="tab-label" for="chck0">0: CSS Review</label>
+				<div class="tab-content">
+					<ol>
+						<li>:pseudo-selectors</li>
+						<li>Responsive design</li>
+						<li>CSS variables</li>
+					</ol>
+				</div>
+			</div>
+			<div class="tab">
+				<input type="checkbox" id="chck1">
+				<label class="tab-label" for="chck1">1: Typography</label>
+				<div class="tab-content">
+					<ol>
+						<li>Locally hosted font</li>
+						<li>Variable font</li>
+						<li>Text clipping</li>
+						<li>Text transforms</li>
+						<li>Responsive text</li>
+					</ol>
+				</div>
+			</div>
+			<div class="tab">
+				<input type="checkbox" id="chck2">
+				<label class="tab-label" for="chck2">2: Content</label>
+				<div class="tab-content">
+					<ol>
+						<li>Pure CSS Accordion (tabs)</li>
+						<li>Advanced List styles</li>
+						<li>Off-canvas navigation (checkbox)</li>
+					</ol>
+				</div>
+			</div>
+			<div class="tab">
+				<input type="checkbox" id="chck3">
+				<label class="tab-label" for="chck3">3: Graphics</label>
+				<div class="tab-content">
+					<ol>
+						<li>Backgrounds &amp; gradients</li>
+						<li>CSS border images</li>
+						<li>CSS image filters</li>
+						<li>Responsive images</li>
+					</ol>
+				</div>
+			</div>
+			<div class="tab">
+				<input type="checkbox" id="chck4">
+				<label class="tab-label" for="chck4">4: Layout</label>
+				<div class="tab-content">
+					<ol>
+						<li>CSS Flexbox</li>
+						<li>CSS Grid</li>
+					</ol>
+				</div>
+			</div>
+			<div class="tab">
+				<input type="checkbox" id="chck5">
+				<label class="tab-label" for="chck5">5: Motion</label>
+				<div class="tab-content">
+					<ol>
+						<li>2D transforms</li>
+						<li>3D transforms (on hover)</li>
+						<li>Animations (on hover)</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</nav>
 
-    <input type="checkbox" name="nav" class="nav-check">
-    <label for="navigationID" class="navicon" rel="navigation"></label>
-    <nav class="site-nav" role="navigation" id="navigationID">
-        <h2 class="nav-title">Course Contents</h2>
-        <div class="tabs">
-            <div class="tab">
-                <input type="checkbox" name="" id="input-css-review">
-                <label class="tab-label" for="input-css-review">0: CSS Review</label>
-                <div class="tab-content">
-                    <ol>
-                        <li>Course 1</li>
-                        <li>Course 2</li>
-                        <li>Course 3</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="tab">
-                <input type="checkbox" name="" id="input-typography">
-                <label class="tab-label" for="input-typography">1: Typography</label>
-                <div class="tab-content">
-                    <ol>
-                        <li>Course 1</li>
-                        <li>Course 2</li>
-                        <li>Course 3</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="tab">
-                <input type="checkbox" name="" id="input-content">
-                <label class="tab-label" for="input-content">2: Content</label>
-                <div class="tab-content">
-                    <ol>
-                        <li>Course 1</li>
-                        <li>Course 2</li>
-                        <li>Course 3</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="tab">
-                <input type="checkbox" name="" id="input-layout">
-                <label class="tab-label" for="input-layout">3: Layout</label>
-                <div class="tab-content">
-                    <ol>
-                        <li>Course 1</li>
-                        <li>Course 2</li>
-                        <li>Course 3</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="tab">
-                <input type="checkbox" name="" id="input-graphic">
-                <label class="tab-label" for="input-graphic">4: Graphic</label>
-                <div class="tab-content">
-                    <ol>
-                        <li>Course 1</li>
-                        <li>Course 2</li>
-                        <li>Course 3</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="tab">
-                <input type="checkbox" name="" id="input-motion">
-                <label class="tab-label" for="input-motion">5: Motion</label>
-                <div class="tab-content">
-                    <ol>
-                        <li>Course 1</li>
-                        <li>Course 2</li>
-                        <li>Course 3</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </nav>
+	<!-- Site Content -->
+	<main class="site-main">
 
-    <main class="main-section">
+		<!-- Site Header (Top bar) -->
+		<header class="top-bar">
+			<div class="left">
+				<p>Eduonix presents</p>
+			</div>
+			<div class="center">
+				<p>A course by <a href="">Aaron Snowberger</a></p>
+			</div>
+			<div class="right">
+				<nav class="social-navigation" role="navigation" aria-label="Social Links Menu">
+					<div class="menu-social-menu-container">
+						<ul id="menu-social-menu" class="social-links-menu">
+							<li id="menu-item-1" class="menu-item menu-item-1">
+								<a href="https://facebook.com">
+									<span class="screen-reader-text">Facebook</span>
+									<i class="fab fa-facebook"></i>
+								</a>
+							</li>
+							<li id="menu-item-2" class="menu-item menu-item-2">
+								<a href="https://twitter.com">
+									<span class="screen-reader-text">Twitter</span>
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+							<li id="menu-item-3" class="menu-item menu-item-3">
+								<a href="https://youtube.com">
+									<span class="screen-reader-text">YouTube</span>
+									<i class="fab fa-youtube"></i>
+								</a>
+							</li>
+							<li id="menu-item-4" class="menu-item menu-item-4">
+								<a href="https://linkedin.com">
+									<span class="screen-reader-text">Linked In</span>
+									<i class="fab fa-linkedin"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
 
-    </main>
+		<!-- Hero section -->
+		<section class="hero">
+			<div class="hero-content">
+				<h1 class="site-title"><span>A</span><span>d</span><span>v</span><span>a</span><span>n</span><span>c</span><span>e</span><span>d</span><span class="⚡️"> </span><span>C</span><span>S</span><span>S</span>
+				</h1>
+				<div class="site-under-title">
+					<p class="site-subtitle">Your One-stop Guide to improving your CSS skills from Intermediate to Advanced</p>
+					<small class="site-host">Created by <a href="">Aaron Snowberger</a> &amp; Hosted by <a href="">Eduonix</a></small>
+				</div>
+			</div>
+		</section>
+
+		<!-- About section -->
+		<section class="about">
+			<div class="content-box">
+				<h2 class="sub-section-title">Hi, I'm Aaron.</h2>
+
+				<p class="about-text"><strong><a href="">Aaron Snowberger</a></strong> is an experienced web developer, graphic designer, and educator in ESL and computer technology. 
+					He holds a Bachelor's degree in Computer Science, Master's degree in Media Design, and professional certifications for React 
+					(JavaScript) development, and as a Google Certified Educator and Trainer. Aaron is passionate about helping new learners discover 
+					the joys of technology, and has presented across the country at multiple local, national, and international conferences in both the 
+					ESL and web development fields. His most recent talk was given at the 2019 JSConf (JavaScript Conference) in Seoul on September 3, 2019.
+				</p>
+			</div>
+		</section>
+
+		<!-- Course sections -->
+		<section class="content course-details">
+			<div class="class-section-grid">
+				<article class="class-section section-zero first-chapter">
+					<div class="card">
+						<div class="card-inner">
+							<div class="card-face card-front">
+								<h4 class="sub-section-title white">
+									<i class="ra ra-perspective-dice-random"></i>
+									Welcome &amp; Introduction
+								</h4>
+								<p>Welcome to <em>Advanced CSS!</em> In this course, you'll learn various intermediate to advanced CSS concepts to help you take your web coding skills to the next level.</p>
+								<p>But first, we'll begin with an Introductory chapter to review the CSS basics you should already be familiar with.</p>
+							</div>
+							<div class="card-face card-back">
+								<h4 class="sub-section-title white">View Slides</h4>
+								<img class="course-slides" src="img/Advanced-CSS-title.jpg" alt="Slides Img" />
+								<a class="btn" href="">Slides</a>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="class-section section-one">
+					<div class="card">
+						<div class="card-inner">
+							<div class="card-face card-front">
+								<h4 class="sub-section-title white">
+									<i class="ra ra-perspective-dice-one"></i>
+									Typography
+								</h4>
+								<p>Explore web fonts and locally hosted fonts. Learn about Variable fonts, how to add them to your projects, and how to use them.</p>
+							</div>
+							<div class="card-face card-back">
+								<h4 class="sub-section-title white">View Codepens</h4>
+								<ul>
+									<li><a href="https://codepen.io/jekkilekki/pen/WNQPgGw">Typography Intro</a></li>
+									<li><a href="https://codepen.io/jekkilekki/pen/bGVZjoQ">Typography Posters</a></li>
+								</ul>
+								<a class="btn">Typography</a>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="class-section section-two">
+					<div class="card">
+						<div class="card-inner">
+							<div class="card-face card-front">
+								<h4 class="sub-section-title white">
+									<i class="ra ra-perspective-dice-two"></i>
+									Content
+								</h4>
+								<p>Learn CSS styling techniques for various types of content including lists, blockquotes, tables, and forms.</p>
+							</div>
+							<div class="card-face card-back">
+								<h4 class="sub-section-title white">View Codepens</h4>
+								<ul>
+									<li><a href="https://codepen.io/jekkilekki/pen/WNrergY">Content (Formatting Visual Data)</a></li>
+									<li><a href="https://codepen.io/jekkilekki/pen/OJMJRXW">Content (Lists)</a></li>
+									<li><a href="https://codepen.io/jekkilekki/pen/JjGjRKQ">Content (Tables)</a></li>
+									<li><a href="https://codepen.io/jekkilekki/pen/dyGypOP">Content (Blockquotes)</a></li>
+									<li><a href="https://codepen.io/jekkilekki/pen/VwewKPL">Content (Forms)</a></li>
+								</ul>
+								<a class="btn">Content</a>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="class-section section-three">
+					<div class="card">
+						<div class="card-inner">
+							<div class="card-face card-front">
+								<h4 class="sub-section-title white">
+									<i class="ra ra-perspective-dice-three"></i>
+									Graphics
+								</h4>
+								<p>Explore various graphical elements and the styling. Borders, border images, and CSS image filters are covered in depth.</p>
+							</div>
+							<div class="card-face card-back">
+								<h4 class="sub-section-title white">View Codepens</h4>
+								<ul>
+									<li><a href="https://codepen.io/jekkilekki/pen/LYGzvxL">Graphics (Colors)</a></li>
+									<li><a href="https://codepen.io/jekkilekki/pen/NWxyLgY">Graphics (Images)</a></li>
+								</ul>
+								<a class="btn">Graphics</a>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="class-section section-four">
+					<div class="card">
+						<div class="card-inner">
+							<div class="card-face card-front">
+								<h4 class="sub-section-title white">
+									<i class="ra ra-perspective-dice-four"></i>
+									Layout
+								</h4>
+								<p>After reviewing the CSS box model, learn CSS Flexbox and Grid to create more dynamic web pages.</p>
+							</div>
+							<div class="card-face card-back">
+								<h4 class="sub-section-title white">View Codepens</h4>
+								<ul>
+									<li><a href="https://codepen.io/jekkilekki/pen/wvMxeyN">Layout (Box Model)</a></li>
+									<li><a href="https://codepen.io/jekkilekki/pen/wvMxeyN">Layout (Flexbox)</a></li>
+									<li><a href="https://codepen.io/jekkilekki/pen/vYLaWPa">Layout (Grid)</a></li>
+								</ul>
+								<a class="btn">Layout</a>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="class-section section-five">
+					<div class="card">
+						<div class="card-inner">
+							<div class="card-face card-front">
+								<h4 class="sub-section-title white">
+									<i class="ra ra-perspective-dice-five"></i>
+									Motion
+								</h4>
+								<p>Bring your websites to life with 2D and 3D transforms, transitions, animations, and effects.</p>
+							</div>
+							<div class="card-face card-back">
+								<h4 class="sub-section-title white">View Codepens</h4>
+								<ul>
+									<li><a href="https://codepen.io/jekkilekki/pen/qBbGNpx">Transitions</a></li>
+									<li><a href="https://codepen.io/jekkilekki/pen/rNxEzbK">Transforms</a></li>
+									<li><a href="https://codepen.io/jekkilekki/pen/JjGgPzd">Animations</a></li>
+								</ul>
+								<a class="btn">Motion!</a>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="class-section section-six final-chapter">
+					<div class="card">
+						<div class="card-inner">
+							<div class="card-face card-front">
+								<h4 class="sub-section-title white">
+									<i class="ra ra-perspective-dice-six"></i>
+									Practical Application
+								</h4>
+								<p>In the final chapter, take the tools and tricks we've learned and apply them to creating a real website that employs these concepts.</p>
+							</div>
+							<div class="card-face card-back">
+								<h4 class="sub-section-title white">View Github Code</h4>
+								<ul>
+									<li><a href="https://github.com/jekkilekki/edx-advanced-css/">Github Code</a></li>
+								</ul>
+								<a class="btn">Build it!</a>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<!-- Site Footer -->
+		<footer class="site-footer">
+			<h2 class="sub-section-title">Learning Content</h2>
+			<ul class="codepens learning-content">
+				<li>CSS Review
+					<ol>
+						<li>:pseudo-selectors</li>
+						<li>Responsive design</li>
+						<li>CSS variables</li>
+					</ol>
+				</li>
+				<li>Typography
+					<ol>
+						<li><a href="https://codepen.io/jekkilekki/pen/WNQPgGw">Typography Intro</a></li>
+						<li><a href="https://codepen.io/jekkilekki/pen/bGVZjoQ">Typography Posters</a></li>
+					</ol>
+				</li>
+				<li>Content
+					<ol>
+						<li><a href="https://codepen.io/jekkilekki/pen/WNrergY">Formatting Visual Data</a></li>
+						<li><a href="https://codepen.io/jekkilekki/pen/OJMJRXW">Lists</a></li>
+						<li><a href="https://codepen.io/jekkilekki/pen/JjGjRKQ">Tables</a></li>
+						<li><a href="https://codepen.io/jekkilekki/pen/dyGypOP">Blockquotes</a></li>
+						<li><a href="https://codepen.io/jekkilekki/pen/VwewKPL">Forms</a></li>
+					</ol>
+				</li>
+				<li>Graphics
+					<ol>
+						<li><a href="https://codepen.io/jekkilekki/pen/LYGzvxL">Colors</a></li>
+						<li><a href="https://codepen.io/jekkilekki/pen/NWxyLgY">Images</a></li>
+					</ol>
+				</li>
+				<li>Layout
+					<ol>
+						<li><a href="https://codepen.io/jekkilekki/pen/wvMxeyN">Box Model</a></li>
+						<li><a href="https://codepen.io/jekkilekki/pen/wvMxeyN">Flexbox</a></li>
+						<li><a href="https://codepen.io/jekkilekki/pen/vYLaWPa">Grid</a></li>
+					</ol>
+				</li>
+				<li>Motion
+					<ol>
+						<li><a href="https://codepen.io/jekkilekki/pen/qBbGNpx">Transitions</a></li>
+							<li><a href="https://codepen.io/jekkilekki/pen/rNxEzbK">Transforms</a></li>
+							<li><a href="https://codepen.io/jekkilekki/pen/JjGgPzd">Animations</a></li>
+					</ol>
+				</li>
+			</ul>
+
+			<div class="copyright">
+				&copy; 2020 Aaron Snowberger
+			</div>
+		</footer>
+
+	</main>
 </body>
 </html>
