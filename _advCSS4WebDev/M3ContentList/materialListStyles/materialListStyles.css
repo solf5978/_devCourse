@@ -1,0 +1,584 @@
+/* ---------------------------------------------------
+ * 0 Document Base Styles
+ * ---------------------------------------------------*/
+ :root {
+    --link-color: rgba(10, 47, 158, 1);
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: Muli;
+    margin: 0;
+    color: #151025;
+  }
+  
+  section {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 6rem;
+    position: relative;
+    background: #efefef;
+  }
+  
+  a {
+    color: rgba(10, 47, 158, 1);
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    color: rgba(53, 68, 255, 1);
+  }
+  
+  a:visited {
+    color: rgba(164, 88, 255, 1);
+  }
+  
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section-title {
+    color: white;
+    background: linear-gradient(
+      240deg,
+      rgba(164, 88, 255, 1) 0%,
+      rgba(53, 68, 255, 1) 40%,
+      rgba(10, 47, 158, 1) 80%
+    );
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+  
+    margin: -6rem -6rem 3rem;
+    padding: 6rem;
+  }
+  
+  .section-title span {
+    font-size: 60%;
+    opacity: 0.6;
+  }
+  
+  article {
+    min-height: calc(100vh - 6rem);
+    padding: 3rem 0;
+    position: relative;
+  }
+  
+  .section-nav-buttons {
+    font-size: 4.8rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10rem;
+  }
+  
+  .section-nav-buttons a {
+    text-decoration: none;
+  }
+  
+  .next-section.end {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+  
+  .next-section.end span {
+    font-size: initial;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  
+  h2 {
+    font-size: 4.4rem;
+  }
+  
+  h3 {
+    font-size: 3.6rem;
+  }
+  
+  h4 {
+    font-size: 3rem;
+    position: relative;
+  }
+  
+  h5 {
+    font-size: 2.4rem;
+    padding-top: 2.4rem;
+  }
+  
+  .col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  
+  .title:before {
+    content: "#";
+    opacity: 0.3;
+    position: absolute;
+    left: 3.5rem;
+    text-align: right;
+  }
+  
+  .sub-section-title {
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  .sub-section-title:before {
+    left: -2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: initial;
+  }
+  
+  .sub-section-title span {
+    font-size: 50%;
+    -webkit-text-fill-color: gray;
+    opacity: 50%;
+  }
+  
+  .font-notes {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pre-columns pre {
+    background: #151025;
+    color: #efefef;
+    padding: 2rem 2rem 0;
+  }
+  
+  .weight-100 {
+    font-weight: 100;
+  }
+  .weight-200 {
+    font-weight: 200;
+  }
+  .weight-300 {
+    font-weight: 300;
+  }
+  .weight-400 {
+    font-weight: 400;
+  }
+  .weight-500 {
+    font-weight: 500;
+  }
+  .weight-600 {
+    font-weight: 600;
+  }
+  .weight-700 {
+    font-weight: 700;
+  }
+  .weight-800 {
+    font-weight: 800;
+  }
+  .weight-900 {
+    font-weight: 900;
+  }
+  .weight-lighter {
+    font-weight: lighter;
+  }
+  .weight-bolder {
+    font-weight: bolder;
+  }
+  
+  #list-styles {
+    /*     display: none; */
+  }
+  
+  #defn-list-styles {
+    /*     display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 2.1.1 Basic Lists & Indents
+   * ---------------------------------------------------*/
+  ul,
+  ol {
+    margin-left: 1.5em;
+    /*   margin-bottom: 1em; */
+  }
+  
+  ul {
+    list-style-type: square;
+  }
+  
+  ul ul {
+    list-style-type: square;
+  }
+  
+  ul ul ul {
+    list-style-type: square;
+  }
+  
+  /* Ordered Lists ---------------------------*/
+  ol {
+    /* Over 20 valid types https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type */
+    list-style-type: hiragana;
+  }
+  
+  ol ol {
+    list-style-type: decimal-leading-zero;
+  }
+  
+  ol ol ol:before {
+    content: "";
+    background: magenta;
+    height: 100%;
+    width: 3px;
+    position: absolute;
+  }
+  
+  ol ol ol {
+    list-style-type: lower-roman;
+    list-style-position: inside;
+    position: relative;
+  }
+  
+  ol ol ol span {
+    display: none;
+  }
+  
+  #basic-lists {
+    /*       display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 2.1.2 Advanced List Styles
+   * ---------------------------------------------------*/
+  #advanced-lists ul li {
+    list-style-image: url("https://www.cbronline.com/wp-content/plugins/wp-favorite-posts/img/star.png");
+  }
+  
+  #advanced-lists ul li:before {
+    margin-left: -2rem;
+  }
+  
+  #advanced-lists ul ul li {
+    list-style-type: none;
+    list-style-image: none;
+  }
+  
+  #advanced-lists ul ul li:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f005";
+    content: "\2B50"; /* emoji unicode */
+    font-weight: 900;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+  }
+  
+  #advanced-lists ul ul ul li:before {
+    content: "";
+    margin: 0;
+  }
+  
+  #advanced-lists ul ul ul li {
+    list-style-type: none;
+    background-image: url("https://cdn.pixabay.com/photo/2013/07/12/17/39/star-152151_960_720.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding: 0 0 0 1.5em;
+    margin-left: -1.5em;
+  }
+  
+  /* Ordered Lists ---------------------------*/
+  #advanced-lists ol {
+    list-style: none;
+    counter-reset: steps 7;
+  }
+  
+  #advanced-lists ol li {
+    counter-increment: steps;
+  }
+  
+  #advanced-lists ol li:before {
+    content: "Step " counter(steps) ")";
+    margin-right: 0.5rem;
+    color: magenta;
+  }
+  
+  #advanced-lists ol ol {
+    counter-reset: sub-step;
+  }
+  
+  #advanced-lists ol ol li {
+    counter-increment: sub-step;
+  }
+  
+  #advanced-lists ol ol li:before {
+    content: counter(steps) "." counter(sub-step) ".";
+    color: #9900ff;
+  }
+  
+  #advanced-lists ol ol ol {
+    counter-reset: sub-sub-step;
+  }
+  
+  #advanced-lists ol ol ol li {
+    counter-increment: sub-sub-step;
+    margin: 1em 0 1em 6em;
+    position: relative;
+  }
+  
+  #advanced-lists ol ol ol li:before {
+    content: counter(steps) "→" counter(sub-step) "→" counter(sub-sub-step) "→";
+    background: #101525;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    transform: rotate(-10deg);
+    position: absolute;
+    left: -6em;
+  }
+  
+  /* Ordered Lists ADVICE ---------------------------
+   * 1. OL (list) = Reset (create new)
+   * 2. LI (item) = Increment
+   * 3. LI:before = Numbering style
+   * --------------------------------------------- */
+  
+  #advanced-lists,
+  #list-styles {
+    /*       display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 2.2.1 Simple Definition List
+   * ---------------------------------------------------*/
+  #simple-defn-lists dl {
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    border-color: red green white blue;
+    border-style: solid dashed dotted double;
+    border-width: 1px 2px 3px 4px;
+    border-radius: 60px 30px 15px 0px;
+  }
+  
+  #simple-defn-lists dt {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+  
+  #simple-defn-lists dd {
+    font-style: italic;
+    text-indent: 2em;
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+  
+  #simple-defn-lists {
+    /*         display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 2.2.2 Multiple Definitions
+   * ---------------------------------------------------*/
+  .pricing-tables {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+  
+  #multi-defns dl {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.32);
+    transition: 0.3s all;
+  }
+  
+  #multi-defns dl:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.32);
+  }
+  
+  #multi-defns dt {
+    counter-reset: defns;
+    background: white;
+    padding: 2rem;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.14);
+  }
+  
+  #multi-defns dd {
+    counter-increment: defns;
+    position: relative;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  #multi-defns dd:before {
+    content: counter(defns) ") ";
+    position: absolute;
+    left: -1.25em;
+  }
+  
+  #multi-defns dd:first-of-type {
+    color: magenta;
+    font-size: 3rem;
+    padding: 2rem;
+  }
+  
+  #multi-defns dd:nth-of-type(2) {
+    padding: 2rem;
+    min-height: 80px;
+  }
+  
+  #multi-defns dd:nth-of-type(3) {
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  #multi-defns dd:last-of-type {
+    text-align: center;
+    margin: 2rem;
+    border-bottom: 0;
+    padding: 2rem;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 0.6) 0%,
+        rgba(53, 68, 255, 0.7) 40%,
+        rgba(10, 47, 158, 0.8) 80%
+      );
+    color: white;
+    border-radius: 10px;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  #multi-defns dd:last-of-type:hover {
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+  }
+  
+  #multi-defns {
+    /*         display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 2.2.3 Pure CSS Accordions
+   * ---------------------------------------------------*/
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  /* Accordion styles */
+  .tabs {
+    border-radius: 10px;
+    overflow: hidden;
+    /*   background: white; */
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .tab {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .tab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Icon */
+  .tab-label:hover {
+    opacity: 0.8;
+  }
+  
+  .tab-label:after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+  }
+  
+  .tab-content {
+    max-height: 0px;
+    padding: 0 1em;
+    color: #151025;
+    background: white;
+    transition: all 0.35s;
+  }
+  
+  .tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 0.75) 0%,
+        rgba(53, 68, 255, 0.75) 40%,
+        rgba(10, 47, 158, 0.75) 80%
+      );
+    cursor: pointer;
+  }
+  
+  .tab-close:hover {
+    opacity: 0.8;
+  }
+  
+  /* :checked */
+  input:checked + .tab-label {
+    background: rgba(10, 47, 158, 1);
+  }
+  
+  input:checked + .tab-label:after {
+    transform: rotate(90deg);
+  }
+  
+  input:checked ~ .tab-content {
+    max-height: 100vh;
+    padding: 2rem;
+  }
+  
