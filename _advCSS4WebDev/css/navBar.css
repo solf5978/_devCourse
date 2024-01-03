@@ -107,3 +107,79 @@ input {
     padding: 2rem;
   }
   
+  .main-section {
+    min-height: 100vh;
+    min-width: 100%;
+    background: white;
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+  }
+
+  .navicon {
+    color: #101525;
+    left: 0.25rem;
+    height: 3rem;
+    position: fixed;
+    top: 0.25rem;
+    width: 3rem;
+    z-index: 20;
+    transform: rotate(90deg);
+    transition: 0.3s all ease-in-out;
+}
+
+.navicon::before,
+.navicon::after {
+    background: transparent;
+    border-bottom: 2px solid #101525;
+    border-top: 1px solid #101525;
+    content: '';
+    height: 7px;
+    position: fixed;
+    left: .5rem;
+    top: 1.25rem;
+    width: 55%;
+    transition: 0.3s all ease-in-out 0.3s;
+}
+
+.navicon::before {
+    transform: rotate(90deg);
+}
+
+.navicon::after {
+    left: 1.0625rem;
+    transform: rotate(-90deg);
+}
+
+.nav-check {
+    cursor: pointer;
+    left: 0.25rem;
+    height: 3rem;
+
+    opacity: 0;
+    position: fixed;
+    top: 0.25rem;
+    width: 3rem;
+    z-index: 21;
+    transition: 0.3s all ease-in-out;
+}
+
+.nav-check:checked + .navicon::before,
+.nav-check:checked + .navicon::after {
+    background: #101525;
+    border: none;
+    height: 2px;
+    left: 0.6875rem;
+    top: 1.5rem;
+    transition: 0.3s all ease-in-out 0.3s;
+}
+
+.nav-check:checked + .navicon::before {
+    transform: rotate(45deg);
+}
+
+.nav-check:checked + .navicon::after {
+	transform: rotate(-45deg);
+}
