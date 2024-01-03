@@ -1,0 +1,495 @@
+/* ---------------------------------------------------
+ * 0 Document Base Styles
+ * ---------------------------------------------------*/
+ :root {
+    --link-color: rgba(10, 47, 158, 1);
+    --light-link-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: Muli;
+    margin: 0;
+    color: #151025;
+  }
+  
+  section {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 6rem;
+    position: relative;
+    background: #efefef;
+  }
+  
+  a {
+    color: rgba(10, 47, 158, 1);
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    color: rgba(53, 68, 255, 1);
+  }
+  
+  a:visited {
+    color: rgba(164, 88, 255, 1);
+  }
+  
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section-title {
+    color: white;
+    background: linear-gradient(
+      240deg,
+      rgba(164, 88, 255, 1) 0%,
+      rgba(53, 68, 255, 1) 40%,
+      rgba(10, 47, 158, 1) 80%
+    );
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+  
+    margin: -6rem -6rem 3rem;
+    padding: 6rem;
+  }
+  
+  .section-title span {
+    font-size: 60%;
+    opacity: 0.6;
+  }
+  
+  article {
+    min-height: calc(100vh - 6rem);
+    padding: 3rem 0;
+    position: relative;
+  }
+  
+  .section-nav-buttons {
+    font-size: 4.8rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10rem;
+  }
+  
+  .section-nav-buttons a {
+    text-decoration: none;
+  }
+  
+  .next-section.end {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+  
+  .next-section.end span {
+    font-size: initial;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  
+  h2 {
+    font-size: 4.4rem;
+  }
+  
+  h3 {
+    font-size: 3.6rem;
+  }
+  
+  h4 {
+    font-size: 3rem;
+    position: relative;
+  }
+  
+  .col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  
+  .title:before {
+    content: "#";
+    opacity: 0.3;
+    position: absolute;
+    left: 3.5rem;
+    text-align: right;
+  }
+  
+  .sub-section-title {
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  .sub-section-title:before {
+    left: -2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: initial;
+  }
+  
+  .sub-section-title span {
+    font-size: 50%;
+    -webkit-text-fill-color: gray;
+    opacity: 50%;
+  }
+  
+  .font-notes {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pre-columns pre {
+    background: #151025;
+    color: #efefef;
+    padding: 2rem 2rem 0;
+  }
+  
+  .weight-100 {
+    font-weight: 100;
+  }
+  .weight-200 {
+    font-weight: 200;
+  }
+  .weight-300 {
+    font-weight: 300;
+  }
+  .weight-400 {
+    font-weight: 400;
+  }
+  .weight-500 {
+    font-weight: 500;
+  }
+  .weight-600 {
+    font-weight: 600;
+  }
+  .weight-700 {
+    font-weight: 700;
+  }
+  .weight-800 {
+    font-weight: 800;
+  }
+  .weight-900 {
+    font-weight: 900;
+  }
+  .weight-lighter {
+    font-weight: lighter;
+  }
+  .weight-bolder {
+    font-weight: bolder;
+  }
+  
+  /* ---------------------------------------------------
+   * 2.5.1 CSS Form Validation
+   * ---------------------------------------------------*/
+  form {
+    margin: auto;
+    display: block;
+    width: 500px;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0;
+  }
+  
+  .form-title {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 2rem;
+    padding: 2rem;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .form-title:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+  
+  /*-- Form elements ---------------------------- */
+  .form-field {
+    position: relative;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+  }
+  
+  .form-field:first-of-type {
+    margin-top: 4rem;
+  }
+  
+  form input,
+  form label,
+  form textarea,
+  form button {
+    display: block;
+    width: calc(100% - 4rem);
+    box-sizing: border-box;
+    margin: 0.5rem 2rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  label {
+    font-size: 1.8rem;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0px;
+    text-align: left;
+    pointer-events: none;
+    transition: all 0.2s 0.3s;
+  }
+  
+  label span {
+    font-size: 1.2rem;
+    color: rgb(159, 159, 181);
+    opacity: 0;
+    display: block;
+    transition: opacity 0.5s 0s;
+    text-align: right;
+    margin-top: 45px;
+    font-style: italic;
+  }
+  
+  /* -- Form Inputs ------------------------------ */
+  input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: white;
+  }
+  
+  input:hover,
+  input:focus,
+  input:active {
+    border: none;
+    border-bottom: 2px solid rgba(164, 88, 255, 1);
+    outline: none;
+    /*   border-radius: 5px; */
+  }
+  
+  /* -- Form Inputs:Pseudo-classes ------------- */
+  input:required,
+  input:placeholder-shown {
+    background: transparent;
+  }
+  
+  input:required + label:before,
+  textarea:required + label:before {
+    content: "*";
+    position: absolute;
+    top: 0px;
+    left: -12px;
+    display: block;
+    color: red;
+  }
+  
+  input:not(:placeholder-shown):not([type="date"]):valid {
+    background: rgba(0, 255, 0, 0.15);
+  }
+  
+  input:not(:placeholder-shown):invalid {
+    background: rgba(255, 0, 0, 0.15);
+  }
+  
+  input:focus:invalid {
+    color: red;
+  }
+  
+  input:read-only {
+    background: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+  }
+  
+  input:disabled {
+    background: rgba(100, 100, 100, 0.3);
+    color: gray;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    cursor: not-allowed;
+  }
+  
+  input:disabled:hover {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  input:not(:placeholder-shown) ~ label,
+  textarea:focus ~ label {
+    top: -27px;
+    font-size: 1.3rem;
+    transition: all 0.2s 0s;
+    opacity: 0.8;
+  }
+  
+  input:not(:placeholder-shown):focus ~ label span {
+    opacity: 1;
+    transition: opacity 0.5s 0.3s;
+  }
+  
+  input:not(:placeholder-shown) ~ label:before,
+  textarea:focus ~ label:before {
+    left: -5px;
+  }
+  
+  /* -- Validation Checks ----------------------------- */
+  form input:not([type="date"]) ~ label:after,
+  form textarea ~ label:after {
+    position: absolute;
+    right: 5px;
+    top: 30px;
+    visibility: hidden;
+  }
+  
+  form input:focus ~ label:after,
+  form textarea:focus ~ label:after,
+  form input:not(:placeholder-shown) ~ label:after,
+  form textarea:not(:placeholder-shown) ~ label:after {
+    visibility: visible;
+  }
+  
+  form input:not(:placeholder-shown):not([type="date"]):valid ~ label:after,
+  form textarea:not(:placeholder-shown):valid ~ label:after {
+    content: "✔️";
+  }
+  
+  form input:not(:placeholder-shown):not([type="date"]):invalid ~ label:after,
+  form textarea:not(:placeholder-shown):invalid ~ label:after {
+    content: "❌";
+  }
+  
+  /* -- Textarea ----------------------------- */
+  form textarea {
+    background: rgba(255, 255, 255, 0);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 1rem;
+    height: 120px;
+  }
+  
+  form textarea:hover,
+  form textarea:focus,
+  form textarea:active {
+    border-color: rgba(164, 88, 255, 1);
+    /*   background: rgba(255, 255, 255, 0.3); */
+    outline: none;
+  }
+  
+  /* -- Button --------------------------------- */
+  form button {
+    background: rgba(164, 88, 255, 1);
+    border: none;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  form button:active,
+  form button:focus,
+  form button:hover {
+    background: rgba(164, 88, 255, 1);
+    outline: none;
+  }
+  
+  form:invalid button {
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+  form:valid button {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  /* ---------------------------------------------------
+   * 2.5.2 Responsive Forms
+   * ---------------------------------------------------*/
+  #responsive {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  #responsive .form-title {
+    grid-column: span 2;
+  }
+  
+  #responsive .form-field:nth-of-type(2) {
+    margin-top: 4rem;
+  }
+  
+  #responsive .form-field:nth-of-type(8) /* textarea */,
+  #responsive .form-field:nth-of-type(9) /* button */ {
+    grid-column: span 2;
+  }
+  
+  #responsive .form-field:nth-of-type(8) textarea {
+    max-width: 730px;
+  }
+  
+  #responsive button {
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    #responsive {
+      width: 800px;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    #responsive {
+      width: 600px;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    #responsive {
+      max-width: 100%;
+      display: block;
+    }
+  }
+  

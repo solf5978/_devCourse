@@ -1,0 +1,98 @@
+<section id="content" class="section-formatting-visual-data">
+    <h2 class="section-title title">2 Content <span>(Forms)</span></h2>
+  
+    <!-- 2.5 Forms -->
+    <article id="forms">
+      <h3 class="sub-section-title title">2.5 Forms</h3>
+  
+      <!-- 2.5.1 Form Validation -->
+      <article id="form-validation">
+        <h4 class="sub-section-title title">2.5.1 CSS Form Validation</h4>
+  
+        <form autocomplete="off">
+          <p class="form-title"><em>Pure CSS</em> form validation</p>
+          <div class="form-field">
+            <input type="text" id="f1" placeholder=" " disabled value="Smartwatch Active 2">
+            <label for="f1">Product Name <span><a href="#">Return to your cart</a> to choose a different product.</span></label>
+          </div>
+          <div class="form-field">
+            <input type="text" id="f2" placeholder=" " value="$100.00" readonly>
+            <label for="f2">Product Price</label>
+          </div>
+          <div class="form-field">
+            <input type="text" id="f2" placeholder=" " pattern="[^\s]+" required>
+            <label for="f2">Username <span>Or use the email you signed up with.</span></label>
+          </div>
+          <div class="form-field">
+            <input type="email" id="f4" placeholder=" ">
+            <!-- Email regex: https://stackoverflow.com/questions/36026590/rails-regex-email-validation-with-no-spaces-allowed -->
+            <label for="f4">Email <span>Include the @ symbol</span></label>
+          </div>
+          <div class="form-field">
+            <input type="password" id="f3" pattern="[A-Za-z0-9]{8,}" placeholder=" ">
+            <label for="f3">Password field <span>Minimum of 8 characters</span></label>
+          </div>
+          <div class="form-field">
+            <input type="text" id="f5" pattern="[0-9]{13,16}" placeholder=" ">
+            <label for="f5">Credit Card<span>Enter a 13 or 16-digit number with no dashes.</span></label>
+          </div>
+          <div class="form-field">
+            <input id='date' type='date' pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder=" " />
+            <label for='date'>Payment Date</label>
+          </div>
+          <div class="form-field">
+            <textarea id="f6" placeholder=" " required></textarea>
+            <label for="f6">Delivery details (required)</label>
+          </div>
+          <div class="form-field">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </article>
+  
+      <!-- 2.5.1 Responsive Forms -->
+      <article id="responsive-forms">
+        <h4 class="sub-section-title title">2.5.2 Responsive Forms</h4>
+  
+        <form id="responsive" autocomplete="off">
+          <p class="form-title"><em>Pure CSS</em> form validation</p>
+          <div class="form-field">
+            <input type="text" id="f1" placeholder=" " disabled value="Smartwatch Active 2">
+            <label for="f1">Product Name <span><a href="#">Return to your cart</a> to choose a different product.</span></label>
+          </div>
+          <div class="form-field">
+            <input type="text" id="f2" placeholder=" " value="$100.00" readonly>
+            <label for="f2">Product Price</label>
+          </div>
+          <div class="form-field">
+            <input type="text" id="f2" placeholder=" " pattern="[^\s]+" required>
+            <label for="f2">Username <span>Or use the email you signed up with.</span></label>
+          </div>
+          <div class="form-field">
+            <input type="email" id="f4" placeholder=" ">
+            <!-- Email regex: https://stackoverflow.com/questions/36026590/rails-regex-email-validation-with-no-spaces-allowed -->
+            <label for="f4">Email <span>Include the @ symbol</span></label>
+          </div>
+          <div class="form-field">
+            <input type="password" id="f3" pattern="[A-Za-z0-9]{8,}" placeholder=" ">
+            <label for="f3">Password field <span>Minimum of 8 characters</span></label>
+          </div>
+          <div class="form-field">
+            <input type="text" id="f5" pattern="[0-9]{13,16}" placeholder=" ">
+            <label for="f5">Credit Card<span>Enter a 13 or 16-digit number with no dashes.</span></label>
+          </div>
+          <div class="form-field">
+            <input id='date' type='date' pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder=" " />
+            <label for='date'>Payment Date</label>
+          </div>
+          <div class="form-field">
+            <textarea id="f6" placeholder=" " required></textarea>
+            <label for="f6">Delivery details (required)</label>
+          </div>
+          <div class="form-field">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </article>
+    </article>
+  </section>
