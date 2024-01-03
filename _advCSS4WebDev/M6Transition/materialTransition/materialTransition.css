@@ -1,0 +1,328 @@
+/* ---------------------------------------------------
+ * 0 Document Base Styles
+ * ---------------------------------------------------*/
+ :root {
+    --link-color: rgba(10, 47, 158, 1);
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: Muli;
+    margin: 0;
+    color: #151025;
+  }
+  
+  section {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 6rem;
+    position: relative;
+    background: #efefef;
+  }
+  
+  a {
+    color: rgba(10, 47, 158, 1);
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    color: rgba(53, 68, 255, 1);
+  }
+  
+  a:visited {
+    color: rgba(164, 88, 255, 1);
+  }
+  
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section-title {
+    color: white;
+    background: linear-gradient(
+      240deg,
+      rgba(164, 88, 255, 1) 0%,
+      rgba(53, 68, 255, 1) 40%,
+      rgba(10, 47, 158, 1) 80%
+    );
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+  
+    margin: -6rem -6rem 3rem;
+    padding: 6rem;
+  }
+  
+  .section-title span {
+    font-size: 60%;
+    opacity: 0.6;
+  }
+  
+  article {
+    min-height: calc(100vh - 6rem);
+    padding: 3rem 0;
+    position: relative;
+  }
+  
+  .section-nav-buttons {
+    font-size: 4.8rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10rem;
+  }
+  
+  .section-nav-buttons a {
+    text-decoration: none;
+  }
+  
+  .next-section.end {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+  
+  .next-section.end span {
+    font-size: initial;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  
+  h2 {
+    font-size: 4.4rem;
+  }
+  
+  h3 {
+    font-size: 3.6rem;
+  }
+  
+  h4 {
+    font-size: 3rem;
+    position: relative;
+  }
+  
+  h5 {
+    padding-top: 0rem;
+    margin-top: 0;
+    font-size: 2.4rem;
+  }
+  
+  article article article {
+    padding: 0 10rem;
+  }
+  
+  .col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  
+  .title:before {
+    content: "#";
+    opacity: 0.3;
+    position: absolute;
+    left: 3.5rem;
+    text-align: right;
+  }
+  
+  .sub-section-title {
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  .sub-section-title:before {
+    left: -2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: initial;
+  }
+  
+  .sub-section-title span {
+    font-size: 50%;
+    -webkit-text-fill-color: gray;
+    opacity: 50%;
+  }
+  
+  .font-notes {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pre-columns pre {
+    background: #151025;
+    color: #efefef;
+    padding: 2rem 2rem 0;
+  }
+  
+  /* ---------------------------------------------------
+   * 5.1.1 Race Track (Curves)
+   * ---------------------------------------------------*/
+  .race-track {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    border: 1px dotted;
+    position: relative;
+    background: hsla(250, 60%, 60%, 0.3);
+    padding-bottom: 7rem;
+  }
+  
+  .race-track div {
+    margin: -1rem 1rem 2rem;
+    border-bottom: 2px solid hsla(250, 60%, 60%, 0.9);
+    max-width: 960px;
+  }
+  
+  .race-track:hover .icon {
+    transform: translateX(890px);
+  }
+  
+  .race-track .icon {
+    background: url(https://developer.tizen.org/sites/default/files/users/user-2059/2-easing.png);
+    height: 100px;
+    width: 80px;
+    display: block;
+    position: relative;
+    top: 50px;
+    background-size: cover;
+  }
+  
+  .race-track.steps .icon {
+    background: url(https://devopspoints.com/uploads/library/css3/img_5db27b33e97f7.png);
+    height: 100px;
+    width: 80px;
+    display: block;
+    position: relative;
+    top: 50px;
+    background-size: cover;
+  }
+  
+  .icon.cubic .icon-text {
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(13px, 85px);
+  }
+  
+  /* === Transition CURVES === */
+  .icon.ease-in-out {
+    background-position: top left 80px;
+    transition: all 3s ease-in-out;
+  }
+  
+  .icon.ease-out {
+    background-position: top left 160px;
+    transition: all 3s ease-out;
+  }
+  
+  .icon.ease-in {
+    background-position: top left 240px;
+    transition: all 3s ease-in;
+  }
+  
+  .icon.ease {
+    background-position: top left 320px;
+    transition: all 3s ease;
+  }
+  
+  .icon.linear {
+    transition: all 3s linear;
+  }
+  
+  .icon.cubic {
+    background: white
+      url(https://valhead.com/wp-content/uploads/2017/02/cubic-bezier-graph.png)
+      no-repeat;
+    background-size: contain;
+    background-position: 0% 50%;
+    position: relative;
+  
+    /* https://cubic-bezier.com/#.53,1.75,0,-1.01 */
+    transition: all 3s cubic-bezier(0.53, 1, 0, -1.01);
+  }
+  
+  #race-track-curves {
+    /*   display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 5.1.2 Race Track (Steps)
+   * ---------------------------------------------------*/
+  
+  /* === Transition STEPS === */
+  .icon.step-end {
+    background-position: top left -5px !important;
+    transition: all 5s step-end;
+  }
+  
+  .icon.step-start {
+    background-position: top left -105px !important;
+    transition: all 5s step-start;
+  }
+  
+  .icon.step-5-end {
+    background-position: top right -105px !important;
+    transition: all 5s steps(5, end);
+  }
+  
+  .icon.step-5-start {
+    background-position: top right -5px !important;
+    transition: all 5s steps(5, start);
+  }
+  
+  #race-track-steps {
+    display: none;
+  }
+  
+  /* ---------------------------------------------------
+   * 5.1.3 Multiple / Async
+   * ---------------------------------------------------*/
+  figure img {
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 3s ease;
+  }
+  
+  figure.has-border {
+    width: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 15px solid transparent;
+    border-image: url(https://www.clker.com/cliparts/x/q/O/y/F/m/another-border-hi.png)
+      38 round;
+    transition: all 1s cubic-bezier(0.53, 1.75, 0, -1.01);
+  }
+  
+  figure:hover {
+    width: 600px;
+    box-shadow: 6px 6px 28px rgba(0, 0, 0, 0.9);
+    transition: width 3s ease, box-shadow 1s linear 1s;
+  }
+  
+  figure:hover img {
+    filter: drop-shadow(16px 16px 20px blue);
+    transition: all 1s cubic-bezier(0.53, 1.75, 0, -1.01) 1s;
+  }
+  
