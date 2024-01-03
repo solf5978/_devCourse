@@ -1,7 +1,88 @@
-/* add border box sizing to the page right from the start */
-html {
+:root {
+    --mainColor: white;
+    
+    /* Font Configuration */
+    --mainFont: "Comic Neue", Lexend, cursive;
+    --baseSize: 1rem;
+    
+    /* Colour Declaration */
+    --cWhite: white;
+    --cBlack: black;
+    --cLime: lime;
+    --cMagenta: magenta;
+    --cMagenta50: #f47dda80;
+    --cTan: tan;
+    --cTeal: teal;
+    --cCyan: cyan;
+    
+    
+  }
+  
+  /* add border box sizing to the page right from the start */
+  html {
     box-sizing: border-box;
   }
   *, *:before, *:after {
     box-sizing: inherit;
   }
+  
+  body {
+    --main-color: teal;
+    margin: 0;
+    font-family: var(--mainFont);
+    font-weight: 300;
+    line-height: 1.75;
+    background-color: var(--cTeal);
+    color: var(--mainColor);
+    font-size: var(--baseSize);
+    margin: 0;
+    padding: 0;
+  }
+  
+  :has(h1, h2, h3, h4, h5, h6) {
+    font-weight: 400;
+    line-height: 1.25;
+    padding: 8px;
+  }
+  
+  .colors {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+  }
+  
+  .colors > * {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .lime { 
+    background-color: var(--cLime);
+  }
+  
+  .magenta { 
+    background-color: var(--cMagenta);
+  }
+  
+  .magenta50 {
+    background-color: var(--cMagenta50);
+  }
+  .white {
+    background-color: var(--cWhite);
+    border: 1px solid #ccc;
+  }
+  .tan {
+    background-color: var(--cTan);
+  }
+  .teal {
+    background-color: var(--cTeal);
+    border: 1px solid var(--cWhite);
+  }
+  .cyan {
+    background-color: var(--cCyan);
+  }
+  .black {
+    background-color: var(--cBlack);
+  }
+  
+  
