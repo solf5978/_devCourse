@@ -281,7 +281,7 @@
   }
   
   #styles {
-    /*   display: none; */
+      display: none;
   }
   
   /* ---------------------------------------------------
@@ -298,6 +298,6 @@
   }
   
   #units {
-    /*   display: none; */
+      display: none;
   }
   

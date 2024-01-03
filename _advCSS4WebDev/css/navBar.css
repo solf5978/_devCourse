@@ -1,0 +1,109 @@
+
+.nav-title {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin: 4.2rem 0 1.6rem;
+    padding: 0 1rem;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  /* Accordion styles */
+  .tabs {
+    /* border-radius: 10px; */
+    overflow: hidden;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+    /*   background: white; */
+    /* box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5); */
+  }
+  
+  .tab {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .tab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    /* background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      ); */
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Icon */
+  .tab-label:hover {
+    opacity: 0.8;
+  }
+  
+ .tab-label:after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+  }
+  
+.tab-content {
+    max-height: 0px;
+    padding: 0 1em;
+    /* color: #151025;
+    background: white; */
+    color: #efefef;
+    transition: all 0.35s;
+  }
+
+  .tab-content ol,
+  .tab-content ul {
+    margin-left: 2rem;
+    line-height: 2;
+  }
+
+  .tab-content li {
+    counter-increment: step;
+  }
+
+  .tab-content li::before {
+    content: counter(step);
+    background: #101525;
+    border-radius: 5px;
+    padding: 0.5px;
+    color: #efefef;
+    transform: rotate(-10deg);
+    left: -2.6em;
+    font-size: 0.8em;
+    line-height: 1.8em;
+  }
+
+  
+  /* :checked */
+  input:checked + .tab-label {
+    background: rgba(10, 47, 158, 1);
+  }
+  
+  input:checked + .tab-label:after {
+    transform: rotate(90deg);
+  }
+  
+  input:checked ~ .tab-content {
+    max-height: 100vh;
+    padding: 2rem;
+  }
+  
