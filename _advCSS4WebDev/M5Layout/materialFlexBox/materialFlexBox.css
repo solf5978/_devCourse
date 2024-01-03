@@ -1,0 +1,285 @@
+/* ---------------------------------------------------
+ * 0 Document Base Styles
+ * ---------------------------------------------------*/
+ :root {
+    --link-color: rgba(10, 47, 158, 1);
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-size: 16px;
+    font-family: Muli;
+    margin: 0;
+    color: #151025;
+  }
+  
+  section {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 6rem;
+    position: relative;
+    background: #efefef;
+  }
+  
+  a {
+    color: rgba(10, 47, 158, 1);
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    color: rgba(53, 68, 255, 1);
+  }
+  
+  a:visited {
+    color: rgba(164, 88, 255, 1);
+  }
+  
+  ul,
+  ol,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section-title {
+    color: white;
+    background: linear-gradient(
+      240deg,
+      rgba(164, 88, 255, 1) 0%,
+      rgba(53, 68, 255, 1) 40%,
+      rgba(10, 47, 158, 1) 80%
+    );
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+  
+    margin: -6rem -6rem 3rem;
+    padding: 6rem;
+  }
+  
+  .section-title span {
+    font-size: 60%;
+    opacity: 0.6;
+  }
+  
+  article {
+    min-height: calc(100vh - 6rem);
+    padding: 3rem 0;
+    position: relative;
+  }
+  
+  .section-nav-buttons {
+    font-size: 4.8rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10rem;
+  }
+  
+  .section-nav-buttons a {
+    text-decoration: none;
+  }
+  
+  .next-section.end {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+  
+  .next-section.end span {
+    font-size: initial;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+  
+  h2 {
+    font-size: 4.4rem;
+  }
+  
+  h3 {
+    font-size: 3.6rem;
+  }
+  
+  h4 {
+    font-size: 3rem;
+    position: relative;
+  }
+  
+  h5 {
+    padding-top: 0rem;
+    margin-top: 0;
+    font-size: 2.4rem;
+  }
+  
+  article article article {
+    padding: 0 10rem;
+  }
+  
+  .col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  
+  .title:before {
+    content: "#";
+    opacity: 0.3;
+    position: absolute;
+    left: 3.5rem;
+    text-align: right;
+  }
+  
+  .sub-section-title {
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png"),
+      linear-gradient(
+        240deg,
+        rgba(164, 88, 255, 1) 0%,
+        rgba(53, 68, 255, 1) 40%,
+        rgba(10, 47, 158, 1) 80%
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  .sub-section-title:before {
+    left: -2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: initial;
+  }
+  
+  .sub-section-title span {
+    font-size: 50%;
+    -webkit-text-fill-color: gray;
+    opacity: 50%;
+  }
+  
+  .font-notes {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pre-columns pre {
+    background: #151025;
+    color: #efefef;
+    padding: 2rem 2rem 0;
+  }
+  
+  .learn-flexbox {
+    margin: -1rem 0 3rem;
+  }
+  
+  .learn-flexbox li {
+    margin-left: 2rem;
+  }
+  
+  .webpage main div {
+    /*   display: none; */
+  }
+  
+  /* ---------------------------------------------------
+   * 4.2.1 Flexbox Layout
+   * ---------------------------------------------------*/
+  .webpage,
+  .webpage * {
+    display: border-box;
+  }
+  
+  .webpage header,
+  .webpage footer {
+    background: hsla(250, 60%, 60%, 0.5);
+    padding: 30px;
+  }
+  
+  .webpage aside {
+    background: hsla(250, 30%, 70%, 0.5);
+  }
+  
+  .webpage main {
+    background: hsla(250, 60%, 90%, 0.8);
+  }
+  
+  .webpage aside,
+  .webpage main {
+    padding: 30px;
+  }
+  
+  /* Flexbox parent */
+  .webpage {
+    display: flex;
+  
+    /* Making it flexible */
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  
+    flex-direction: row;
+    width: 240px;
+    border: 1px dotted;
+    flex-wrap: no-wrap;
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    /*     width: 240px; */
+  
+    flex-flow: row-reverse wrap-reverse;
+    flex-flow: row wrap;
+    width: 100%;
+  
+    /* Horizontal positioning */
+    justify-content: start;
+    justify-content: center;
+    /*     justify-content: flex-end; */
+    /*     justify-content: flex-start; */
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+  
+    /* Vertical positioning */
+    height: 70vh;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: stretch;
+    align-items: center;
+  }
+  
+  /* Flexbox children */
+  .webpage header,
+  .webpage aside,
+  .webpage main,
+  .webpage footer {
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex: 1 1 100px;
+  }
+  
+  /* ========== Real Page Layout ========== */
+  .webpage {
+    height: auto;
+    justify-content: start;
+    align-items: stretch;
+  }
+  
+  .webpage header,
+  .webpage footer {
+    flex: 1 1 100%;
+  }
+  
+  .webpage aside {
+    flex: 0 1 200px;
+  }
+  
+  .webpage main {
+    flex-grow: 1;
+  }
+  
