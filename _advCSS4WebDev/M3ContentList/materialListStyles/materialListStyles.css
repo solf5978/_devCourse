@@ -362,7 +362,7 @@
   
   #advanced-lists,
   #list-styles {
-    /*       display: none; */
+          display: none;
   }
   
   /* ---------------------------------------------------
@@ -393,7 +393,7 @@
   }
   
   #simple-defn-lists {
-    /*         display: none; */
+            display: none;
   }
   
   /* ---------------------------------------------------
