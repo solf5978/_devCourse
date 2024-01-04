@@ -168,3 +168,17 @@
       gap: 2rem;
     }
   }
+  @media (min-width: 1025px) {
+    .wrapper {
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 0 2rem;
+    }
+    main {
+      /* grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+      grid-area: 1 / 2 / 5 / 3;
+      padding-top: 8rem;
+      display: block;
+    }
+  }
