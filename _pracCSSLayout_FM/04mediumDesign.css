@@ -1,5 +1,3 @@
-/* copied from the footer exercise */
-
 @layer base {
     :root {
       --base-size: 1rem;
@@ -22,7 +20,8 @@
       --black: #050d14;
       --shadow: #050d1480;
       --gradient: linear-gradient(180deg, var(--black) 0%, var(--teal) 100%);
-      --grey: #adb0c0;
+      --grey: #ADB0C0;
+  
   
       /* fonts */
       --sans-serif: "Poppins", sans-serif;
@@ -211,33 +210,34 @@
     .album {
       border: 2px solid var(--cyan);
       max-width: 500px;
-      margin: 2rem auto;
+      margin: 3rem auto 1rem auto;
       padding: 1rem;
       text-align: center;
     }
-    .album h2 {
-      margin: 0;
-      font-family: var(--cursive);
-      font-size: var(--h6);
-    }
     .album h1 {
       color: var(--lime);
-      text-transform: uppercase;
       font-weight: 300;
+      text-transform: uppercase;
       font-size: var(--h4);
       margin: 1rem 0;
     }
+    .album h2 {
+      margin: 0;
+      font-size: var(--h6);
+      font-family: var(--cursive);
+    }
   }
-  @layer tracklist {
+  @layer playlist {
     table {
+      border-collapse: collapse;
       max-width: 500px;
       width: 100%;
       margin: 0 auto;
       font-family: var(--cursive);
-      border-collapse: collapse;
     }
     caption {
       visibility: collapse;
+      /* the accessible way of hiding this but still visible to screen readers */
     }
     th, td {
       padding: 1rem 0;
@@ -245,8 +245,8 @@
     th {
       text-align: left;
       font-family: var(--sans-serif);
-      border-bottom: 1px solid var(--grey);
       color: var(--grey);
+      border-bottom: 1px solid var(--grey);
     }
     td:last-of-type {
       font-family: var(--serif);
@@ -286,7 +286,4 @@
       max-width: 1200px;
     }
   }
-  
-  
-  
   
