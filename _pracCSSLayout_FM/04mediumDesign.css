@@ -332,6 +332,22 @@
         padding: 0 1rem;
       }
     }
+    @media (min-width: 1000px) {
+    .reviews {
+      display: block;
+      width: 200px;
+    }
+    .reviews figure:first-of-type,
+    .reviews figure:last-of-type,
+    .reviews figure:nth-of-type(3),
+    .reviews figure:nth-of-type(2) {
+      padding: 1rem;
+    }
+    .reviews .featured-img {
+      position: relative;
+      right: 1.5rem;
+    }
+  }
   }
   @layer footer {
     footer {
