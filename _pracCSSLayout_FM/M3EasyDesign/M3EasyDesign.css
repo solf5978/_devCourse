@@ -99,9 +99,25 @@
       width: 100%;
       max-width: 100%;
     }
+    main {
+      margin-bottom: 4rem;
+    }
     figure {
       margin: 0;
       padding: 0;
+    }
+    blockquote {
+      margin: 0;
+      padding: 0;
+    }
+    cite {
+      font-style: normal;
+      display: block;
+      margin-top: -3px;
+    }
+    footer {
+      margin-top: 5rem;
+      text-transform: uppercase;
     }
   }
   @layer header-banner-tour {
@@ -123,6 +139,14 @@
     .club {
       color: var(--lime);
       font-size: var(--h5);
+    }
+  }
+  @layer reviews {
+    .imggroup {
+      margin-top: 2rem;
+    }
+    .star {
+      width: 18px;
     }
   }
   
