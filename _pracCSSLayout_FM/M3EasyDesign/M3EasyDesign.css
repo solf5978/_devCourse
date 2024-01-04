@@ -149,4 +149,22 @@
       width: 18px;
     }
   }
-  
+  @media (min-width: 800px) {
+    .wrapper {
+      max-width: 800px;
+      padding: 2rem;
+    }
+      main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+      main h1 {
+       /* grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+      grid-area: 1 / 1 / 2 / 4;
+    }
+      aside {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
