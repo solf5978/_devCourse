@@ -227,7 +227,7 @@
       font-family: var(--cursive);
     }
   }
-  @layer playlist {
+  @layer tracklist {
     table {
       border-collapse: collapse;
       max-width: 500px;
@@ -252,6 +252,15 @@
       font-family: var(--serif);
       color: var(--magenta);
       font-weight: 600;
+    }
+  }
+  @layer reviews {
+    /* copied from mobile work - figure, blockquote, cite are already styled in the base */
+    .imggroup {
+      margin-top: 2rem;
+    }
+    .star {
+      width: 18px;
     }
   }
   @layer footer {
