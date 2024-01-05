@@ -125,7 +125,30 @@
   }
   
   @layer audio {
-  
+  #audio-player-container .controls {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    margin: 1rem;
+  }
+  #audio-player-container .volume {
+    display: grid;
+    grid-template-columns: 0.15fr 1fr 0.15fr;
+    justify-content: center;
+    align-items: center;
+  }
+  #audio-player-container .name-play {
+    display: grid;
+    grid-template-columns: 2fr 0.75fr 2fr;
+    gap: 1rem;
+    margin: 1rem;
+  }
+  #audio-player-container .play-slider {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    justify-content: center;
+    align-items: center;
+  }
   #audio-player-container {
     --seek-before-width: 0%;
       --volume-before-width: 100%;
