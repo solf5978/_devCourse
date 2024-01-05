@@ -133,8 +133,8 @@
       justify-content: space-between;
       gap: 1.5rem;
       font-family: var(--cursive);
-      max-width: 1200px;
-      margin: 4rem 2rem;
+      max-width: 850px;
+      margin: 4rem auto;
     }
   
     #top ul {
@@ -347,7 +347,7 @@
     }
     input[type="range"] {
       position: relative;
-      /* -webkit-appearance: none; */
+      -webkit-appearance: none;
       margin: 0;
       padding: 0;
       height: 19px;
@@ -516,7 +516,7 @@
         padding: 0 1rem;
       }
     }
-    @media (min-width: 1000px) {
+    @media (min-width: 1025px) {
       .reviews {
         display: block;
         width: 200px;
@@ -620,15 +620,35 @@
       fill: var(--cyan);
     }
   }
-  @media (min-width: 800px) {
-    .wrapper {
-      max-width: 800px;
-      padding: 2rem;
+  @layer main-grid {
+    @media (max-width: 700px) {
+      .wrapper {
+        min-width: 325px;
+        max-width: 700px;
+        padding: 0 1rem;
+      }
     }
-  }
-  @media (min-width: 1025px) {
-    .wrapper {
-      max-width: 1200px;
+    @media (min-width: 701px) {
+    }
+    @media (min-width: 1025px) {
+      .wrapper {
+        max-width: 1200px;
+        padding: 0 1.5rem;
+      }
+      .main-grid {
+        display: grid;
+        grid-template-columns: 200px auto 350px;
+        gap: 2rem;
+      }
+      .cover {
+        order: 2;
+      }
+      .main-grid aside:last-child {
+        order: 3;
+      }
+      .album {
+        margin-top: 0;
+      }
     }
   }
   
