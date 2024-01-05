@@ -1,0 +1,289 @@
+@layer base {
+    :root {
+      --base-size: 1rem;
+      --scale: 1.25;
+      --h1: calc(var(--h2) * var(--scale));
+      --h2: calc(var(--h3) * var(--scale));
+      --h3: calc(var(--h4) * var(--scale));
+      --h4: calc(var(--h5) * var(--scale));
+      --h5: calc(var(--h6) * var(--scale));
+      --h6: var(--base-size);
+  
+      /* colors */
+      --lime: #a4ffa2;
+      --magenta: #f47dda;
+      --magenta50: #f47dda80;
+      --white: #ffffff;
+      --tan: #cec5b4;
+      --teal: #2e6d81;
+      --cyan: #7de6f4;
+      --black: #050d14;
+      --shadow: #050d1480;
+      --gradient: linear-gradient(180deg, var(--black) 0%, var(--teal) 100%);
+      --grey: #ADB0C0;
+  
+  
+      /* fonts */
+      --sans-serif: "Poppins", sans-serif;
+      --serif: "Cormorant Garamond", serif;
+      --cursive: "Pacifico", cursive;
+    }
+    html {
+      box-sizing: border-box;
+    }
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+  
+    body {
+      font-family: var(--serif);
+      font-weight: 300;
+      line-height: 1.75;
+      background: var(--gradient) no-repeat fixed;
+      color: var(--white);
+      font-size: var(--base-size);
+      margin: 0;
+      padding: 0;
+    }
+  
+    p {
+      margin-bottom: 1rem;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 3rem 0 1.38rem;
+      font-weight: 300;
+      line-height: 1.3;
+    }
+  
+    h1,
+    .h1 {
+      font-size: var(--h1);
+    }
+  
+    h2,
+    .h2 {
+      font-size: var(--h2);
+    }
+  
+    h3,
+    .h3 {
+      font-size: var(--h3);
+    }
+  
+    h4,
+    .h4 {
+      font-size: var(--h4);
+    }
+  
+    h5,
+    .h5 {
+      font-size: var(--h5);
+    }
+  
+    h6,
+    .h6 {
+      font-size: var(--h6);
+    }
+    a {
+      color: var(--lime);
+    }
+    a:hover {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+    main {
+      margin-bottom: 4rem;
+    }
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+    blockquote {
+      margin: 0;
+      padding: 0;
+    }
+    cite {
+      font-style: normal;
+      display: block;
+      margin-top: -3px;
+    }
+    footer {
+      margin-top: 5rem;
+      text-transform: uppercase;
+    }
+  }
+  @layer header-banner {
+    .wrapper {
+      max-width: 375px;
+      margin: 0 auto;
+    }
+    header {
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+      text-align: center;
+    }
+    header img {
+      max-width: 150px;
+    }
+  }
+  @layer tour {
+    /* this style works in all browsers, but you'll need to add a font-family: var(--serif) to the button-primary class to keep the buttons in a serif font */
+    /* main p {
+      font-family: var(--sans-serif);
+    } */
+    /* :has is not as well supported as of this recording. This selector says "if a paragraph contains a class of club, make it sans-serif." */
+    p:has(.club) {
+      font-family: var(--sans-serif);
+    }
+    .date {
+      color: var(--tan);
+      font-family: var(--cursive);
+    }
+    .club {
+      color: var(--lime);
+      font-size: var(--h5);
+      text-transform: uppercase;
+      font-family: var(--serif);
+    }
+    main {
+      margin: 0 auto 4rem auto;
+      text-align: left;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 0;
+      max-width: 600px;
+    }
+    main h1 {
+      grid-area: 1 / 1 / 2 / 3;
+      text-align: center;
+      font-family: var(--cursive);
+    }
+    main p:nth-child(odd) {
+      justify-self: end;
+      align-self: center;
+    }
+    .button-primary {
+      color: var(--magenta);
+      font-weight: 600;
+      text-transform: uppercase;
+      display: inline-block;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      border: 2px solid var(--magenta);
+      border-radius: 10px;
+      text-align: center;
+      white-space: nowrap;
+      width: 170px;
+    }
+    .button-soldout {
+      background: linear-gradient(
+        to top right,
+        transparent calc(50% - 2px),
+        var(--magenta50),
+        transparent calc(50% + 2px)
+      );
+      color: var(--magenta50);
+      border-color: var(--magenta50);
+    }
+    .button-primary:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+    .button-soldout:hover {
+      color: var(--magenta50);
+      border-color: var(--magenta50);
+    }
+  }
+  @layer album {
+    .album {
+      border: 2px solid var(--cyan);
+      max-width: 500px;
+      margin: 3rem auto 1rem auto;
+      padding: 1rem;
+      text-align: center;
+    }
+    .album h1 {
+      color: var(--lime);
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: var(--h4);
+      margin: 1rem 0;
+    }
+    .album h2 {
+      margin: 0;
+      font-size: var(--h6);
+      font-family: var(--cursive);
+    }
+  }
+  @layer playlist {
+    table {
+      border-collapse: collapse;
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto;
+      font-family: var(--cursive);
+    }
+    caption {
+      visibility: collapse;
+      /* the accessible way of hiding this but still visible to screen readers */
+    }
+    th, td {
+      padding: 1rem 0;
+    }
+    th {
+      text-align: left;
+      font-family: var(--sans-serif);
+      color: var(--grey);
+      border-bottom: 1px solid var(--grey);
+    }
+    td:last-of-type {
+      font-family: var(--serif);
+      color: var(--magenta);
+      font-weight: 600;
+    }
+  }
+  @layer footer {
+    footer {
+      text-align: center;
+    }
+    footer ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 1rem 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    footer svg {
+      fill: var(--lime);
+    }
+    footer svg:hover {
+      fill: var(--cyan);
+    }
+  }
+  @media (min-width: 800px) {
+    .wrapper {
+      max-width: 800px;
+      padding: 2rem;
+    }
+  }
+  @media (min-width: 1025px) {
+    .wrapper {
+      max-width: 1200px;
+    }
+  }
+  
