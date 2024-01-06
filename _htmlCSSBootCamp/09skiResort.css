@@ -1,0 +1,53 @@
+:root {
+    --topicColor: #463d36;
+    --headlineColor: #a6192e;
+    --mainFont: san-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.wrapper {
+
+    background-color: var(--topicColor);
+}
+
+.cardContainer {
+    width: 600px;
+    height: 300px;
+    border-radius: 10%;
+    background-color: #eee;
+    margin: auto;
+
+}
+
+h1 {
+    text-transform: uppercase;
+    color: var(--headlineColor);
+    padding: 60px 40px 0px 40px;
+    margin-bottom: -20px;
+    font-family: var(--mainFont);
+    font-weight: bold;
+}
+
+
+
+/* 
+<div class="wrapper">
+600
+28
+40
+28
+24
+
+<h1>open daily 9am - 4pm</h1>
+<h3>banana peel now open!</h3>
+<p>winter has seriously delivered so far, and banana peel is now open for the season!</p>
+<button>life & terrain status</button> */
