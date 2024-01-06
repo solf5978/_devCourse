@@ -161,9 +161,15 @@
   
   
   /* hide/reveal the tracklist */
-  document.querySelector("#tracklist").addEventListener("click", () => {
+  document.querySelector(".button-tracklist").addEventListener("click", () => {
     document.querySelectorAll(".hidden").forEach((item) => {
       item.classList.toggle("showing");
+    });
+      document.querySelectorAll(".button-tracklist").forEach((item) => {
+      item.classList.toggle("button-close");
+    });
+     document.querySelectorAll(".main-grid").forEach((item) => {
+      item.classList.toggle("main-grid-open");
     });
   });
   
