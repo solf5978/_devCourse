@@ -26,7 +26,7 @@ body {
 }
 
 .cardContainer h1 {
-    text-transform: uppercase;
+    text-transform: capitalize;
     padding-bottom: 28px;
     font-size: 2.5rem;
 }
@@ -56,13 +56,3 @@ body {
     margin-right: -240px;
 }
 
-/* 
-<div class="wrapper">
-600
-28
-40
-28
-24
-
-<p>winter has seriously delivered so far, and banana peel is now open for the season!</p>
-<button>life & terrain status</button> */
