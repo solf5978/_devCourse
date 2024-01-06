@@ -373,7 +373,7 @@
     }
     input[type="range"] {
       position: relative;
-      -webkit-appearance: none;
+      /* -webkit-appearance: none; */
       margin: 0;
       padding: 0;
       height: 19px;
