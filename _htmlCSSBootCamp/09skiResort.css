@@ -12,19 +12,17 @@
 
 body {
     min-height: 100vh;
-}
-
-.wrapper {
-
+    font-family: var(--mainFont);
     background-color: var(--topicColor);
 }
 
 .cardContainer {
     width: 600px;
     height: 300px;
-    border-radius: 10%;
+    border-radius: 25px;
     background-color: #eee;
     margin: auto;
+
 
 }
 
@@ -32,12 +30,34 @@ h1 {
     text-transform: uppercase;
     color: var(--headlineColor);
     padding: 60px 40px 0px 40px;
-    margin-bottom: -20px;
-    font-family: var(--mainFont);
+    margin-bottom: -40px;
+
+    font-size: 1.75rem;
     font-weight: bold;
 }
 
+h3 {
+    text-transform: uppercase;
+    padding: 0 0 28px 40px;
+    font-size: 2.5rem;
 
+}
+
+p {
+    font-size: 1.75rem;
+    padding-left: 40px;
+    margin-top: -60px;
+}
+
+button {
+    background-color: var(--topicColor);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 30px 40px;
+    margin-right: -240px;
+}
 
 /* 
 <div class="wrapper">
@@ -47,7 +67,5 @@ h1 {
 28
 24
 
-<h1>open daily 9am - 4pm</h1>
-<h3>banana peel now open!</h3>
 <p>winter has seriously delivered so far, and banana peel is now open for the season!</p>
 <button>life & terrain status</button> */
