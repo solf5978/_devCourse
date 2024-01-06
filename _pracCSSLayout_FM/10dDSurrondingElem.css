@@ -1,0 +1,258 @@
+@layer base {
+    :root {
+      --base-size: 1rem;
+      --scale: 1.25;
+      --h1: calc(var(--h2) * var(--scale));
+      --h2: calc(var(--h3) * var(--scale));
+      --h3: calc(var(--h4) * var(--scale));
+      --h4: calc(var(--h5) * var(--scale));
+      --h5: calc(var(--h6) * var(--scale));
+      --h6: var(--base-size);
+  
+      /* colors */
+      --lime: #a4ffa2;
+      --magenta: #f47dda;
+      --magenta50: #f47dda80;
+      --white: #ffffff;
+      --tan: #cec5b4;
+      --teal: #2e6d81;
+      --cyan: #7de6f4;
+      --black: #050d14;
+      --shadow: #050d1480;
+      --gradient: linear-gradient(180deg, var(--black) 0%, var(--teal) 100%);
+      --grey: #adb0c0;
+  
+      /* fonts */
+      --sans-serif: "Poppins", sans-serif;
+      --serif: "Cormorant Garamond", serif;
+      --cursive: "Pacifico", cursive;
+    }
+    html {
+      box-sizing: border-box;
+    }
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+  
+    body {
+      font-family: var(--serif);
+      font-weight: 300;
+      line-height: 1.75;
+      background: var(--gradient) no-repeat fixed;
+      color: var(--white);
+      font-size: var(--base-size);
+      margin: 0;
+      padding: 0;
+    }
+  
+    p {
+      margin-bottom: 1rem;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 3rem 0 1.38rem;
+      font-weight: 300;
+      line-height: 1.3;
+    }
+  
+    h1,
+    .h1 {
+      font-size: var(--h1);
+    }
+  
+    h2,
+    .h2 {
+      font-size: var(--h2);
+    }
+  
+    h3,
+    .h3 {
+      font-size: var(--h3);
+    }
+  
+    h4,
+    .h4 {
+      font-size: var(--h4);
+    }
+  
+    h5,
+    .h5 {
+      font-size: var(--h5);
+    }
+  
+    h6,
+    .h6 {
+      font-size: var(--h6);
+    }
+    a {
+      color: var(--lime);
+    }
+    a:hover {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+    main {
+      margin-bottom: 4rem;
+    }
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+    blockquote {
+      margin: 0;
+      padding: 0;
+    }
+    cite {
+      font-style: normal;
+      display: block;
+      margin-top: -3px;
+    }
+    footer {
+      margin-top: 5rem;
+      text-transform: uppercase;
+    }
+    .wrapper {
+      margin: 0 auto;
+      max-width: 500px;
+    }
+    /* buttons */
+    .button-primary {
+      color: var(--magenta);
+      font-weight: 600;
+      text-transform: uppercase;
+      display: inline-block;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      border: 2px solid var(--magenta);
+      border-radius: 10px;
+      text-align: center;
+      white-space: nowrap;
+      width: 170px;
+    }
+    .button-primary:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+    .button-fullwidth {
+      display: block;
+      width: 100%;
+      border-radius: 0;
+      margin: 2rem auto;
+    }
+  }
+  @layer reviews {
+    .star {
+      width: 18px;
+    }
+    .reviews {
+      margin: 2rem auto;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: 1rem;
+      text-align: center;
+    }
+    .hidemobile {
+      display: none;
+    }
+    @media (min-width: 800px) {
+      .wrapper {
+        max-width: 800px;
+      }
+      .hidemobile {
+        display: block;
+      }
+      .hidetablet {
+        display: none;
+      }
+      .reviews {
+        padding: 0 3rem;
+      }
+    }
+    @media (min-width: 1000px) {
+      .hidetablet {
+        display: block;
+      }
+      .wrapper {
+        max-width: 1440px;
+      }
+    }
+  }
+  @layer album {
+    .album {
+      border: 2px solid var(--cyan);
+      margin: 2rem auto 1rem auto;
+      padding: 1rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .album h1 {
+      color: var(--lime);
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: var(--h4);
+      margin: 1rem 0;
+    }
+    .album h2 {
+      margin: 0;
+      font-size: var(--h6);
+      font-family: var(--cursive);
+    }
+    .maglime {
+      background: url(https://assets.codepen.io/296057/fem-blindfold-1200.jpg)
+        no-repeat;
+      background-size: cover;
+    }
+    .bolt-lg {
+      width: 155px;
+      margin: 2rem auto;
+    }
+  }
+  @layer footer {
+    footer {
+      text-align: center;
+    }
+    footer ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 1rem 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    footer svg {
+      fill: var(--lime);
+    }
+    footer svg:hover {
+      fill: var(--cyan);
+    }
+  }
+  @media (min-width: 800px) {
+    .wrapper {
+      max-width: 800px;
+    }
+    .maglime {
+      height: 300px;
+    }
+  }
+  @media (min-width: 1000px) {
+    .wrapper {
+      max-width: 1440px;
+    }
+  }
+  
