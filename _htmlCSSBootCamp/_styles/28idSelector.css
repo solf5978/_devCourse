@@ -1,0 +1,10 @@
+body {
+  font-family: Montserrat, sans-serif;
+}
+#featured {
+  background-color: gold;
+  font-size: 20px;
+}
+#reviews {
+  text-decoration: gold underline;
+}
