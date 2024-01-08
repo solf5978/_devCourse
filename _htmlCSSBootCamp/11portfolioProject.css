@@ -12,4 +12,19 @@
 
 body {
     font-family: var(--mainFont);
+    min-height: 100vh;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav.navUL {
+    
+    justify-content: flex-end;
+}
+
+ul li {
+    text-decoration: none;
+    list-style: none;
 }
