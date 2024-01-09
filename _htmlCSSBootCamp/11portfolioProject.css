@@ -12,28 +12,16 @@
 
 body {
     font-family: var(--mainFont);
+    font-weight: 300;
     min-height: 100vh;
 }
 
-h3 {
-    display: inline;
+.figureContainer {
+    width: 80%;
 }
 
-.navContainer {
-    display: flex;
-    justify-content: flex-start;
-    list-style: none;
-}
-
-.navContainer li {
-    padding: 0.5rem 0.5rem;
-}
-
-li[class*=tHeader] a {
-    text-decoration: none;
-}
-
-figure img {
-    width: 450px;
-    height: 250px;
+.figureContainer figure img {
+    display: inline-block;
+    min-width: 300px;
+    max-width: 450px;
 }
