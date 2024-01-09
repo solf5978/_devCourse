@@ -15,10 +15,15 @@ body {
     min-height: 100vh;
 }
 
-.navBarContainer {
+h3 {
+    display: inline-block;
+}
+.navULContainer {
     display: flex;
-    justify-content: space-evenly;
-    
-    text-decoration: none;
-    list-style: none;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+ul.navUL {
+     align-self: flex-end;
 }
