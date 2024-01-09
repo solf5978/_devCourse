@@ -16,14 +16,24 @@ body {
 }
 
 h3 {
-    display: inline-block;
-}
-.navULContainer {
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
+    display: inline;
 }
 
-ul.navUL {
-     align-self: flex-end;
+.navContainer {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.navContainer li {
+    padding: 0.5rem 0.5rem;
+}
+
+li[class*=tHeader] a {
+    text-decoration: none;
+}
+
+figure img {
+    width: 450px;
+    height: 250px;
 }
