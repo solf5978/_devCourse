@@ -12,16 +12,13 @@
 
 body {
     font-family: var(--mainFont);
-    font-weight: 300;
-    min-height: 100vh;
 }
 
-.figureContainer {
-    width: 80%;
-}
-
-.figureContainer figure img {
+h1 {
     display: inline-block;
-    min-width: 300px;
-    max-width: 450px;
+    font-weight: 300;
+}
+
+nav {
+    display: inline-block;
 }
