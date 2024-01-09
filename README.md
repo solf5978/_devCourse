@@ -34,7 +34,8 @@
 -
 
 ### System Analysis & Design
-- [System Design for Beginners](https://neetcode.io/courses/system-design-for-beginners/0) By NeetCodeIO
+- [System Design For Beginners](https://neetcode.io/courses/system-design-for-beginners/0) By NeetCodeIO
+- [System Design Interview](https://neetcode.io/courses/system-design-interview/0) By NeetCodeIO
 
 ### TypeScript
 
