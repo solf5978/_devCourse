@@ -15,16 +15,10 @@ body {
     min-height: 100vh;
 }
 
-.nav {
+.navUL {
     display: flex;
-}
-
-.nav.navUL {
+    justify-content: space-evenly;
     
-    justify-content: flex-end;
-}
-
-ul li {
     text-decoration: none;
     list-style: none;
 }
