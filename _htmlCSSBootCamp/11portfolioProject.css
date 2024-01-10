@@ -49,3 +49,7 @@ a.activeLink {
     margin: 1.75rem;
 }
 
+figure img {
+    width: 45%;
+    height: 500px;
+}
