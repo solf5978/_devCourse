@@ -14,11 +14,14 @@ body {
     font-family: var(--mainFont);
 }
 
-h1 {
+header h1, 
+nav.navContainer, 
+nav.navContainer li {
     display: inline-block;
     font-weight: 300;
 }
 
-nav {
-    display: inline-block;
+nav.navContainer li {
+    padding: 1rem 1rem;
+    list-style: none;
 }
