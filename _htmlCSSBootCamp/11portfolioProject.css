@@ -60,28 +60,9 @@ figure {
 figure.imgCards {
     width: 49.75%;
     display: inline-block;
-    box-sizing: border-box;
+    padding: 1rem;
 }
 
-.gallery {
-    padding: 16px;
-  }
-  
-  .card {
-    width: 49.75%;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 16px;
-  }
-  .card img {
-    height: 500px;
-    width: 100%;
-    object-fit: cover;
-  }
-  .card img:hover {
-    opacity: 0.9;
-  }
-  
 
 figure.imgCards img {
     height: 500px;
@@ -89,7 +70,8 @@ figure.imgCards img {
 }
 
 figure.imgCards figcaption {
-    text-align: center;
+    text-align: left;
+    margin: 0.5rem 0;
 }
 
 section.galleryContainer {
