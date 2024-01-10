@@ -16,17 +16,18 @@ body {
 }
 
 header h1 {
+    display: inline-block;
     font-weight: 300;
-    margin: 1.675rem 0 1.675rem 2.5rem;
+    margin: 0 -8px 0 0;
 }
 
-header h1, 
-nav.navContainer, 
+
+nav.navContainer {
+    display: inline-block;
+    padding: 0;
+} 
 nav.navContainer li {
     display: inline-block;
-}
-
-nav.navContainer li {
     margin: 0.5rem 0.5rem;
     list-style: none;
 }
@@ -34,4 +35,12 @@ nav.navContainer li {
 nav.navContainer a {
     color: #333;
     text-decoration: none;
+}
+
+nav.navContainer ul li:first-child {
+    text-decoration: underline;
+}
+
+.navbar {
+    margin: 1.75rem;
 }
