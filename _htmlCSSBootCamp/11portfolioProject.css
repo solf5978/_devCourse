@@ -49,12 +49,11 @@ a.activeLink {
     margin: 1.75rem;
 }
 
-figure.imgBoxes {
-    width: 50%;
-    height: 550px;
+figure.imgCards {
+    width: 40%;
+    display: inline-block;
 }
 
 figure img {
-    width: 45%;
     height: 500px;
 }
