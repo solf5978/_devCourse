@@ -50,10 +50,12 @@ a.activeLink {
 }
 
 figure.imgCards {
-    width: 40%;
+    margin: 0;
+    width: 49.75%;
     display: inline-block;
 }
 
-figure img {
-    height: 500px;
+figure.imgCards img {
+    height: 640px;
+    width: 100%;
 }
