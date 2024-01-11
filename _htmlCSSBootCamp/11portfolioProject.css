@@ -6,92 +6,111 @@
     box-sizing: border-box;
 }
 
-:root {
-    --mainFont: 'Cormorant', serif;
+@layer page, navbar, figure, footer;
+
+@layer page {
+    :root {
+        --mainFont: 'Cormorant', serif;
+    }
+    
+    html,
+    body {
+        font-family: var(--mainFont);
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
 }
 
-html,
-body {
-    font-family: var(--mainFont);
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
+@layer navbar {
+    header h1 {
+        display: inline-block;
+        font-weight: 300;
+        margin: 0 -8px 0 0;
+    }
+    
+    
+    nav.navContainer {
+        display: inline-block;
+        padding: 0;
+    } 
+    nav.navContainer li {
+        display: inline-block;
+        margin: 0.5rem 0.5rem;
+        list-style: none;
+    }
+    
+    nav.navContainer a {
+        color: #333;
+        text-decoration: none;
+    }
+    
+    /* nav.navContainer ul li:first-child {
+        border-bottom: 2px solid #333;
+    } */
+    
+    a.activeLink {
+        border-bottom: 2px solid #333;
+    }
+    
+    .navbar {
+        margin: 1.75rem;
+    }
+    
+    
 }
 
-header h1 {
-    display: inline-block;
-    font-weight: 300;
-    margin: 0 -8px 0 0;
+@layer figure {
+    figure {
+        width: 100%;
+        margin: 0;
+    }
+    
+    figure.imgCards {
+        width: 49.75%;
+        display: inline-block;
+        padding: 1rem;
+    }
+    
+    
+    figure.imgCards img {
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    figure.imgCards img:hover {
+        opacity: 0.7;
+    }
+    
+    figure.imgCards figcaption {
+        text-align: left;
+        margin: 0.5rem 0;
+    }
+    
+    section.galleryContainer {
+        padding: 1rem;
+    }
 }
 
-
-nav.navContainer {
-    display: inline-block;
-    padding: 0;
-} 
-nav.navContainer li {
-    display: inline-block;
-    margin: 0.5rem 0.5rem;
-    list-style: none;
+@layer footer {
+    .sellingPoint {
+        width: 40%;
+        min-width: 640px;
+        font-size: 2.5rem;
+        margin-left: 5rem;
+    }
+    
+    .sellingPoint p span {
+        border-bottom: 2px solid #333;
+        padding: 0.5rem;
+    }
+    
+    footer {
+        margin-left: 5rem;
+        font-size: small;
+        padding-bottom: 1rem;
+    }
+    
 }
 
-nav.navContainer a {
-    color: #333;
-    text-decoration: none;
-}
-
-/* nav.navContainer ul li:first-child {
-    border-bottom: 2px solid #333;
-} */
-
-a.activeLink {
-    border-bottom: 2px solid #333;
-}
-
-.navbar {
-    margin: 1.75rem;
-}
-
-figure {
-    width: 100%;
-    margin: 0;
-}
-
-figure.imgCards {
-    width: 49.75%;
-    display: inline-block;
-    padding: 1rem;
-}
-
-
-figure.imgCards img {
-    height: 500px;
-    width: 100%;
-    object-fit: cover;
-}
-
-figure.imgCards figcaption {
-    text-align: left;
-    margin: 0.5rem 0;
-}
-
-section.galleryContainer {
-    padding: 1rem;
-}
-
-.sellingPoint {
-    width: 40%;
-    min-width: 640px;
-    font-size: 2.5rem;
-    margin-left: 5rem;
-}
-
-.sellingPoint p span {
-    border-bottom: 2px solid #333;
-}
-
-footer {
-    margin-left: 5rem;
-    font-size: small;
-    padding-bottom: 1rem;
-}
