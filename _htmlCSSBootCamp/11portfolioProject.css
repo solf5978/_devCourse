@@ -67,6 +67,7 @@ figure.imgCards {
 figure.imgCards img {
     height: 500px;
     width: 100%;
+    object-fit: cover;
 }
 
 figure.imgCards figcaption {
