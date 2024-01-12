@@ -1,66 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;700&family=Mukta:wght@300;400;500;700&display=swap');
+@layer rootLayer, headerLayer, mainContent;
 
-/* Adding Reset */
+@layer rootLayer {
+    *, 
+    *::after,
+    *::before {
+        box-sizing: border-box;
+    }
 
-*, 
-*::after,
-*::before {
-    box-sizing: border-box;
+    :root {
+        --hFont: 'Bitter', serif;
+        --pFont: 'Mukta', sans-serif;
+    }
+    
+    html, 
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        color: #eee;
+        background-color: slateblue;
+        font-family: var(--pFont);
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
 }
 
-:root {
-    --hFont: 'Bitter', serif;
-    --pFont: 'Mukta', sans-serif;
+@layer headerLayer {
+    header {
+        width: 50%;
+        margin: auto;
+        padding: 5rem 5rem;
+        text-align: center;
+    }
+
+    header p {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 3rem;
+
+    }
+
+    .timeStampHeader {
+        text-align: center;
+        font-weight: bold;
+        padding: 1.5rem 0;
+        letter-spacing: 1.5px;
+        font-family: var(--hFont);
+        font-weight: bold;
+        font-size: 0.875rem;
+    }
 }
 
-html, 
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-}
-
-body {
-    color: #eee;
-    background-color: slateblue;
-    font-family: var(--pFont);
+@layer mainContent {
+    .mainContent {
+        color: #333;
+        background-color: #eee;
+    }
+    
+    .topicSection,
+    .topicSection ~ *{
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+        padding: 0 2rem;
+    }
+    
+    .topicSection h3 +  h2 {
+        text-transform: uppercase;
+        font-weight: 500;
+    }
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--hFont);
+    font-family: var(--hFont);    
 }
 
-.mainContent {
-    color: #333;
-    background-color: #eee;
-}
 
-header {
-    width: 80%;
-    margin: auto;
-    padding: 5rem 5rem;
-    text-align: center;
-}
 
-header p {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 3rem;
-    
-}
 
-.topicSection,
-.topicSection ~ *{
-    width: 80%;
-    max-width: 800px;
-    margin: auto;
-    padding: 0 2rem;
-}
 
+
+
+
+
+
+
+/* General */
+.timeStampHeader span,
 code {
-    color: sandybrown;
+    color: #e95400;
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer li {
     list-style: none;
