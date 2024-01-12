@@ -9,8 +9,8 @@
 }
 
 :root {
-    --headlineFont: 'Bitter', serif;
-    --paragraphFont: 'Mukta', sans-serif;
+    --hFont: 'Bitter', serif;
+    --pFont: 'Mukta', sans-serif;
 }
 
 html, 
@@ -23,6 +23,11 @@ body {
 body {
     color: #eee;
     background-color: slateblue;
+    font-family: var(--pFont);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--hFont);
 }
 
 .mainContent {
@@ -40,6 +45,7 @@ header {
 header p {
     border-bottom: 1px solid #eee;
     padding-bottom: 3rem;
+    
 }
 
 .topicSection,
