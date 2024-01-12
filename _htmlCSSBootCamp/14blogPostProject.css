@@ -15,5 +15,19 @@ body {
 }
 
 body {
-    background-color: blueviolet;
+    color: #eee;
+    background-color: slateblue;
+}
+
+.mainContent {
+    color: #333;
+    background-color: #eee;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer li a {
+    color: #eee;
 }
