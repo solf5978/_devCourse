@@ -37,6 +37,17 @@ header p {
     padding-bottom: 3rem;
 }
 
+.topicSection,
+.topicSection ~ *{
+    width: 800px;
+    text-align: center;
+    margin: auto;
+}
+
+:is(h3, h4, h5, h6) {
+    text-align: left;
+}
+
 footer li {
     list-style: none;
 }
