@@ -41,7 +41,6 @@ header p {
 .topicSection ~ *{
     width: 80%;
     max-width: 800px;
-    text-align: center;
     margin: auto;
 }
 
