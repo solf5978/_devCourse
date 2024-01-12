@@ -28,10 +28,16 @@
 
 @layer headerLayer {
     header {
-        width: 50%;
+        width: 80%;
         margin: auto;
-        padding: 5rem 5rem;
+        padding: 1rem 1rem;
         text-align: center;
+    }
+
+    header h1 {
+        font-size: 80px;
+        font-weight: normal;
+        letter-spacing: -1.5px;
     }
 
     header p {
@@ -65,16 +71,17 @@
         padding: 0 2rem;
     }
 
-    .topicSection h3 {
+    .topicSection h2 {
         text-transform: capitalize;
-        font-size: 50px;
+        font-size: 4.125rem;
         font-weight: 500;
         letter-spacing: -0.5px;
     }
 
-    .topicSection h3 +  h2 {
+    .topicSection h2 +  p {
         text-transform: uppercase;
         font-weight: 500;
+        font-size: 1.125rem;
         letter-spacing: 0px;
         margin: 2.5rem 0;
     }
@@ -96,6 +103,39 @@
     .topicSection::after {
         content: hr;
     }
+
+    .newSection h3,
+    .newSection h4,
+    .newSection h5,
+    .newSection h6 {
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+
+    .newSection h3 {
+        font-size: 2.25rem;
+        letter-spacing: 0px;
+    }
+
+    .newSection h4 {
+        font-size: 1.875rem;
+        letter-spacing: 0.25px;
+    }
+
+    .newSection h5 {
+        font-size: 1.5rem;
+        letter-spacing: 0.25px;
+    }
+
+    .newSection h6 {
+        font-size: 1.25rem;
+        letter-spacing: 0.25px;
+    }
+
+    .commonSection h3 {
+        text-transform: capitalize;
+    }
+
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -114,9 +154,13 @@
 
 /* General */
 .timeStampHeader span,
-code {
+code, 
+abbr {
     color: #e95400;
     font-weight: bold;
+}
+
+.timeStampHeader span {
     text-transform: uppercase;
 }
 
