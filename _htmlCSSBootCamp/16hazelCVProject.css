@@ -66,13 +66,14 @@
 }
 
 .headerContainer {
-    width: 75%;
-    max-width: 800px;
-    margin: auto;
+    padding: 0 15%;
 }
 
 .headerContainer h1 {
-    font-size: 3rem;
+    font-size: 4.5rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding: 32px 0;
 }
 
 .headerContainer h2 {
