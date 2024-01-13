@@ -108,20 +108,34 @@
     }
 
     main .mainContent .colsContainer {
-        padding: 0 15%;
+        padding: 0.5rem 15%;
     }
 
     .mainContent .colsContainer p:first-of-type {
         width: 50%;
         float: left;
-        color: red;
+        margin-top: 0.2rem;
     }
+
+    
+    .mainContent .colsContainer h2 {
+        width: 50%;
+        float: right;
+        margin-top: 0;
+    }
+
 
     .mainContent .colsContainer p:not(p:first-of-type) {
         width: 51%;
         float: right;
         padding-left: 1%;
+        margin: 0;
+    }
 
+    .mainContent .colsContainer p:last-of-type {
+        font-size: 0.8rem;
+        color: hsla(0, 4%, 10%, 0.5);
+        padding-top: 0.5rem;
     }
 
 }
