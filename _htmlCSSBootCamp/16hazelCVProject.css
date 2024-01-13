@@ -101,6 +101,28 @@
 }
 
 @layer mainLayer {
+    main .mainContent {
+        min-height: 90vh;
+        display: inline-block;
+        padding: 4rem 0;
+    }
+
+    main .mainContent .colsContainer {
+        padding: 0 15%;
+    }
+
+    .mainContent .colsContainer p:first-of-type {
+        width: 50%;
+        float: left;
+        color: red;
+    }
+
+    .mainContent .colsContainer p:not(p:first-of-type) {
+        width: 51%;
+        float: right;
+        padding-left: 1%;
+
+    }
 
 }
 
