@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
 
-@layer rootLayer, headerLayer;
+@layer rootLayer, headerLayer, mainLayer, footerLayer;
 
 @layer rootLayer {
     *, 
@@ -64,38 +64,46 @@
     header nav input[type=button]:hover {
         opacity: 0.75;
     }
+
+    .headerContainer {
+        padding: 0 15%;
+    }
+    
+    .headerContainer h1 {
+        font-size: 3rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+        padding: 32px 0;
+    }
+    
+    .headerContainer .colsContainer {
+        font-size: 1.5rem;
+    }
+    
+    .headerContainer .colsContainer p {
+        width: 50%;
+        float: left;
+    }
+    
+    .headerContainer .colsContainer ul {
+        list-style: none;
+        width: 50%;
+        float: left;
+        padding: 0;
+    }
+    
+    .headerContainer .colsContainer ul li {
+        width: 50%;
+        float: left;
+        font-size: 1.25rem;
+        padding: 0.5rem 0;
+    }
 }
 
-.headerContainer {
-    padding: 0 15%;
+@layer mainLayer {
+
 }
 
-.headerContainer h1 {
-    font-size: 3rem;
-    font-weight: normal;
-    letter-spacing: 2px;
-    padding: 32px 0;
-}
+@layer footerLayer {
 
-.headerContainer .colsContainer {
-    font-size: 1.5rem;
-}
-
-.headerContainer .colsContainer p {
-    width: 50%;
-    float: left;
-}
-
-.headerContainer .colsContainer ul {
-    list-style: none;
-    width: 50%;
-    float: left;
-    padding: 0;
-}
-
-.headerContainer .colsContainer ul li {
-    width: 50%;
-    float: left;
-    font-size: 1.25rem;
-    padding: 0.5rem 0;
 }
