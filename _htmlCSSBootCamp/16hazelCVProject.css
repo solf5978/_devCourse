@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
 
-@layer rootLayer;
+@layer rootLayer, headerLayer;
 
 @layer rootLayer {
     *, 
@@ -13,20 +14,24 @@
         margin: 0;
         padding: 0;
         height: 100vh;
+        font-family: 'Forum', serif;
     }
+}
+
+@layer headerLayer {
+
 }
 
 header {
     background-color: #f08e80;
     height: 90vh;
-
+    color: #eee;
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #eee;
     padding: 1.875rem 2rem;
 }
 
@@ -42,4 +47,27 @@ header nav ul li {
 header nav ul li a {
     color: #eee;
     text-decoration: none;
+    font-size: 1.2rem;
+}
+
+header nav h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+header nav input[type=button] {
+    background-color: #eee;
+    color: #f08e80;
+    padding: 1.125rem 2rem;
+    border: 0px;
+}
+
+header nav input[type=button]:hover {
+    opacity: 0.75;
+}
+
+header p {
+    margin: auto;
+
 }
