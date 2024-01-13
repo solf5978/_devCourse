@@ -21,7 +21,8 @@
 @layer headerLayer {
     header {
         background-color: #f08e80;
-        height: 90vh;
+        min-height: 90vh;
+        display: inline-block;
         color: #eee;
     }
     
@@ -70,17 +71,31 @@
 }
 
 .headerContainer h1 {
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-weight: normal;
     letter-spacing: 2px;
     padding: 32px 0;
 }
 
-.headerContainer h2 {
+.headerContainer .colsContainer {
+    font-size: 1.5rem;
+}
+
+.headerContainer .colsContainer p {
+    width: 50%;
     float: left;
 }
 
+.headerContainer .colsContainer ul {
+    list-style: none;
+    width: 50%;
+    float: left;
+    padding: 0;
+}
 
-header p {
-    margin: auto;
+.headerContainer .colsContainer ul li {
+    width: 50%;
+    float: left;
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
 }
