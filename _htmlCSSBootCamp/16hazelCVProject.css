@@ -1,0 +1,45 @@
+
+@layer rootLayer;
+
+@layer rootLayer {
+    *, 
+    *::after,
+    *::before {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+}
+
+header {
+    background-color: #f08e80;
+    height: 90vh;
+
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #eee;
+    padding: 1.875rem 2rem;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 0.75rem;
+}
+
+header nav ul li a {
+    color: #eee;
+    text-decoration: none;
+}
