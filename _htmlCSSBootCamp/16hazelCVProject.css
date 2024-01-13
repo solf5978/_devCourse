@@ -101,42 +101,48 @@
 }
 
 @layer mainLayer {
-    main .mainContent {
-        min-height: 90vh;
+    main .mainContent, 
+    main .eventContent {
+        min-height: 45vh;
         display: inline-block;
         padding: 4rem 0;
     }
 
-    main .mainContent .colsContainer {
+    main .colsContainer {
         padding: 0.5rem 15%;
     }
 
-    .mainContent .colsContainer p:first-of-type {
+    main .colsContainer p:first-of-type {
         width: 50%;
         float: left;
-        margin-top: 0.2rem;
+
     }
 
     
-    .mainContent .colsContainer h2 {
+    main .colsContainer h2 {
         width: 50%;
         float: right;
-        margin-top: 0;
+        margin-top: 0.5rem;
     }
 
 
-    .mainContent .colsContainer p:not(p:first-of-type) {
+    main .colsContainer p:not(p:first-of-type) {
         width: 51%;
         float: right;
         padding-left: 1%;
-        margin: 0;
     }
 
-    .mainContent .colsContainer p:last-of-type {
+    main .colsContainer p:last-of-type {
         font-size: 0.8rem;
         color: hsla(0, 4%, 10%, 0.5);
-        padding-top: 0.5rem;
+        margin-top: -0.5rem;
     }
+
+    main .eventContent {
+        background-color: #fdf0ef;
+    }
+
+
 
 }
 
