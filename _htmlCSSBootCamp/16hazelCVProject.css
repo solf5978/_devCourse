@@ -19,55 +19,67 @@
 }
 
 @layer headerLayer {
-
+    header {
+        background-color: #f08e80;
+        height: 90vh;
+        color: #eee;
+    }
+    
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.875rem 2rem;
+    }
+    
+    header nav ul {
+        list-style: none;
+    }
+    
+    header nav ul li {
+        display: inline-block;
+        margin: 0 0.75rem;
+    }
+    
+    header nav ul li a {
+        color: #eee;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+    
+    header nav h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    header nav input[type=button] {
+        background-color: #eee;
+        color: #f08e80;
+        padding: 1.125rem 2rem;
+        border: 0px;
+    }
+    
+    header nav input[type=button]:hover {
+        opacity: 0.75;
+    }
 }
 
-header {
-    background-color: #f08e80;
-    height: 90vh;
-    color: #eee;
+.headerContainer {
+    width: 75%;
+    max-width: 800px;
+    margin: auto;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.875rem 2rem;
+.headerContainer h1 {
+    font-size: 3rem;
 }
 
-header nav ul {
-    list-style: none;
+.headerContainer h2 {
+    float: left;
 }
 
-header nav ul li {
-    display: inline-block;
-    margin: 0 0.75rem;
-}
-
-header nav ul li a {
-    color: #eee;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-header nav h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-header nav input[type=button] {
-    background-color: #eee;
-    color: #f08e80;
-    padding: 1.125rem 2rem;
-    border: 0px;
-}
-
-header nav input[type=button]:hover {
-    opacity: 0.75;
-}
 
 header p {
     margin: auto;
-
 }
