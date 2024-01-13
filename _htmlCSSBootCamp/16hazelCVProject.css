@@ -147,5 +147,25 @@
 }
 
 @layer footerLayer {
+    footer {
+        background-color: #333;
+        max-width: 100vw;
+        color: #eee;
+    }
+
+    footer .footerContent {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .footerContent i[class*=fa] {
+        color: red;
+    }
+
+    .footerContent img {
+        width: 2rem;
+        height: 2rem;
+        margin: 0 0.5rem;
+    }
 
 }
