@@ -1,0 +1,7 @@
+.box {
+  border: 1px solid red;
+  height: 300px;
+  width: 300px;
+  background-image: url("images/peacock.png"), url("images/sunset.jpg");
+  background-color: aquamarine;
+}
