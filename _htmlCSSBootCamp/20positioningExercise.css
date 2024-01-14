@@ -1,14 +1,30 @@
 
-html,
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100vh;
+    font-family: "DM Sans", sans-serif;
     background: radial-gradient(#0288d1, #01579b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-input[type="button"] {
+.msgButton {
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 1rem 1.875rem;
+}
+
+.msgBadge {
+    background-color: #4caf50;
+    padding: 0.3rem 0.6rem;
+    border: 2px solid white;
+    border-radius: 50%;
     position: relative;
-    margin: auto auto;
+    left: 3rem;
+    bottom: 1.5rem;
 }
