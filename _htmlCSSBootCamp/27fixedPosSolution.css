@@ -1,0 +1,12 @@
+.sidebar {
+    background-color: red;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  .sidebar button {
+    position: absolute;
+    right: 0;
+  }
