@@ -18,6 +18,11 @@ body {
     border-radius: 10px;
     padding: 1rem 1.875rem;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.msgButton:hover {
+    opacity: 0.7;
 }
 
 .msgBadge {
