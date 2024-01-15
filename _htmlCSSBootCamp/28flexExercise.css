@@ -8,6 +8,7 @@ h1 {
     width: 1000px;
     height: 800px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
   }
