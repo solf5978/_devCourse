@@ -10,7 +10,8 @@ body {
     border-radius: 5px;
     width: 400px;
     margin: 0 2.5rem;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .cardContainer {
@@ -23,4 +24,6 @@ body {
     color: white;
     padding: 20px;
     text-align: center;
+    margin-top: auto;
+    margin-bottom: 0.5rem;
 }
