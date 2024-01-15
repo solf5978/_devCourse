@@ -8,4 +8,23 @@ body {
 
 h1 {
     color: rgb(83, 49, 156);
+    text-align: center;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: center;
+}
+
+ul.planList {
+    display: flex;
+    width: 60%;
+    max-width: 960px;
+    justify-content: space-around;
+    border: 2px solid black;
+    list-style-type: none;
+}
+
+ul.planList li a {
+    text-decoration: none;
 }
