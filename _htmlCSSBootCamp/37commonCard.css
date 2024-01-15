@@ -5,3 +5,8 @@ body {
     background: linear-gradient(darkcyan, purple);
 }
 
+.cardDemo {
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+}
