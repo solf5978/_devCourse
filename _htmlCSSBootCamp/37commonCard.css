@@ -12,6 +12,7 @@ body {
     margin: 0 2.5rem;
     display: flex;
     flex-direction: column;
+    padding: 0.5rem;
 }
 
 .cardContainer {
@@ -25,5 +26,4 @@ body {
     padding: 20px;
     text-align: center;
     margin-top: auto;
-    margin-bottom: 0.5rem;
 }
