@@ -8,12 +8,15 @@ h1 {
   width: 1200px;
   height: 800px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  align-content: center;
+  
 }
 span {
-  width: 200px;
+  width: 250px;
   color: white;
   background-color: #26C6DA;
   font-size: 3rem;
