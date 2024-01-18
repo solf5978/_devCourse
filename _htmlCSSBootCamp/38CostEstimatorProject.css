@@ -4,12 +4,6 @@
 body {
     background-color: rgba(233, 223, 255, 1);
     font-family: 'Josefin Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    color: #2c2c2c;
 }
 
 h1 {
@@ -17,7 +11,14 @@ h1 {
     text-align: center;
 }
 
-.mainContent {
+.mainConatiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #2c2c2c;
+    border-radius: 5px;
     background-color: #fcfcfc;
     width: 100%;
     max-width: 960px;
