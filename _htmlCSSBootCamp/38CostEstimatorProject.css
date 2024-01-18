@@ -32,6 +32,7 @@ section.mainContainer {
     justify-content: center;
     align-items: center;
     color: #2c2c2c;
+    padding: 1rem 0;
     border-radius: 25px;
     background-color: #fcfcfc;
 
@@ -51,9 +52,13 @@ ul.planList {
 ul.planList li a {
     text-decoration: none;
     color: rgba(200, 175, 255, 1);
-    padding: 1rem 0 ;
 }
 
 ul.planList li a:hover {
     color: rgba(83, 49, 156, 1);
+}
+
+ul.planList li a#teamPlan {
+    color: rgba(83, 49, 156, 1);
+
 }
