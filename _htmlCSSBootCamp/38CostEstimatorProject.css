@@ -63,15 +63,17 @@ ul.planList li a#teamPlan {
     position: relative;
 }
 
-span.activeLine {
+ul.planList li a#teamPlan::before {
+    content: "";
+    width: 150%;
     height: 3px;
-    background-color: purple;
-    width: 75px;
-    display: inline-block;
+    background-color: rgba(83, 49, 156, 1);
+    border-radius: 5px;
     position: absolute;
-    border-radius: 15%;
-    bottom: 0;
-    left: 0;
+    left: -25%;
+    bottom: -19px;
+    z-index: 1;
+
 }
 
 div.crossLine {
