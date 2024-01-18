@@ -35,6 +35,7 @@ section.mainContainer {
     padding: 1rem 0;
     border-radius: 25px;
     background-color: #fcfcfc;
+    position: relative;
 
 }
 
@@ -46,7 +47,6 @@ ul.planList {
     text-transform: uppercase;
     justify-content: space-evenly;
     list-style-type: none;
-
 }
 
 ul.planList li a {
@@ -60,5 +60,13 @@ ul.planList li a:hover {
 
 ul.planList li a#teamPlan {
     color: rgba(83, 49, 156, 1);
+}
+
+div.crossLine {
+    height: 3px;
+    width: 100%;
+    background-color: rgba(231, 231, 231, 1);
+    position: absolute;
+    bottom: 1rem;
 
 }
