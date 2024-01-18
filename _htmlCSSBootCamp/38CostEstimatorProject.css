@@ -65,12 +65,12 @@ ul.planList li a#teamPlan {
 
 ul.planList li a#teamPlan::before {
     content: "";
-    width: 150%;
+    width: 200%;
     height: 3px;
     background-color: rgba(83, 49, 156, 1);
-    border-radius: 5px;
+    border-radius: 10px;
     position: absolute;
-    left: -25%;
+    left: -50%;
     bottom: -19px;
     z-index: 1;
 
