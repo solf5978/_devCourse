@@ -204,4 +204,17 @@
         cursor: pointer;
         transform: scale(1.2);
     }
+
+    .scale {
+        padding: 0;
+        margin: 0;
+    }
+
+    .scale ul {
+        padding-left: 0;
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
