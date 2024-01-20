@@ -174,7 +174,7 @@
     }
 
     .slider .progress {
-        width: 30%;
+        width: 31%;
         height: 1.125rem;
         background: linear-gradient(
             90deg, 
@@ -197,11 +197,11 @@
         position: absolute;
         left: 29%;
         top: -0.33rem;
+        transition: 0.15s transform ease;
     }
 
     .slider .point:hover {
-        width: 28px;
-        height: 28px;
-        top: -0.5rem;
+        cursor: pointer;
+        transform: scale(1.2);
     }
 }
