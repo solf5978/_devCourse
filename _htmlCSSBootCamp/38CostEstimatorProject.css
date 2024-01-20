@@ -73,7 +73,7 @@
         border-radius: 10px;
         position: absolute;
         left: -50%;
-        bottom: -19px;
+        bottom: -21px;
         z-index: 1;
     
     }
@@ -83,7 +83,7 @@
         width: 100%;
         background-color: rgba(231, 231, 231, 1);
         position: absolute;
-        bottom: 1rem;
+        top: 4.5rem;
     }
 }
 
@@ -91,6 +91,22 @@
     .paymentWrapper {
         display: flex;
         flex-direction: row;
+        padding-top: 2rem;
+    }
+
+    .paymentWrapper img {
+        height: 40px;
+    }
+
+    .toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(83, 49, 156, 1);
+        width: 125px;
+        height: 40px;
+        border-radius: 20px;
+        padding: 0 2rem;
     }
 }
 
