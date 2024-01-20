@@ -206,8 +206,7 @@
     }
 
     .scale {
-        padding: 0;
-        margin: 0;
+        width: 100%;
     }
 
     .scale ul {
@@ -215,6 +214,9 @@
         width: 100%;
         list-style-type: none;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        font-weight: bold;
+        color: rgba(166, 166, 166, 1);
+        text-transform: uppercase;
     }
 }
