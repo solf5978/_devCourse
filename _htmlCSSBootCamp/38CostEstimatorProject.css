@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap');
-@layer generalMain, headerLayer, toggler, cardLayer, sliderLayer;
+@layer generalMain, headerLayer, toggler, cardLayer, sliderLayer, dblCards;
 
 @layer generalMain {
     body {
@@ -218,5 +218,18 @@
         font-weight: bold;
         color: rgba(166, 166, 166, 1);
         text-transform: uppercase;
+    }
+}
+
+@layer dblCards {
+    .cardWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .cardWrapper .card {
+        background-color: rgba(233, 223, 255, 1);
+        border-radius: 20px;
     }
 }
