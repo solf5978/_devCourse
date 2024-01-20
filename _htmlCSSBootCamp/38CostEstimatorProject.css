@@ -200,6 +200,8 @@
     }
 
     .slider .point:hover {
-        
+        width: 28px;
+        height: 28px;
+        top: -0.5rem;
     }
 }
