@@ -151,4 +151,10 @@
         font-weight: bold;
         color: #2c2c2c;
     }
+
+    .descriptionPara {
+        padding: 1rem 2rem;
+        line-height: 2rem;
+        letter-spacing: 0.2px;
+    }
 }
