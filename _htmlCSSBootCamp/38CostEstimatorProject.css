@@ -1,86 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap');
+@layer generalMain, headerLayer, toggler;
 
-
-body {
-    box-sizing: border-box;
+@layer generalMain {
+    body {
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: rgba(233, 223, 255, 1);
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        color: #2c2c2c;
+    }
+    
+    main.mainContent {
+        width: 100%;
+        max-width: 900px;
+    }
+}
+@layer headerLayer {
+    h1 {
+        color: rgb(83, 49, 156);
+        text-align: center;
+    }
+    
+    section.mainContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #2c2c2c;
+        padding: 1rem 0;
+        border-radius: 25px;
+        background-color: #fcfcfc;
+        position: relative;
+    
+    }
+    
+    ul.planList {
+        display: flex;
+        width: 100%;
+        font-weight: bold;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+    
+    ul.planList li a {
+        text-decoration: none;
+        color: rgba(200, 175, 255, 1);
+    }
+    
+    ul.planList li a:hover {
+        color: rgba(83, 49, 156, 1);
+    }
+    
+    ul.planList li a#teamPlan {
+        color: rgba(83, 49, 156, 1);
+        position: relative;
+    }
+    
+    ul.planList li a#teamPlan::before {
+        content: "";
+        width: 200%;
+        height: 3px;
+        background-color: rgba(83, 49, 156, 1);
+        border-radius: 10px;
+        position: absolute;
+        left: -50%;
+        bottom: -19px;
+        z-index: 1;
+    
+    }
+    
+    div.crossLine {
+        height: 3px;
+        width: 100%;
+        background-color: rgba(231, 231, 231, 1);
+        position: absolute;
+        bottom: 1rem;
+    }
 }
 
-body {
-    background-color: rgba(233, 223, 255, 1);
-    font-family: 'Josefin Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    color: #2c2c2c;
+@layer toggler {
+    .paymentWrapper {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
-main.mainContent {
-    width: 100%;
-    max-width: 900px;
-}
-
-h1 {
-    color: rgb(83, 49, 156);
-    text-align: center;
-}
-
-section.mainContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #2c2c2c;
-    padding: 1rem 0;
-    border-radius: 25px;
-    background-color: #fcfcfc;
-    position: relative;
-
-}
-
-ul.planList {
-    display: flex;
-    width: 100%;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    justify-content: space-around;
-    list-style-type: none;
-}
-
-ul.planList li a {
-    text-decoration: none;
-    color: rgba(200, 175, 255, 1);
-}
-
-ul.planList li a:hover {
-    color: rgba(83, 49, 156, 1);
-}
-
-ul.planList li a#teamPlan {
-    color: rgba(83, 49, 156, 1);
-    position: relative;
-}
-
-ul.planList li a#teamPlan::before {
-    content: "";
-    width: 200%;
-    height: 3px;
-    background-color: rgba(83, 49, 156, 1);
-    border-radius: 10px;
-    position: absolute;
-    left: -50%;
-    bottom: -19px;
-    z-index: 1;
-
-}
-
-div.crossLine {
-    height: 3px;
-    width: 100%;
-    background-color: rgba(231, 231, 231, 1);
-    position: absolute;
-    bottom: 1rem;
-
-}
