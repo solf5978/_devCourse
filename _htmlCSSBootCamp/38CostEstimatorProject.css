@@ -162,7 +162,7 @@
 @layer sliderLayer {
     .slider {
         width: 95%;
-
+        position: relative;
     }
 
     .slider .bar {
@@ -176,5 +176,30 @@
     .slider .progress {
         width: 30%;
         height: 1.125rem;
+        background: linear-gradient(
+            90deg, 
+            rgba(2,0,36,1) 0%, 
+            rgba(9,9,121,1) 35%, 
+            rgba(0,212,255,1) 100%
+        );
+        border-radius: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .slider .point {
+        width: 24px;
+        height: 24px;
+        background-color: rgb(2,0,36);
+        border-radius: 50%;
+        border: 3px solid #fcfcfc;
+        position: absolute;
+        left: 29%;
+        top: -0.33rem;
+    }
+
+    .slider .point:hover {
+        
     }
 }
