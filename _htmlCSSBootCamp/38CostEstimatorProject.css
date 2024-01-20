@@ -128,7 +128,6 @@
 @layer cardLayer {
     .cardContainer {
         width: 55%;
-        height: 250px;
         border-radius: 20px;
         background-color: rgba(233, 223, 255, 1);
         text-align: center;
@@ -136,7 +135,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 2rem;
         margin-top: 2rem;
+        font-size: 0.8rem;
     }
 
     .cardContainer p.periodPricing {
