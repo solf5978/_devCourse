@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700&display=swap');
-@layer generalMain, headerLayer, toggler;
+@layer generalMain, headerLayer, toggler, cardLayer;
 
 @layer generalMain {
     body {
@@ -125,3 +125,11 @@
     }
 }
 
+@layer cardLayer {
+    .cardContainer {
+        width: 45%;
+        height: 250px;
+        border-radius: 20px;
+        background-color: rgba(233, 223, 255, 1);
+    }
+}
