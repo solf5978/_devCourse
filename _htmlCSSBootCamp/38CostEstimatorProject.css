@@ -251,7 +251,7 @@
         text-transform: uppercase;
         padding: 0.5rem 0;
         color: #fcfcfc;
-        background-color: rgb(97, 30, 160);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,97,121,1) 35%, rgba(0,212,255,1) 100%);
         position: absolute;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
