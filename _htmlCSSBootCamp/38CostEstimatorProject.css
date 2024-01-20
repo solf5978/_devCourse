@@ -239,15 +239,13 @@
         transition: 0.15s tranform ease-out;
     }
 
-    .cardWrapper .card {
+    .cardWrapper .card:hover {
         transform: scale(1.05);
     }
 
     .card > div {
         padding: 0.5rem 0;
     }
-
-
 
     .card hr {
         width: 30%;
