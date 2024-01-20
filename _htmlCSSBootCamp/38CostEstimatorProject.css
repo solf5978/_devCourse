@@ -235,7 +235,6 @@
         padding: 1rem 2rem;
         box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.3);
         text-align: center;
-        text-transform: uppercase;
         font-weight: bold;
     }
 
@@ -251,10 +250,26 @@
 
     .card > div p {
         margin: 0.5rem 0;
+        text-transform: uppercase;
     }
 
     .card .price {
         font-size: 3.25rem;
         color: #2c2c2c;
+    }
+
+    .card button {
+        border: none;
+        border-radius: 10px;
+        background-color:  rgb(83, 49, 156);
+        padding: 1rem 1rem;
+        color: #fcfcfc;
+        text-transform: capitalize;
+        transition: 0.15s transform ease-out;
+    }
+
+    .card button:hover {
+        cursor: pointer;
+        transform: scale(1.05);
     }
 }
