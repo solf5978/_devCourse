@@ -240,7 +240,7 @@
     }
 
     .cardWrapper .card:hover {
-        transform: scale(1.05);
+        transform: translateY(-0.5rem);
     }
 
     .card > div {
@@ -268,6 +268,7 @@
         border-radius: 10px;
         background-color:  rgb(83, 49, 156);
         padding: 1rem 1rem;
+        margin: 0.5rem;
         color: #fcfcfc;
         font-weight: bold;
         text-transform: capitalize;
