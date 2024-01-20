@@ -1,0 +1,24 @@
+/* 
+Give the h1 the following font sizes:
+- for screen sizes below 800 pixels: 3rem
+- for screen sizes between 800 and 1000 pixels: 5rem
+- for screen sizes above 1000 pixels: 7rem
+*/
+
+@media (min-width: 799px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (min-width: 800px) and (max-width: 999px) {
+    h1 {
+      font-size: 5rem;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    h1 {
+      font-size: 7rem;
+    }
+  }
