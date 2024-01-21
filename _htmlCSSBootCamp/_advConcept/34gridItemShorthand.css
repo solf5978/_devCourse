@@ -1,0 +1,27 @@
+.container {
+  height: 700px;
+  width: 700px;
+  margin: 200px auto;
+  background-color: black;
+  box-shadow: 0 6px 20px rgba(227, 183, 183, 0.2);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.box {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.first {
+  grid-column: 2/4;
+  grid-row: 2 / span 2;
+}
+
+.second {
+  /* grid-row: 4;
+  grid-column: span 4; */
+  grid-area: 4 / 1 / 5 / 4;
+}
