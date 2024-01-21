@@ -11,6 +11,9 @@
 
 @layer mainLayer {
     .galleryContainer {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
         display: grid;
         grid-template-areas:
             "headline headline sideImg"
