@@ -1,0 +1,22 @@
+.container {
+  height: 700px;
+  width: 700px;
+  margin: 200px auto;
+  background-color: black;
+  box-shadow: 0 6px 20px rgba(227, 183, 183, 0.2);
+  display: grid;
+  grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end];
+  grid-template-rows: [row1-start] 1fr [row1-end row2-start] 1fr [row2-end];
+}
+
+.box {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.first {
+  grid-column-start: col2-start;
+  grid-column-end: col3-end;
+  grid-row-start: row2-start;
+}
