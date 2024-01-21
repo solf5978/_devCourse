@@ -1,4 +1,4 @@
-# Follow Along Materials From Courses
+# Following Along Materials From Various Courses
 
 ### Golang
 
