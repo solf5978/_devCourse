@@ -16,29 +16,22 @@
             "headline headline sideImg"
             "headline headline sideLong"
             "secImg thirdImg sideLong"
-            "secImg thirdImg sideLong";
+            "fourImg secHL secHL"
+            "fourImg secHL secHL"
+            "sixImg sixImg sevenImg"
+            "sixImg sixImg sevenImg";
         gap: 0.875rem;
     }
 
-    #eth {
-        grid-area: headline;
-    }
-
-    #alphabet {
-        grid-area: sideImg;
-    }
-
-    #traveler {
-        grid-area: sideLong;
-    }
-
-    #cube {
-        grid-area: secImg;
-    }
-
-    #astro {
-        grid-area: thirdImg;
-    }
+    #eth {grid-area: headline;}
+    #alphabet {grid-area: sideImg;}
+    #traveler {grid-area: sideLong;}
+    #cube {grid-area: secImg;}
+    #astro {grid-area: thirdImg;}
+    #cup {grid-area: fourImg;}
+    #insta {grid-area: secHL;}
+    #foam {grid-area: sixImg;}
+    #dimentional {grid-area: sevenImg;}
 
     .imgBox {
         position: relative;
