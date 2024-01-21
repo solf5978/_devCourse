@@ -1,0 +1,19 @@
+.container {
+  height: 700px;
+  width: 80%;
+  margin: 200px auto;
+  background-color: black;
+  box-shadow: 0 6px 20px rgba(227, 183, 183, 0.2);
+  display: grid;
+  grid-template: 1fr 1fr / repeat(4, 1fr);
+  /* column-gap: 20px;
+  row-gap: 30px; */
+  /* grid-gap: 20px; */
+  gap: 10px 40px;
+}
+
+.box {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
