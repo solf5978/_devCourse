@@ -10,6 +10,36 @@
 }
 
 @layer mainLayer {
+    .galleryContainer {
+        display: grid;
+        grid-template-areas:
+            "headline headline sideImg"
+            "headline headline sideLong"
+            "secImg thirdImg sideLong"
+            "secImg thirdImg sideLong";
+        gap: 0.875rem;
+    }
+
+    #eth {
+        grid-area: headline;
+    }
+
+    #alphabet {
+        grid-area: sideImg;
+    }
+
+    #traveler {
+        grid-area: sideLong;
+    }
+
+    #cube {
+        grid-area: secImg;
+    }
+
+    #astro {
+        grid-area: thirdImg;
+    }
+
     .imgBox {
         position: relative;
     }
