@@ -34,7 +34,7 @@
     #cup {grid-area: fourImg;}
     #insta {grid-area: secHL;}
     #foam {grid-area: sixImg;}
-    #dimentional {grid-area: sevenImg;}
+    #dimensional {grid-area: sevenImg;}
 
     .imgBox {
         position: relative;
@@ -71,6 +71,12 @@
         cursor: pointer;
         opacity: 1;
     }
+
+    #astro .overlay,
+    #insta .overlay,
+    #dimensional .overlay {
+        color: white;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -102,5 +108,9 @@
             "fourImg fourImg"
             "sixImg sixImg"
             "sevenImg sevenImg";
+    }
+
+    .imgBox .overlay {
+        font-size: 1.5rem;
     }
 }
