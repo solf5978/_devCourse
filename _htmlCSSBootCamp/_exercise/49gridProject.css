@@ -87,3 +87,20 @@
             "sevenImg sevenImg";
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .galleryContainer {
+        display: grid;
+        max-width: 100%;
+        grid-template-areas:
+            "headline headline"
+            "sideImg sideImg"
+            "sideLong sideLong"
+            "secImg thirdImg"
+            "secHL secHL"
+            "secHL secHL"
+            "fourImg fourImg"
+            "sixImg sixImg"
+            "sevenImg sevenImg";
+    }
+}
