@@ -10,7 +10,40 @@
 }
 
 @layer navbarLayer {
-    
+    .navContainer {
+        display: flex;
+        justify-content: space-between;
+        padding: 4rem 2rem;
+    }
+
+    .navContainer h1,
+    .navContainer h2 {
+        display: inline;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    .navBar {
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navBar a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .navBar a:hover {
+        text-decoration: underline;
+    }
+
+    .navBar img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }
 
 @layer mainLayer {
