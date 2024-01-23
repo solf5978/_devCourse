@@ -195,12 +195,15 @@ body {
 
 .animateTOPBar {
   animation: flipBar1 1s;
+  animation-fill-mode: forwards;
 }
 .animateMIDBar  {
   animation: fadeBar2 1s;
+  animation-fill-mode: forwards;
 }
 .animateBTMBar  {
   animation: flipBar3 1s;
+  animation-fill-mode: forwards;
 }
 @keyframes flipBar1 {
   from {
