@@ -1,6 +1,11 @@
+const hamburgerBTN = document.querySelector(".hamburger")
 
-const btn = document.querySelector(".btn");
+const topBar = document.querySelector(".barTOP")
+const midBar = document.querySelector(".barMID")
+const btmBar = document.querySelector(".barBTM")
 
-btn.addEventListener("click", () => {
-    btn.classList.toggle("purple")
+hamburgerBTN.addEventListener("click", () => {
+    topBar.classList.toggle("animateTOPBar")
+    midBar.classList.toggle("animateMIDBar")
+    btmBar.classList.toggle("animateBTMBar")
 })
