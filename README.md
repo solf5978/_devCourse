@@ -27,6 +27,12 @@
 - [_sharpenJSPrac](https://www.udemy.com/course/javascript-practice-problems-sharpen-your-skills/)      By Steven Hancock
 -
 
+### Others
+
+---
+
+- [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                               By AmigosCode
+
 ### Python
 
 ---
