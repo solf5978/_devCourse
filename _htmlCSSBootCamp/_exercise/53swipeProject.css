@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap');
+@layer topMost;
+
+@layer topMost {
+    *,
+    *::before,
+    *::after {
+    /* Override Browser Default CSS */
+    margin: 0;
+    padding: 0;
+    /* Rendre Box Into Actual Box Size */
+    box-sizing: border-box;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+    }
+
+    html,
+    body {
+    height: 100vh;
+    }
+
+    :root {
+        --text-dark: #121212;
+        --text-light: #ececec;
+        --text-grey: #adbdcc;
+        --main-font: 'Anek Telugu', sans-serif;
+        --heading-font: 'Roboto', sans-serif;
+    }
+}
+
+
+
+
