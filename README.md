@@ -31,7 +31,7 @@
 
 ---
 
-- [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                               By AmigosCode
+- [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                              By AmigosCode
 
 ### Python
 
