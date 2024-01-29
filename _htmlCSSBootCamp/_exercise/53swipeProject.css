@@ -195,7 +195,19 @@
         cursor: pointer;
     }
 
-    
+    .with-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .with-icon > img {
+        transition: transform 0.25s ease;
+    }
+
+    .with-icon:hover > img{
+        transform: translateX(5px);
+    }
 }
 
 
