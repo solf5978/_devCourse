@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap');
-@layer topMost, generalSetup, interativeComponent;
+@layer topMost, generalSetup, interativeComponent, sectionContainer;
 
 @layer topMost {
     *,
@@ -253,4 +253,36 @@
     }
 }
 
+@layer sectionContainer {
+    .section-container {
+        width: 100%;
+        max-width: var(--standard-width);
+    }
 
+    .two-column {
+        width: 100%;
+        display: flex;
+        font-display: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .two-column > .col-left {
+        width: 50%;
+        padding: 0 var(--spacing-md) 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .two-column > .col-right {
+        width: 50%;
+        padding: 0 0 0 var(--spacing-md);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+    
+}
