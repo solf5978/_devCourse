@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap');
-@layer topMost, generalSetup, interativeComponent, navBar, sectionContainer, heroContent;
+@layer topMost, generalSetup, interativeComponent, navBar, sectionContainer, heroContent, partners;
 
 @layer topMost {
     *,
@@ -316,5 +316,18 @@
     .hero-phone {
         height: 628px;
         transform: translate(32px, -32px);
+    }
+}
+
+@layer partners {
+    .partners-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .partners-grid img {
+        height: 60px;
+        place-self: center;
     }
 }
