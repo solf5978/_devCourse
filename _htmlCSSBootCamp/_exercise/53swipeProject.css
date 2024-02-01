@@ -780,10 +780,25 @@
     }
 }
 
+@media only screen and (max-width: 850px) {
+    .partners-grid img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 @media only screen and (max-width: 768px) {
+    :root {
+        --h1-size: 4rem;
+        --h1-height: 4.5rem;
+        --h3-size: 2.25rem;
+    }
+
 
 }
 
 @media only screen and (max-width: 550px) {
-
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
