@@ -483,7 +483,7 @@
 
     .global-section .card-container {
         display: flex;
-        margin: var(--spacing-xl) 0;
+        margin: calc(var(--spacing-xl) * 2) 0;
     }
 
     .global-section .card-container .card {
@@ -496,6 +496,13 @@
         border-left: 2px solid var(--blue-1);
         padding: 0 0 0 var(--spacing-sm);
         line-height: 1.5rem;
+    }
+
+    #globe {
+        max-width: 844px;
+        opacity: 25%;
+        position: absolute;
+        
     }
 }
 
