@@ -21,6 +21,7 @@
     }
 
     main {
+        width: 100%;
         margin: var(--spacing-lg);
     }
 
@@ -252,6 +253,18 @@
     .with-icon:hover > img{
         transform: translate(5px, -2px);
     }
+
+    .hero,
+    .partners-section,
+    .unified-platform-section,
+    .graphic-section,
+    .integrations-section,
+    .why-swipe-section,
+    .global-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @layer navBar {
@@ -451,6 +464,13 @@
 
     .why-swipe-section .card-container .card p {
         font-size: var(--secondary-text-size)
+    }
+
+    /* Global Section Part */
+    .global-section {
+        width: 100%;
+        background-color: var(--primary-accent);
+        color: var(--text-light);
     }
 }
 
