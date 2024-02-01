@@ -272,6 +272,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        padding: calc(var(--spacing-xl) * 2) 0;
     }
 }
 
@@ -312,6 +313,10 @@
 }
 
 @layer heroContent {
+    .hero {
+        padding-bottom: 0;
+    }
+    
     .button-container {
         display: flex;
         margin: var(--spacing-md) 0;
@@ -370,6 +375,11 @@
     }
 
     /* Partners Section */
+
+    .partners-section {
+        padding: 0;
+    }
+
     .partners-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -422,7 +432,20 @@
     /* Integrations Section */
     .integrations-section {
         color: var(--text-light);
+        position: relative;
+        z-index: 1;
+    }
+
+    .integrations-section::before {
+        content: "";
+        width: 100%;
+        height: 1100px;
         background-color: var(--primary-accent);
+        position: absolute;
+        top: -32px;
+        left: 0;
+        z-index: -1;
+        transform: skewY(-10deg);
     }
 
     .integrations-section .primary-button {
