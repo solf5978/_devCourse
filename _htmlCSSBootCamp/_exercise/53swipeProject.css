@@ -423,5 +423,17 @@
     #api-code {
         margin: 0 0 var(--spacing-md) 0;
     }
+
+    /* Why Swipe Section */
+    .why-swipe-section .card-container {
+        display: flex;
+    }
+
+    .why-swipe-section .card-container .card {
+        width: 25%;
+        padding: 0 var(--spacing-sm) 0 0;
+        margin: 0 var(--spacing-md) 0 0 ;
+
+    }
 }
 
