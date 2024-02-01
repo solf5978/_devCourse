@@ -520,5 +520,27 @@
     .virtual-events-section .primary-button:hover {
         background-color: var(--primary-accent);
     }
+
+    .swipe-sessions-card {
+        width: 540px;
+        height: 446px;
+        box-shadow: var(--standard-box-shadow);
+        border-radius: 15px;
+    }
+
+    .swipe-sessions-card .card-top {
+        background-color: var(--purple-1);
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swipe-sessions-card .card-top ::before {
+        background-color: var(--purple-1);
+        content: "";
+        width: 100%;
+    }
 }
 
