@@ -284,13 +284,15 @@
         width: 100%;
         max-width: var(--standard-width);
         padding: 0 var(--spacing-md);
+        margin: var(--spacing-sm) 0 var(--spacing-xl) 0;
     }
 
     .menu {
+        width: 85%;
         display: flex;
         list-style: none;
-        align-items: center;
         justify-content: center;
+        align-items: center;
     }
 
     .menu a {
@@ -303,19 +305,36 @@
         text-decoration: underline;
     }
 
-    .navbar-button {
-        justify-content: flex-end;
+    .navbar .primary-button {
+        margin-right: 0;
+        padding: 0.5rem 0.85rem 0.15rem 0.85rem;
+        border-radius: 25px;
         background-color: rgba(250, 250, 250, 0.25);
     }
 
-    .navbar-button:hover {
+    .navbar .primary-button:hover {
         background-color: rgba(250, 250, 250, 0.5);
+    }
+}
+
+@layer gradientOnTop {
+    #gradient-canvas {
+        background-color: purple;
+        width: 200%;
+        height: 970px;
+        transform: rotate(-10deg);
+        position: absolute;
+        top: -600px;
+        left: -50%;
+        z-index: -2;
     }
 }
 
 @layer heroContent {
     .hero {
         width: 100%;
+        display: flex;
+        justify-content: center;
         padding-bottom: 0;
     }
 
@@ -325,7 +344,7 @@
     }
 
     .button-container button:nth-of-type(2) {
-        margin-left: 1.25rem;
+        margin: 0 0 0 1.25rem;
         color: var(--purple-2);
     }
 
@@ -334,14 +353,14 @@
     }
 
     .hero .hero-phone-container {
-        display: flex;
         height: 564px;
+        align-items: flex-end;
     }
 
     .hero-phone {
         height: 628px;
         justify-content: flex-end;
-
+        transform: translate(15rem, -32px);
     }
 }
 
