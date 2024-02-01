@@ -385,7 +385,17 @@
     #phone {grid-area: phone; width: 100%; box-shadow: var(--standard-box-shadow);}
     #dash {grid-area: dash; width: 100%; box-shadow: var(--standard-box-shadow);}
 
-    /* Cards Section */
+    /* Integrations Section */
+    .integrations-section {
+        color: var(--text-light);
+        background-color: var(--primary-accent);
+    }
+
+    .integrations-section .card-container {
+        display: flex;
+        margin: var(--spacing-lg) 0;
+    }
+
 
 }
 
