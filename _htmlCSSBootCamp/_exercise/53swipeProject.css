@@ -261,7 +261,7 @@
     .integrations-section,
     .why-swipe-section,
     .global-section,
-    .virtual-event-section {
+    .virtual-events-section {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -507,7 +507,18 @@
         position: absolute;
         top: 0;
     }
-
     
+    /* virtual events section */
+    .virtual-events-section {
+        padding: calc(var(--spacing-xl) * 2) 0;
+    }
+    .virtual-events-section .primary-button {
+        background-color: var(--purple-1);
+        margin: var(--spacing-md) 0 0 0;
+    }
+
+    .virtual-events-section .primary-button:hover {
+        background-color: var(--primary-accent);
+    }
 }
 
