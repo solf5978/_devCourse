@@ -396,6 +396,8 @@
         margin: var(--spacing-lg) 0;
     }
 
-
+    .integrations-section .card-container .card {
+        width: 50%;
+    }
 }
 
