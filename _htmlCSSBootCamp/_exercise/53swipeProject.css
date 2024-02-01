@@ -483,6 +483,7 @@
 
     .global-section .card-container {
         display: flex;
+        margin: var(--spacing-xl) 0;
     }
 
     .global-section .card-container .card {
@@ -494,6 +495,7 @@
     .global-section .card-container .card h3 {
         border-left: 2px solid var(--blue-1);
         padding: 0 0 0 var(--spacing-sm);
+        line-height: 1.5rem;
     }
 }
 
