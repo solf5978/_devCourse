@@ -334,13 +334,14 @@
     }
 
     .hero .hero-phone-container {
+        display: flex;
         height: 564px;
-        align-items: flex-end;
     }
 
     .hero-phone {
         height: 628px;
-        transform: translate(10rem, -32px);
+        justify-content: flex-end;
+
     }
 }
 
