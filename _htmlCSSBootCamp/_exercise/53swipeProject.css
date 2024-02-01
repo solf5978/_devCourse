@@ -530,6 +530,7 @@
 
     .virtual-events-section .col-left {
         height: 446px;
+        padding: 0 var(--spacing-lg) 0 0;
     }
 
     .swipe-sessions-card {
