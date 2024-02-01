@@ -471,6 +471,8 @@
         width: 100%;
         background-color: var(--primary-accent);
         color: var(--text-light);
+        position: relative;
+        padding: calc(var(--spacing-lg) * 3) 0;
     }
 
     .global-section a {
@@ -502,7 +504,7 @@
         max-width: 844px;
         opacity: 25%;
         position: absolute;
-        
+        top: 0;
     }
 }
 
