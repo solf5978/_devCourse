@@ -26,7 +26,7 @@
 
     :root {
 
-        --standard-width: 1280px;
+        --standard-width: 960px;
 
         --text-dark: #121212;
         --text-light: #ececec;
@@ -192,13 +192,15 @@
     .primary-button {
         font-family: var(--main-font);
         font-size: var(--btn-font-size);
+        text-align: center;
         letter-spacing: 1.25px;
         font-weight: bold;
-        border-radius: 20px;
+        border-radius: 10px;
         border: none;
         background-color: var(--primary-accent);
         color: var(--text-light);
-        padding: var(--spacing-sm) var(--spacing-sm);
+        padding: calc(var(--spacing-sm) + 4px) var(--spacing-sm) var(--spacing-sm) var(--spacing-sm);
+        margin: 0 auto;
         text-transform: capitalize;
         transition: all 0.15s ease;
     }
@@ -206,6 +208,10 @@
     .primary-button:hover {
         background-color: var(--primary-btn-hover-color);
         cursor: pointer;
+    }
+
+    .primary-button > img {
+        transform: translateY(-2px);
     }
 
     .secondary-button {
@@ -216,6 +222,7 @@
         border-radius: 20px;
         border: none;
         background-color: transparent;
+        margin: 0 auto;
         color: var(--primary-accent);
         text-transform: capitalize;
         transition: all 0.15s ease;
@@ -226,6 +233,10 @@
         cursor: pointer;
     }
 
+    .secondary-button > img {
+        transform: translateY(-2px);
+    }
+
     .with-icon {
         display: flex;
         align-items: center;
@@ -233,11 +244,12 @@
     }
 
     .with-icon > img {
+        transform: translateY(-2px);
         transition: transform 0.25s ease;
     }
 
     .with-icon:hover > img{
-        transform: translateX(5px);
+        transform: translate(5px, -2px);
     }
 }
 
