@@ -149,6 +149,13 @@
         margin: var(--spacing-sm) 0;
     }
 
+    h1::first-letter,
+    h2::first-letter,
+    h3::first-letter,
+    p::first-letter {
+        text-transform: uppercase;
+    }
+
     .card {
         display: flex;
         flex-direction: column;
@@ -211,10 +218,6 @@
         cursor: pointer;
     }
 
-    .primary-button > img {
-        transform: translateY(-2px);
-    }
-
     .secondary-button {
         font-family: var(--main-font);
         font-size: var(--btn-font-size);
@@ -223,7 +226,7 @@
         border-radius: 20px;
         border: none;
         background-color: transparent;
-        padding: calc(var(--spacing-sm) + 4px) var(--spacing-sm) var(--spacing-sm) var(--spacing-sm);
+        padding: var(--btn-padding);
         margin: 0 auto;
         color: var(--primary-accent);
         text-transform: capitalize;
@@ -233,10 +236,6 @@
     .secondary-button:hover {
         opacity: 0.7;
         cursor: pointer;
-    }
-
-    .secondary-button > img {
-        transform: translateY(-2px);
     }
 
     .with-icon {
@@ -441,13 +440,17 @@
     /* Why Swipe Section */
     .why-swipe-section .card-container {
         display: flex;
+        margin: var(--spacing-lg) 0;
     }
 
     .why-swipe-section .card-container .card {
         width: 25%;
         padding: 0 var(--spacing-sm) 0 0;
         margin: 0 var(--spacing-md) 0 0 ;
+    }
 
+    .why-swipe-section .card-container .card p {
+        font-size: var(--secondary-text-size)
     }
 }
 
