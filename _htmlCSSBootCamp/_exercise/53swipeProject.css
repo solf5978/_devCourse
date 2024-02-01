@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap');
-@layer topMost, generalSetup, navBar, heroContent, mainContent;
+@layer topMost, generalSetup, navBar, heroContent, mainContent, footer;
 
 @layer topMost {
     *,
@@ -637,3 +637,6 @@
     }
 }
 
+@layer footer {
+    
+}
