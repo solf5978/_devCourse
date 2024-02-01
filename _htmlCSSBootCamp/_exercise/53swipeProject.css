@@ -260,7 +260,8 @@
     .graphic-section,
     .integrations-section,
     .why-swipe-section,
-    .global-section {
+    .global-section,
+    .virtual-event-section {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -506,5 +507,7 @@
         position: absolute;
         top: 0;
     }
+
+    
 }
 
