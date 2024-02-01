@@ -773,3 +773,17 @@
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 1144px) {
+    .section-container {
+        padding: 0 var(--spacing-md);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 550px) {
+
+}
