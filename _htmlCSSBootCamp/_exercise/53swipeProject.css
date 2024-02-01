@@ -316,7 +316,7 @@
     .hero {
         padding-bottom: 0;
     }
-    
+
     .button-container {
         display: flex;
         margin: var(--spacing-md) 0;
@@ -397,6 +397,7 @@
     /* Unified Platform Section */
     .unified-platform-section {
         padding: var(--spacing-xl) 0;
+        background-color: var(--bg-light);
     }
     
     .unified-platform-section h2 {
@@ -500,10 +501,21 @@
     /* Global Section Part */
     .global-section {
         width: 100%;
-        background-color: var(--primary-accent);
         color: var(--text-light);
         position: relative;
-        padding: calc(var(--spacing-lg) * 3) 0;
+        padding: calc(var(--spacing-lg) * 3) 0 0 0;
+    }
+
+    .global-section::before {
+        content: "";
+        width: 100%;
+        height: 1200px;
+        background-color: var(--primary-accent);
+        position: absolute;
+        top: -32px;
+        left: 0;
+        transform: skewY(-10deg);
+        z-index: -1;
     }
 
     .global-section a {
@@ -541,7 +553,19 @@
     /* virtual events section */
     .virtual-events-section {
         padding: calc(var(--spacing-xl) * 2) 0;
+        position: relative;
     }
+
+    .virtual-events-section::before {
+        content: "";
+        background-color: var(--bg-white);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
     .virtual-events-section .primary-button {
         background-color: var(--purple-1);
         margin: var(--spacing-md) 0 0 0;
