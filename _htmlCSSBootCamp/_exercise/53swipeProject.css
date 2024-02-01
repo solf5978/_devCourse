@@ -27,7 +27,7 @@
 
     :root {
 
-        --standard-width: 960px;
+        --standard-width: 1140px;
 
         --text-dark: #121212;
         --text-light: #ececec;
@@ -64,7 +64,7 @@
 
         --primary-btn-hover-color: #6d7a88;
         --btn-font-size: 1rem;
-        --btn-padding: .875rem .5rem .5rem .5rem;
+        --btn-padding: .875rem .5rem .5rem .875rem;
 
         --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
     }
@@ -471,6 +471,29 @@
         width: 100%;
         background-color: var(--primary-accent);
         color: var(--text-light);
+    }
+
+    .global-section a {
+        color: var(--blue-1);
+    }
+
+    .global-section a:hover {
+        color: var(--text-light);
+    }
+
+    .global-section .card-container {
+        display: flex;
+    }
+
+    .global-section .card-container .card {
+        width: 25%;
+        padding: 0 var(--spacing-sm) 0 0;
+        margin: 0 var(--spacing-md) 0 0;
+    }
+
+    .global-section .card-container .card h3 {
+        border-left: 2px solid var(--blue-1);
+        padding: 0 0 0 var(--spacing-sm);
     }
 }
 
