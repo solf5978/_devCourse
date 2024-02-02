@@ -782,6 +782,13 @@
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    :root {
+        --h1-size: 5rem;
+        --h1-height: 5.25rem;
+    }
+}
+
 @media only screen and (max-width: 850px) {
     .partners-grid img {
         width: 100%;
@@ -889,8 +896,12 @@
         margin: 0;
     }
 
+    .navbar {
+        width: 75%;
+    }
+
     .navbar .menu {
-        width: 30%;
+        width: 50%;
     }
 
     .hero {
