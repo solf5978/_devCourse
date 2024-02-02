@@ -798,6 +798,10 @@
 }
 
 @media only screen and (max-width: 550px) {
+    .two-column {
+        flex-direction: column;
+    }
+
     .partners-grid {
         grid-template-columns: repeat(2, 1fr);
     }
