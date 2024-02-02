@@ -802,6 +802,12 @@
         flex-direction: column;
     }
 
+    .two-column .col-left,
+    .two-column .col-right {
+        width: 100%;
+        padding: 0;
+    }
+
     .partners-grid {
         grid-template-columns: repeat(2, 1fr);
     }
