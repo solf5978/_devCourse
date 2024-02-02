@@ -18,6 +18,8 @@
     html,
     body {
     width: 100%;
+    position: relative;
+    overflow-x: hidden;
     }
 
     main {
@@ -785,6 +787,14 @@
         width: 100%;
         height: auto;
     }
+
+    .integrations-section .col-left {
+        width: 60%;
+    }
+
+    .integrations-section .col-right {
+        width: 40%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -792,6 +802,10 @@
         --h1-size: 4rem;
         --h1-height: 4.5rem;
         --h3-size: 2.25rem;
+    }
+
+    .unified-platform-section h2 {
+        width: 100%;
     }
 
 
@@ -811,4 +825,6 @@
     .partners-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+
 }
