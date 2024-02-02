@@ -812,6 +812,18 @@
         --h6-size: 1rem;
     }
 
+    .navbar .menu {
+        display: none;
+    }
+
+    .navbar .primary-button {
+        display: none;
+    }
+
+    .navbar {
+        margin: 0;
+    }
+
     .hero .col-left {
         width: 60%;
     }
