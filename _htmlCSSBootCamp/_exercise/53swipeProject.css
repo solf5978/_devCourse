@@ -927,12 +927,27 @@
         padding: 0;
     }
 
+    .hero,
+    .partners-section,
+    .unified-platform-section,
+    .graphic-section,
+    .integrations-section,
+    .why-swipe-section,
+    .global-section,
+    .virtual-events-section {
+        padding: var(--spacing-xl) 0 0 0;
+    }
+
     #gradient-canvas {
         height: 800px;
     }
 
     main {
         margin: 0;
+    }
+
+    .hero-phone-container {
+        display: none;
     }
 
     .partners-grid {
