@@ -852,5 +852,9 @@
         width: 100%;
     }
 
+    .why-swipe-section .card-container .card .icon {
+        height: 35px;
+    }
+
 
 }
