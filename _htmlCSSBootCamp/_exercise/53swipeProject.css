@@ -817,6 +817,15 @@
         width: 100%;
     }
 
+    .why-swipe-section .card-container {
+        flex-wrap: wrap;
+    }
+
+    .why-swipe-section .card-container .card {
+        width: 50%;
+        margin: var(--spacing-sm) 0;
+    }
+
 
 }
 
@@ -837,6 +846,10 @@
 
     .integrations-section .col-right {
         display: none;
+    }
+
+    .why-swipe-section .card-container .card {
+        width: 100%;
     }
 
 
