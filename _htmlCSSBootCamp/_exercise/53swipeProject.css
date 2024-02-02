@@ -884,24 +884,12 @@
         padding: 0;
     }
 
-    .navbar {
-        margin: 0;
-    }
-
     #gradient-canvas {
         height: 800px;
     }
 
     main {
         margin: 0;
-    }
-
-    .navbar {
-        width: 75%;
-    }
-
-    .navbar .menu {
-        width: 50%;
     }
 
     .hero {
