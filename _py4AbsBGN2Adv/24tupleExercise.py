@@ -12,13 +12,13 @@ tuple1 = ("hi", 47, 3.14, True)
 
 # Create a second tuple by slicing the second and third element from the first 
 # tuple.
-tuple2 = tuple1[1:2]
+tuple2 = tuple1[1:3]
 # Create a third tuple by concatenating the first and second tuple.
 tuple3 = tuple1 + tuple2
 # Output all three tuples.
 print(tuple1, tuple2, tuple3)
 # Output the last element in the first tuple.
-print(tuuple1[-1])
+print(tuple1[-1])
 # Using indexing, output the number of times the first element from the second 
 # tuple occurs in the third tuple (should be more than 1) and output it.
 print(tuple3.count(tuple2[0]))
@@ -29,5 +29,6 @@ print(tuple1.index(tuple2[1]))
 print(tuple1 + tuple2 +tuple3)
 # Pack the three tuples into a `result` variable and output it.
 result = (tuple1, tuple2, tuple3)
+print(result)
 # Output the second tuple repeated 4 times
 print(tuple2 * 4)
