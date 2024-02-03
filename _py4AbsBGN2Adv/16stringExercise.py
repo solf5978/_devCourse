@@ -16,5 +16,6 @@ noun = input("Give Me A Noun: ")
 verb = input("Give Me A Verb")
 adj = input("Give Me An Adj")
 # Format a string be a story with the 4 user inputs and store in in a variable
-
 # Print the formatted story string to the console
+
+print(f"I met a {noun} that are {verb} with a {adj} hair")
