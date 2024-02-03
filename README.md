@@ -32,6 +32,7 @@
 ---
 
 - [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                              By AmigosCode
+- [Engineering Management Fundamentals](https://frontendmasters.com/courses/intro-management/)          By Jem Young
 
 ### Python
 
