@@ -39,6 +39,7 @@
 ---
 
 - [_py4AbsBGN2Adv](https://www.udemy.com/course/python-for-absolute-beginners-2023-beginner-to-advanced)By Jesse Warner
+- [_py3Fundamentals](https://www.udemy.com/course/python3-fundamentals/)                                By Fred Baptiste
 
 ### System Analysis & Design
 
