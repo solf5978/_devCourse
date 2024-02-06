@@ -4,7 +4,6 @@
 
 ---
 
-- [Git & Github Full](https://fireship.io/courses/git/)                                                 By Jeff Delaney
 - [_basicOfGo_FM](https://frontendmasters.com/courses/go-basics/)                                       By Maximiliano Firtman
 
 ### HTML & CSS
@@ -12,7 +11,7 @@
 ---
 - [_advCSS4WebDev](https://www.udemy.com/course/advanced-css-for-web-developers/)                       By Eduonix
 - [_compGuide2HTML](https://www.udemy.com/course/the-complete-guide-to-html/)                           By Colt Steele
-- [_cssDemystified](https://cssdemystified.com/)                                                        By Kevin Powell
+- [_cssDemystified](https://cssdemystified.git adcom/)                                                        By Kevin Powell
 - [_getStartCSS_FM](https://gettingstartedwith.css.education/)                                          By Jen Kramer
 - [_htmlCSSBootCamp](https://www.udemy.com/course/html-and-css-bootcamp/)                               By Colt Steele
 - [_interHTMLCSS_FM](https://semantics-selectors.css.education/index.html/)                             By Jen Kramer
@@ -33,6 +32,7 @@
 
 - [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                              By AmigosCode
 - [Engineering Management Fundamentals](https://frontendmasters.com/courses/intro-management/)          By Jem Young
+- [Git & Github Full](https://fireship.io/courses/git/)                                                 By Jeff Delaney
 
 ### Python
 
@@ -57,5 +57,5 @@
 
 
 ### Hold
-- [_100DoCWebDevBootCamp](https://www.udemy.com/course/100-days-of-code-web-development-bootcamp/) By Maximilian Schwarzmuller & Manuel Lorenz
-- [_com2023WebDevBootCamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/) By Dr. Angela Yu
+- [_100DoCWebDevBootCamp](https://www.udemy.com/course/100-days-of-code-web-development-bootcamp/)      By Maximilian Schwarzmuller & Manuel Lorenz
+- [_com2023WebDevBootCamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/)         By Dr. Angela Yu
