@@ -1,4 +1,4 @@
-let age = 30
-let start = "Hello World"
+let age: number = 30
+let start: string = "Hello World"
 console.log(age)
 console.log(start)
