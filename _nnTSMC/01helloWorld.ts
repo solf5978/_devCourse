@@ -6,3 +6,8 @@ isFictional = true
 console.log(age)
 console.log(start)
 console.log(isFictional)
+
+// null & undefined
+
+let something: null
+let anotherThing: undefined
