@@ -39,8 +39,9 @@
 
 ---
 
-- [_py4AbsBGN2Adv](https://www.udemy.com/course/python-for-absolute-beginners-2023-beginner-to-advanced)By Jesse Warner
 - [_py3Fundamentals](https://www.udemy.com/course/python3-fundamentals/)                                By Fred Baptiste
+- [_py4AbsBGN2Adv](https://www.udemy.com/course/python-for-absolute-beginners-2023-beginner-to-advanced)By Jesse Warner
+- [_pyMFS23Proj](https://www.udemy.com/course/python-masterclass-course/)                               By Ashutosh Pawar
 
 ### System Analysis & Design
 
@@ -54,7 +55,7 @@
 ---
 
 - [_fundTS5P_FM](https://frontendmasters.com/courses/typescript-v4/)                                    By Mike North
--
+- [_nnTSMC](https://netninja.dev/p/typescript-masterclass)                                              By Net Ninja ( Shaun)
 
 
 ### Hold
