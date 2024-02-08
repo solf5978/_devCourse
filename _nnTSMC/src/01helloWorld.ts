@@ -25,3 +25,15 @@ ages.push(35)
 
 
 let things = [1, true, 'hello']
+// const t -> number boolean string, either one of these
+const t = things[0]
+
+// object literals
+
+let user: {
+    firstName:string,
+    age: number, 
+    id: number,
+} = {   firstName: 'mario',
+        age: 18,
+        id: 1, }
