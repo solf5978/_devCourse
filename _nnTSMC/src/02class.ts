@@ -1,9 +1,16 @@
 type Base = 'classic' | 'thick' | 'thin' | 'garlic'
 
-class Pizzas {
-    constructor(private title: string, private price: number) {
-        // this.title = title
-        // this.price = price
+class MenuItem {
+    constructor(private title: string, private price:number){}
+    // use get as a getter keyword
+    get details() : string {
+        return `${this.title} - ${this.price}`
+    }
+}
+
+class Pizzas extends MenuItem{
+    constructor(title: string, price: number) {
+        super(title, price)
     }
     // private title: string
     // private price: number
@@ -37,3 +44,12 @@ function addMushroomsToPizzas(pizzas: Pizzas[]): void {
 }
 
 addMushroomsToPizzas([pizza, pizzaTwo])
+// pizza.details() <- call a function
+// use as a getter
+pizza.details
+
+function printMenuItem(item: MenuItem) : void {
+    console.log(item.details)
+}
+
+printMenuItem(pizza)
