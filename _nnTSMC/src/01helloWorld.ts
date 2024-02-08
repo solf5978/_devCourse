@@ -102,3 +102,16 @@ const [lat, long] = useCoords()
 let users: [name: string, age: number]
 users = ['peach', 25]
 console.log(users[0])
+
+
+// interfaces
+
+interface Author {
+    name:string,
+    avatar: string, 
+}
+
+const authorOne: Author = {
+    name: 'mario', 
+    avatar: '/img/avatarOne.png',
+}
