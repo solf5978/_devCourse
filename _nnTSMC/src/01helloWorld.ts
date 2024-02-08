@@ -196,3 +196,9 @@ anotherId = '1hjk2ld;s'
 anotherId = 5
 
 // union type pitfall
+
+function swapIdType(id: Id) : Id {
+    // only use in props and methods common to both number and string types
+    // parseInt(id) is a NoNo
+    return id
+}
