@@ -96,3 +96,9 @@ function useCoords(): [number, number] {
 }
 
 const [lat, long] = useCoords()
+
+// named tuples
+
+let users: [name: string, age: number]
+users = ['peach', 25]
+console.log(users[0])
