@@ -358,3 +358,47 @@ const bill = {
 function printBillFormat(value: HasFormatter) : void {
     console.log(value.format())
 }
+
+function printBill(bill: Bill) : void {
+    console.log('server:', bill.server)
+    console.log(bill.format())
+}
+
+printBillFormat(usr)
+printBillFormat(bill)
+
+printBill(bill)
+
+// extending type aliases
+
+type pearson = {
+    id: string | number
+    firstName: string
+}
+
+type upser = pearson & {
+    email: string
+}
+
+const pearsonOne: pearson = {
+    id:1, 
+    firstName: 'hello'
+}
+
+const pearsonTwo = {
+    id: '2',
+    firstName: 'yoshi',
+    email: 'yoshi@dalkf.com'
+}
+
+const pearsonThree = {
+    email: 'peach@hello.com'
+}
+
+function printUser(user: upser) {
+    console.log(user.id, user.email, user.firstName)
+}
+
+// printUser(pearsonOne)
+printUser(pearsonTwo)
+// printUser(pearsonThree)
