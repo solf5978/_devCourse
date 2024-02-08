@@ -326,3 +326,35 @@ const shapeTwo: HasArea = {
 
 shapeOne.calcArea(5)
 shapeTwo.calcArea(10)
+
+// extending interfaces
+
+interface HasFormatter {
+    format() : string
+}
+
+interface Bill extends HasFormatter {
+    id : string | number
+    amount: number
+    server: string
+}
+
+const usr = {
+    id: 1, 
+    format(): string {
+        return `This user has an id of ${this.id}`
+    }
+}
+
+const bill = {
+    id: 2, 
+    amount: 50,
+    server: 'marios',
+    format(): string {
+        return `Bill with id ${this.id} has ${this.amount} to pay`
+    }
+}
+
+function printBillFormat(value: HasFormatter) : void {
+    console.log(value.format())
+}
