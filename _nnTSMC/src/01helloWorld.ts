@@ -47,7 +47,7 @@ let person = {
     score: 35
 }
 
-function addTwoNumbers(a: number, b: number) {
+function addTwoNumbers(a: number, b: number): number {
     return a + b
 }
 
