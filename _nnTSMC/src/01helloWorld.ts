@@ -270,3 +270,29 @@ const sigPerson = {
     name: 'mario',
     age: 30,
 }
+
+// function signatures
+
+type Calculator = (numOne: number, numTwo: number) => number
+
+function exampleOne(a: number, b: number) {
+    return a + b
+}
+
+function exampleTwo(first: number, second: number) {
+    return first * second
+}
+
+function exampleThree(num: number) {
+    return num * num
+}
+
+function exampleFour(numOne: number, numTwo: number) {
+    return `${numOne}${numTwo}`
+}
+
+let calcs: Calculator[] = []
+calcs.push(exampleOne)
+calcs.push(exampleTwo)
+calcs.push(exampleThree)
+// function signatures on interface
