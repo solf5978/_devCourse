@@ -1,10 +1,18 @@
 type Base = 'classic' | 'thick' | 'thin' | 'garlic'
 
-class MenuItem {
+interface HasFormatter {
+    format() : string
+}
+
+class MenuItem implements HasFormatter {
     constructor(private title: string, private price:number){}
     // use get as a getter keyword
     get details() : string {
         return `${this.title} - ${this.price}`
+    }
+
+    format() {
+        return `This menu item is call ${this.title} and is ${this.price}`
     }
 }
 
@@ -53,3 +61,7 @@ function printMenuItem(item: MenuItem) : void {
 }
 
 printMenuItem(pizza)
+
+function printFormatted(val: HasFormatter) : void {
+    console.log(val.format())
+}
