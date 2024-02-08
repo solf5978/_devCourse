@@ -63,3 +63,5 @@ function addAllNumbers(items:number[]): void {
 function formatGreeting(name: string, greeting: string): string {
     return `${greeting}, ${name}`
 }
+
+let age1: any
