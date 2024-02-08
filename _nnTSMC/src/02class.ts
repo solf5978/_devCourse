@@ -1,14 +1,14 @@
 type Base = 'classic' | 'thick' | 'thin' | 'garlic'
 
 class Pizzas {
-    constructor(title: string, price: number) {
-        this.title = title
-        this.price = price
+    constructor(private title: string, private price: number) {
+        // this.title = title
+        // this.price = price
     }
-    title: string
-    price: number
-    base: Base = 'classic'
-    toppings: string[] = []
+    // private title: string
+    // private price: number
+    private base: Base = 'classic'
+    private toppings: string[] = []
 
     addTopping(topping: string) : void {
         this.toppings.push(topping)
