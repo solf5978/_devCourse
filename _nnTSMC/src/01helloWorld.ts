@@ -296,3 +296,33 @@ calcs.push(exampleOne)
 calcs.push(exampleTwo)
 calcs.push(exampleThree)
 // function signatures on interface
+
+interface HasArea {
+    name: string
+    calcArea: (a: number) => number
+    sameThing(a:number) : number
+}
+
+const shapeOne: HasArea = {
+    name: "square",
+    calcArea(l: number) {
+        return l* l
+    },
+    sameThing(l) {
+        return l
+    }
+}
+
+const shapeTwo: HasArea = {
+    name: "circle",
+    calcArea(r: number) {
+        return Math.PI * r^2
+    },
+    sameThing(l) {
+        return l
+    }
+}
+
+
+shapeOne.calcArea(5)
+shapeTwo.calcArea(10)
