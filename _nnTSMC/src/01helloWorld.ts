@@ -65,3 +65,7 @@ function formatGreeting(name: string, greeting: string): string {
 }
 
 let age1: any
+let anytype
+
+let anythings: any[] = ['hello', 30, null, true]
+anythings.push({id: 123})
