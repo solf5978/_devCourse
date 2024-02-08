@@ -69,3 +69,13 @@ let anytype
 
 let anythings: any[] = ['hello', 30, null, true]
 anythings.push({id: 123})
+
+function addTGT(value: any): any {
+    return value + value
+}
+
+const resultAny = addTGT("hello")
+const resultAny2 = addTGT(3)
+
+// useful when migrating from js to ts
+// bcz using ANY won't cause errors initially
