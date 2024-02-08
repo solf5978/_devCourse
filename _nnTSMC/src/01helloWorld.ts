@@ -40,3 +40,14 @@ let user: {
 
 user.firstName = "djafh"
 
+// type inference with object literals
+
+let person = {
+    name: 'luigi',
+    score: 35
+}
+
+function addTwoNumbers(a: number, b: number) {
+    return a + b
+}
+
