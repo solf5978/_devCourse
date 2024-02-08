@@ -115,3 +115,19 @@ const authorOne: Author = {
     name: 'mario', 
     avatar: '/img/avatarOne.png',
 }
+
+interface Post {
+    title: string,
+    body: string,
+    tags: string[],
+    create_at: Date,
+    author: Author,
+}
+
+const newPost: Post = {
+    title: 'my first post', 
+    body: 'something', 
+    tags: ['gaming', 'tech'],
+    create_at: new Date(),
+    author: authorOne
+}
