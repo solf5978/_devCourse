@@ -7,11 +7,11 @@ interface Payment {
     notes: string
 }
 
-const writer = new CSVWriter(['id', 'amount', 'to', 'notes'])
+const paymentwriter = new CSVWriter<Payment>(['id', 'amount', 'to', 'notes'])
 
-writer.addRows([
+paymentwriter.addRows([
     { id: 1, amount: 50, to: 'yoshi', notes: 'for--'},
     { id: 13, amount: 510, to: 'ygdsaoshi', notes: 'fordas--'},
 ])
 
-writer.save('./data/payments.csv')
+paymentwriter.save('./data/payments.csv')
