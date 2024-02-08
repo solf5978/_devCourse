@@ -177,3 +177,22 @@ function formatUser(user: User) : void {
 
 formatUser(userOne)
 formatUser({ name: 'yoshi', score: 31})
+
+// union types
+
+let someId: number | string
+someId = 1
+someId = '2'
+
+let email: string | null = null
+
+email = 'marios@netninja.dev'
+email = null
+
+type Id = number | string
+let anotherId: Id
+
+anotherId = '1hjk2ld;s'
+anotherId = 5
+
+// union type pitfall
