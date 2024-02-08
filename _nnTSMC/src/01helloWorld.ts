@@ -11,3 +11,17 @@ console.log(isFictional)
 
 let something: null
 let anotherThing: undefined
+
+// Arrays
+let names: []
+let str_names: string[]
+let ppl: string[] = ['marios', 'luigi']
+let ages: number[] = [25, 26, 20]
+
+const f = ppl[1]
+
+ppl.push("hello")
+ages.push(35)
+
+
+let things = [1, true, 'hello']
