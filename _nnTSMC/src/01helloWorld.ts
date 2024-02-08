@@ -219,4 +219,28 @@ const idTwo = swapIdType_guard("2")
 console.log(idOne)
 console.log(idTwo)
 
+// tagged interfaces
 
+interface PerUser {
+    type: 'user'
+    username: string
+    email: string
+    id: Id
+}
+
+interface PerPerson {
+    type: 'person'
+    firstName: string
+    age: number
+    id: Id
+}
+
+function logDetails(value: PerUser | PerPerson) : void {
+    // use of hardcoded type to verify
+    if (value.type === 'user'){
+        value.email == "hello@"
+    }
+    if (value.type === 'person') {
+        value.firstName = "hello"
+    }
+}
