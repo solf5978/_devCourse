@@ -145,13 +145,35 @@ let posts: Post[] = []
 
 posts.push(newPost)
 
-// TYPE aliases
+// TYPE aliases as tuple
 
 type Rgb = [number, number, number]
 
-function gerRandomColor() :Rgb {
+function getRandomColor() :Rgb {
     const r = Math.floor(Math.random() * 255)
     const g = Math.floor(Math.random() * 255)
     const b = Math.floor(Math.random() * 255)
     return [r, g, b,]
 }
+
+const colorOne = getRandomColor()
+const colorTwo = getRandomColor()
+console.log(colorOne, colorTwo)
+// TYPE aliases as object literal
+
+type User = {
+    name: string
+    score: number 
+}
+
+const userOne: User = {
+    name: 'marios',
+    score: 55
+}
+
+function formatUser(user: User) : void {
+    console.log(`${user.name} got ${user.score}`)
+}
+
+formatUser(userOne)
+formatUser({ name: 'yoshi', score: 31})
