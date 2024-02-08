@@ -202,3 +202,17 @@ function swapIdType(id: Id) : Id {
     // parseInt(id) is a NoNo
     return id
 }
+
+// type guards
+function swapIdType_guard(id: Id) {
+    if (typeof id === 'string') {
+        // use on strings
+        return parseInt(id)
+    } else {
+        // that is a number as it shall be
+        return `${id}`
+    }
+}
+
+const idOne = swapIdType_guard(1)
+const idTwo = swapIdType_guard("2")
