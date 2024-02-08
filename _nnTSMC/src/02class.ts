@@ -15,7 +15,7 @@ class Pizzas {
     }
 
     removeTopping(topping: string) : void {
-        this.toppings = this.toppings.filter((t) => !== topping)
+        this.toppings = this.toppings.filter((t) => t !== topping)
     }
 
     selectBase(b: Base): void {
