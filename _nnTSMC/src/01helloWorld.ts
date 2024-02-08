@@ -37,3 +37,6 @@ let user: {
 } = {   firstName: 'mario',
         age: 18,
         id: 1, }
+
+user.firstName = "djafh"
+
