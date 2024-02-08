@@ -59,3 +59,7 @@ function addAllNumbers(items:number[]): void {
     const total = items.reduce((a, c ) => a + c, 0)
     console.log(total)
 }
+
+function formatGreeting(name: string, greeting: string): string {
+    return `${greeting}, ${name}`
+}
