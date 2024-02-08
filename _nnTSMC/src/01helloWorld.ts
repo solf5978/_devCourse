@@ -55,3 +55,7 @@ const subtractTwoNumbers = (a: number, b:number): number => {
     return a - b 
 }
 
+function addAllNumbers(items:number[]): void {
+    const total = items.reduce((a, c ) => a + c, 0)
+    console.log(total)
+}
