@@ -19,4 +19,4 @@ function randomCollectionItem<T>(c: Collection<T>): T {
 }
 
 const resultOne = randomCollectionItem<string>(collectionOne)
-const resultTwo = randomCollectionItem<number>(collectionTwo)
+const resultTwo = randomCollectionItem(collectionTwo)
