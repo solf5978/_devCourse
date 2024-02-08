@@ -216,3 +216,7 @@ function swapIdType_guard(id: Id) {
 
 const idOne = swapIdType_guard(1)
 const idTwo = swapIdType_guard("2")
+console.log(idOne)
+console.log(idTwo)
+
+
