@@ -79,3 +79,20 @@ const resultAny2 = addTGT(3)
 
 // useful when migrating from js to ts
 // bcz using ANY won't cause errors initially
+
+
+// tuples
+let tuple: [string, number, boolean]
+
+let hsla: [number, string, string, number]
+hsla = [200, "100%", "50", 1]
+
+let xy: [number, number]
+
+function useCoords(): [number, number] {
+    const lat = 100
+    const long = 50
+    return [lat, long]
+}
+
+const [lat, long] = useCoords()
