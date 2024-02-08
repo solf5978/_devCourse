@@ -29,3 +29,11 @@ const pizzaTwo = new Pizzas('luigi special', 30)
 pizza.addTopping('mushrooms')
 pizza.addTopping('olives')
 pizza.selectBase('garlic')
+
+function addMushroomsToPizzas(pizzas: Pizzas[]): void {
+    for (const p of pizzas) {
+        p.addTopping('mushrooms')
+    }
+}
+
+addMushroomsToPizzas([pizza, pizzaTwo])
