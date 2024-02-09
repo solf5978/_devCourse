@@ -1,13 +1,12 @@
 interface PostCardProps {
-    title: string
-    author: string
+    post: Post
 }
 
-export default function PostCard({title, author}: PostCardProps) {
+export default function PostCard({ post}: PostCardProps) {
     return (
         <div className="card">
-            <h2>{title}</h2>
-            <p>Written By {author}</p>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
         </div>
     )
 }
