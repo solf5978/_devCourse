@@ -21,7 +21,7 @@ users_1.add(user1)
 users_1.add(user1)
 users_1.add(user2)
 
-function logUserEmails(users: Set<setUser) : void {
+function logUserEmails(users: Set<setUser>) : void {
     users.forEach((user) => console.log(user.email))
 }
 
