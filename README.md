@@ -40,6 +40,7 @@
 ---
 
 - [_py3Fundamentals](https://www.udemy.com/course/python3-fundamentals/)                                By Fred Baptiste
+- [_py3DP1Functional](https://www.udemy.com/course/python-3-deep-dive-part-1/)                          By Fred Baptiste
 - [_py4AbsBGN2Adv](https://www.udemy.com/course/python-for-absolute-beginners-2023-beginner-to-advanced)By Jesse Warner
 - [_pyMFS23Proj](https://www.udemy.com/course/python-masterclass-course/)                               By Ashutosh Pawar
 
