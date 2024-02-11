@@ -47,6 +47,12 @@
 - [_py4AbsBGN2Adv](https://www.udemy.com/course/python-for-absolute-beginners-2023-beginner-to-advanced)By Jesse Warner
 - [_pyMFS23Proj](https://www.udemy.com/course/python-masterclass-course/)                               By Ashutosh Pawar
 
+### Rust
+
+---
+
+- [Ultimate Rust Crash Course](https://www.udemy.com/course/ultimate-rust-crash-course/)                By Nathan Stocks
+
 ### System Analysis & Design
 
 ---
