@@ -4,7 +4,7 @@ fn scope_and_shadowing() {
     {
         let b = 456;
         println!("b = {}", b);
-        let a = 878; // redeclaring
+        let a = 878; // redeclare
         println!("inside a = {}", a);
     }
     println!("a = {}", a);
