@@ -51,6 +51,7 @@
 
 ---
 
+- [_theRustPL](https://www.udemy.com/course/rust-lang/)                                                 By Dmitri Nesteruk
 - [Ultimate Rust Crash Course](https://www.udemy.com/course/ultimate-rust-crash-course/)                By Nathan Stocks
 
 ### System Analysis & Design
