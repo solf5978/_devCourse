@@ -17,5 +17,7 @@ fn main() {
 
     let c = 1 | 2;
     println!("1|2 = {}", c); // 3
+    let two_to_ten = 1 << 10;
+    println!("2 << 10 = {}", two_to_ten);
 
 }
