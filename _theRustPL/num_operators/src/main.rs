@@ -15,4 +15,7 @@ fn main() {
     let b_to_pi = f64::powf(b, std::f64::consts::PI);
     println!("{} cubed = {}, {} ^ pi = {}", b, b_cubed, b, b_to_pi);
 
+    let c = 1 | 2;
+    println!("1|2 = {}", c); // 3
+
 }
