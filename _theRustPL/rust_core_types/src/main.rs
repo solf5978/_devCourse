@@ -13,6 +13,7 @@ fn main() {
     let var_char: char = 'a';
     let var_float: f32 = 2.5;
     let var_double: f64 = 2.5;
+    let var_boolean: bool = true;
 
     println!(" u8's value = {} , and its size is {}", var_u8, mem::size_of_val(&var_u8));
     println!(" u16's value = {} , and its size is {}", var_u16, mem::size_of_val(&var_u16));
@@ -26,5 +27,5 @@ fn main() {
     println!(" char's value = {} , and its size is {}", var_char, mem::size_of_val(&var_char));
     println!(" f32's value = {} , and its size is {}", var_float, mem::size_of_val(&var_float));
     println!(" f64's value = {} , and its size is {}", var_double, mem::size_of_val(&var_double));
-
+    println!(" boolean's value = {} , and its size is {}", var_boolean, mem::size_of_val(&var_boolean));
 }
