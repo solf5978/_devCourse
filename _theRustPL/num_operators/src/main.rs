@@ -20,4 +20,8 @@ fn main() {
     let two_to_ten = 1 << 10;
     println!("2 << 10 = {}", two_to_ten);
 
+    let pi_less_4 = std::f64::consts::PI < 4.0;
+    let x = 5;
+    let x_is_5 = x == 5;
+
 }
