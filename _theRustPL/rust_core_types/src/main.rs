@@ -11,6 +11,8 @@ fn main() {
     let var_i64: i64 = 0;
     let var_isize: isize = 0;
     let var_char: char = 'a';
+    let var_float: f32 = 2.5;
+    let var_double: f64 = 2.5;
 
     println!(" u8's value = {} , and its size is {}", var_u8, mem::size_of_val(&var_u8));
     println!(" u16's value = {} , and its size is {}", var_u16, mem::size_of_val(&var_u16));
@@ -22,6 +24,7 @@ fn main() {
     println!(" i64's value = {} , and its size is {}", var_i64, mem::size_of_val(&var_i64));
     println!(" isize's value = {} , and its size is {}", var_isize, mem::size_of_val(&var_isize));
     println!(" char's value = {} , and its size is {}", var_char, mem::size_of_val(&var_char));
-
+    println!(" f32's value = {} , and its size is {}", var_float, mem::size_of_val(&var_float));
+    println!(" f64's value = {} , and its size is {}", var_double, mem::size_of_val(&var_double));
 
 }
