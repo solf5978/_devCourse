@@ -159,6 +159,7 @@ fn pattern_matching() {
         (0,0) => println!("origin"),
         (x,y) => println!("x -> {}, y = {}", x, y),
         (_, y) => println!("(?, {})", y),
+        (y..) => println("I only care about y"),
     }
 }
 
