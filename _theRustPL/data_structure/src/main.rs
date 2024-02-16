@@ -138,6 +138,30 @@ fn tuples() {
     println!("{}", meaning.0);
 }
 
+fn hom_many(x:i32) -> &'static str {
+    match x {
+        0 => "no",
+        1 | 2 => "one or two",
+        3..5 => "a little",
+        seven2eight@ 7..8 => "seven or eight",
+        _ if (x % 2 == 0) => "some",
+        _ => "a few",
+    }
+}
+
+fn pattern_matching() {
+    for x in 0..13 {
+        println!("{} : I have {} oranges", x, hom_may(x));
+    }
+
+    let point = (3, 4);
+    match (point){
+        (0,0) => println!("origin"),
+        (x,y) => println!("x -> {}, y = {}", x, y),
+        (_, y) => println!("(?, {})", y),
+    }
+}
+
 fn main() {
     // structures();
     // println!("Hello, world!");
