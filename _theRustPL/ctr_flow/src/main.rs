@@ -30,8 +30,19 @@ fn while_loop() {
 
     while x < 1000 {
         x *=2 ;
+        if x == 64 { continue; }
         println!("x's value = {}x", x);
+
+        if x == 1024 { break; }
     }
+
+    let mut y:i8 = 0;
+    loop {
+        y *= 2;
+        println!("y = {}", y);
+        if y == 1 << 10 { break; } // break @ 1024
+    }
+
 }
 
 fn main() {
