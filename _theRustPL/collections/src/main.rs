@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 
 fn vectors() {
     let mut a = Vec::new();
@@ -25,8 +26,32 @@ fn vectors() {
     if let Some(x) = a.pop() {
         println!("{}", x);
     } // while let works too
-
 }
+
+fn create_hashmap() {
+    let mut shapes = HashMap::new();
+    shapes.insert(String::from("triangle"), 3);
+    shapes.insert(String::from("square"), 4);
+
+    println!("a square has {} sides", shapes["square".into()]);
+
+    for (k, v) in &shapes {
+        println!("{} : {}", k, v);
+    }
+
+    println!("{:?}", shapes);
+
+    shapes.entry("circle".into()).or_insert(1);
+    {
+        let actual = shapes.entry("circle".into()).or_insert(1);
+        *actual = 0;
+    }
+
+    println!("{:?}", shapes);
+}
+
 fn main() {
     vectors();
+    create_hashmap();
+    create_hsahset();
 }
