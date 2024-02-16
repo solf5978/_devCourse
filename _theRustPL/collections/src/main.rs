@@ -67,6 +67,24 @@ fn create_hashset() {
     if !greeks.contains("kappa") {
         println!("we dont have this");
     }
+
+    let removed = greeks.remove("delta");
+    if removed {
+        println!("removed!!!")
+    }
+
+    let _1_5: HashSet<_> = (1..=5).collect();
+    let _11_15: HashSet<_> = (11..=15).collect();
+    let _21_25: HashSet<_> = (21..=25).collect();
+    let _31_35: HashSet<_> = (31..=35).collect();
+
+    println!(
+        "is {:?} a subset of {:?}? {}", _1_5, _11_15, _1_5.is_subset(&_11_15)
+    );
+
+    println!(
+        "is {:?} a subset of {:?}? {}", _1_5, _11_15, _1_5.is_disjoint(&_11_15)
+    );
 }
 
 fn main() {
