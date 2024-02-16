@@ -79,9 +79,13 @@ fn main() {
     let first: f64= 3.0;
     let second: f64 = 2.5;
     let result =
-        if second != 00 { Some(x/y)} else { None };
+        if second != 0.0 { Some(first/second)} else { None };
     match result {
         Some(z) => println!("{}/{}={}", first, second, z),
         None => println!("cannot divide by zero")
+    }
+
+    if let Some(z) = result {
+        println!("result = {}", z)
     }
 }
