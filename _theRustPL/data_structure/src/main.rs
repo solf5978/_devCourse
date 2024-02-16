@@ -113,6 +113,18 @@ fn slice() {
     println!("{:?}", data);
 }
 
+fn sum_and_product(x:i32, y: i32) -> (i32, i32) {
+    return (x + y, x * y)
+}
+
+fn tuples() {
+    let x = 3;
+    let y = 4;
+    let sp = sum_and_product(x, y);
+    println!("result of sp -> {:?}", sp);
+    println!("{0} + {1} = {2}, {0} * {1} = {3}", x, y, sp.0, sp.1);
+}
+
 fn main() {
     // structures();
     // println!("Hello, world!");
@@ -139,6 +151,7 @@ fn main() {
     //
     // create_array();
     slice();
+    tuples();
 
 
 }
