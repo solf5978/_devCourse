@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 
 fn vectors() {
     let mut a = Vec::new();
@@ -50,8 +50,27 @@ fn create_hashmap() {
     println!("{:?}", shapes);
 }
 
+fn create_hashset() {
+    let mut greeks = HashSet::new();
+    greeks.insert("gamma");
+    greeks.insert("delta");
+    println!("{:?}", greeks);
+
+    greeks.insert("delta"); //no changes
+    println!("{:?}", greeks);
+    let added_vega = greeks.insert("vega");
+
+    if added_vega {
+        println!("Yes it is in");
+    }
+
+    if !greeks.contains("kappa") {
+        println!("we dont have this");
+    }
+}
+
 fn main() {
     vectors();
     create_hashmap();
-    create_hsahset();
+    create_hashset();
 }
