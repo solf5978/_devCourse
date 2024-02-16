@@ -1,4 +1,3 @@
-use rand::Rng;
 use std::io::stdin;
 
 fn if_statement()
