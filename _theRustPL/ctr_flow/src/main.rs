@@ -57,13 +57,16 @@ fn for_loop() {
 }
 
 fn main() {
-    if_statement();
-    while_loop();
-    for_loop();
+    // if_statement();
+    // while_loop();
+    // for_loop();
     let country_code = 44;
     let country = match country_code {
         44 => "Hello",
         46 => "World",
         75 => "Yo",
+        1..=1000 => "others unknown", // 1000 is included
+        _ => "exhausted"
     };
+    println!("print the country_code {} with name -> {} ", country_code, country);
 }
