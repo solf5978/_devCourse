@@ -72,6 +72,8 @@ fn create_array() {
     a[0] = 321;
     println!("first element of a is -> {}", a[0]);
 
+    println!("{:?}", a);
+
 }
 
 fn main() {
