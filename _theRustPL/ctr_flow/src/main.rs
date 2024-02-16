@@ -1,4 +1,5 @@
-
+use rand::Rng;
+use std::io::stdin;
 
 fn if_statement()
 {
@@ -56,6 +57,12 @@ fn for_loop() {
     }
 }
 
+enum LockState {
+    Locked,
+    Failed,
+    Unlocked,
+}
+
 fn main() {
     // if_statement();
     // while_loop();
@@ -69,4 +76,43 @@ fn main() {
         _ => "exhausted"
     };
     println!("print the country_code {} with name -> {} ", country_code, country);
+
+    let code = String::from("1234");
+    let mut state = LockState::Locked;
+    let mut entry = String::new();
+
+    loop {
+        match state {
+            LockState::Locked => {
+                let mut input = String::new();
+                match stdin().read_line(&mut input) {
+                    Ok(_) => {
+                        entry.push_str(&input.trim_end())
+                    }
+                    Err(_) => {
+                        continue
+                    }
+                }
+                if entry == code {
+                    state = LockState::Unlocked;
+                    continue;
+                }
+
+                if !code.starts_with(&entry) {
+                    state = LockState::Failed;
+                }
+            }
+            LockState::Failed => {
+                println!("FAILED from input");
+                entry.clear();
+                state = LockState::Locked;
+                continue;
+            }
+            LockState::Unlocked => {
+                println!("UNLOCKED");
+                return;
+            }
+        }
+    }
+
 }
