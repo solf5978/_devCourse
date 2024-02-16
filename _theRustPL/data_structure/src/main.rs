@@ -42,7 +42,22 @@ fn enums() {
     }
 }
 
+union IntOrFloat {
+    i: i32,
+    f: f32,
+}
+
+union IntOrFloat64 {
+    i: i64,
+    f: f64,
+}
+
 fn main() {
     structures();
     println!("Hello, world!");
+
+    let iof = IntOrFloat { i: 123 };
+    iof.i = 234;
+
+    let value = unsafe { iof.i };
 }
