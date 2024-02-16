@@ -1,6 +1,6 @@
 
 fn vectors() {
-    let a = Vec::new();
+    let mut a = Vec::new();
     a.push(1);
     a.push(2);
     a.push(3);
@@ -11,7 +11,8 @@ fn vectors() {
     println!("a = {:?}", a);
     println!("a[0] = {}", a[0]);
 
-    let idx: i32 = 0;
+    let idx: usize = 12;
+    a[idx] = 312;
     println!("a[0] = {}", a[idx]);
 
 }
