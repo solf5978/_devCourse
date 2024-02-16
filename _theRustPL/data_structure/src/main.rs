@@ -84,7 +84,7 @@ fn main() {
         Some(z) => println!("{}/{}={}", first, second, z),
         None => println!("cannot divide by zero")
     }
-
+    // Option -> Some(v) | None
     if let Some(z) = result {
         println!("result = {}", z)
     }
