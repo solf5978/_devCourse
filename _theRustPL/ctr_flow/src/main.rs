@@ -13,16 +13,15 @@ fn if_statement()
     }
 
     // if else is an expression
-    let day:str = if temp > 20 {"sunny"} else {"cloudy"};
+    let day = if temp > 20 {"sunny"} else {"cloudy"};
     println!("today is {}", day);
 
     println!("is it {}"
              ,if temp > 20 {"hot"} else if temp < 10 {"cold"} else {"ok"});
 
     println!("it is {}", if temp > 20 {
-        if temp > 30 {"super hot"} else {"just hot"}
-        else if temp < 10 {"cold"} else {"ok"}});
-
+        if temp > 30 {"super hot"} else {"just hot"}}
+        else if temp < 10 {"cold"} else {"ok"});
 }
 
 fn while_loop() {
@@ -31,12 +30,12 @@ fn while_loop() {
     while x < 1000 {
         x *=2 ;
         if x == 64 { continue; }
-        println!("x's value = {}x", x);
+        println!("x's value = {}", x);
 
         if x == 1024 { break; }
     }
 
-    let mut y:i8 = 0;
+    let mut y:i32 = 1;
     loop {
         y *= 2;
         println!("y = {}", y);
@@ -45,15 +44,15 @@ fn while_loop() {
 }
 
 fn for_loop() {
-    for i in 1.. 11 {
+    for i in 1..11 {
         if i == 3 { continue; }
 
         if i == 8 { break; }
         println!("current value is = {}", i);
     }
 
-    for (posX, posY) in (30..41).enumberate() {
-        println!("{} and {} ", posX, posY);
+    for (idx, pos_y) in (30..41).enumerate() {
+        println!("{} and {} ", idx, pos_y);
     }
 }
 
