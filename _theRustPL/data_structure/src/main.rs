@@ -58,7 +58,7 @@ fn process_value(iof: IntOrFloat) {
             IntOrFloat { i:42 } => {
                 println!("meaning of life value");
             }
-            IntOrFloat { f:f32 } => {
+            IntOrFloat { f  } => {
                 println!("value = {}", f)
             }
         }
@@ -74,5 +74,14 @@ fn main() {
 
     let value = unsafe { iof.i };
     println!("iof.i = {}", value);
-    process_value(IntOrFloat { i: 42 });
+    process_value(IntOrFloat { i: 5 });
+
+    let first: f64= 3.0;
+    let second: f64 = 2.5;
+    let result =
+        if second != 00 { Some(x/y)} else { None };
+    match result {
+        Some(z) => println!("{}/{}={}", first, second, z),
+        None => println!("cannot divide by zero")
+    }
 }
