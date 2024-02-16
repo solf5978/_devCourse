@@ -51,6 +51,10 @@ fn for_loop() {
         if i == 8 { break; }
         println!("current value is = {}", i);
     }
+
+    for (posX, posY) in (30..41).enumberate() {
+        println!("{} and {} ", posX, posY);
+    }
 }
 
 fn main() {
