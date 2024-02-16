@@ -123,6 +123,19 @@ fn tuples() {
     let sp = sum_and_product(x, y);
     println!("result of sp -> {:?}", sp);
     println!("{0} + {1} = {2}, {0} * {1} = {3}", x, y, sp.0, sp.1);
+
+    // event using destructuring
+    let (a, b) = sp;
+    println!("Once again -> {0} + {1} = {2}, {0} * {1} = {3}", x, y, a, b);
+
+    let sp2 = sum_and_product(4, 8);
+    let combined = (sp, sp2);
+    println!("{:?}", combined);
+    println!("last elem = {}", (combined.1).1);
+
+    let foo = (true, 42.0, -1i8);
+    let meaning = (42,);
+    println!("{}", meaning.0);
 }
 
 fn main() {
