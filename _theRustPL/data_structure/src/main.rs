@@ -58,7 +58,7 @@ fn process_value(iof: IntOrFloat) {
             IntOrFloat { i:42 } => {
                 println!("meaning of life value");
             }
-            IntOrFloat { f } => {
+            IntOrFloat { f:f32 } => {
                 println!("value = {}", f)
             }
         }
@@ -69,7 +69,7 @@ fn main() {
     structures();
     println!("Hello, world!");
 
-    let iof = IntOrFloat { i: 123 };
+    let mut iof = IntOrFloat { i: 123 };
     iof.i = 234;
 
     let value = unsafe { iof.i };
