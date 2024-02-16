@@ -42,10 +42,19 @@ fn while_loop() {
         println!("y = {}", y);
         if y == 1 << 10 { break; } // break @ 1024
     }
+}
 
+fn for_loop() {
+    for i in 1.. 11 {
+        if i == 3 { continue; }
+
+        if i == 8 { break; }
+        println!("current value is = {}", i);
+    }
 }
 
 fn main() {
     if_statement();
     while_loop();
+    for_loop();
 }
