@@ -21,9 +21,20 @@ fn if_statement()
 
     println!("it is {}", if temp > 20 {
         if temp > 30 {"super hot"} else {"just hot"}
-        else if temp < 10 {{"cold"} else {"ok"}});
+        else if temp < 10 {"cold"} else {"ok"}});
+
+}
+
+fn while_loop() {
+    let mut x = 1;
+
+    while x < 1000 {
+        x *=2 ;
+        println!("x's value = {}x", x);
+    }
 }
 
 fn main() {
     if_statement();
+    while_loop();
 }
