@@ -65,6 +65,15 @@ fn process_value(iof: IntOrFloat) {
     }
 }
 
+fn create_array() {
+    let mut a:[i32;5] = [1, 2, 3, 4, 5,];
+    println!("a has {} elements, first is {}",
+        a.len(), a[0]);
+    a[0] = 321;
+    println!("first element of a is -> {}", a[0]);
+
+}
+
 fn main() {
     structures();
     println!("Hello, world!");
@@ -74,7 +83,7 @@ fn main() {
 
     let value = unsafe { iof.i };
     println!("iof.i = {}", value);
-    process_value(IntOrFloat { i: 5 });
+    process_value(IntOrFloat { i: 42 });
 
     let first: f64= 3.0;
     let second: f64 = 2.5;
@@ -88,4 +97,6 @@ fn main() {
     if let Some(z) = result {
         println!("result = {}", z)
     }
+
+    create_array();
 }
