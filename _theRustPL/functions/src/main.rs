@@ -1,4 +1,23 @@
 
+struct Point {
+    x: f64,
+    y: f64,
+}
+
+struct Line {
+    start: Point,
+    end: Point
+}
+
+impl Line {
+    fn len(&self) -> f64 {
+        let dx = self.start.x - self.end.x;
+        let dy = self.start.y - self.end.y;
+        return (dx * dx + dy * dy).sqrt()
+    }
+}
+
+
 fn print_value( input: i32) {
     println!("Value = {}", input);
 }
