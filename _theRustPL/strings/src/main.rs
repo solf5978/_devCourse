@@ -48,6 +48,16 @@ fn strings() {
     let rfr = format!("{0} {1} , {0}!", run, forest);
     println!("{}", rfr);
 
+    let info = format!("the name's is {last}, {first} {last}.", first = "james", last = "bond");
+    println!("{}", info);
+
+    let mixed = format!(
+        "{} {} {0} {} {data}",
+        "a",
+        "b",
+        data = "hello",
+    );
+    println!("{}", mixed);
 
 }
 
