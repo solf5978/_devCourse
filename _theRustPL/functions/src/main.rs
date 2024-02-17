@@ -41,9 +41,9 @@ fn functions() {
 
 fn say_hello() { println!("hello"); }
 fn closures() {
-    say_hello()
+    say_hello();
     let haha = say_hello;
-    sh();
+    haha();
 
     let plus_one = |x: i32| -> i32 { x + 1 };
     let a = 6;
@@ -54,6 +54,15 @@ fn closures() {
         z += 2;
         z
     }; println!("{}  + 2 = {}", 3, plus_two(3));
+
+    let plus_three = |x:&mut i32| *x += 3;
+    let mut f = 12;
+    plus_three(&mut f);
+    println!("f = {}", f);
+}
+
+fn is_even(x: u32) -> bool {
+    x % 2 ==0
 }
 
 fn main() {
@@ -61,4 +70,18 @@ fn main() {
 
     functions();
     closures();
+    let limit = 500;
+    let mut sum = 0;
+
+    let above_limit = |y| y > limit;
+    for i in 0.. {
+        let isq = i * i;
+
+        if above_limit(isq) {
+            break;
+        } else if is_even(isq) {
+            sum += isq;
+        }
+    }
+    println!("final result -> {}", sum);
 }
