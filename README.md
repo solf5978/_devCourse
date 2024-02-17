@@ -51,6 +51,7 @@
 
 ---
 
+- [Rust Programming For Beginners](https://www.udemy.com/course/rust-coding-for-beginners/)             By Jayson Lennon
 - [_theRustPL](https://www.udemy.com/course/rust-lang/)                                                 By Dmitri Nesteruk
 - [Ultimate Rust Crash Course](https://www.udemy.com/course/ultimate-rust-crash-course/)                By Nathan Stocks
 

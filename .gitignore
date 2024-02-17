@@ -9,6 +9,7 @@ assets/
 .idea/
 .vscode/
 _example/
+*.*ignore
 
 # Binaries for programs and plugins
 *.exe
