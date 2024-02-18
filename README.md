@@ -34,6 +34,7 @@
 - [Enterprise Engineering Management 101](https://frontendmasters.com/courses/intro-management/)        By Jem Young
 - [Enterprise Engineering Management 102](https://frontendmasters.com/courses/engineering-management/)  By Ryan Burgess
 - [Git & Github Full](https://fireship.io/courses/git/)                                                 By Jeff Delaney
+- [The Software Designer Mindset](https://www.arjancodes.com/mindset)                                   By ArjanCodes
 
 ### Python
 
