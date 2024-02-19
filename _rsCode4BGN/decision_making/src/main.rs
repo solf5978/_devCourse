@@ -20,15 +20,15 @@ fn main() {
     match some_bool {
         true => println!("its true"),
         false => println!("its false"),
-    }
+    };
 
     let some_int = 3;
     match some_int {
-        1 => 1,
-        2 => 2,
-        3 => 3,
+        1 => println!("1"),
+        2 => println!("2"),
+        3 => println!("3"),
         _ => println!("Something else"),
-    }
+    };
 
     let exercise_bool = true;
     if exercise_bool == true {
@@ -40,7 +40,15 @@ fn main() {
     match exercise_bool {
         true => println!("it's true"),
         false => println!("it's false"),
-    }
+    };
+
+    let match_int = 1;
+    match match_int {
+        1 => String::from("One"),
+        2 => String::from("Two"),
+        3 => String::from("Three"),
+        _ => String::from("Not 1, 2 or 3"),
+    };
 
     
 }
