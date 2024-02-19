@@ -30,5 +30,17 @@ fn main() {
         _ => println!("Something else"),
     }
 
+    let exercise_bool = true;
+    if exercise_bool == true {
+        println!("it's true");
+    } else {
+        println!("it's false");
+    }
+
+    match exercise_bool {
+        true => println!("it's true"),
+        false => println!("it's false"),
+    }
+
     
 }
