@@ -22,5 +22,13 @@ fn main() {
         false => println!("its false"),
     }
 
+    let some_int = 3;
+    match some_int {
+        1 => 1,
+        2 => 2,
+        3 => 3,
+        _ => println!("Something else"),
+    }
+
     
 }
