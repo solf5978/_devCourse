@@ -52,4 +52,13 @@ impl ShippingBox {
 
 fn main() {
     println!("Hello, world!");
+    let parcel_s = Dimensions {
+        width: 1.0,
+        height: 2.0,
+        depth: 3.0,
+    };
+
+    let parcel_s = ShippingBox::new(5.0, Color::Red, parcel_s);
+    parcel_s.print();
+
 }
