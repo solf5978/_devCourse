@@ -11,6 +11,10 @@ struct Employee {
     working_hours: u32,
 }
 
+fn pEmployee(emp : Employee) {
+    println!("{:?}", emp);
+}
+
 fn main() {
     let me = Employee {
         pos: Position::Worker,
@@ -28,4 +32,7 @@ fn main() {
 
     //Using #[derive(Debug)] on Struct
     println!("{:?}", me);
+    pEmployee(me);
+    pEmployee(me);
+
 }
