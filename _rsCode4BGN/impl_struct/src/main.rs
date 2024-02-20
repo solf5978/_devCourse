@@ -34,7 +34,7 @@ struct ShippingBox {
 }
 
 impl ShippingBox {
-    fn new(weight: f64, color: Color, dimentsions: Dimensions) -> Self {
+    fn new(weight: f64, color: Color, dimensions: Dimensions) -> Self {
         Self {
             weight,
             color,
