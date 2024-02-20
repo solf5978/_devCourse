@@ -5,7 +5,7 @@ enum Position {
     Worker,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 struct Employee {
     pos: Position,
     working_hours: u32,
