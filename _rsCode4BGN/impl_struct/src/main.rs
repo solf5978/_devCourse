@@ -45,6 +45,7 @@ impl ShippingBox {
     fn print(&self) {
         self.color.print();
         self.dimensions.print();
+        println!("weight: {:?}", self.weight);
     }
 }
 
