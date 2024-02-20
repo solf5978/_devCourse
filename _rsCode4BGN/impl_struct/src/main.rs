@@ -38,7 +38,7 @@ impl ShippingBox {
         Self {
             weight,
             color,
-            dimentsions,
+            dimensions,
         }
     }
 
