@@ -1,14 +1,16 @@
 # Following Along Materials From Various Courses
-### Containerized
+
+### DevOps
 ---
+- [3 Days Linux Administration Course](https://www.udemy.com/course/perfect-3-days-linux-course)        By Imran Afzal
+- [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                              By AmigosCode
+- [Linux Mastery: Master the Linux Command Line](https://www.udemy.com/course/linux-mastery/)           By Ziyad Yehia
 
 ### Golang
 ---
-
 - [_basicOfGo_FM](https://frontendmasters.com/courses/go-basics/)                                       By Maximiliano Firtman
 
 ### HTML & CSS
-
 ---
 - [_advCSS4WebDev](https://www.udemy.com/course/advanced-css-for-web-developers/)                       By Eduonix
 - [_compGuide2HTML](https://www.udemy.com/course/the-complete-guide-to-html/)                           By Colt Steele
@@ -20,27 +22,20 @@
 - [_pracCSSLayout_FM](https://practical.css.education/)                                                 By Jen Kramer
 
 ### JavaScript
-
 ---
-
 - [_modernJSBootCamp](https://www.udemy.com/course/javascript-beginners-complete-tutorial/)             By Colt Steele & Stephen Grider
 - [_sharpenJSPrac](https://www.udemy.com/course/javascript-practice-problems-sharpen-your-skills/)      By Steven Hancock
 -
 
 ### Others
-
 ---
-- [3 Days Linux Administration Course](https://www.udemy.com/course/perfect-3-days-linux-course)        By Imran Afzal
-- [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                              By AmigosCode
 - [Enterprise Engineering Management 101](https://frontendmasters.com/courses/intro-management/)        By Jem Young
 - [Enterprise Engineering Management 102](https://frontendmasters.com/courses/engineering-management/)  By Ryan Burgess
 - [Git & Github Full](https://fireship.io/courses/git/)                                                 By Jeff Delaney
 - [The Software Designer Mindset](https://www.arjancodes.com/mindset)                                   By ArjanCodes
 
 ### Python
-
 ---
-
 - [_py3/_Fundamentals](https://www.udemy.com/course/python3-fundamentals/)                              By Fred Baptiste
 - [_py3/_DP1Functional](https://www.udemy.com/course/python-3-deep-dive-part-1/)                        By Fred Baptiste
 - [_py3/_DP2Iterator](https://www.udemy.com/course/python-3-deep-dive-part-2/)                          By Fred Baptiste
@@ -50,24 +45,18 @@
 - [_pyMFS23Proj](https://www.udemy.com/course/python-masterclass-course/)                               By Ashutosh Pawar
 
 ### Rust
-
 ---
-
 - [_rsCode4BGN](https://www.udemy.com/course/rust-coding-for-beginners/)                                By Jayson Lennon
 - [_theRustPL](https://www.udemy.com/course/rust-lang/)                                                 By Dmitri Nesteruk
 - [Ultimate Rust Crash Course](https://www.udemy.com/course/ultimate-rust-crash-course/)                By Nathan Stocks
 
 ### System Analysis & Design
-
 ---
-
 - [System Design For Beginners](https://neetcode.io/courses/system-design-for-beginners/0)              By NeetCodeIO
 - [System Design Interview](https://neetcode.io/courses/system-design-interview/0)                      By NeetCodeIO
 
 ### TypeScript
-
 ---
-
 - [_fundTS5P_FM](https://frontendmasters.com/courses/typescript-v4/)                                    By Mike North
 - [_nnTSMC](https://netninja.dev/p/typescript-masterclass)                                              By Net Ninja ( Shaun)
 
