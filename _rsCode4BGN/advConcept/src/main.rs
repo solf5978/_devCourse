@@ -20,7 +20,7 @@ enum Discount {
     Flat(i32),
 }
 
-struct Ticket {
+struct EventTicket {
     event: String,
     price: i32,
 }
@@ -58,14 +58,14 @@ fn main() {
         _ => (),
     }
 
-    let concert = Ticket {
+    let concert = EventTicket {
         event: "concert".to_owned(),
         price: 50,
     };
 
     match concert {
-        Ticket { price: 50, event } => println!("price @ 50 -> {:?}", event),
-        Ticket { price, .. } => println!("price = {:?}", price)
+        EventTicket { price: 50, event } => println!("price @ 50 -> {:?}", event),
+        EventTicket { price, .. } => println!("price = {:?}", price)
     }
 
 }
