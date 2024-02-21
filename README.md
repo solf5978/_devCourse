@@ -1,7 +1,8 @@
 # Following Along Materials From Various Courses
+### Containerized
+---
 
 ### Golang
-
 ---
 
 - [_basicOfGo_FM](https://frontendmasters.com/courses/go-basics/)                                       By Maximiliano Firtman
@@ -29,7 +30,7 @@
 ### Others
 
 ---
-
+- [3 Days Linux Administration Course](https://www.udemy.com/course/perfect-3-days-linux-course)        By Imran Afzal
 - [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                              By AmigosCode
 - [Enterprise Engineering Management 101](https://frontendmasters.com/courses/intro-management/)        By Jem Young
 - [Enterprise Engineering Management 102](https://frontendmasters.com/courses/engineering-management/)  By Ryan Burgess
