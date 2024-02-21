@@ -16,4 +16,14 @@ fn main() {
         Some(ans) => println!("q1: {:?}", ans),
         None => println!("q1: No rep"),
     }
+
+    match rep.q2 {
+        Some(ans) => println!("q1: {:?}", ans),
+        None => println!("q2: No rep"),
+    }
+
+    match rep.q3 {
+        Some(ans) => println!("q1: {:?}", ans),
+        None => println!("q3: No rep"),
+    }
 }
