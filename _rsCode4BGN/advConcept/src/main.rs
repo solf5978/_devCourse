@@ -58,4 +58,14 @@ fn main() {
         _ => (),
     }
 
+    let concert = Ticket {
+        event: "concert".to_owned(),
+        price: 50,
+    };
+
+    match concert {
+        Ticket { price: 50, event } => println!("price @ 50 -> {:?}", event),
+        Ticket { price, .. } => println!("price = {:?}", price)
+    }
+
 }
