@@ -15,6 +15,16 @@ fn pEmployee(emp : Employee) {
     println!("{:?}", emp);
 }
 
+enum Discount {
+    Percent(i32),
+    Flat(i32),
+}
+
+struct Ticket {
+    event: String,
+    price: i32,
+}
+
 fn main() {
     let me = Employee {
         pos: Position::Worker,
@@ -34,5 +44,18 @@ fn main() {
     println!("{:?}", me);
     pEmployee(me);
     pEmployee(me);
+
+    let n = 3;
+    match n {
+        3 => println!("three"),
+        other => println!("number: {:?}", other),
+    }
+
+    let flat = Discount::Flat(2);
+    match flat {
+        Discount::Flat(2) => println!("flat 2"),
+        Discount::Flat(amount) => println!("flat discount of {:?}", amount),
+        _ => (),
+    }
 
 }
