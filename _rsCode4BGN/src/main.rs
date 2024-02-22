@@ -25,9 +25,17 @@ struct Student {
     locker: Option<i32>,
 }
 
-fn main() {
-    let choice = get_choice("mainmenu");
+fn print_choice(choice: &MenuChoice) {
     println!("choice = {:?}", choice);
+}
+
+fn main() {
+    let choice: Result<MenuChoice, _> = get_choice("mainmenu");
+    // println!("choice = {:?}", choice);
+    match choice {
+        Ok(inner_choice) => print_choice(&inner_choice),
+        Err(e) => println!("error = {:?}", e),
+    };
 
     let mary = Student {
         name: "Mary".to_owned(),
