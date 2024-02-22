@@ -5,6 +5,45 @@ enum MenuChoice {
     Quit,
 }
 
+enum Position {
+    Maintenance,
+    Marketing,
+    Manager,
+    LineSupervisor,
+    KitchenStaff,
+    AssemblyTech,
+}
+
+enum Status {
+    Active,
+    Terminated,
+}
+
+struct Employee {
+    position: Position,
+    status: Status,
+}
+
+fn t_access(emp: &Employee) -> Result<(), String> {
+    match emp.status {
+        Status::Terminated => return Err("Access Denied".to_owned()),
+        _ => (),
+    }
+
+    match emp.position {
+        Position::Maintenance => Ok(()),
+        Position::Marketing => Ok(()),
+        Position::Manager => Ok(()),
+        _ => Err("Invalid position".to_owned()),
+    }
+}
+
+fn p_access(emp: &Employee) -> Result<(), String> {
+    let attemp_access = t_access(emp)?;
+    println!("Authorized");
+    Ok(())
+}
+
 fn get_choice(input: &str) -> Result<MenuChoice, String> {
     match input {
         "mainmenu" => Ok(MenuChoice::MainMenu),
@@ -48,6 +87,15 @@ fn pick_choice(input: &str) -> Result<(), String> {
 }
 
 fn main() {
+    let mgr = Employee {
+        status: Status::Active,
+        position: Position::Manager,
+    };
+
+    match p_access(&mgr) {
+        Err(e) => println!("Access Denied: {:?}", e),
+        _ => (),
+    }
     let ashley = Customer { age: 20 };
     let purchased = try_purchase(&ashley);
     println!("{:?}", purchased);
