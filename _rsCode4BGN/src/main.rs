@@ -1,5 +1,5 @@
-use std::collections::HashMap;
-
+use std::{collections::HashMap, hash::Hash};
+#[derive(Debug)]
 struct Contents {
     content: String,
 }
@@ -93,6 +93,24 @@ fn pick_choice(input: &str) -> Result<(), String> {
 }
 
 fn main() {
+    let mut stock = HashMap::new();
+    stock.insert("chair", 5);
+    stock.insert("bed", 3);
+    stock.insert("teapot", 2);
+    stock.insert("table", 0);
+    stock.insert("lamp", 1);
+    let mut total_stock = 0;
+    for (item, qty) in stock.iter() {
+        total_stock = total_stock + qty;
+        let stock_count = if qty == &0 {
+            "out of stock".to_owned()
+        } else {
+            format!("{:?}", qty)
+        };
+        println!("item -> {:?}, stock-> {:?}", item, stock_count);
+    }
+    println!("total stock-> {:?}", total_stock);
+
     let mut lockers = HashMap::new();
     lockers.insert(
         1,
@@ -112,6 +130,10 @@ fn main() {
             content: "gym shorts".to_owned(),
         },
     );
+
+    for (locker_num, locker_val) in lockers.iter() {
+        println!("number->{:?}, content->{:?}", locker_num, locker_val);
+    }
 
     let mgr = Employee {
         status: Status::Active,
