@@ -29,6 +29,12 @@ fn print_choice(choice: &MenuChoice) {
     println!("choice = {:?}", choice);
 }
 
+fn pick_choice(input: &str) -> Result<(), String> {
+    let choice: MenuChoice = get_choice(input)?;
+    print_choice(&choice);
+    return Ok(());
+}
+
 fn main() {
     let choice: Result<MenuChoice, _> = get_choice("mainmenu");
     // println!("choice = {:?}", choice);
