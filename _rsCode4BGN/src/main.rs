@@ -32,16 +32,17 @@ fn print_choice(choice: &MenuChoice) {
 fn pick_choice(input: &str) -> Result<(), String> {
     let choice: MenuChoice = get_choice(input)?;
     print_choice(&choice);
-    return Ok(());
+    Ok(())
 }
 
 fn main() {
     let choice: Result<MenuChoice, _> = get_choice("mainmenu");
     // println!("choice = {:?}", choice);
-    match choice {
-        Ok(inner_choice) => print_choice(&inner_choice),
-        Err(e) => println!("error = {:?}", e),
-    };
+    // match choice {
+    //     Ok(inner_choice) => print_choice(&inner_choice),
+    //     Err(e) => println!("error = {:?}", e),
+    // };
+    pick_choice("start");
 
     let mary = Student {
         name: "Mary".to_owned(),
