@@ -1,3 +1,19 @@
+#[derive(Debug)]
+enum MenuChoice {
+    MainMenu,
+    Start,
+    Quit,
+}
+
+fn get_choice(input: &str) -> Result<MenuChoice, String> {
+    match input {
+        "mainmenu" => Ok(MenuChoice::MainMenu),
+        "start" => Ok(MenuChoice::Start),
+        "quit" => Ok(MenuChoice::Quit),
+        _ => Err("Nothing".to_owned()),
+    }
+}
+
 struct Survey {
     q1: Option<i32>,
     q2: Option<bool>,
@@ -10,6 +26,9 @@ struct Student {
 }
 
 fn main() {
+    let choice = get_choice("mainmenu");
+    println!("choice = {:?}", choice);
+
     let mary = Student {
         name: "Mary".to_owned(),
         locker: Some(3),
@@ -20,7 +39,6 @@ fn main() {
         Some(num) => println!("locker number -> {:?}", num),
         None => println!("no locker assigned"),
     }
-
 
     println!("Hello, world!");
     let rep = Survey {
