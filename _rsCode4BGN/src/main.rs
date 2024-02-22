@@ -20,6 +20,10 @@ struct Survey {
     q3: Option<String>,
 }
 
+struct Customer {
+    age: i32,
+}
+
 struct Student {
     name: String,
     locker: Option<i32>,
@@ -29,6 +33,14 @@ fn print_choice(choice: &MenuChoice) {
     println!("choice = {:?}", choice);
 }
 
+fn try_purchase(customer: &Customer) -> Result<(), String> {
+    if customer.age < 21 {
+        Err("Below The Lawful Age".to_owned())
+    } else {
+        Ok(())
+    }
+}
+
 fn pick_choice(input: &str) -> Result<(), String> {
     let choice: MenuChoice = get_choice(input)?;
     print_choice(&choice);
@@ -36,13 +48,17 @@ fn pick_choice(input: &str) -> Result<(), String> {
 }
 
 fn main() {
+    let ashley = Customer { age: 20 };
+    let purchased = try_purchase(&ashley);
+    println!("{:?}", purchased);
     let choice: Result<MenuChoice, _> = get_choice("mainmenu");
     // println!("choice = {:?}", choice);
     // match choice {
     //     Ok(inner_choice) => print_choice(&inner_choice),
     //     Err(e) => println!("error = {:?}", e),
     // };
-    pick_choice("start");
+    let res = pick_choice("start");
+    println!("Choice value = {:?}", res);
 
     let mary = Student {
         name: "Mary".to_owned(),
