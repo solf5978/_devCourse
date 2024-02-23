@@ -17,6 +17,23 @@ fn find_user(name: &str) -> Option<i32> {
         _ => None,
     }
 }
+
+fn clamp(n: i32, lower: i32, upper: i32) -> i32 {
+    if n < lower {
+        lower
+    } else if n > upper {
+        upper
+    } else {
+        n
+    }
+}
+
+fn div(a: i32, b: i32) -> Option<i32> {
+    Some(a / b)
+}
+fn concat(first: &str, second: &str) -> String {
+    format!("{} {}", first, second)
+}
 fn main() {
     let add = |a: i32, b: i32| -> i32 { a + b };
     let add = |a, b| a + b;
@@ -30,5 +47,16 @@ fn main() {
     match user {
         Some(user) => println!("{:?}", user),
         None => println!("user not found"),
+    }
+}
+
+#[cfg(test)]
+mod test {
+    use crate::*;
+    #[test]
+    fn clamp_lower() {
+        let result = clamp(10, 100, 1000);
+        let expected = 100;
+        assert_eq!(result, expected, "shoudld be 100");
     }
 }
