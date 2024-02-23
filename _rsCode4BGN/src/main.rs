@@ -30,11 +30,12 @@ fn part_3() -> Access {
 }
 
 fn main() {
-    let data = vec![1, 2, 3, 4, 5]
+    let data: Vec<_> = vec![1, 2, 3, 4, 5]
         .iter()
         .map(|num| num * 3)
         .filter(|num| num > &10)
         .collect();
+    println!("{:?}", data);
 
     let a: Option<i32> = Some(1);
     let a_is_some = a.is_some();
