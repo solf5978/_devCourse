@@ -59,4 +59,25 @@ mod test {
         let expected = 100;
         assert_eq!(result, expected, "shoudld be 100");
     }
+
+    #[test]
+    fn clamp_upper() {
+        let result = clamp(100000, 100, 1000);
+        let expected = 1000;
+        assert_eq!(result, expected, "shoudld be 1000");
+    }
+
+    #[test]
+    fn check_div() {
+        let result = div(1, 1);
+        let expected = Some(1);
+        assert_eq!(result, expected, "should be 1");
+    }
+
+    #[test]
+    fn check_concat() {
+        let result = concat("a", "b");
+        let expected = String::from("a b");
+        assert_eq!(result, expected, "should be a b");
+    }
 }
