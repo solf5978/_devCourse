@@ -20,10 +20,14 @@ impl Bills {
 
     fn get_all(&self) -> Vec<Bill> {
         let mut bills = vec![];
-        for bill in self.bills.values() {
+        for bill in self.inner.values() {
             bills.push(bill.clone());
         }
         bills
+    }
+
+    fn remove(&mut self, name: &str) -> bool {
+        self.inner.remove(name).is_some()
     }
 }
 
@@ -54,6 +58,13 @@ fn add_bill_menu(bills: &mut Bills) {
     let bill = Bill { name, amount };
     bills.add(bill);
     println!("Bill Added");
+}
+
+fn remove_bill_menu(bills: &mut Bills) {
+    for bill in bills.get_all() {
+        println!("{:?}", bill);
+    }
+    let input = get_input();
 }
 
 fn view_bills_menu(bills: &Bills) {
