@@ -1,5 +1,7 @@
 use std::collections::HashMap;
 use std::io;
+
+#[derive(Debug, Clone)]
 struct Bill {
     name: String,
     amount: f64,
@@ -11,7 +13,9 @@ struct Bills {
 
 impl Bills {
     fn new() -> Self {
-        Self { inner: vec![] }
+        Self {
+            inner: HashMap::new(),
+        }
     }
 
     fn add(&mut self, bill: Bill) {
@@ -65,6 +69,11 @@ fn remove_bill_menu(bills: &mut Bills) {
         println!("{:?}", bill);
     }
     let input = get_input();
+    if bills.remove(&input) {
+        println!("Removed");
+    } else {
+        println!("Bill not found");
+    }
 }
 
 fn view_bills_menu(bills: &Bills) {
@@ -79,6 +88,7 @@ fn main_menu() {
         println!("-- Manage Bills --");
         println!("1. Add New Bill");
         println!("2. View Bills");
+        println!("3. Delete Bills");
         println!("");
         println!("Selection:");
     }
@@ -91,6 +101,7 @@ fn main_menu() {
         match input.as_str() {
             "1" => add_bill_menu(&mut bills),
             "2" => view_bills_menu(&bills),
+            "3" => view_bills_menu(&mut bills),
             _ => break,
         }
     }
