@@ -21,4 +21,14 @@ fn main() {
     let add = |a: i32, b: i32| -> i32 { a + b };
     let add = |a, b| a + b;
     let sum = add(1, 1);
+
+    let user_name = "sam";
+    let user = find_user(user_name).map(|user_id| User {
+        user_id,
+        name: user_name.to_owned(),
+    });
+    match user {
+        Some(user) => println!("{:?}", user),
+        None => println!("user not found"),
+    }
 }
