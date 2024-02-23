@@ -45,21 +45,32 @@ impl Bills {
     }
 }
 
-fn get_input() -> String {
+fn get_input() -> Option<String> {
     let mut buf = String::new();
     while io::stdin().read_line(&mut buf).is_err() {
         println!("Please Re-Enter Your Data");
     }
-    buf.trim().to_owned()
+    let input = buf.trim().to_owned();
+    if input == "" {
+        None
+    } else {
+        Some(input)
+    }
 }
 
-fn get_bill_amount() -> f64 {
+fn get_bill_amount() -> Option<f64> {
     println!("Amount: ");
     loop {
-        let input: String = get_input();
+        let input = match get_input() {
+            Some(input) => input,
+            None => return None,
+        };
+        if &input == "" {
+            return None;
+        }
         let parsed_input: Result<f64, _> = input.parse();
         match parsed_input {
-            Ok(amount) => return amount,
+            Ok(amount) => return Some(amount),
             Err(_) => println!("Please Re-Enter A Number: "),
         }
     }
@@ -67,8 +78,14 @@ fn get_bill_amount() -> f64 {
 
 fn add_bill_menu(bills: &mut Bills) {
     println!("Bill Name: ");
-    let name = get_input();
-    let amount = get_bill_amount();
+    let name = match get_input() {
+        Some(input) => input,
+        None => return,
+    };
+    let amount = match get_bill_amount() {
+        Some(amount) => amount,
+        None => return,
+    };
     let bill = Bill { name, amount };
     bills.add(bill);
     println!("Bill Added");
@@ -79,7 +96,10 @@ fn remove_bill_menu(bills: &mut Bills) {
     for bill in bills.get_all() {
         println!("{:?}", bill);
     }
-    let input = get_input();
+    let input = match get_input() {
+        Some(input) => input,
+        None => return,
+    };
     if bills.remove(&input) {
         println!("Removed");
     } else {
@@ -92,8 +112,14 @@ fn update_bill_menu(bills: &mut Bills) {
         println!("{:?}", bill);
     }
     println!("Enter bill name to update");
-    let input = get_input();
-    let amount = get_bill_amount();
+    let input = match get_input() {
+        Some(input) => input,
+        None => return,
+    };
+    let amount = match get_bill_amount() {
+        Some(amount) => amount,
+        None => return,
+    };
     if bills.update(&input, amount) {
         println!("updated");
     } else {
@@ -115,6 +141,7 @@ fn main_menu() {
         println!("2. View Bills");
         println!("3. Delete Bills");
         println!("4. Update Bills");
+        println!("5. Revert Operation");
         println!("");
         println!("Selection:");
     }
@@ -123,7 +150,10 @@ fn main_menu() {
 
     loop {
         show();
-        let input = get_input();
+        let input = match get_input() {
+            Some(input) => input,
+            None => return,
+        };
         match input.as_str() {
             "1" => add_bill_menu(&mut bills),
             "2" => view_bills_menu(&bills),
