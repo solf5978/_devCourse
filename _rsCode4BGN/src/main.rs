@@ -101,7 +101,7 @@ fn main_menu() {
         match input.as_str() {
             "1" => add_bill_menu(&mut bills),
             "2" => view_bills_menu(&bills),
-            "3" => view_bills_menu(&mut bills),
+            "3" => remove_bill_menu(&mut bills),
             _ => break,
         }
     }
