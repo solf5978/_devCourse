@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use std::io;
 struct Bill {
     name: String,
@@ -5,7 +6,7 @@ struct Bill {
 }
 
 struct Bills {
-    inner: Vec<Bill>,
+    inner: HashMap<String, Bill>,
 }
 
 impl Bills {
@@ -14,11 +15,15 @@ impl Bills {
     }
 
     fn add(&mut self, bill: Bill) {
-        self.inner.push(bill);
+        self.inner.insert(bill.name.clone(), bill);
     }
 
-    fn get_all(&self) -> &Vec<Bill> {
-        &self.inner
+    fn get_all(&self) -> Vec<Bill> {
+        let mut bills = vec![];
+        for bill in self.bills.values() {
+            bills.push(bill.clone());
+        }
+        bills
     }
 }
 
