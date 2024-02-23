@@ -22,11 +22,11 @@ fn part_1() -> bool {
 }
 
 fn part_2() -> Option<Access> {
-    maybe_access("root")
+    maybe_access("root").or_else(|| root())
 }
 
-fn part_3() -> Option<Access> {
-    maybe_access("alice")
+fn part_3() -> Access {
+    maybe_access("alice").unwrap_or_else(|| Access::Guest)
 }
 
 fn main() {
@@ -56,6 +56,6 @@ mod test {
     }
     #[test]
     fn chk_part_3() {
-        assert_eq!(part_3(), None, "Guest User");
+        assert_eq!(part_3(), Access::Guest, "Guest User");
     }
 }
