@@ -6,6 +6,8 @@
 - [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                              By AmigosCode
 - [Linux Mastery: Master the Linux Command Line](https://www.udemy.com/course/linux-mastery/)           By Ziyad Yehia
 - [Linux System Programming](https://www.pluralsight.com/courses/linux-systems-programming-2022)        By Christopher Hart
+- [The Complete Docker Course For Developers](https://diveintodocker.com/)                              By Nick Janetakis
+- [The Linux Command Line BootCamp](https://www.udemy.com/course/the-linux-command-line-bootcamp)       By Colt Steele
 
 ### Golang
 ---
