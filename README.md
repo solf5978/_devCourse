@@ -5,6 +5,7 @@
 - [3 Days Linux Administration Course](https://www.udemy.com/course/perfect-3-days-linux-course)        By Imran Afzal
 - [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                              By AmigosCode
 - [Linux Mastery: Master the Linux Command Line](https://www.udemy.com/course/linux-mastery/)           By Ziyad Yehia
+- [Linux System Programming](https://www.pluralsight.com/courses/linux-systems-programming-2022)        By Christopher Hart
 
 ### Golang
 ---
