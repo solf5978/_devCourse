@@ -1,4 +1,8 @@
+use std::io::{Read, Write};
+use std::path::PathBuf;
+use std::process::Command;
 use std::{collections::HashMap, error};
+use structopt::StructOpt;
 use thiserror::Error;
 
 #[derive(Debug)]
@@ -21,6 +25,12 @@ impl Records {
 
     fn add(&mut self, record: Record) {
         self.inner.insert(record.id, record);
+    }
+
+    fn into_vec(mut self) -> Vec<Record> {
+        let mut records: Vec<_> = self.inner.drain().map(|kv| kv.1).collect();
+        records.sort_by_key(|rec| rec.id);
+        records
     }
 }
 
@@ -78,5 +88,33 @@ fn load_records(file_name: PathBuf, verbose: bool) -> std::io::Result<Records> {
     let mut buffer = String::new();
     file.read_to_string(&mut buffer)?;
     Ok(parse_records(buffer, verbose))
+}
+
+#[derive(StructOpt, Debug)]
+#[structopt(about = "project 2: contact manager")]
+struct Opt {
+    #[structopt(short, parse(from_os_str), default_value = "#fileName")]
+    data_file: PathBuf,
+    #[structopt(subcommand)]
+    cmd: Command,
+    #[structopt(short, help = "verbose")]
+    verbose: bool,
+}
+
+#[derive(StructOpt, Debug)]
+enum Command {
+    List {},
+}
+
+fn run(opt: Opt) -> Result<(), std::io::Error> {
+    match opt.cmd {
+        Command::List { .. } => {
+            let recs = load_records(opt.data_file, opt.verbose)?;
+            for record in recs.into_vec() {
+                println!("{:?}", record);
+            }
+        }
+    }
+    Ok(())
 }
 fn main() {}
