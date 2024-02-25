@@ -53,10 +53,18 @@ impl Records {
     fn remove(&mut self, id: i64) -> Option<Record> {
         self.inner.remove(&id)
     }
-    
-    fn update(&mut self, ) {
 
+    fn update(&mut self, id: i64, name: &str, email: Option<String>) {
+        self.inner.insert(
+            id,
+            Record {
+                id: (),
+                name: name.to_string(),
+                email: (),
+            },
+        );
     }
+}
 
 fn save_records(file_name: PathBuf, records: Records) -> std::io::Result<()> {
     let mut file = OpenOptions::new()
@@ -153,6 +161,7 @@ enum Command {
     },
     List {},
     Remove,
+    Edit,
     Search {
         query: String,
     },
@@ -170,13 +179,22 @@ fn run(opt: Opt) -> Result<(), std::io::Error> {
             });
             save_records(opt.data_file, recs)?;
         }
+        Command::Edit { id, name, email } => {
+            let mut recs = load_records(opt.data_file.clone(), opt.verbose)?;
+            let next_id = recs.next_id();
+            recs.add(Record {
+                id: next_id,
+                name,
+                email,
+            });
+        }
         Command::List { .. } => {
             let recs = load_records(opt.data_file, opt.verbose)?;
             for record in recs.into_vec() {
                 println!("{:?}", record);
             }
         }
-        Command::Remove {id} => {
+        Command::Remove { id } => {
             let mut recs = load_records(opt.data_file.clone(), opt.verbose)?;
             if recs.remove(id).is_some() {
                 save_records(opt.data_file, recs)?;
