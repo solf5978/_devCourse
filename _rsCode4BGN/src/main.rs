@@ -7,8 +7,13 @@ enum Access {
     User,
     Guest,
 }
-
-enum ProgramError {}
+#[derive(Debug, Error)]
+enum ProgramError {
+    #[error("menu error")]
+    Menu(#[from] MenuError),
+    #[error("menu error")]
+    Math(#[from] MathError),
+}
 #[derive(Debug, Error)]
 enum MenuError {
     #[error("menu item not found")]
