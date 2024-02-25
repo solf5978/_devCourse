@@ -59,7 +59,7 @@ fn parse_records(records: String, verbose: bool) -> Records {
                 Ok(rec) => recs.add(rec),
                 Err(e) => {
                     if verbose {
-                        print!(
+                        println!(
                             "error on line number {} : {}\n > \"{}\"\n",
                             num + 1,
                             e,
@@ -70,6 +70,7 @@ fn parse_records(records: String, verbose: bool) -> Records {
             }
         }
     }
+    recs
 }
 
 fn load_records(file_name: PathBuf, verbose: bool) -> std::io::Result<Records> {
