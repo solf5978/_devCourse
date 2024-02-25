@@ -49,7 +49,14 @@ impl Records {
             .filter(|rec| rec.name.to_lowercase().contains(&name.to_lowercase()))
             .collect()
     }
-}
+
+    fn remove(&mut self, id: i64) -> Option<Record> {
+        self.inner.remove(&id)
+    }
+    
+    fn update(&mut self, ) {
+
+    }
 
 fn save_records(file_name: PathBuf, records: Records) -> std::io::Result<()> {
     let mut file = OpenOptions::new()
@@ -145,6 +152,7 @@ enum Command {
         email: Option<String>,
     },
     List {},
+    Remove,
     Search {
         query: String,
     },
@@ -166,6 +174,15 @@ fn run(opt: Opt) -> Result<(), std::io::Error> {
             let recs = load_records(opt.data_file, opt.verbose)?;
             for record in recs.into_vec() {
                 println!("{:?}", record);
+            }
+        }
+        Command::Remove {id} => {
+            let mut recs = load_records(opt.data_file.clone(), opt.verbose)?;
+            if recs.remove(id).is_some() {
+                save_records(opt.data_file, recs)?;
+                println!("record deleted");
+            } else {
+                println!("record not found");
             }
         }
         Command::Search { query } => {
