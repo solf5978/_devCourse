@@ -42,6 +42,13 @@ impl Records {
             None => 1,
         }
     }
+
+    fn search(&self, name: &str) -> Vec<&Record> {
+        self.inner
+            .values()
+            .filter(|rec| rec.name.to_lowercase().contains(&name.to_lowercase()))
+            .collect()
+    }
 }
 
 fn save_records(file_name: PathBuf, records: Records) -> std::io::Result<()> {
