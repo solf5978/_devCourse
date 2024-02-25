@@ -50,6 +50,7 @@
 ### Rust
 ---
 - [_rsCode4BGN](https://www.udemy.com/course/rust-coding-for-beginners/)                                By Jayson Lennon
+- [_rsCompBGNGuide](https://www.udemy.com/course/rustaceans/)                                           By Catalin Stefan
 - [_theRustPL](https://www.udemy.com/course/rust-lang/)                                                 By Dmitri Nesteruk
 - [Ultimate Rust Crash Course](https://www.udemy.com/course/ultimate-rust-crash-course/)                By Nathan Stocks
 
@@ -66,4 +67,4 @@
 
 ### Hold
 - [_100DoCWebDevBootCamp](https://www.udemy.com/course/100-days-of-code-web-development-bootcamp/)      By Maximilian Schwarzmuller & Manuel Lorenz
-- [_com2023WebDevBootCamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/)         By Dr. Angela Yu
+- [_compWebDevBootCamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/)         By Dr. Angela Yu
