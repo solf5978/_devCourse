@@ -1,34 +1,37 @@
-# Following Along Materials From Various Courses
+# Follow Along Online Courses
 
-### DevOps
----
-- [3 Days Linux Administration Course](https://www.udemy.com/course/perfect-3-days-linux-course/)       By Imran Afzal
-- [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                              By AmigosCode
-- [Linux Mastery: Master the Linux Command Line](https://www.udemy.com/course/linux-mastery/)           By Ziyad Yehia
-- [Linux System Programming](https://www.pluralsight.com/courses/linux-systems-programming-2022/)       By Christopher Hart
-- [The Complete Docker Course For Developers](https://diveintodocker.com/)                              By Nick Janetakis
-- [The Linux Command Line BootCamp](https://www.udemy.com/course/the-linux-command-line-bootcamp/)      By Colt Steele
+| Repo.             |  Cat.  |  Course                                                                                         |  Author(s)                 |  Status            |
+|-------------------|--------|-------------------------------------------------------------------------------------------------|----------------------------|--------------------|
+|                   | DevOps | [3 Days Linux Administration Course](https://www.udemy.com/course/perfect-3-days-linux-course/) | Imran Afzal                | :heavy_check_mark: |
+|                   | DevOps | [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                        | AmigosCode                 | :heavy_check_mark: |
+|                   | DevOps | [Linux Mastery: Master the Linux Command Line](https://www.udemy.com/course/linux-mastery/)     | Ziyad Yehia                | :heavy_check_mark: |
+|                   | DevOps | [Linux System Programming](https://www.pluralsight.com/courses/linux-systems-programming-2022/) | Christopher Hart           | :heavy_check_mark: |
+|                   | DevOps | [The Complete Docker Course For Developers](https://diveintodocker.com/)                        | Nick Janetakis             | :heavy_check_mark: |
+|                   | DevOps | [The Docker For DevOps Course: From Development To Production](https://www.udemy.com/course/the-docker-for-devops-course-from-development-to-production/)                                                                  | Nick Janetakis             | :heavy_check_mark: |
+|                   | DevOps | [The Linux Command Line BootCamp](https://www.udemy.com/course/the-linux-command-line-bootcamp/)| Colt Steele                | :heavy_check_mark: |
+| _basicOfGo_FM     | Golang | [Basic Of Go](https://frontendmasters.com/courses/go-basics/)                                   | Maximiliano Firtman        | :heavy_check_mark: |
+| _advCSS4WebDev    | HTML&CSS  | [Advanced Css For Web Developers](https://www.udemy.com/course/advanced-css-for-web-developers/)| Eduonix                    | :heavy_check_mark: |
+| _compGuide2HTML   | HTML&CSS  | [The Complete Guide To HTML](https://www.udemy.com/course/the-complete-guide-to-html/)          | Colt Steele                | :heavy_check_mark: |
+| _cssDemystified   | HTML&CSS  | [CSS Demystified](https://cssdemystified/)                                                      | Kevin Powell               | :heavy_check_mark: |
+| _getStartCSS_FM   | HTML&CSS  | [Getting Started With CSS](https://gettingstartedwith.css.education/)                           | Jen Kramer                 | :heavy_check_mark: |
+| _htmlCSSBootCamp  | HTML&CSS  | [HTML & CSS BootCamp](https://www.udemy.com/course/html-and-css-bootcamp/)                      | Colt Steele                | :heavy_check_mark: |
+| _interHTMLCSS_FM  | HTML&CSS  | [Intermediate HTML & CSS](https://semantics-selectors.css.education/)                           | Jen Kramer                 | :heavy_check_mark: |
+| _learnCSSToday_WDS| HTML&CSS  | [Learn CSS Today](https://courses.webdevsimplified.com/learn-css-today/)                        | Web Dev Simplified         | :heavy_check_mark: |
+| _pracCSSLayout_FM | HTML&CSS  | [Practical CSS](https://practical.css.education/)                                               | Jen Kramer                 | :heavy_check_mark: |
+| _modernJSBootCamp | JavaScript| [The Modern Javascript Bootcamp Course](https://www.udemy.com/course/javascript-beginners-complete-tutorial/) | Colt Steele & Stephen Grider | :heavy_check_mark: |
+| _sharpenJSPrac    | JavaScript| [JavaScript Practice Problems](https://www.udemy.com/course/javascript-practice-problems-sharpen-your-skills/)| Steven Hancock | :heavy_check_mark: |
+|                   | General| [The Software Designer Mindset](https://www.arjancodes.com/mindset)                             | ArjanCodes                 | :heavy_check_mark: |
+|                   | Git    | [Git & Github Full](https://fireship.io/courses/git/)                                           | Jeff Delaney               | :heavy_check_mark: |
+|                   |        |                                                                                                 |                            | :heavy_check_mark: |
+|                   |        |                                                                                                 |                            | :heavy_check_mark: |
+|                   |        |                                                                                                 |                            | :heavy_check_mark: |
+|                   |        |                                                                                                 |                            | :heavy_check_mark: |
+|                   |        |                                                                                                 |                            | :heavy_check_mark: |
+|                   |        |                                                                                                 |                            | :heavy_check_mark: |
+|                   |        |                                                                                                 |                            | :heavy_check_mark: |
+|                   |        |                                                                                                 |                            | :heavy_check_mark: |
+|                   |        |                                                                                                 |                            | :heavy_check_mark: |
 
-### Golang
----
-- [_basicOfGo_FM](https://frontendmasters.com/courses/go-basics/)                                       By Maximiliano Firtman
-
-### HTML & CSS
----
-- [_advCSS4WebDev](https://www.udemy.com/course/advanced-css-for-web-developers/)                       By Eduonix
-- [_compGuide2HTML](https://www.udemy.com/course/the-complete-guide-to-html/)                           By Colt Steele
-- [_cssDemystified](https://cssdemystified.git adcom/)                                                  By Kevin Powell
-- [_getStartCSS_FM](https://gettingstartedwith.css.education/)                                          By Jen Kramer
-- [_htmlCSSBootCamp](https://www.udemy.com/course/html-and-css-bootcamp/)                               By Colt Steele
-- [_interHTMLCSS_FM](https://semantics-selectors.css.education/index.html/)                             By Jen Kramer
-- [_learnCSSToday_WDS](https://courses.webdevsimplified.com/learn-css-today/)                           By Web Dev Simplified
-- [_pracCSSLayout_FM](https://practical.css.education/)                                                 By Jen Kramer
-
-### JavaScript
----
-- [_modernJSBootCamp](https://www.udemy.com/course/javascript-beginners-complete-tutorial/)             By Colt Steele & Stephen Grider
-- [_sharpenJSPrac](https://www.udemy.com/course/javascript-practice-problems-sharpen-your-skills/)      By Steven Hancock
--
 
 ### Others
 ---
