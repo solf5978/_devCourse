@@ -29,6 +29,7 @@
 | _py3/*            | Python | [Python 3 Deep Dive *](https://www.udemy.com/course/python3-fundamentals/)                                   | Fred Baptiste              | ✔️ |
 | _py4AbsBGN2Adv    | Python | [Python For Absolute Beginners](https://www.udemy.com/course/python-for-absolute-beginners-2023-beginner-to-advanced)    | Jesse Warner   | ✔️ |
 | _pyMFS23Proj      | Python | [Python MasterClass](https://www.udemy.com/course/python-masterclass-course/)                                | Ashutosh Pawar             | ✔️ |
+| _rsRealApp        | Rust   | [Learn Rust by Building Real Applications](https://www.udemy.com/course/rust-fundamentals/)                  | Lyubomir Gavadinov         | ✔️ |
 | _rsCode4BGN       | Rust   | [Rust Coding For Beginners](https://www.udemy.com/course/rust-coding-for-beginners/)              | Jayson Lennon              | ✔️ |
 | _rsCompBGNGuide   | Rust   | [The Rust Complete Beginner Guide](https://www.udemy.com/course/rustaceans/)                      | Catalin Stefan             | ✔️ |
 | _theRustPL        | Rust   | [The Rust Programming Language](https://www.udemy.com/course/rust-lang/)                          | Dmitri Nesteruk            | ✔️ |
