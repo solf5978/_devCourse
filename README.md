@@ -2,12 +2,12 @@
 
 ### DevOps
 ---
-- [3 Days Linux Administration Course](https://www.udemy.com/course/perfect-3-days-linux-course)        By Imran Afzal
+- [3 Days Linux Administration Course](https://www.udemy.com/course/perfect-3-days-linux-course/)       By Imran Afzal
 - [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                              By AmigosCode
 - [Linux Mastery: Master the Linux Command Line](https://www.udemy.com/course/linux-mastery/)           By Ziyad Yehia
-- [Linux System Programming](https://www.pluralsight.com/courses/linux-systems-programming-2022)        By Christopher Hart
+- [Linux System Programming](https://www.pluralsight.com/courses/linux-systems-programming-2022/)       By Christopher Hart
 - [The Complete Docker Course For Developers](https://diveintodocker.com/)                              By Nick Janetakis
-- [The Linux Command Line BootCamp](https://www.udemy.com/course/the-linux-command-line-bootcamp)       By Colt Steele
+- [The Linux Command Line BootCamp](https://www.udemy.com/course/the-linux-command-line-bootcamp/)      By Colt Steele
 
 ### Golang
 ---
@@ -39,6 +39,8 @@
 
 ### Python
 ---
+- [_10DPYBlitz](https://www.udemy.com/course/10-day-python-blitz-learn-python-2023/)                    By Robert Bunch
+- [_100DoCCompPYProBC](https://www.udemy.com/course/100-days-of-code/)                                  By Dr. Angela Yu
 - [_py3/_Fundamentals](https://www.udemy.com/course/python3-fundamentals/)                              By Fred Baptiste
 - [_py3/_DP1Functional](https://www.udemy.com/course/python-3-deep-dive-part-1/)                        By Fred Baptiste
 - [_py3/_DP2Iterator](https://www.udemy.com/course/python-3-deep-dive-part-2/)                          By Fred Baptiste
