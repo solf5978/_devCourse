@@ -33,6 +33,7 @@
 | _rsCode4BGN       | Rust   | [Rust Coding For Beginners](https://www.udemy.com/course/rust-coding-for-beginners/)                         | Jayson Lennon              | ✔️ |
 | _rsCompBGNGuide   | Rust   | [The Rust Complete Beginner Guide](https://www.udemy.com/course/rustaceans/)                                 | Catalin Stefan             | ✔️ |
 | _theRustPL        | Rust   | [The Rust Programming Language](https://www.udemy.com/course/rust-lang/)                                     | Dmitri Nesteruk            | ✔️ |
+|                   | Rust   | [The Rust Programming Language](https://frontendmasters.com/courses/rust/)                                   | Richard Feldman            | ✔️ |
 |                   | Rust   | [Ultimate Rust Crash Course](https://www.udemy.com/course/ultimate-rust-crash-course/)                       | Nathan Stocks              | ✔️ |
 |                   | SA&D   | [System Design For Beginners](https://neetcode.io/courses/system-design-for-beginners/0)                     | NeetCodeIO                 | ✔️ |
 |                   | SA&D   | [System Design Interview](https://neetcode.io/courses/system-design-interview/0)                             | NeetCodeIO                 | ✔️ |
