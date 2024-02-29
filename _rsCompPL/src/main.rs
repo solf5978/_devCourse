@@ -1,3 +1,4 @@
+#[derive(Debug)]
 struct Car {
     mpg: i8,
     color: String,
@@ -14,4 +15,12 @@ impl Car {
     }
 }
 
-fn main() {}
+fn main() {
+    let car1 = Car {
+        mpg: 0,
+        color: String::from("Red"),
+        top_speed: 0,
+    };
+
+    println!("{:?}", car1);
+}
