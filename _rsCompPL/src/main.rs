@@ -15,6 +15,8 @@ fn main() {
     let ans = concat_string(str1);
 
     println!("{}", ans);
+
+    control_flow(25);
 }
 
 fn concat_string(v: String) -> String {
