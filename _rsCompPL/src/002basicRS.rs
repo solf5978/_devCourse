@@ -12,6 +12,11 @@ fn main() {
     println!("{:?}", vec);
 
     let str1 = String::from("Hello");
+    let ans = concat_string(str1);
+
+    println!("{}", ans);
 }
 
-fn concat_string() {}
+fn concat_string(v: String) -> String {
+    v + "  World!"
+}
