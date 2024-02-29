@@ -15,8 +15,21 @@ fn main() {
     let ans = concat_string(str1);
 
     println!("{}", ans);
+
+    control_flow(25);
 }
 
 fn concat_string(v: String) -> String {
     v + "  World!"
+}
+fn control_flow(v: i32) {
+    if v == 1 {
+        println!("The Value -> {}", v);
+    } else if v > 50 {
+        println!("Value {} > 50 -> ", v);
+    } else if v < 25 {
+        println!("Value {} <  25-> ", v);
+    } else {
+        println!("The Value {} > 25 & < 50 -> ", v);
+    }
 }
