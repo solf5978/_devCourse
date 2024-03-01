@@ -6,7 +6,7 @@ struct Car {
 }
 
 #[derive(Debug)]
-struct MotoCycle {
+struct MotorCycle {
     mpg: i8,
     color: String,
     top_speed: i16,
@@ -18,7 +18,7 @@ pub trait Properties {
     fn set_top_speed(&mut self, top_speed: i16);
 }
 
-impl Properties for MotoCycle {
+impl Properties for MotorCycle {
     fn set_mpg(&mut self, mpg: i8) {
         self.mpg = mpg;
     }
@@ -52,12 +52,19 @@ impl Car {
     }
 }
 
+impl MotorCycle {
+    fn new(mpg: i8, color: String, top_speed: i16) -> Self {
+        Self {
+            mpg,
+            color,
+            top_speed,
+        }
+    }
+}
+
 fn main() {
-    let car1 = Car {
-        mpg: 0,
-        color: String::from("Red"),
-        top_speed: 0,
-    };
+    let car1 = Car::new(0, String::from("Red"), 120);
+    let moto1 = MotorCycle::new(0, String::from("Black and white"), 150);
 
     println!("{:?}", car1);
 }
