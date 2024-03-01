@@ -62,6 +62,10 @@ impl MotorCycle {
     }
 }
 
+fn print<T: std::fmt::Debug>(value: T) {
+    println!("{:?}", value);
+}
+
 fn main() {
     let car1 = Car::new(0, String::from("Red"), 120);
     let moto1 = MotorCycle::new(0, String::from("Black and white"), 150);
