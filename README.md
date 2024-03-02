@@ -23,6 +23,7 @@
 |                   | General| [Enterprise Engineering Management 101](https://frontendmasters.com/courses/intro-management/)               | Jem Young                  | ✔️ |
 |                   | General| [Enterprise Engineering Management 102](https://frontendmasters.com/courses/engineering-management/)         | Ryan Burgess               | ✔️ |
 |                   | Git    | [Git & Github Full](https://fireship.io/courses/git/)                                                        | Jeff Delaney               | ✔️ |
+|                   | Git    | [Git with Visual Studio Code](https://www.udemy.com/course/git-with-visual-studio-code/)                     | Alex Delaney               | ✔️ |
 | _basicOfGo_FM     | Golang | [Basic Of Go](https://frontendmasters.com/courses/go-basics/)                                                | Maximiliano Firtman        | ✔️ |
 | _10DPYBlitz       | Python | [10 Day Python Blitz](https://www.udemy.com/course/10-day-python-blitz-learn-python-2023/)                   | Robert Bunch               | 🚧 |
 | _100DoCCompPYProBC| Python | [100 Days of Code The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/)          | Dr. Angela Yu              | 🚧 |
