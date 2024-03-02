@@ -42,16 +42,16 @@
 |                   | SA&D   | [System Design Interview](https://neetcode.io/courses/system-design-interview/0)                             | NeetCodeIO                 | ✔️ |
 | _fundTS5P_FM      | TypeScript | [TypeScript 5+ Fundamentals V4](https://frontendmasters.com/courses/typescript-v4/)                      | Mike North                 | ✔️ |
 | _nnTSMC           | TypeScript | (https://netninja.dev/p/typescript-masterclass)                                                          | Net Ninja (Shuan)          | ✔️ |
-|                   |        | []                                                                                                           |                            | ✔️ |
-|                   |        | []                                                                                                           |                            | ✔️ |
-|                   |        | []                                                                                                           |                            | ✔️ |
-|                   |        | []                                                                                                           |                            | ✔️ |
-|                   |        | []                                                                                                           |                            | ✔️ |
-|                   |        | []                                                                                                           |                            | ✔️ |
-|                   |        | []                                                                                                           |                            | ✔️ |
-|                   |        | []                                                                                                           |                            | ✔️ |
-|                   |        | []                                                                                                           |                            | ✔️ |
-|                   |        | []                                                                                                           |                            | ✔️ |
+|                   |        | []                                                                                                           |                            | 🚧 |
+|                   |        | []                                                                                                           |                            | 🚧 |
+|                   |        | []                                                                                                           |                            | 🚧 |
+|                   |        | []                                                                                                           |                            | 🚧 |
+|                   |        | []                                                                                                           |                            | 🚧 |
+|                   |        | []                                                                                                           |                            | 🚧 |
+|                   |        | []                                                                                                           |                            | 🚧 |
+|                   |        | []                                                                                                           |                            | 🚧 |
+|                   |        | []                                                                                                           |                            | 🚧 |
+|                   |        | []                                                                                                           |                            | 🚧 |
 
 
 
