@@ -31,7 +31,7 @@
 | _pyMFS23Proj      | Python | [Python MasterClass](https://www.udemy.com/course/python-masterclass-course/)                                | Ashutosh Pawar             | ✔️ |
 |                   | Rust   | [Learn Rust by Building Real Applications](https://www.udemy.com/course/rust-fundamentals/)                  | Lyubomir Gavadinov         | ✔️ |
 | _rsCode4BGN       | Rust   | [Rust Coding For Beginners](https://www.udemy.com/course/rust-coding-for-beginners/)                         | Jayson Lennon              | ✔️ |
-|                   | Rust   | [Rust Programming Course: From Beginner to Expert 2.0](https://www.udemy.com/course/rust-programming-master-class-from-beginner-to-expert/)                                                                                     | Nouman Azam                | ✔️ |
+| _rsBGN2EXP        | Rust   | [Rust Programming Course: From Beginner to Expert 2.0](https://www.udemy.com/course/rust-programming-master-class-from-beginner-to-expert/)                                                                                     | Nouman Azam                | ✔️ |
 | _rsCompPL         | Rust   | [The Complete Rust Programming Course](https://www.udemy.com/course/rust-programming-the-complete-guide/)    | Codestars                  | ✔️ |
 | _rsCompBGNGuide   | Rust   | [The Rust Complete Beginner Guide](https://www.udemy.com/course/rustaceans/)                                 | Catalin Stefan             | ✔️ |
 | _theRustPL        | Rust   | [The Rust Programming Language](https://www.udemy.com/course/rust-lang/)                                     | Dmitri Nesteruk            | ✔️ |
