@@ -31,6 +31,7 @@
 | _py4AbsBGN2Adv    | Python | [Python For Absolute Beginners](https://www.udemy.com/course/python-for-absolute-beginners-2023-beginner-to-advanced)    | Jesse Warner   | ✔️ |
 | _pyMFS23Proj      | Python | [Python MasterClass](https://www.udemy.com/course/python-masterclass-course/)                                | Ashutosh Pawar             | ✔️ |
 |                   | Rust   | [Learn Rust by Building Real Applications](https://www.udemy.com/course/rust-fundamentals/)                  | Lyubomir Gavadinov         | ✔️ |
+|                   | Rust   | [Complete Rust Course - Zero To Advanced](https://www.udemy.com/course/complete-rust-course-zero-to-master/) | Clarian North              | ✔️ |
 | _rsCode4BGN       | Rust   | [Rust Coding For Beginners](https://www.udemy.com/course/rust-coding-for-beginners/)                         | Jayson Lennon              | ✔️ |
 | _rsBGN2EXP        | Rust   | [Rust Programming Course: From Beginner to Expert 2.0](https://www.udemy.com/course/rust-programming-master-class-from-beginner-to-expert/)                                                                                     | Nouman Azam                | ✔️ |
 | _rsCompPL         | Rust   | [The Complete Rust Programming Course](https://www.udemy.com/course/rust-programming-the-complete-guide/)    | Codestars                  | ✔️ |
