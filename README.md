@@ -33,6 +33,7 @@
 |                   | Rust   | [Learn Rust by Building Real Applications](https://www.udemy.com/course/rust-fundamentals/)                  | Lyubomir Gavadinov         | ✔️ |
 |                   | Rust   | [Complete Rust Course - Zero To Advanced](https://www.udemy.com/course/complete-rust-course-zero-to-master/) | Clarian North              | ✔️ |
 | _rsCode4BGN       | Rust   | [Rust Coding For Beginners](https://www.udemy.com/course/rust-coding-for-beginners/)                         | Jayson Lennon              | ✔️ |
+| _rsProComp_ZTM    | Rust   | [Rust Programming: The Complete Developer's Guide](https://zerotomastery.io/courses/learn-rust/)             | Jayson Lennon              | ✔️ |
 | _rsBGN2EXP        | Rust   | [Rust Programming Course: From Beginner to Expert 2.0](https://www.udemy.com/course/rust-programming-master-class-from-beginner-to-expert/)                                                                                     | Nouman Azam                | ✔️ |
 | _rsCompPL         | Rust   | [The Complete Rust Programming Course](https://www.udemy.com/course/rust-programming-the-complete-guide/)    | Codestars                  | ✔️ |
 | _rsCompBGNGuide   | Rust   | [The Rust Complete Beginner Guide](https://www.udemy.com/course/rustaceans/)                                 | Catalin Stefan             | ✔️ |
