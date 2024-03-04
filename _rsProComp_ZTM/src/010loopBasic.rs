@@ -3,9 +3,9 @@ fn main() {
     loop {
         if num < 5 {
             println!("{num:?}");
-            num = num + 1;
         } else {
             break;
         }
+        num = num + 1;
     }
 }
