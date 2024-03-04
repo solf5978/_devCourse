@@ -3,11 +3,11 @@ struct GroceryItem {
     id: i32,
 }
 
-fn display_qty(&item: GroceryItem) {
+fn display_qty(item: &GroceryItem) {
     println!("qty -> {:?}", item.qty);
 }
 
-fn display_id(&item: GroceryItem) {
+fn display_id(item: &GroceryItem) {
     println!("id -> {:?}", item.id);
 }
 
