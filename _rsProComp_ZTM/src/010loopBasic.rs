@@ -1,5 +1,5 @@
 fn main() {
-    let mut num = 0;
+    let mut num = 1;
     loop {
         if num < 5 {
             println!("{num:?}");
