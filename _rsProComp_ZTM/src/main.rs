@@ -26,7 +26,7 @@ impl Bills {
 }
 
 mod menu {
-    use crate::{get_input, Bill, Bills};
+    use crate::{get_bill_amount, get_input, Bill, Bills};
 
     pub fn add_bill(bills: &mut Bills) {
         println!("Bill Name: ");
@@ -34,13 +34,19 @@ mod menu {
             Some(input) => input,
             None => return,
         };
-        let amount = match get_input() {
+        let amount = match get_bill_amount() {
             Some(amount) => amount,
             None => return,
         };
         let bill = Bill { name, amount };
         bills.add(bill);
         println!("Bill Added")
+    }
+
+    pub fn view_bills(bills: &Bills) {
+        for bill in bills.get_all() {
+            println!("{bill:?}")
+        }
     }
 }
 enum MainMenu {
@@ -103,12 +109,13 @@ fn get_bill_amount() -> Option<f64> {
 }
 
 fn main() {
+    let mut bills = Bills::new();
     loop {
         MainMenu::show();
         let input = get_input().expect("No Input");
         match MainMenu::from_str(input.as_str()) {
-            Some(MainMenu::AddBill) => (),
-            Some(MainMenu::ViewBill) => (),
+            Some(MainMenu::AddBill) => menu::add_bill(&mut bills),
+            Some(MainMenu::ViewBill) => menu::view_bills(&bills),
             None => return,
         }
     }
