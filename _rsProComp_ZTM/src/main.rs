@@ -28,7 +28,15 @@ impl Bills {
         self.inner.remove(name).is_some()
     }
 
-    fn view() {}
+    fn update(&mut self, name: &str, amount: f64) -> bool {
+        match self.inner.get_mut(name) {
+            Some(bill) => {
+                bill.amount = amount;
+                true
+            }
+            None => false,
+        }
+    }
 }
 
 mod menu {
@@ -65,6 +73,26 @@ mod menu {
         }
     }
 
+    pub fn update_bill(bills: &mut Bills) {
+        for bill in bills.get_all() {
+            println!("{bill:?}")
+        }
+        println!("Enter bill name to update: ");
+        let name = match get_input() {
+            Some(name) => name,
+            None => return,
+        };
+        let amount = match get_bill_amount() {
+            Some(amount) => amount,
+            None => return,
+        };
+        if bills.update(&name, amount) {
+            println!("Bill updated");
+        } else {
+            println!("Bill Not Found");
+        }
+    }
+
     pub fn view_bills(bills: &Bills) {
         for bill in bills.get_all() {
             println!("{bill:?}")
@@ -74,7 +102,7 @@ mod menu {
 enum MainMenu {
     AddBill,
     ViewBill,
-    RemoveBill,
+    RemoveBill,UpdateBill,RevertOperation,
 }
 
 impl MainMenu {
@@ -82,6 +110,9 @@ impl MainMenu {
         match input {
             "1" => Some(Self::AddBill),
             "2" => Some(Self::ViewBill),
+            "3" => Some(Self::RemoveBill),
+            "4" => Some(Self::UpdateBill),
+            "5" => Some(Self::RevertOperation),
             _ => None,
         }
     }
@@ -140,6 +171,7 @@ fn main() {
             Some(MainMenu::AddBill) => menu::add_bill(&mut bills),
             Some(MainMenu::ViewBill) => menu::view_bills(&bills),
             Some(MainMenu::RemoveBill) => menu::remove_bill(&mut bills),
+            Some(MainMenu::UpdateBill)
             None => return,
         }
     }
