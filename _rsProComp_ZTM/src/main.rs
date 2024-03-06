@@ -83,6 +83,25 @@ fn get_input() -> Option<String> {
         Some(input)
     }
 }
+
+fn get_bill_amount() -> Option<f64> {
+    println!("Amount: ");
+    loop {
+        let input = match get_input() {
+            Some(input) => input,
+            None => return None,
+        };
+        if &input == "" {
+            return None;
+        }
+        let parsed_input: Result<f64, _> = input.parse();
+        match parsed_input {
+            Ok(amount) => return Some(amount),
+            Err(_) => println!("Please Re-Enter A Number: "),
+        }
+    }
+}
+
 fn main() {
     loop {
         MainMenu::show();
