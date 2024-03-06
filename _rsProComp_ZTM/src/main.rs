@@ -24,6 +24,25 @@ impl Bills {
 
     fn view() {}
 }
+
+mod menu {
+    use crate::{get_input, Bill, Bills};
+
+    pub fn add_bill(bills: &mut Bills) {
+        println!("Bill Name: ");
+        let name = match get_input() {
+            Some(input) => input,
+            None => return,
+        };
+        let amount = match get_input() {
+            Some(amount) => amount,
+            None => return,
+        };
+        let bill = Bill { name, amount };
+        bills.add(bill);
+        println!("Bill Added")
+    }
+}
 enum MainMenu {
     AddBill,
     ViewBill,
