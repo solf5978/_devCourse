@@ -24,5 +24,7 @@ fn main() {
     let names = Names { inner: names };
     let titles = Titles { inner: titles };
     let data = names.inner.iter().zip(titles.inner.iter());
-    println!("{data:?}");
+    for (name, title) in data.take(5) {
+        println!("Names: {}, Titles: {}", name, title);
+    }
 }
