@@ -102,7 +102,9 @@ mod menu {
 enum MainMenu {
     AddBill,
     ViewBill,
-    RemoveBill,UpdateBill,RevertOperation,
+    RemoveBill,
+    UpdateBill,
+    RevertOperation,
 }
 
 impl MainMenu {
@@ -171,7 +173,8 @@ fn main() {
             Some(MainMenu::AddBill) => menu::add_bill(&mut bills),
             Some(MainMenu::ViewBill) => menu::view_bills(&bills),
             Some(MainMenu::RemoveBill) => menu::remove_bill(&mut bills),
-            Some(MainMenu::UpdateBill)
+            Some(MainMenu::UpdateBill) => menu::update_bill(&mut bills),
+            Some(MainMenu::RevertOperation) => (),
             None => return,
         }
     }
