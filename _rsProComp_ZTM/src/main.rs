@@ -1,4 +1,4 @@
-use std::io;
+use std::{collections::HashMap, io};
 #[derive(Clone, Debug)]
 pub struct Bill {
     name: String,
@@ -6,20 +6,26 @@ pub struct Bill {
 }
 
 pub struct Bills {
-    inner: Vec<Bill>,
+    inner: HashMap<String, Bill>,
 }
 
 impl Bills {
     fn new() -> Self {
-        Self { inner: vec![] }
+        Self {
+            inner: HashMap::new(),
+        }
     }
 
     fn add(&mut self, bill: Bill) {
-        self.inner.push(bill);
+        self.inner.insert(bill.name.to_string(), bill);
     }
 
     fn get_all(&self) -> Vec<&Bill> {
-        self.inner.iter().collect()
+        self.inner.values().collect()
+    }
+
+    fn remove(&mut self, name: &str) -> bool {
+        self.inner.remove(name).is_some()
     }
 
     fn view() {}
@@ -43,6 +49,22 @@ mod menu {
         println!("Bill Added")
     }
 
+    pub fn remove_bill(bills: &mut Bills) {
+        for bill in bills.get_all() {
+            println!("{bill:?}");
+        }
+        println!("Enter bill name to remove: ");
+        let name = match get_input() {
+            Some(name) => name,
+            None => return,
+        };
+        if bills.remove(&name) {
+            println!("Bill Removed");
+        } else {
+            println!("Bill Not Found");
+        }
+    }
+
     pub fn view_bills(bills: &Bills) {
         for bill in bills.get_all() {
             println!("{bill:?}")
@@ -52,6 +74,7 @@ mod menu {
 enum MainMenu {
     AddBill,
     ViewBill,
+    RemoveBill,
 }
 
 impl MainMenu {
@@ -64,14 +87,14 @@ impl MainMenu {
     }
 
     fn show() {
-        println!("");
+        println!();
         println!("-- Manage Bills --");
         println!("1. Add New Bill");
         println!("2. View Bills");
         println!("3. Delete Bills");
         println!("4. Update Bills");
         println!("5. Revert Operation");
-        println!("");
+        println!();
         println!("Selection:");
     }
 }
@@ -83,7 +106,7 @@ fn get_input() -> Option<String> {
     }
 
     let input = buf.trim().to_owned();
-    if input == "" {
+    if input.is_empty() {
         None
     } else {
         Some(input)
@@ -97,7 +120,7 @@ fn get_bill_amount() -> Option<f64> {
             Some(input) => input,
             None => return None,
         };
-        if &input == "" {
+        if input.is_empty() {
             return None;
         }
         let parsed_input: Result<f64, _> = input.parse();
@@ -116,6 +139,7 @@ fn main() {
         match MainMenu::from_str(input.as_str()) {
             Some(MainMenu::AddBill) => menu::add_bill(&mut bills),
             Some(MainMenu::ViewBill) => menu::view_bills(&bills),
+            Some(MainMenu::RemoveBill) => menu::remove_bill(&mut bills),
             None => return,
         }
     }
