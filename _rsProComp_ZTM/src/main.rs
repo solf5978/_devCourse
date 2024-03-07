@@ -1,52 +1,34 @@
-use thiserror::Error;
-
-#[derive(Debug, Error)]
-enum ProgramError {
-    #[error("menu error")]
-    Menu(#[from] MenuError),
-    #[error("Math error")]
-    Math(#[from] MathError),
+enum Color {
+    Black,
+    Blue,
+    Brown,
+    Custom(String),
+    Gray,
+    Green,
+    Purple,
+    Red,
+    White,
+    Yellow,
 }
 
-#[derive(Debug, Error)]
-enum MenuError {
-    #[error("menu item not found")]
-    NotFound,
+struct ShirtColor(Color);
+impl ShirtColor {
+    fn new(color: Color) -> Self {
+        Self(color)
+    }
 }
-
-#[derive(Debug, Error)]
-enum MathError {
-    #[error("divide by zero error")]
-    DividedByZero,
-}
-
-fn pick_menu(choice: &str) -> Result<i32, MenuError> {
-    match choice {
-        "1" => Ok(1),
-        "2" => Ok(2),
-        "3" => Ok(3),
-        _ => Err(MenuError::NotFound),
+struct ShoeColor(Color);
+impl ShoeColor {
+    fn new(color: Color) -> Self {
+        Self(color)
     }
 }
 
-fn divide(a: i32, b: i32) -> Result<i32, MathError> {
-    if b != 0 {
-        Ok(a / b)
-    } else {
-        Err(MathError::DividedByZero)
+struct PantsColor(Color);
+impl PantsColor {
+    fn new(color: Color) -> Self {
+        Self(color)
     }
 }
 
-fn run(step: i32) -> Result<(), ProgramError> {
-    if step == 1 {
-        pick_menu("4")?;
-    } else if step == 2 {
-        divide(1, 0)?;
-    }
-    Ok(())
-}
-
-fn main() {
-    println!("{:?}", run(1));
-    println!("{:?}", run(2));
-}
+fn main() {}
