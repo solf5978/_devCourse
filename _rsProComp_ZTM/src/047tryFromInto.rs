@@ -6,7 +6,7 @@ enum RgbError {
     #[error("Missing Hash Value For Color")]
     MissingHash,
     #[error("Format Error w Digit: {0}")]
-    ParseError(std::num::ParseIntError),
+    ParseError(#[from] std::num::ParseIntError),
     #[error("Missing Characters")]
     LengthError,
 }
