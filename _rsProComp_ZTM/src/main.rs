@@ -1,21 +1,39 @@
-use std::os::windows::process;
+use std::convert::TryFrom;
+use thiserror::Error;
 
-fn data() -> &'static [u64] {
-    &[5, 5, 4, 4, 3, 3, 1]
+#[derive(Debug, Error)]
+enum RgbError {
+    #[error("Missing Hash Value For Color")]
+    MissingHash,
+    #[error("Format Error w Digit: {0}")]
+    ParseError(std::num::ParseIntError),
+    #[error("Missing Characters")]
+    LengthError,
 }
+#[derive(Debug, Eq, PartialEq)]
+struct Rgb(u8, u8, u8);
 
-fn process_chunk(data: &[u64]) {
-    match data {
-        [lhs, rhs] => println!("{} + {} = {}", lhs, rhs, (lhs + rhs)),
-        [single] => println!("Unpaired Value: {}", single),
-        [] => println!("Data Stream Complete"),
-        [..] => unreachable!("Chunk Size At Least Over 2"),
+fn main() {}
+
+#[cfg(test)]
+mod test {
+    use super::Rgb;
+    use std::convert::TryFrom;
+
+    #[test]
+    fn converts_valid_hex_color() {
+        let expected = Rgb(0, 204, 102);
+        let actual = Rgb::try_from("#00cc66");
+        assert_eq!(
+            actual.is_ok(),
+            true,
+            "Valid HEX Code Should be converted to Rgb"
+        );
+        assert_eq!(actual.unwrap(), expected, "Wrong Rgb Value");
     }
-}
 
-fn main() {
-    let mut stream = data().chunks((2));
-    for chunk in stream {
-        process_chunk(chunk);
+    #[test]
+    fn fails_on_invalid_hex_digits() {
+        assert_eq!(Rgb::try_from("0011yy").is_err(), true, "Invalid Hex Color");
     }
 }
