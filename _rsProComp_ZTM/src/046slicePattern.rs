@@ -1,5 +1,3 @@
-use std::os::windows::process;
-
 fn data() -> &'static [u64] {
     &[5, 5, 4, 4, 3, 3, 1]
 }
