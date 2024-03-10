@@ -24,8 +24,8 @@ struct Worker<M> {
 impl Worker<Message> {
     fn add_job(&self, job: Job) {
         self.tx
-        .send(Message::AddJob(job))
-        .expect("Failed to add job");
+            .send(Message::AddJob(job))
+            .expect("Failed to add job");
     }
     fn join(self) {
         self.handle.join().expect("failed to join thread");
@@ -41,7 +41,7 @@ fn spawn_worker(counter: Arc<Mutex<usize>>) -> Worker<Message> {
     let handle = thread::spawn(move || {
         let mut jobs = VecDeque::new();
         loop {
-            loop{
+            loop {
                 for job in jobs.pop_front() {
                     match job {
                         Job::Print(msg) => println!("{}", msg),
@@ -54,7 +54,7 @@ fn spawn_worker(counter: Arc<Mutex<usize>>) -> Worker<Message> {
                     match msg {
                         Message::AddJob(job) => {
                             jobs.push_back(job);
-                            continue;;
+                            continue;
                         }
                         Message::Quit => return,
                     }
@@ -97,9 +97,9 @@ fn main() {
     ];
 
     let jobs_sent = jobs.len();
-    let job_counter = Arc::new(Mutex::new(0))
+    let job_counter = Arc::new(Mutex::new(0));
     let mut workers = vec![];
-    for _ in 0..4{
+    for _ in 0..4 {
         let worker = spawn_worker(Arc::clone(&job_counter));
         workers.push(worker);
     }
