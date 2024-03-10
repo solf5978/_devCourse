@@ -115,4 +115,8 @@ fn main() {
     for worker in workers {
         worker.join();
     }
+
+    println!("Jobs sent: {}", jobs_sent);
+    let jobs_completed = job_counter.lock();
+    println!("{}", jobs_completed);
 }
