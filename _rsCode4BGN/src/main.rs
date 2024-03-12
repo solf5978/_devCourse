@@ -1,8 +1,7 @@
-use std::fs::{write, File, OpenOptions};
+use std::collections::HashMap;
+use std::fs::{File, OpenOptions};
 use std::io::{Read, Write};
 use std::path::PathBuf;
-use std::process::Command;
-use std::{collections::HashMap, error};
 use structopt::StructOpt;
 use thiserror::Error;
 
@@ -147,13 +146,13 @@ struct Opt {
     #[structopt(short, parse(from_os_str), default_value = "#fileName")]
     data_file: PathBuf,
     #[structopt(subcommand)]
-    cmd: Command,
+    cmd: Cmd,
     #[structopt(short, help = "verbose")]
     verbose: bool,
 }
 
-#[derive(StructOpt, Debug)]
-enum Command {
+#[derive(Debug, StructOpt)]
+enum Cmd {
     Add {
         name: String,
         #[structopt(short)]
@@ -169,8 +168,8 @@ enum Command {
 
 fn run(opt: Opt) -> Result<(), std::io::Error> {
     match opt.cmd {
-        Command::Add { name, email } => {
-            let mut recs = load_records(opt.data_file, opt.verboseverbose)?;
+        Cmd::Add { name, email } => {
+            let mut recs = load_records(opt.data_file, opt.verbose)?;
             let next_id = recs.next_id();
             recs.add(Record {
                 id: next_id,
@@ -179,7 +178,7 @@ fn run(opt: Opt) -> Result<(), std::io::Error> {
             });
             save_records(opt.data_file, recs)?;
         }
-        Command::Edit { id, name, email } => {
+        Cmd::Edit => {
             let mut recs = load_records(opt.data_file.clone(), opt.verbose)?;
             let next_id = recs.next_id();
             recs.add(Record {
@@ -188,13 +187,13 @@ fn run(opt: Opt) -> Result<(), std::io::Error> {
                 email,
             });
         }
-        Command::List { .. } => {
+        Cmd::List { .. } => {
             let recs = load_records(opt.data_file, opt.verbose)?;
             for record in recs.into_vec() {
                 println!("{:?}", record);
             }
         }
-        Command::Remove { id } => {
+        Cmd::Remove { id } => {
             let mut recs = load_records(opt.data_file.clone(), opt.verbose)?;
             if recs.remove(id).is_some() {
                 save_records(opt.data_file, recs)?;
@@ -203,7 +202,7 @@ fn run(opt: Opt) -> Result<(), std::io::Error> {
                 println!("record not found");
             }
         }
-        Command::Search { query } => {
+        Cmd::Search { query } => {
             let recs = load_records(opt.data_file, opt.verbose)?;
             let results = recs.search(&query);
             if results.is_empty() {
