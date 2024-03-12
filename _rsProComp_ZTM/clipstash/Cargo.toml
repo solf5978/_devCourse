@@ -2,6 +2,11 @@
 name = "clipstash"
 version = "0.1.0"
 edition = "2021"
+include = [
+    "/src", 
+    "/src/lib/domain/clip",
+    "/src/lib/domain/clip/field",
+    ]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
