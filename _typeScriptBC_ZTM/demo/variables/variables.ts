@@ -18,3 +18,20 @@ const demo5 = `typescript`;
 
 let demo7 = "typescript";
 demo7 = "Hello" + demo7;
+
+const amount = 100;
+const fraction = 10.5;
+const oneTHousand = 1e3;
+const allPermissions = 0o777;
+
+const binary = 0b0101;
+const bigInt = 9000n;
+const yes = true;
+const no = false;
+const missing = undefined;
+const empty = null;
+
+let someNum = 0;
+someNum = 10;
+someNum = -10;
+someNum = 10.5;
