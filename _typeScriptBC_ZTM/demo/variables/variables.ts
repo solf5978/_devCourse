@@ -35,3 +35,15 @@ let someNum = 0;
 someNum = 10;
 someNum = -10;
 someNum = 10.5;
+
+// using block to scope variables
+
+{
+  let someNum = 0;
+  someNum = 10;
+  someNum = -10;
+  someNum = 10.5;
+}
+
+// uninitialized variables
+let huioo;
