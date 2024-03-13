@@ -8,3 +8,13 @@
 //
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/variable-declarations.html#let-declarations
+
+// double quotes are allowed
+const courseName = "typescript";
+// single quote is allow too.
+const demo3 = "typescript";
+// backtick style
+const demo5 = `typescript`;
+
+let demo7 = "typescript";
+demo7 = "Hello" + demo7;
