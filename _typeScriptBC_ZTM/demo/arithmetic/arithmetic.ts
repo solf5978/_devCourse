@@ -32,3 +32,6 @@ assert.equal(neg2, 1);
 
 const exp = 2 ** 3;
 assert.equal(exp, 8);
+
+const abs = Math.abs(-10);
+assert.equal(abs, 10);
