@@ -6,3 +6,8 @@ import { strict as assert } from "assert";
 //
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+function greet(msg) {
+  console.log(`Hello, ${msg}!`);
+}
+greet("World");
