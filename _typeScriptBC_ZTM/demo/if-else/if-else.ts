@@ -9,3 +9,19 @@ import { strict as assert } from "assert";
 //
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
+
+const answer = 42;
+
+if (answer === 42) {
+  console.log("Correct!");
+} else {
+  console.log("Wrong!");
+}
+
+if (answer === 42) {
+  console.log("Correct!");
+} else if (answer === 43) {
+  console.log(`answer is {answer}`);
+} else {
+  console.log("Wrong!");
+}
