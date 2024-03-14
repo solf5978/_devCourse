@@ -23,3 +23,6 @@ let hello = sayHello();
 function sum(lhs, rhs) {
   return lhs + rhs;
 }
+
+const answer = sum(1, 2);
+console.log(answer);
