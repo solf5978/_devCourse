@@ -15,3 +15,7 @@ const amount: number = 2 + 2;
 const hello: string = `Hello, ${myName}!`;
 const powerLevel: bigint = 2n ** 3n;
 const yes: boolean = true;
+
+function sum(lhs: number, rhs: number): number {
+  return lhs + rhs;
+}
