@@ -37,3 +37,7 @@ function approveWork() {
   } else {
   }
 }
+
+function hasOvertimeHours(hoursWorked: number, totalOvertime: number): boolean {
+  return hoursWorked > totalOvertime;
+}
