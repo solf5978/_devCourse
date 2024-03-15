@@ -16,3 +16,13 @@
 //
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
+
+for (let i = 1; i < 5; i++) {
+  console.log(i);
+  if (i == 4) {
+    break;
+  }
+  if (i == 1) {
+    continue;
+  }
+}
