@@ -15,3 +15,8 @@ function sum(lhs: number, rhs: number): number {
 }
 
 const arrowSum = (lhs: number, rhs: number): number => lhs + rhs;
+
+type calculationFn = (lhs: number, rhs: number) => number;
+function calculateCB(fn: calculationFn, lhs: number, rhs: number): number {
+  return fn(lhs, rhs);
+}
