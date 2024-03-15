@@ -17,3 +17,6 @@ let letters: string[] = ["a", "b", "c", "d", "e", "f"];
 
 arrayDemo.push(1);
 arrayDemo.push(2);
+
+let lastOne = letters.pop();
+const mixed = [1, 2, 3, "four", 5, 6, 7];
