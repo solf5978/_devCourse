@@ -6,3 +6,7 @@ import { strict as assert } from "assert";
 //
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+
+const age = 19;
+const msg = age < 18 ? "You are too young" : "You are old enough";
+const illegalAge = age < 18 ? "allow" : "deny";
