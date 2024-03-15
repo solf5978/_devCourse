@@ -25,3 +25,15 @@ if (answer === 42) {
 } else {
   console.log("Wrong!");
 }
+
+const hasTheSkill = true;
+const isTuesday = true;
+const totalOvertime = 0.5;
+const holidaySeason = false;
+
+function approveWork() {
+  if (hasTheSkill && (isTuesday || (holidaySeason && totalOvertime > 0.5))) {
+    console.log("Approved!");
+  } else {
+  }
+}
