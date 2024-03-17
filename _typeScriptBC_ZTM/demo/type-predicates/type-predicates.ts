@@ -51,3 +51,6 @@ function calArea(shape: Shape): number {
     throw new Error("unknown shape");
   }
 }
+
+const square: Square = { kind: "square", size: 10 };
+const circle: Circle = { kind: "circle", size: 10 };
