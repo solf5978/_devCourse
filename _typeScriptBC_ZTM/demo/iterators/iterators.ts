@@ -8,3 +8,29 @@
 //
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html
+
+const demoArray = [1, 2, 3, 4, 5, 6];
+
+for (let i = 0; i < demoArray.length; i++) {
+  console.log(demoArray[i]);
+}
+
+for (const value of demoArray) {
+  console.log(value);
+}
+
+const nums = {
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+};
+
+let property: keyof typeof nums;
+
+for (property in nums) {
+  console.log(property);
+  console.log(nums[property]);
+}
