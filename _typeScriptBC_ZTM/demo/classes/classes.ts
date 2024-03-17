@@ -8,3 +8,25 @@ import { strict as assert } from "assert";
 //
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/2/classes.html
+
+class Color {
+  r: number = 0;
+  g: number = 0;
+  b: number = 0;
+}
+
+const red = new Color();
+red.r = 255;
+const redValue = red.r;
+
+class Dimensions {
+  width: number;
+  height: number;
+  length: number;
+
+  constructor(width: number, height: number, length: number) {
+    this.width = width;
+    this.height = height;
+    this.length = length;
+  }
+}
