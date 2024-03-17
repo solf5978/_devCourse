@@ -40,4 +40,39 @@ function addTodo(task: string): void {
   saveTodos(todos);
   console.log(`Added todo ${task} with id ${id}`);
 }
-function cli(): void {}
+function cli(): void {
+  const subCommand = process.argv[2];
+  const options = process.argv.slice(3);
+
+  switch (subCommand) {
+    case "list":
+      if (options.length === 0) {
+        listTodos();
+      } else {
+        console.log("Invalid options");
+      }
+      break;
+    case "add":
+      if (options.length === 1) {
+        addTodo(options[0]);
+      } else {
+        console.log("Invalid number of arguments");
+      }
+      break;
+    case "remove":
+      if (options.length === 1) {
+        const id = parseInt(options[0], 10);
+        if (isNaN(id)) {
+          console.log("Invalid id");
+        } else {
+          removeTodo(id);
+        }
+      } else {
+        console.log("Invalid number of arguments");
+      }
+      break;
+
+    default:
+      console.log("Invalid command");
+  }
+}
