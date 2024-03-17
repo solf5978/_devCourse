@@ -20,3 +20,59 @@
 //
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+
+interface Pii {
+  age?: number;
+  addr?: string;
+}
+
+interface SearchResult {
+  name: string;
+  pii?: Pii;
+}
+
+class Database {
+  search(name: string): SearchResult | undefined {
+    switch (name) {
+      case "John":
+        return {
+          name: "John",
+          pii: {
+            age: 30,
+            addr: "123 Main St",
+          },
+        };
+      case "Jane":
+        return {
+          name: "Jane",
+        };
+      default:
+        return undefined;
+    }
+  }
+}
+
+const db = new Database();
+
+{
+  const result = db.search("John");
+  if (
+    result !== undefined &&
+    result !== null &&
+    result.name !== undefined &&
+    result.pii?.addr !== undefined &&
+    result.pii?.age !== null
+  ) {
+    console.log(result.name);
+    console.log(result.pii.age);
+    console.log(result.pii.addr);
+  }
+}
+
+//with optional chaining
+{
+  const chain = db.search("John");
+  if (chain?.pii?.age) {
+    console.log(chain.pii.age);
+  }
+}
