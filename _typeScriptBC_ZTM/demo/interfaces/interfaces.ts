@@ -11,3 +11,48 @@ import { strict as assert } from "assert";
 //
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/2/objects.html
+
+interface Area {
+  area(): number;
+}
+interface Perimeter {
+  perimeter(): number;
+}
+
+class Rectangle implements Area, Perimeter {
+  length: number = 1;
+  width: number = 1;
+
+  area(): number {
+    return this.length * this.width;
+  }
+
+  perimeter(): number {
+    return 2 * (this.length + this.width);
+  }
+}
+
+const rect = new Rectangle();
+rect.area();
+rect.perimeter();
+
+type AreaAndPerimeter = Area & Perimeter;
+
+class Circle implements AreaAndPerimeter {
+  radius: number = 4;
+
+  area(): number {
+    return Math.PI * this.radius * this.radius;
+  }
+
+  perimeter(): number {
+    return 2 * Math.PI * this.radius;
+  }
+}
+
+const circ = new Circle();
+const objectWithArea: Area[] = [rect, circ];
+
+for (let i = 0; i < objectWithArea.length; i++) {
+  console.log(objectWithArea[i].area());
+}
