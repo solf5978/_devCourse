@@ -13,3 +13,24 @@ import { strict as assert } from "assert";
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises
+
+async function fetchUserData(userID: number): Promise<{ name; email }> {
+  const rep = await fetch(`https://api.example.com/users/${userID}`);
+  const data = await rep.json();
+  return { name: data.name, email: data.email };
+}
+
+// using async/await
+(async () => {
+  try {
+    const userData = await fetchUserData(1);
+    console.log(userData.name);
+  } catch (error) {
+    console.log(error);
+  }
+})();
+
+// using Promise
+fetchUserData(1)
+  .then((userData) => console.log(userData.name))
+  .catch((error) => console.log(error));
