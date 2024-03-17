@@ -40,23 +40,33 @@ function addTodo(task: string): void {
   saveTodos(todos);
   console.log(`Added todo ${task} with id ${id}`);
 }
+
+function cliInvalidOption(command: string): void {
+  console.error(`Invalid option: ${command}`);
+}
 function cli(): void {
   const subCommand = process.argv[2];
   const options = process.argv.slice(3);
 
   switch (subCommand) {
+    case "--help":
+      console.log("Commands:");
+      console.log("add <task>");
+      console.log("list");
+      console.log("remove <id>");
+      break;
     case "list":
       if (options.length === 0) {
         listTodos();
       } else {
-        console.log("Invalid options");
+        cliInvalidOption(subCommand);
       }
       break;
     case "add":
       if (options.length === 1) {
         addTodo(options[0]);
       } else {
-        console.log("Invalid number of arguments");
+        cliInvalidOption(subCommand);
       }
       break;
     case "remove":
@@ -68,11 +78,11 @@ function cli(): void {
           removeTodo(id);
         }
       } else {
-        console.log("Invalid number of arguments");
+        cliInvalidOption(subCommand);
       }
       break;
 
     default:
-      console.log("Invalid command");
+      cliInvalidOption(subCommand);
   }
 }
