@@ -56,3 +56,29 @@ const objectWithArea: Area[] = [rect, circ];
 for (let i = 0; i < objectWithArea.length; i++) {
   console.log(objectWithArea[i].area());
 }
+
+interface CustomrInfo {
+  name: string;
+}
+
+class Customer implements CustomrInfo {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+interface Address {
+  street: string;
+  city: string;
+}
+
+const addr = {
+  street: "name",
+  city: "samples",
+};
+
+function printAddr(address: Address): void {
+  console.log(address.street, address.city);
+}
