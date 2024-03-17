@@ -26,3 +26,13 @@ studentScores.set("<NA3>", 80);
 for (const [name, score] of studentScores.entries()) {
   console.log(name, score);
 }
+
+studentScores.delete("<NA1>");
+studentScores.has("<NA1>");
+
+for (const name of studentScores.keys()) {
+}
+for (const score of studentScores.values()) {
+}
+
+studentScores.clear();
