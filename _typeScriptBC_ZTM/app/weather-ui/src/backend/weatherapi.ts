@@ -1,4 +1,5 @@
-import axios from "axios";
+import { z } from "zod";
+import type { AxiosStatic } from "axios";
 
 const weatherCodes: Record<number, string> = {
   0: "Clear sky",
@@ -31,72 +32,71 @@ const weatherCodes: Record<number, string> = {
   99: "Thunderstorm with heavy hail",
 };
 
-interface CurrentWeatherApiResponse {
-  temperature: string;
-  widspeed: number;
-  winddirection: number;
-  weathercode: number;
-  is_day: number;
-  time: string;
-}
+export const currentWeatherApiResponseSchema = z.object({
+  current_weather: z.object({
+    temperature: z.number(),
+    windspeed: z.number(),
+    winddirection: z.number(),
+    weathercode: z.number(),
+    is_day: z.number(),
+    time: z.string(),
+  }),
+  hourly_unit: z.object({
+    temperature_2m: z.string(),
+  }),
+  hourly: z.object({
+    temperature_2m: z.array(z.number()),
+  }),
+});
+
+export type CurrentWeatherApiResponse = z.infer<
+  typeof currentWeatherApiResponseSchema
+>;
 
 export interface Temperature {
   value: number;
   unit: string;
 }
 
-const formatTemperature = (temp: Temperature): string =>
-  `${temp.value}°${temp.unit}`;
-
 export interface Wind {
   speed: number;
   direction: number;
   unit: string;
 }
-const formatWind = (wind: Wind): string => `${wind.speed} ${wind.unit}`;
-
 export class CurrentWeather {
   temperature: Temperature;
-  wind: Wind;
   weathercode: number;
-  daytime: boolean;
+  is_day: boolean;
   time: string;
+  hourlyTemp: number[];
 
   constructor(apiResponse: CurrentWeatherApiResponse) {
     this.temperature = {
-      value: parseInt(apiResponse.temperature),
-      unit: "C",
-    };
-    this.wind = {
-      speed: apiResponse.widspeed,
-      direction: apiResponse.winddirection,
-      unit: "km/h",
+      value: apiResponse.current_weather.temperature,
+      unit: apiResponse.hourly_unit.temperature_2m,
     };
 
-    this.weathercode = apiResponse.weathercode;
-    this.daytime = apiResponse.is_day === 1;
-    this.time = apiResponse.time;
+    this.weathercode = apiResponse.current_weather.weathercode;
+    this.is_day = apiResponse.current_weather.is_day === 1;
+    this.time = apiResponse.current_weather.time;
+    this.hourlyTemp = apiResponse.hourly.temperature_2m;
   }
 
   condition(): string {
     return weatherCodes[this.weathercode];
   }
 
-  format(): string {
-    const descriptionLen = 16;
-    const temp = "Temperature: ".padStart(descriptionLen, " ");
-    const windSpeed = "Wind Speed: ".padStart(descriptionLen, " ");
-    const condition = "Condtion: ".padStart(descriptionLen, " ");
+  lowTemp(): number {
+    return this.hourlyTemp.reduce((prev, curr) => Math.min(prev, curr));
+  }
 
-    const formatted: string[] = [];
-    formatted.push(`${temp}: ${formatTemperature(this.temperature)}`);
-    formatted.push(`${windSpeed}: ${formatWind(this.wind)}`);
-    formatted.push(`${condition}: ${this.condition}`);
-    return formatted.join("\n");
+  highTemp(): number {
+    return this.hourlyTemp.reduce((prev, curr) => Math.max(prev, curr));
   }
 }
 
 export async function fetchWeatherData(
+  axios: AxiosStatic,
   apiUrl: string,
   lat: number,
   lon: number
@@ -111,17 +111,18 @@ export async function fetchWeatherData(
       temperature_unit: "celsius",
       windspeed_unit: "km/h",
       current_weather: true,
+      forecast_days: 1,
     },
   };
   const response = await axios.request(options);
   if (response.status === 200) {
-    if (response.data?.current_weather !== undefined) {
-      const res = response.data.current_weather as CurrentWeatherApiResponse;
+    try {
+      const res = currentWeatherApiResponseSchema.parse(response.data);
       return new CurrentWeather(res);
-    } else {
-      throw new Error("No current weather data found");
+    } catch (err) {
+      throw new Error("Failed to find location data");
     }
   } else {
-    throw new Error("Failed to fetch weather data");
+    throw new Error("Failed to find location data");
   }
 }
