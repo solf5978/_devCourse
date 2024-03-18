@@ -1,6 +1,7 @@
 import type { LocationInfo } from "./location";
 import { fetchLocationData } from "./location";
 const GEOCODE_API_URL = "https://maps.googleapis.com/maps/api/geocode/json";
+const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5?";
 async function main(): Promise<number> {
   if (process.argv.length < 3) {
     console.error("Usage: weather LOCATION");
