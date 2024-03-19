@@ -18,8 +18,9 @@
 | _learnCSSToday_WDS| HTML&CSS  | [Learn CSS Today](https://courses.webdevsimplified.com/learn-css-today/)                                  | Web Dev Simplified         | ✔️ |
 | _pracCSSLayout_FM | HTML&CSS  | [Practical CSS](https://practical.css.education/)                                                         | Jen Kramer                 | ✔️ |
 | _modernJSBootCamp | JavaScript| [The Modern Javascript Bootcamp Course](https://www.udemy.com/course/javascript-beginners-complete-tutorial/) | Colt Steele & Stephen Grider | 🚧 |
+|                   | JavaScript| [Javascript Mastery](https://www.amigoscode.com/courses/javascript-mastery)                               | AmigosCode                 | ✔️ |
 | _sharpenJSPrac    | JavaScript| [JavaScript Practice Problems](https://www.udemy.com/course/javascript-practice-problems-sharpen-your-skills/)| Steven Hancock         | ✔️ |
-|                   | General| [The Software Designer Mindset](https://www.arjancodes.com/mindset)                                          | ArjanCodes                 | 🚧 |
+|                   | General| [The Software Designer Mindset](https://www.arjancodes.com/mindset)                                          | ArjanCodes                 | ✔️ |
 |                   | General| [Enterprise Engineering Management 101](https://frontendmasters.com/courses/intro-management/)               | Jem Young                  | ✔️ |
 |                   | General| [Enterprise Engineering Management 102](https://frontendmasters.com/courses/engineering-management/)         | Ryan Burgess               | ✔️ |
 |                   | Git    | [Git & Github Full](https://fireship.io/courses/git/)                                                        | Jeff Delaney               | ✔️ |
