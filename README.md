@@ -2,6 +2,7 @@
 
 | Repo.             |  Cat.  |  Course                                                                                                      |  Author(s)                 | Status |
 |-------------------|--------|--------------------------------------------------------------------------------------------------------------|----------------------------|--------|
+|                   | Algo&DS| [Easy To Advanced Data Structures](https://www.udemy.com/course/introduction-to-data-structures/)            | William Fiset              | ✔️ |
 |                   | DataBase | [Advanced Databases](https://www.amigoscode.com/courses/advanced-databases)                                | AmigosCode                 | ✔️ |
 |                   | DataBase | [Database Design & Implementation](https://www.amigoscode.com/courses/database-design)                     | AmigosCode                 | ✔️ |
 |                   | DevOps | [3 Days Linux Administration Course](https://www.udemy.com/course/perfect-3-days-linux-course/)              | Imran Afzal                | ✔️ |
