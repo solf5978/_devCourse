@@ -2,6 +2,8 @@
 
 | Repo.             |  Cat.  |  Course                                                                                                      |  Author(s)                 | Status |
 |-------------------|--------|--------------------------------------------------------------------------------------------------------------|----------------------------|--------|
+|                   | DataBase | [Advanced Databases](https://www.amigoscode.com/courses/advanced-databases)                                | AmigosCode                 | ✔️ |
+|                   | DataBase | [Database Design & Implementation](https://www.amigoscode.com/courses/database-design)                     | AmigosCode                 | ✔️ |
 |                   | DevOps | [3 Days Linux Administration Course](https://www.udemy.com/course/perfect-3-days-linux-course/)              | Imran Afzal                | ✔️ |
 |                   | DevOps | [Docker for DevOps Engineers](https://www.amigoscode.dev/courses/docker)                                     | AmigosCode                 | ✔️ |
 |                   | DevOps | [Linux Mastery: Master the Linux Command Line](https://www.udemy.com/course/linux-mastery/)                  | Ziyad Yehia                | ✔️ |
