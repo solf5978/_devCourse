@@ -5,6 +5,9 @@ import axios from "axios";
 import dotenv from "dotenv";
 import fastify from "fastify";
 import nunjucks from "nunjucks";
+import { z } from "zod";
+import { fetchLocationData } from "./location";
+import { fetchWeatherData } from "./weatherapi";
 
 dotenv.config();
 const envir = process.env.NODE_ENV;
@@ -89,3 +92,54 @@ const weatherCodeToImage = (code: number): string => {
       return "/static/img/info.svg";
   }
 };
+
+const locationSchema = z.object({
+  location: z.string(),
+});
+
+server.get("/", async (req, res) => {
+  const queryParams = req.query;
+  try {
+    const { location } = locationSchema.parse(queryParams);
+    const locationInfo = await fetchLocationData(
+      HTTP_CLIENT,
+      GEOCODE_API_URL,
+      location
+    );
+    const weatherInfo = await fetchWeatherData(
+      HTTP_CLIENT,
+      WEATHER_API_URL,
+      locationInfo.lat,
+      locationInfo.lon
+    );
+
+    const rendered = templates.render("weather.njk", {
+      envir,
+      location: locationInfo.display_name,
+      currentDate: new Date().toDateString(),
+      weather: {
+        ...weatherInfo,
+        conditionImg: weatherCodeToImage(weatherInfo.weathercode),
+        condition: weatherInfo.condition(),
+        lowTemp: weatherInfo.lowTemp(),
+        highTemp: weatherInfo.highTemp(),
+      },
+    });
+    await res.header("Content-Type", "text/html; charset=utf-8").send(rendered);
+  } catch (error) {
+    const rendered = templates.render("get_started.njk", { envir });
+
+    await res.header("Content-Type", "text/html; charset=utf-8").send(rendered);
+  }
+});
+
+const start = async (): Promise<void> => {
+  try {
+    await server.listen({ port: 3636 });
+  } catch (e) {
+    server.log.error(e);
+    process.exit(1);
+  }
+};
+
+start();

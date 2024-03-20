@@ -98,8 +98,8 @@ export class CurrentWeather {
 export async function fetchWeatherData(
   axios: AxiosStatic,
   apiUrl: string,
-  lat: number,
-  lon: number
+  lat: string,
+  lon: string
 ): Promise<CurrentWeather> {
   const options = {
     method: "GET",
