@@ -10,3 +10,15 @@
 // a 'discriminated union'. Unions only allow the type to be one
 // option at a time. Combining this with objects allows multiple
 // pieces of data to be associated with each individual option.
+
+type numbers = 1 | 2 | 3 | number;
+type AccountCreationMessage =
+  | { kind: "ok"; greeting: string }
+  | { kind: "passwordComplexityFailure"; message: string }
+  | { kind: "usernameExists" };
+
+const ok: AccountCreationMessage = { kind: "ok", greeting: "Hello, world!" };
+const passwordTooShort: AccountCreationMessage = {
+  kind: "passwordComplexityFailure",
+  message: "Password must be at least 8 characters long",
+};
