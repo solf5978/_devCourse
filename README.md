@@ -3,6 +3,7 @@
 | Repo.             |  Cat.  |  Course                                                                                                      |  Author(s)                 | Status |
 |-------------------|--------|--------------------------------------------------------------------------------------------------------------|----------------------------|--------|
 |                   | Algo&DS| [Easy To Advanced Data Structures](https://www.udemy.com/course/introduction-to-data-structures/)            | William Fiset              | ✔️ |
+|                   | Algo&DS| [Tree & Graph Data Structures](https://frontendmasters.com/courses/trees-and-graphs/)                        | Bianca Gandolfo            | ✔️ |
 |                   | DataBase | [Advanced Databases](https://www.amigoscode.com/courses/advanced-databases)                                | AmigosCode                 | ✔️ |
 |                   | DataBase | [Database Design & Implementation](https://www.amigoscode.com/courses/database-design)                     | AmigosCode                 | ✔️ |
 |                   | DevOps | [3 Days Linux Administration Course](https://www.udemy.com/course/perfect-3-days-linux-course/)              | Imran Afzal                | ✔️ |
@@ -20,9 +21,10 @@
 | _interHTMLCSS_FM  | HTML&CSS  | [Intermediate HTML & CSS](https://semantics-selectors.css.education/)                                     | Jen Kramer                 | ✔️ |
 | _learnCSSToday_WDS| HTML&CSS  | [Learn CSS Today](https://courses.webdevsimplified.com/learn-css-today/)                                  | Web Dev Simplified         | ✔️ |
 | _pracCSSLayout_FM | HTML&CSS  | [Practical CSS](https://practical.css.education/)                                                         | Jen Kramer                 | ✔️ |
-| _modernJSBootCamp | JavaScript| [The Modern Javascript Bootcamp Course](https://www.udemy.com/course/javascript-beginners-complete-tutorial/) | Colt Steele & Stephen Grider | 🚧 |
+| _beginnerJS       | JavaScript| [Beginner Javascript](https://beginnerjavascript.com/)                                                    | Wes Bos                    | ✔️ |
 |                   | JavaScript| [Javascript Mastery](https://www.amigoscode.com/courses/javascript-mastery)                               | AmigosCode                 | ✔️ |
 | _sharpenJSPrac    | JavaScript| [JavaScript Practice Problems](https://www.udemy.com/course/javascript-practice-problems-sharpen-your-skills/)| Steven Hancock         | ✔️ |
+| _modernJSBootCamp | JavaScript| [The Modern Javascript Bootcamp Course](https://www.udemy.com/course/javascript-beginners-complete-tutorial/) | Colt Steele & Stephen Grider | 🚧 |
 |                   | General| [The Software Designer Mindset](https://www.arjancodes.com/mindset)                                          | ArjanCodes                 | ✔️ |
 |                   | General| [Enterprise Engineering Management 101](https://frontendmasters.com/courses/intro-management/)               | Jem Young                  | ✔️ |
 |                   | General| [Enterprise Engineering Management 102](https://frontendmasters.com/courses/engineering-management/)         | Ryan Burgess               | ✔️ |
@@ -34,6 +36,7 @@
 | _py3/*            | Python | [Python 3 Deep Dive *](https://www.udemy.com/course/python3-fundamentals/)                                   | Fred Baptiste              | 🚧 |
 | _py4AbsBGN2Adv    | Python | [Python For Absolute Beginners](https://www.udemy.com/course/python-for-absolute-beginners-2023-beginner-to-advanced)    | Jesse Warner   | ✔️ |
 | _pyMFS23Proj      | Python | [Python MasterClass](https://www.udemy.com/course/python-masterclass-course/)                                | Ashutosh Pawar             | ✔️ |
+|                   | ReactJS| [Learn React Today](https://reactsimplified.com/)                                                            | Web Dev Simplified         | ✔️ |
 |                   | Rust   | [Learn Rust by Building Real Applications](https://www.udemy.com/course/rust-fundamentals/)                  | Lyubomir Gavadinov         | ✔️ |
 |                   | Rust   | [Complete Rust Course - Zero To Advanced](https://www.udemy.com/course/complete-rust-course-zero-to-master/) | Clarian North              | ✔️ |
 | _rsCode4BGN       | Rust   | [Rust Coding For Beginners](https://www.udemy.com/course/rust-coding-for-beginners/)                         | Jayson Lennon              | ✔️ |
