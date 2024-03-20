@@ -11,3 +11,11 @@ import { strict as assert } from "assert";
 //
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/2/generics.html#hello-world-of-generics
+
+function getFirstNumber(arr: number[]): number | undefined {
+  if (arr.length === 0) {
+    return undefined;
+  } else {
+    return arr[0];
+  }
+}

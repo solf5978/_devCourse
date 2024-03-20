@@ -33,6 +33,6 @@ const red: Rgb = "red";
 
   let k: keyof typeof Department;
   for (k in Department) {
-    console.log(`Key => ${k}: , ${Department[k]}`);
+    console.log(`Key => ${k}: , floor => ${Department[k]}`);
   }
 }
