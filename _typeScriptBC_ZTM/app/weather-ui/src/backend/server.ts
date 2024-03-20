@@ -1,5 +1,9 @@
+import path from "path";
+import formBody from "@fastify/formbody";
+import staticFiles from "@fastify/static";
 import axios from "axios";
 import dotenv from "dotenv";
+import fastify from "fastify";
 import nunjucks from "nunjucks";
 
 dotenv.config();
@@ -10,6 +14,19 @@ const templates = new nunjucks.Environment(
 const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather";
 const GEOCODE_API_URL = "https://geocode.";
 const HTTP_CLIENT = axios;
+
+const server = fastify({
+  logger: true,
+  ignoreTrailingSlash: true,
+});
+
+{
+  server.register(formBody);
+  server.register(staticFiles, {
+    root: path.join(__dirname, "../../dist"),
+  });
+}
+
 const weatherCodeToImage = (code: number): string => {
   switch (code) {
     case 0:
