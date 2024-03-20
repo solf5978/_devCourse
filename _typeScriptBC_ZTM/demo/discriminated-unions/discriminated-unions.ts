@@ -38,3 +38,7 @@ function showMessage(msg: AccountCreationMessage) {
       break;
   }
 }
+
+showMessage(ok);
+showMessage(passwordTooShort);
+showMessage({ kind: "usernameExists" });
