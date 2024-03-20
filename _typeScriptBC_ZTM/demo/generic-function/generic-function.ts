@@ -19,3 +19,23 @@ function getFirstNumber(arr: number[]): number | undefined {
     return arr[0];
   }
 }
+
+function getFirstString(arr: string[]): string | undefined {
+  if (arr.length === 0) {
+    return undefined;
+  } else {
+    return arr[0];
+  }
+}
+
+function getFirstStringOrNumber(
+  arr: string[] | number[]
+): string | number | undefined {
+  return arr[0];
+}
+
+function getFirstItem<T>(arr: T[]): T | undefined {
+  return arr[0];
+}
+
+getFirstNumber([1, 2, 3]); // 1
