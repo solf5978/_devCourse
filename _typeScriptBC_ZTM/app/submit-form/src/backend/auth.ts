@@ -17,3 +17,10 @@ export async function hasedPassword(plain: string): Promise<HashedPassword> {
     });
   });
 }
+
+export async function cmpPassword(
+  plain: string,
+  storedHash: HashedPassword
+): Promise<boolean> {
+  return await bcrypt.compare(plain, storedHash.hashed);
+}
