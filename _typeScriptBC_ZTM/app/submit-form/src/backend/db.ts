@@ -17,9 +17,22 @@ export interface UserRepository {
 // export class PostgresUserRepository implements UserRepository {}
 export class SqliteUserRepository implements UserRepository {
   constructor(private readonly db: AsyncDatabase) {}
-  create(user: User): Promise<User> {}
-  findByEmail(email: string): Promise<User | undefined> {}
-  get(userId: number): Promise<User | undefined> {}
+  async create(user: User): Promise<User> {
+    const userId: { id: number } = await this.db.get(
+      `INSERT INTO users (id, email, password, agreedToTerm) VALUES (?, ?, ?) RETURNING id`,
+      [user.email, user.hashedPassword, user.agreedToTerms]
+    );
+    return {
+      ...user,
+      id: userId.id,
+    };
+  }
+  async findByEmail(email: string): Promise<User | undefined> {
+    return this.db.get(`SELECT * FROM users WHERE email =?`, email);
+  }
+  async get(userId: number): Promise<User | undefined> {
+    return await this.db.get(`SELECT * FROM users WHERE id =?`, userId);
+  }
 }
 
 export async function connect(
