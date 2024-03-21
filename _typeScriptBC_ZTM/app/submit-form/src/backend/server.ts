@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import Fastify from "fastify";
 import nunjucks from "nunjucks";
 import { z } from "zod";
+import { HashedPassword, hashPassword } from "./auth";
 
 import { connect, newDb, SqliteSession, SqliteUserRepository } from "./db";
 
@@ -69,13 +70,14 @@ fastify.post("/account/signup", async (request, reply) => {
 
   const db = await connect(USERS_DB);
   const userRepository = new SqliteUserRepository(db);
+  const hashedPassword = await hashPassword(requestData.password);
 
   try {
     const newUser = {
       ...requestData,
       id: 0,
       agreedToTerms: true,
-      hasedPassword: "FIXME",
+      hashedPassword,
     };
     const user = await userRepository.create(newUser);
     console.log(user);

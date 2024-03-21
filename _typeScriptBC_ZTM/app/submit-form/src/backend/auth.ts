@@ -6,7 +6,7 @@ export class HashedPassword {
   constructor(readonly hashed: string) {}
 }
 
-export async function hasedPassword(plain: string): Promise<HashedPassword> {
+export async function hashPassword(plain: string): Promise<HashedPassword> {
   return await new Promise((resolve, reject) => {
     bcrypt.hash(plain, saltRounds, (err, hashed) => {
       if (err !== undefined) {
