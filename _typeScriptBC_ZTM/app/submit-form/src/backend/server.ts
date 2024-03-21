@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 import Fastify from "fastify";
 import nunjucks from "nunjucks";
 import { z } from "zod";
-import { HashedPassword, hashPassword } from "./auth";
+import { cmpPassword, HashedPassword, hashPassword } from "./auth";
 
 import { connect, newDb, SqliteSession, SqliteUserRepository } from "./db";
 
@@ -35,6 +35,13 @@ const accountCreateRequestSchema = z.object({
 
 type accountCreateRequest = z.infer<typeof accountCreateRequestSchema>;
 
+const accountLoginRequestSchema = z.object({
+  email: z.string(),
+  password: z.string(),
+  agreedToTerms: z.string().optional(),
+});
+
+type accountLoginRequest = z.infer<typeof accountLoginRequestSchema>;
 {
   fastify.register(formBody);
   fastify.register(cookie, {
@@ -87,11 +94,39 @@ fastify.post("/account/signup", async (request, reply) => {
   }
 });
 
-fastify.post("/signinp", async (request, reply) => {
+fastify.post("/signin", async (request, reply) => {
   const rendered = template.render("signin.njk", { envir });
   return await reply
     .header("Content-Type", "text/html; charset=utf-8")
     .send(rendered);
+});
+
+fastify.post("/account/signin", async (request, reply) => {
+  let requestData: accountLoginRequest;
+  try {
+    requestData = accountLoginRequestSchema.parse(request.body);
+  } catch (e) {
+    return await reply.redirect("/signin");
+  }
+
+  const db = await connect(USERS_DB);
+  const userRepository = new SqliteUserRepository(db);
+  try {
+    const user = await userRepository.findByEmail(requestData.email);
+    if (user === undefined) {
+      return await reply.redirect("/signin");
+    }
+    const passwordMatches = await cmpPassword(
+      requestData.password,
+      user.hashedPassword
+    );
+    if (!passwordMatches) {
+      return await reply.redirect("/signin");
+    }
+    return await reply.redirect("/welcome");
+  } catch (e) {
+    return await reply.redirect("/signin");
+  }
 });
 
 const start = async (): Promise<void> => {
