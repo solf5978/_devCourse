@@ -26,6 +26,14 @@ const fastify = Fastify({
   logger: true,
 });
 
+const accountCreateRequestSchema = z.object({
+  email: z.string(),
+  password: z.string(),
+  agreedToTerms: z.string().optional(),
+});
+
+type accountCreateRequest = z.infer<typeof accountCreateRequestSchema>;
+
 {
   fastify.register(formBody);
   fastify.register(cookie, {
@@ -45,6 +53,36 @@ fastify.get("/signup", async (request, reply) => {
   return await reply
     .header("Content-Type", "text/html; charset=utf-8")
     .send(rendered);
+});
+
+fastify.post("/account/signup", async (request, reply) => {
+  let requestData: accountCreateRequest;
+  try {
+    requestData = accountCreateRequestSchema.parse(request.body);
+  } catch (e) {
+    return await reply.redirect("/signup");
+  }
+
+  if (requestData.agreedToTerms !== "on") {
+    return await reply.redirect("/signup");
+  }
+
+  const db = await connect(USERS_DB);
+  const userRepository = new SqliteUserRepository(db);
+
+  try {
+    const newUser = {
+      ...requestData,
+      id: 0,
+      agreedToTerms: true,
+      hasedPassword: "FIXME",
+    };
+    const user = await userRepository.create(newUser);
+    console.log(user);
+    return await reply.redirect("/welcome");
+  } catch (e) {
+    return await reply.redirect("/signup");
+  }
 });
 
 fastify.post("/signinp", async (request, reply) => {
