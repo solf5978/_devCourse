@@ -39,6 +39,21 @@ const fastify = Fastify({
 fastify.get("/", async (request, reply) => {
   await reply.send("Hi there!");
 });
+
+fastify.get("/signup", async (request, reply) => {
+  const rendered = template.render("signup.njk", { envir });
+  return await reply
+    .header("Content-Type", "text/html; charset=utf-8")
+    .send(rendered);
+});
+
+fastify.post("/signinp", async (request, reply) => {
+  const rendered = template.render("signin.njk", { envir });
+  return await reply
+    .header("Content-Type", "text/html; charset=utf-8")
+    .send(rendered);
+});
+
 const start = async (): Promise<void> => {
   try {
     const db = await connect(USERS_DB);
