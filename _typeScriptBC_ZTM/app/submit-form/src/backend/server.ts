@@ -98,7 +98,9 @@ fastify.post("/account/signup", async (request, reply) => {
       hashedPassword,
     };
     const user = await userRepository.create(newUser);
-    console.log(user);
+    const sessions = new SqliteSession(db);
+    const sessionId = await sessions.create(user.id);
+    setSesstionCokkie(reply, sessionId);
     return await reply.redirect("/welcome");
   } catch (e) {
     return await reply.redirect("/signup");
@@ -134,6 +136,9 @@ fastify.post("/account/signin", async (request, reply) => {
     if (!passwordMatches) {
       return await reply.redirect("/signin");
     }
+    const sessions = new SqliteSession(db);
+    const sessionId = await sessions.create(user.id);
+    setSesstionCokkie(reply, sessionId);
     return await reply.redirect("/welcome");
   } catch (e) {
     return await reply.redirect("/signin");
