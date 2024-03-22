@@ -3,6 +3,7 @@ import cookie from "@fastify/cookie";
 import formBody from "@fastify/formbody";
 import staticFiles from "@fastify/static";
 import dotenv from "dotenv";
+import { clearFlashCookie, FLASH_MSG_COOKIE } from "./flash";
 import Fastify from "fastify";
 
 import nunjucks from "nunjucks";
@@ -12,6 +13,7 @@ import { cmpPassword, HashedPassword, hashPassword } from "./auth";
 import { connect, newDb, SqliteSession, SqliteUserRepository } from "./db";
 import type { FastifyRequest } from "fastify/types/request";
 import type { FastifyReply } from "fastify/types/reply";
+
 dotenv.config();
 const SESSION_COOKIE = "SESSION_ID";
 
@@ -51,11 +53,19 @@ type accountLoginRequest = z.infer<typeof accountLoginRequestSchema>;
   fastify.register(cookie, {
     secret: cookieSecret,
   });
+  fastify.register(clearFlashCookie);
   fastify.register(staticFiles, {
     root: path.join(__dirname, "../../dist"),
   });
 }
 
+function setFlashCookie(reply: FastifyReply, msg: string): void {
+  reply.setCookie(FLASH_MSG_COOKIE, msg, { path: "/" });
+}
+
+function readFlashCookie(request: FastifyRequest): string | undefined {
+  return request.cookies[FLASH_MSG_COOKIE];
+}
 function setSesstionCokkie(reply: FastifyReply, sessionId: string): void {
   reply.setCookie(SESSION_COOKIE, sessionId, { path: "/" });
 }
