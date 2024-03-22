@@ -89,10 +89,12 @@ fastify.post("/account/signup", async (request, reply) => {
   try {
     requestData = accountCreateRequestSchema.parse(request.body);
   } catch (e) {
+    setFlashCookie(reply, `Error Occurs @ ${e}`);
     return await reply.redirect("/signup");
   }
 
   if (requestData.agreedToTerms !== "on") {
+    setFlashCookie(reply, `You must agree to terms`);
     return await reply.redirect("/signup");
   }
 
@@ -113,6 +115,7 @@ fastify.post("/account/signup", async (request, reply) => {
     setSesstionCokkie(reply, sessionId);
     return await reply.redirect("/welcome");
   } catch (e) {
+    setFlashCookie(reply, `The Account Has Already Registered`);
     return await reply.redirect("/signup");
   }
 });
@@ -129,6 +132,7 @@ fastify.post("/account/signin", async (request, reply) => {
   try {
     requestData = accountLoginRequestSchema.parse(request.body);
   } catch (e) {
+    setFlashCookie(reply, `Error Processing -> ${e}`);
     return await reply.redirect("/signin");
   }
 
@@ -137,6 +141,7 @@ fastify.post("/account/signin", async (request, reply) => {
   try {
     const user = await userRepository.findByEmail(requestData.email);
     if (user === undefined) {
+      setFlashCookie(reply, "Invalid Login Credentials");
       return await reply.redirect("/signin");
     }
     const passwordMatches = await cmpPassword(
@@ -144,6 +149,7 @@ fastify.post("/account/signin", async (request, reply) => {
       user.hashedPassword
     );
     if (!passwordMatches) {
+      setFlashCookie(reply, "Attempted Password does not match");
       return await reply.redirect("/signin");
     }
     const sessions = new SqliteSession(db);
@@ -151,6 +157,7 @@ fastify.post("/account/signin", async (request, reply) => {
     setSesstionCokkie(reply, sessionId);
     return await reply.redirect("/welcome");
   } catch (e) {
+    setFlashCookie(reply, "Invalid Login Credentials");
     return await reply.redirect("/signin");
   }
 });
