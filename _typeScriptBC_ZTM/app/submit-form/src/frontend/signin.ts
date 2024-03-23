@@ -1,3 +1,4 @@
+import { checkUsername } from "../shared/username-rules";
 import { FieldError } from "./field-error";
 const passwordField = document.getElementById("password") as HTMLInputElement;
 const passwordInvalidLabel = document.getElementById(
@@ -19,8 +20,28 @@ function updateSubmitButton(): void {
 }
 
 emailField.addEventListener("input", (_) => {
+  const usernameFailures = checkUsername(emailField.value);
+  if (usernameFailures.length > 0) {
+    const formattedErrors = usernameFailures.join("<br />");
+    errors.set("invalid-email", emailField, emailInvalidLabel, formattedErrors);
+  } else {
+    errors.remove("invalid-email", emailField, emailInvalidLabel);
+  }
+
   updateSubmitButton();
 });
 passwordField.addEventListener("input", (_) => {
+  const usernameFailures = checkUsername(passwordField.value);
+  if (usernameFailures.length > 0) {
+    const formattedErrors = usernameFailures.join("<br />");
+    errors.set(
+      "invalid-password",
+      passwordField,
+      passwordInvalidLabel,
+      formattedErrors
+    );
+  } else {
+    errors.remove("invalid-password", passwordField, passwordInvalidLabel);
+  }
   updateSubmitButton();
 });
