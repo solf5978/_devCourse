@@ -50,6 +50,7 @@
 |                   | SA&D   | [System Design For Beginners](https://neetcode.io/courses/system-design-for-beginners/0)                     | NeetCodeIO                 | ✔️ |
 |                   | SA&D   | [System Design Interview](https://neetcode.io/courses/system-design-interview/0)                             | NeetCodeIO                 | ✔️ |
 | _practicalTS      | TypeScript | [Practical Typescript](https://www.udemy.com/course/practical-typescript/)                               | John Smilga                | ✔️ |
+| _simplifiedTS     | TypeScript | [Simplified TypeScript](https://courses.webdevsimplified.com/typescript-simplified/)                     | Web Dev Simplified         | ✔️ |
 | _dev4TS5          | TypeScript | [TypeScript 5 For Developers](https://www.udemy.com/course/typescript-full-stack-programming/)           | Alex Dan                   | ✔️ |
 | _fundTS5P_FM      | TypeScript | [TypeScript 5+ Fundamentals V4](https://frontendmasters.com/courses/typescript-v4/)                      | Mike North                 | ✔️ |
 | _typeScriptBC_ZTM | TypeScript | [TypeScript Bootcamp Zero To Mastery](https://zerotomastery.io/courses/typescript-bootcamp/)             | Jayson Lennon              | ✔️ |
