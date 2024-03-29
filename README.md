@@ -55,6 +55,7 @@
 | _totalTS          | TypeScript | [Total TypeScript](https://www.totaltypescript.com/)           | Matt Pocock                   | 🚧 |
 | _dev4TS5          | TypeScript | [TypeScript 5 For Developers](https://www.udemy.com/course/typescript-full-stack-programming/)           | Alex Dan                   | ✔️ |
 | _fundTS5P_FM      | TypeScript | [TypeScript 5+ Fundamentals V4](https://frontendmasters.com/courses/typescript-v4/)                      | Mike North                 | ✔️ |
+|                   | TypeScript | [TypeScript + React: The Beginner Guide](https://www.udemy.com/course/typescript-the-beginner-guide/)    | Robin Lebhar               | ✔️ |
 | _typeScriptBC_ZTM | TypeScript | [TypeScript Bootcamp Zero To Mastery](https://zerotomastery.io/courses/typescript-bootcamp/)             | Jayson Lennon              | ✔️ |
 | _nnTSMC           | TypeScript | [TypeScript Master Class](https://netninja.dev/p/typescript-masterclass)                                 | Net Ninja (Shuan)          | ✔️ |
 |                   |        | []                                                                                                           |                            | 🚧 |
